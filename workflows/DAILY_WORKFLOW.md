@@ -23,7 +23,7 @@ cd /Users/unclejoe/Media_Workspace/berlin-gastro-news
 python3 scripts/harvest.py
 
 # 2. 选篇
-python3 scripts/select.py --count 10
+python3 scripts/select_top.py --count 10
 
 # 3. AI 翻译（OpenClaw 在自己的会话内做的认知工作；不调外部 API）
 #   - 读 daily-selected.json 的每条
