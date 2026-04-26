@@ -270,13 +270,18 @@ class NewsDB:
             raise
 
     def get_articles_pending_publication(self) -> List[sqlite3.Row]:
-        """Articles with translation but no slug yet — need publish_article."""
+        """Articles with translation that need a published .md file.
+
+        publish_article.py de-dupes by checking if the .md exists on disk,
+        so this just returns everything with a translated_body. The CLI
+        prints "exists, skipping" for ones already written — idempotent.
+        """
         conn = self.connect()
         return conn.execute("""
             SELECT * FROM news_articles
             WHERE translated_body IS NOT NULL
               AND translated_body != ''
-              AND (slug IS NULL OR slug = '')
+            ORDER BY published_at DESC
         """).fetchall()
 
     def get_articles_for_briefing(self, briefing_date: str) -> List[sqlite3.Row]:

@@ -14,7 +14,7 @@ export async function GET(context) {
       title: p.data.title,
       description: p.data.description,
       pubDate: p.data.pubDate,
-      link: `/articles/${p.id}`,
+      link: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/articles/${p.id}`,
       categories: p.data.tags,
     })),
   });

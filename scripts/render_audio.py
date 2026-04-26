@@ -29,9 +29,14 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument("--date", default="today")
     p.add_argument("--provider", default="microsoft", choices=["microsoft", "minimax"])
-    p.add_argument("--voice", default="zh-CN-XiaoxiaoNeural")
+    p.add_argument("--voice", default=None,
+                   help="Voice ID. Defaults: microsoft=zh-CN-XiaoxiaoNeural, minimax=male-qn-qingse")
     p.add_argument("--rate", default="+0%")
+    p.add_argument("--no-fallback", action="store_true",
+                   help="Disable automatic MiniMax fallback when microsoft fails")
     args = p.parse_args()
+    if args.voice is None:
+        args.voice = "zh-CN-XiaoxiaoNeural" if args.provider == "microsoft" else "male-qn-qingse"
 
     date_str = parse_date(args.date)
     year, month, _ = date_str.split("-")
@@ -48,17 +53,26 @@ def main():
     print(f"📝 sanitized {len(raw)} → {len(plain)} chars → {plain_txt.relative_to(ROOT)}")
 
     out_mp3 = day_dir / "audio.mp3"
-    cmd = [
-        "python3", str(TTS_SCRIPT),
-        "--file", str(plain_txt),
-        str(out_mp3),
-        "--provider", args.provider,
-        "--voice", args.voice,
-    ]
-    if args.provider == "microsoft":
-        cmd += ["--rate", args.rate]
-    print(f"🎙️  {' '.join(cmd)}")
-    r = subprocess.run(cmd, capture_output=True, text=True, timeout=600)
+
+    def run_tts(provider: str, voice: str) -> subprocess.CompletedProcess:
+        cmd = [
+            "python3", str(TTS_SCRIPT),
+            "--file", str(plain_txt),
+            str(out_mp3),
+            "--provider", provider,
+            "--voice", voice,
+        ]
+        if provider == "microsoft":
+            cmd += ["--rate", args.rate]
+        print(f"🎙️  {' '.join(cmd)}")
+        return subprocess.run(cmd, capture_output=True, text=True, timeout=600)
+
+    r = run_tts(args.provider, args.voice)
+    if r.returncode != 0 and args.provider == "microsoft" and not args.no_fallback:
+        print("⚠️  microsoft TTS failed, falling back to MiniMax")
+        print(r.stdout)
+        print(r.stderr, file=sys.stderr)
+        r = run_tts("minimax", "male-qn-qingse")
     if r.returncode != 0:
         print("❌ TTS failed:")
         print(r.stdout)

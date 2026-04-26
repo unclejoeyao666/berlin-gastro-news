@@ -104,20 +104,18 @@ def test_update_translation_and_mark_played(tmp_db):
 
 def test_get_articles_pending_publication(tmp_db):
     with NewsDB(tmp_db) as db:
+        # Article without translation → not pending
         rid1 = db.add_article(make_article(title="t1", source_url="https://e.com/1"))
+        # Article with translation → pending
+        rid2 = db.add_article(make_article(title="t2", source_url="https://e.com/2"))
         db.update_translation(
-            rid1, "ct1", "cs1", "cb1", "ia1",
-            ["gastro-law"], "slug-t1-2026-04-26",
-        )
-        # Add rid3 with translation but no slug
-        rid3 = db.add_article(make_article(title="t3", source_url="https://e.com/3"))
-        db.connect().execute(
-            "UPDATE news_articles SET translated_body = 'body3' WHERE id = ?",
-            (rid3,),
+            rid2, "ct2", "cs2", "cb2", "ia2",
+            ["gastro-law"], "slug-t2-2026-04-26",
         )
         pending = db.get_articles_pending_publication()
-        assert len(pending) == 1
-        assert pending[0]["id"] == rid3
+        ids = [r["id"] for r in pending]
+        assert rid2 in ids
+        assert rid1 not in ids
 
 
 def test_import_sources_json(tmp_db, tmp_path):
