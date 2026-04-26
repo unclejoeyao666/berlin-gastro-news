@@ -1,45 +1,26 @@
-# 柏林餐饮商业新闻简报
+# Berlin Gastro News
 
-每日自动搜集柏林/德国与餐饮业相关的商业新闻、法律法规、政策动态。
+每日柏林餐饮商业新闻自动播报系统 — 抓取 → 翻译 → 站点发布 → 音频 → Discord。
 
-## 目录结构
+**站点**：https://unclejoeyao666.github.io/berlin-gastro-news/
+**架构设计**：[docs/superpowers/specs/2026-04-26-berlin-gastro-news-v2-design.md](docs/superpowers/specs/2026-04-26-berlin-gastro-news-v2-design.md)
+**每日工作流**：[workflows/DAILY_WORKFLOW.md](workflows/DAILY_WORKFLOW.md)
+
+## 项目结构
 
 ```
-berlin-gastro-news/
-├── README.md              # 项目说明
-├── master-index.md        # 主索引（去重核对用，记录所有已播报新闻）
-├── 2026/
-│   ├── 04/
-│   │   ├── 10/
-│   │   │   └── news_2026-04-10.md
-│   │   ├── 12/
-│   │   │   └── news_2026-04-12.md
-│   │   └── ...
-│   └── ...
+data/         SQLite 新闻数据库 + RSS 源
+scripts/      Python 流水线脚本
+site/         Astro 静态站点
+daily/        每日成品文件包（briefing.md / audio_script.md / audio.mp3 / meta.json）
+docs/         设计文档与执行计划
+archive/v1/   v1 历史代码与数据
 ```
 
-## 去重机制
+## 运行方式
 
-每次播报前，将搜索到的新闻与 `master-index.md` 进行核对：
-1. **URL匹配**：同一篇文章 → 跳过
-2. **标题/主题匹配**：核心主题相同 → 跳过
-3. **事件匹配**：同一事件不同报道 → 跳过
-4. **新进展例外**：同一主题有实质性新信息 → 视为新条目
+由本地 OpenClaw 每天 06:00 (Berlin) 触发，按 `workflows/DAILY_WORKFLOW.md` 7 步流水线执行。
 
-仅发布新发现的、未播报过的新闻。无新内容则不发送。
+## License
 
-## 信息来源
-- berlin.de 柏林市政府官网
-- service.berlin.de 柏林服务门户
-- bundesregierung.de 联邦政府
-- IHK Berlin 柏林工商会
-- LaGeSo 柏林卫生与社会事务局
-- berlin.de/presse 柏林新闻门户
-
-## 更新频率
-每日早上7:00（柏林时间）自动更新
-
----
-
-创建时间: 2026-04-09 20:06
-去重机制建立: 2026-04-12
+私人项目，未授权第三方使用。

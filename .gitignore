@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+.pytest_cache/
+
+# SQLite WAL/SHM (db file itself IS tracked)
+data/news.db-shm
+data/news.db-wal
+
+# Astro
+site/node_modules/
+site/dist/
+site/.astro/
+
+# Intermediate state
+daily-selected.json
+*.tmp.txt
+
+# OS
+.DS_Store
+Thumbs.db
