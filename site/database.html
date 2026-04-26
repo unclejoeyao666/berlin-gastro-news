@@ -1,0 +1,1944 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>新闻数据库 — 全部新闻</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg: #ffffff; --bg2: #f8f9fa; --text: #2c3e50; --text2: #7f8c8d;
+    --border: #ecf0f1; --accent: #e74c3c; --accent2: #c0392b;
+    --card-bg: #ffffff; --shadow: rgba(0,0,0,0.08);
+}
+[data-theme="dark"] {
+    --bg: #1a1a2e; --bg2: #16213e; --text: #eaeaea; --text2: #a0a0a0;
+    --border: #2a2a4a; --accent: #e74c3c; --accent2: #ff6b6b;
+    --card-bg: #16213e; --shadow: rgba(0,0,0,0.3);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Noto Sans SC', 'Noto Sans', -apple-system, sans-serif;
+    background: var(--bg); color: var(--text);
+    line-height: 1.7; transition: all 0.3s;
+}
+.container { max-width: 900px; margin: 0 auto; padding: 20px; }
+header {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: white; padding: 40px 0; text-align: center;
+    margin-bottom: 30px; border-radius: 0 0 20px 20px;
+}
+header h1 { font-size: 2em; margin-bottom: 8px; }
+header p { opacity: 0.85; font-size: 1.05em; }
+nav {
+    display: flex; gap: 15px; justify-content: center;
+    margin-top: 15px; flex-wrap: wrap;
+}
+nav a {
+    color: white; text-decoration: none; padding: 6px 16px;
+    border: 1px solid rgba(255,255,255,0.3); border-radius: 20px;
+    font-size: 0.9em; transition: all 0.2s;
+}
+nav a:hover, nav a.active {
+    background: rgba(255,255,255,0.2); border-color: white;
+}
+.stats-bar {
+    display: flex; gap: 20px; justify-content: center;
+    padding: 15px; background: var(--bg2); border-radius: 12px;
+    margin-bottom: 25px; flex-wrap: wrap;
+}
+.stat { text-align: center; }
+.stat .num { font-size: 1.8em; font-weight: 700; color: var(--accent); }
+.stat .label { font-size: 0.85em; color: var(--text2); }
+.card {
+    background: var(--card-bg); border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px; margin-bottom: 16px;
+    box-shadow: 0 2px 8px var(--shadow); transition: transform 0.2s;
+    border-left: 4px solid var(--accent);
+}
+.card:hover { transform: translateY(-2px); }
+.card .num {
+    display: inline-block; background: var(--accent); color: white;
+    width: 28px; height: 28px; line-height: 28px; text-align: center;
+    border-radius: 50%; font-size: 0.85em; font-weight: 700;
+    margin-right: 10px;
+}
+.card h3 { display: inline; font-size: 1.1em; }
+.card .meta {
+    margin: 8px 0; font-size: 0.88em; color: var(--text2);
+    display: flex; gap: 15px; flex-wrap: wrap; align-items: center;
+}
+.card .meta .tag {
+    display: inline-block; padding: 2px 10px; border-radius: 12px;
+    font-size: 0.8em; color: white;
+}
+.card .summary {
+    margin: 10px 0; font-size: 0.95em; line-height: 1.8;
+}
+.card .link a {
+    color: var(--accent); text-decoration: none; font-size: 0.9em;
+}
+.card .link a:hover { text-decoration: underline; }
+.toggle-btn {
+    position: fixed; top: 15px; right: 15px; z-index: 100;
+    background: var(--card-bg); border: 1px solid var(--border);
+    border-radius: 50%; width: 40px; height: 40px; cursor: pointer;
+    font-size: 1.2em; display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 2px 8px var(--shadow);
+}
+footer {
+    text-align: center; padding: 30px; color: var(--text2);
+    font-size: 0.85em; border-top: 1px solid var(--border); margin-top: 40px;
+}
+.search-box {
+    width: 100%; padding: 12px 18px; border: 2px solid var(--border);
+    border-radius: 10px; font-size: 1em; margin-bottom: 20px;
+    background: var(--bg); color: var(--text);
+    font-family: inherit;
+}
+.search-box:focus { border-color: var(--accent); outline: none; }
+@media(max-width:600px) {
+    header h1 { font-size: 1.4em; }
+    .stats-bar { gap: 10px; }
+    .card { padding: 15px; }
+}
+</style>
+</head>
+<body>
+<button class="toggle-btn" onclick="toggleTheme()">🌓</button>
+<header>
+    <h1>📰 新闻数据库</h1>
+    <p>共 3859 条新闻 · 最新200条</p>
+    <nav>
+        <a href="index.html">📅 今日简报</a>
+        <a href="database.html" class="active">🗄️ 新闻库</a>
+        <a href="archive.html">📚 历史归档</a>
+        <a href="about.html">ℹ️ 关于</a>
+    </nav>
+</header>
+<div class="container">
+<input class="search-box" id="search" type="text" placeholder="🔍 搜索新闻标题、来源、内容..." oninput="filterCards()">
+<div class="card" style="border-left-color:#3498db">
+    <h3>Liveblog USA unter Trump: Trump: Schütze ist vermutlich Einzeltäter</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-26</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Liveticker zur US-Politik unter Donald Trump aktuell: Aktuelle News & Nachrichten von heute ► Jetzt lesen im Liveticker der FAZ</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/politik/usa-unter-trump/liveblog-trump-schuetze-ist-vermutlich-einzeltaeter-faz-19444916.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Schüsse bei Pressedinner: Plötzlich holt der Secret Service Trump aus dem Saal</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-26</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Es soll Donald Trumps erste Rede beim traditionellen Pressedinner in Washington werden, da fallen Schüsse. Es ist das nächste Kapitel der politischen Gewalt in Amerika.</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/politik/pressedinner-trump-von-secret-service-aus-saal-gebracht-accg-200769105.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Oldtimer: Unternehmer Friedhelm Loh hat die teuerste Autosammlung Deutschlands</h3>
+    <div class="meta">
+        <span>📌 明镜周刊</span>
+        <span>📅 2026-04-26</span>
+        <span class="tag" style="background:#3498db">商业 · 政治 · 经济</span>
+    </div>
+    <div class="summary">Kennedys Lincoln, Schumachers Ferrari, ein Feuerwehrwagen von Porsche: Der hessische Unternehmer Friedhelm Loh sammelt extrem teure und seltene Autos wie andere Leute Briefmarken. Was treibt ihn an?</div>
+    <div class="link"><a href="https://www.spiegel.de/wirtschaft/oldtimer-unternehmer-friedhelm-loh-hat-die-teuerste-autosammlung-deutschlands-a-cf80bbea-b0d7-4c0c-ae10-02553aeffb3e#ref=rss" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Wohnen für alle, pünktliche Züge und Hilfe gegen Tinnitus - die guten News der Woche</h3>
+    <div class="meta">
+        <span>📌 明镜周刊</span>
+        <span>📅 2026-04-26</span>
+        <span class="tag" style="background:#3498db">商业 · 政治 · 经济</span>
+    </div>
+    <div class="summary">In einem Wohnprojekt in Baden-Württemberg leben Alt und Jung zusammen. Großbritannien will rauchfrei werden. Und: Ein Hobbyläufer wird zum Strava-Star. Die guten Nachrichten der Woche.</div>
+    <div class="link"><a href="https://www.spiegel.de/ausland/wohnen-fuer-alle-puenktliche-zuege-und-hilfe-gegen-tinnitus-die-guten-news-der-woche-a-4f0ea9fe-1836-4715-8aa1-cac6a776ab21#ref=rss" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>Hong Kong’s Ryan Choi shines on Los Angeles World Fencing League debut</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-26</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">Ryan Choi Chun-yin staged a fabulous comeback to win his top-of-the-bill bout against Miles Chamley-Watson in the inaugural World Fencing League on Saturday night local time in Los Angeles. Reigning foil world champion Choi trailed Chamley-Watson for long periods of the two-minute contest, but he ul…</div>
+    <div class="link"><a href="https://www.scmp.com/sport/hong-kong/article/3351454/hong-kongs-ryan-choi-shines-los-angeles-world-fencing-league-debut?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#7f8c8d">
+    <h3>Trump uninjured after shooting at Correspondents' Dinner</h3>
+    <div class="meta">
+        <span>📌 德国之声（英语）</span>
+        <span>📅 2026-04-26</span>
+        <span class="tag" style="background:#7f8c8d">政治 · 国际 · 地缘政治</span>
+    </div>
+    <div class="summary">President Donald Trump was evacuated after gunfire at the Washington Hilton hotel, where journalists and celebrities were gathered for the annual White House Correspondents' Dinner. A suspect is in custody.</div>
+    <div class="link"><a href="https://www.dw.com/en/trump-uninjured-after-shooting-at-correspondents-dinner/live-76938867?maca=en-rss-en-all-1573-rdf" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>Midnight pranksters fan flames of frustration for Malaysia’s fire services</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-26</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">It’s midnight. A call was made to Malaysia’s Fire and Rescue Department about a forest fire in Tanjung Bungah, Penang. Firefighters rushed to the scene only to discover there was no such blaze. the department gets a prank call every other day. Many of these calls are usually made about an hour befor…</div>
+    <div class="link"><a href="https://www.scmp.com/news/asia/southeast-asia/article/3351453/midnight-pranksters-fan-flames-frustration-malaysias-fire-services?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>He swore he wouldn’t be a chef. Now he owns a 2-Michelin-starred restaurant in Manila</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-26</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">Josh Boutwood has a confession to make: the founder of Manila-based Helm – the only restaurant in the Philippines with two Michelin stars – once swore that he would not become a chef. Born in the UK to a Filipino father and an English mother, Boutwood spent his earliest years in Boracay before movin…</div>
+    <div class="link"><a href="https://www.scmp.com/lifestyle/food-drink/article/3351262/he-swore-he-wouldnt-be-chef-now-he-owns-2-michelin-starred-restaurant-manila?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>Could Russian missiles help India counter its arch-rival’s Chinese weapons?</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-26</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">India has reportedly signed a deal to buy Russian missiles that target support aircraft as its arch-rival Pakistan and China continue to integrate their aerial weapons profiles. Russia has cleared the export of around 300 R-37M ultra-long-range air-to-air missiles in a US$1.2 billion deal, according…</div>
+    <div class="link"><a href="https://www.scmp.com/news/china/military/article/3351452/could-russian-missiles-help-india-counter-its-arch-rivals-chinese-weapons?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>Why Shenzhen may be first to climb out of China’s property slump</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-26</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">Shenzhen’s residential inventory has fallen to a seven-year low, putting the southern technology hub ahead of other first-tier Chinese cities in clearing excess housing stock – a condition investors see as essential for a broader property market recovery. While inventory had declined across major Ch…</div>
+    <div class="link"><a href="https://www.scmp.com/business/article/3351407/why-shenzhen-may-be-first-climb-out-chinas-property-slump?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#7f8c8d">
+    <h3>Schüsse in Washington: US-Präsident Trump in Sicherheit gebracht</h3>
+    <div class="meta">
+        <span>📌 德国新闻联播（综合）</span>
+        <span>📅 2026-04-26</span>
+        <span class="tag" style="background:#7f8c8d">政治 · 商业 · 综合</span>
+    </div>
+    <div class="summary">Beim traditionellen Korrespondentendinner in Washington sind Schüsse gefallen. US-Präsident Trump und weitere Kabinettsmitglieder wurden in Sicherheit gebracht. Ein Verdächtiger wurde festgenommen.</div>
+    <div class="link"><a href="https://www.tagesschau.de/ausland/amerika/trump-korrespondentendinner-100.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Russischer Angriffskrieg: Ein Toter und drei Verletzte durch ukrainische Drohnen in Sewastopol</h3>
+    <div class="meta">
+        <span>📌 明镜周刊</span>
+        <span>📅 2026-04-26</span>
+        <span class="tag" style="background:#3498db">商业 · 政治 · 经济</span>
+    </div>
+    <div class="summary">Russland und die Ukraine attackieren sich weiter gegenseitig mit Drohnen. Auf der russisch besetzten Halbinsel Krim wurde ein Mann getötet. Aus der Ukraine meldeten die Behörden mindestens zehn Tote.</div>
+    <div class="link"><a href="https://www.spiegel.de/ausland/russischer-angriffskrieg-ein-toter-und-drei-verletzte-durch-ukrainische-drohnen-in-sewastopol-a-1a4546c2-a1b7-466f-ad0f-b3176d6b049b#ref=rss" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>2-speed recovery hits Central landlords as older towers cut rents to compete</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-26</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">A two-speed recovery is emerging in Central’s top-tier offices, prompting landlords to adopt a more hands-on leasing approach, including hiring asset managers, as rental performance diverges. While much attention has focused on firms taking advantage of lower rents to move back into Central, widenin…</div>
+    <div class="link"><a href="https://www.scmp.com/business/article/3351364/2-speed-recovery-hits-central-landlords-older-towers-cut-rents-compete?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Liebe: Wie Hormone beeinflussen, ob wir ewig verliebt bleiben</h3>
+    <div class="meta">
+        <span>📌 明镜周刊</span>
+        <span>📅 2026-04-26</span>
+        <span class="tag" style="background:#3498db">商业 · 政治 · 经济</span>
+    </div>
+    <div class="summary">Lars Penke erforscht die Biologie der Liebe. Hier erklärt er die drei unterschiedlichen hormonellen Systeme, die Menschen dazu bringen, andere attraktiv zu finden, sich zu verknallen und zusammenzubleiben.</div>
+    <div class="link"><a href="https://www.spiegel.de/partnerschaft/liebe-wie-hormone-beeinflussen-ob-wir-ewig-verliebt-bleiben-a-dd61d17f-540b-4154-aa0c-122a17b73e08#ref=rss" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Fotos der dramatischen Momente im Washington Hilton</h3>
+    <div class="meta">
+        <span>📌 明镜周刊</span>
+        <span>📅 2026-04-26</span>
+        <span class="tag" style="background:#3498db">商业 · 政治 · 经济</span>
+    </div>
+    <div class="summary">Schüsse im Foyer, Panik im Saal, Schwerbewaffnete in der Hotellobby: Fotos zeigen die dramatischen Augenblicke beim traditionsreichen White House Correspondents' Dinner.</div>
+    <div class="link"><a href="https://www.spiegel.de/ausland/fotos-der-dramatischen-momente-im-washington-hilton-a-67430726-6361-4611-9ad6-ac80e9b660db#ref=rss" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>‘Made in China’ label should be source of pride</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-26</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">Feel strongly about these letters, or any other aspects of the news? Share your views by emailing us your Letter to the Editor at letters@scmp.com or filling in this Google form. Submissions should not exceed 400 words. Since I moved to China, the world has taken on a different rhythm. A different w…</div>
+    <div class="link"><a href="https://www.scmp.com/opinion/letters/article/3351249/made-china-label-should-be-source-pride?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>Saudi PIF-owned Al-Ahli beat Japanese rivals for AFC Champions League Elite history</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-26</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">Al-Ahli of Saudi Arabia successfully defended the AFC Champions League Elite crown after beating first-time finalists Machida Zelvia of Japan 1-0 on Saturday. It took an extra-time goal from Saudi international striker Firas Al-Burikan to settle a bad-tempered final in front of 60,000 mainly Al-Ahli…</div>
+    <div class="link"><a href="https://www.scmp.com/sport/football/article/3351451/saudi-pif-owned-al-ahli-beat-japanese-rivals-afc-champions-league-elite-history?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>How gunfire threw Trump’s glitzy Washington Hilton dinner into chaos</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-26</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">It was meant to be a glitzy Saturday night at a Washington ballroom featuring President Donald Trump, but the glamour was shattered by gunshots that left guests diving to the floor and the US leader bundled out by security personnel. Trump was seated on the dais at the White House Correspondents’ As…</div>
+    <div class="link"><a href="https://www.scmp.com/news/world/united-states-canada/article/3351450/how-gunfire-threw-trumps-glitzy-washington-hilton-dinner-chaos?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#7f8c8d">
+    <h3>Mehrere Tote bei Bombenanschlag im Westen Kolumbiens</h3>
+    <div class="meta">
+        <span>📌 德国新闻联播（综合）</span>
+        <span>📅 2026-04-26</span>
+        <span class="tag" style="background:#7f8c8d">政治 · 商业 · 综合</span>
+    </div>
+    <div class="summary">Bei einem Bombenanschlag im Westen Kolumbiens wurden mindestens 14 Menschen getötet. Medienberichten zufolge fiel ein Sprengstoffzylinder auf einen Kleinbus und explodierte. Präsident Petro spricht von Terror - wenige Wochen vor der Wahl.</div>
+    <div class="link"><a href="https://www.tagesschau.de/ausland/amerika/kolumbien-bombenanschlag-100.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>Singapore’s answer to school bullying? The cane … and counselling</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-26</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">For six months, Adriana Lim Escano’s teenage son went to school and said nothing. He had tried to do the right thing – stepping in when a group of boys bullied a classmate – and paid for it with half a year of misery, name-calling and social isolation. His mother only found out when another parent c…</div>
+    <div class="link"><a href="https://www.scmp.com/week-asia/lifestyle-culture/article/3351336/singapores-answer-school-bullying-cane-and-counselling?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Vor Gericht</h3>
+    <div class="meta">
+        <span>📌 ZDF今日经济</span>
+        <span>📅 2026-04-26</span>
+        <span class="tag" style="background:#3498db">商业 · 经济</span>
+    </div>
+    <div class="summary">Im Prozess gegen Michael Jackson gilt Gavins Mutter Janet Arvizo als Schlüsselfigur. Sie sagt aus, ihr Sohn sei in Neverland von ihr getrennt worden und habe das Bett mit dem Popstar geteilt.</div>
+    <div class="link"><a href="https://www.zdf.de/video/dokus/zdfinfo-michael-jackson-der-jahrhundert-prozess-100/zdfinfo-michael-jackson-der-jahrhundert-prozess-vor-gericht-100" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Unter Anklage</h3>
+    <div class="meta">
+        <span>📌 ZDF今日经济</span>
+        <span>📅 2026-04-26</span>
+        <span class="tag" style="background:#3498db">商业 · 经济</span>
+    </div>
+    <div class="summary">Michael Jacksons erster Gerichtstermin gerät zum Spektakel: Fans aus ganz Amerika reisen an. Der Prozess spaltet das Land – und entfacht eine Debatte über Ruhm, Medienmacht und Gerechtigkeit.</div>
+    <div class="link"><a href="https://www.zdf.de/video/dokus/zdfinfo-michael-jackson-der-jahrhundert-prozess-100/zdfinfo-michael-jackson-der-jahrhundert-prozess-unter-anklage-100" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Was geschah in Neverland?</h3>
+    <div class="meta">
+        <span>📌 ZDF今日经济</span>
+        <span>📅 2026-04-26</span>
+        <span class="tag" style="background:#3498db">商业 · 经济</span>
+    </div>
+    <div class="summary">Nach Ausstrahlung der Michael-Jackson-Doku von Martin Bashir gerät der "King of Pop" weltweit unter Druck. Sein Umfeld startet eine PR-Offensive – doch bald werden neue Vorwürfe laut.</div>
+    <div class="link"><a href="https://www.zdf.de/video/dokus/zdfinfo-michael-jackson-der-jahrhundert-prozess-100/zdfinfo-michael-jackson-der-jahrhundert-prozess-was-geschah-in-neverland-100" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>King Of Pop</h3>
+    <div class="meta">
+        <span>📌 ZDF今日经济</span>
+        <span>📅 2026-04-26</span>
+        <span class="tag" style="background:#3498db">商业 · 经济</span>
+    </div>
+    <div class="summary">Bislang unveröffentlichte Tonaufnahmen und exklusive Interviews werfen ein neues Licht auf Michael Jacksons Beziehung zu Gavin Arvizo – und die Ereignisse, die zum Prozess von 2005 führen.</div>
+    <div class="link"><a href="https://www.zdf.de/video/dokus/zdfinfo-michael-jackson-der-jahrhundert-prozess-100/zdfinfo-michael-jackson-der-jahrhundert-prozess-king-of-pop-100" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Vor Präsidentschaftswahl: Mindestens 14 Tote bei Bombenanschlag in Kolumbien</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-26</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Ein verheerender Anschlag sorgt in dem südamerikanischen Land für Entsetzen. Die Explosion auf der „Panamericana“-Straße zerstört einen Bus und viele weitere Fahrzeuge. Die Behörden haben einen Verdacht, wer verantwortlich ist.</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/politik/ausland/kolumbien-mindestens-14-tote-bei-bombenanschlag-accg-200768973.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#7f8c8d">
+    <h3>Orban verkündet Verzicht auf sein Abgeordnetenmandat</h3>
+    <div class="meta">
+        <span>📌 德国新闻联播（综合）</span>
+        <span>📅 2026-04-26</span>
+        <span class="tag" style="background:#7f8c8d">政治 · 商业 · 综合</span>
+    </div>
+    <div class="summary">Im Mai endet Orbans Zeit als Ungarns Ministerpräsident - nach 16 Jahren. Nun hat er angekündigt, sich aus dem Parlament in Budapest zurückzuziehen. Wahlsieger Magyar warnt derweil vor möglichen Fluchtplänen im Umfeld Orbans. Von O. Soos.</div>
+    <div class="link"><a href="https://www.tagesschau.de/ausland/europa/orban-parlamentsmandat-100.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>What’s fuelling the surge in South Koreans travelling to China?</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-26</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">A new wave of South Korean content creators is descending on Chinese cities, cameras in hand, transforming the streets of Shanghai, Shenzhen and beyond into lively backdrops for travel vlogs and lifestyle videos. Dubbed the “Korean v-blogger influx” by some online users, their ranks have swelled sin…</div>
+    <div class="link"><a href="https://www.scmp.com/news/china/diplomacy/article/3351425/whats-fuelling-surge-south-koreans-travelling-china?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#2c3e50">
+    <h3>Trump safe after evacuation from shooting at gala dinner</h3>
+    <div class="meta">
+        <span>📌 政客（欧洲版）</span>
+        <span>📅 2026-04-26</span>
+        <span class="tag" style="background:#2c3e50">欧盟 · 政治 · 贸易</span>
+    </div>
+    <div class="summary">A suspect is in custody, authorities said, after incident at White House Correspondents’ Association Dinner in Washington.</div>
+    <div class="link"><a href="https://www.politico.com/news/2026/04/25/trump-evacuated-from-white-house-correspondents-association-dinner-00892113?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>Iconic South Korean district on the brink in divisive urban renewal fight</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-26</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">For 42 years, Ha Sung-ki has sold large speakers to churches and event halls from his electronics shop inside Seoul’s Sewoon Plaza. On a weekday afternoon, the corridor outside – once part of a bustling merchants’ network – is largely empty. “These days, the number of customers crossing the street t…</div>
+    <div class="link"><a href="https://www.scmp.com/week-asia/lifestyle-culture/article/3351379/iconic-south-korean-district-brink-divisive-urban-renewal-fight?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>10 ways Hong Kong schools can effectively promote mental health</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-26</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">Student mental health is a matter of great concern. According to the latest data from the Education Bureau, the number of secondary students with mental health issues has doubled over the past five years, from 660 in 2020-21 to 1,330 in 2024-25. In recent years, the government and various stakeholde…</div>
+    <div class="link"><a href="https://www.scmp.com/opinion/hong-kong-opinion/article/3350606/10-ways-hong-kong-schools-can-effectively-promote-mental-health?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>Can Chongqing leverage its online viral fame to become an international tourism hub?</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-26</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">Chongqing, also known as ‘the most confusing city’ has become one of China’s most popular tourism attraction spots in recent years. Many Chinese and international social media content creators have hopped on the viral trend of making videos about the city’s bewildering, mountainous urban landscape. …</div>
+    <div class="link"><a href="https://www.scmp.com/news/china/article/3351343/can-chongqing-leverage-its-online-viral-fame-become-international-tourism-hub?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Schüsse auf Secret Service bei Korrespondentendinner – Trump in Sicherheit</h3>
+    <div class="meta">
+        <span>📌 明镜周刊</span>
+        <span>📅 2026-04-26</span>
+        <span class="tag" style="background:#3498db">商业 · 政治 · 经济</span>
+    </div>
+    <div class="summary">Erstmals war Donald Trump beim traditionsreichen White House Correspondents' Dinner dabei. Dann fielen Schüsse außerhalb des Saales. Der US-Präsident wurde evakuiert – und ein Verdächtiger festgenommen.</div>
+    <div class="link"><a href="https://www.spiegel.de/ausland/zwischenfall-bei-korrespondentendinner-trump-in-sicherheit-gebracht-a-3f6ccd80-cdce-4ace-bd2a-a2046811af3e#ref=rss" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>Some Hong Kong trees are behaving strangely and botanists want to know why</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-26</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">A citywide study should be launched to examine how global warming is affecting plants in Hong Kong and the knock-on effect on the rest of the ecosystem, botanists have urged after witnessing clear changes in leaf-shedding and flowering patterns. Some species, such as the red kapok tree, commonly kno…</div>
+    <div class="link"><a href="https://www.scmp.com/news/hong-kong/health-environment/article/3351437/some-hong-kong-trees-are-behaving-strangely-and-botanists-want-know-why?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>Muddy yet clear-cut: How Chinese investors are turning jungle into Indonesia’s new capital</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-26</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">After an hour’s drive through the jungle of Borneo, you reach more jungle. Your rental van from the Balikpapan city airport shakes precariously, navigating a partial bridge washout. A roadside sign admonishes against poaching the endangered sun bears. By hour three you’ve arrived at Indonesia’s new …</div>
+    <div class="link"><a href="https://www.scmp.com/economy/china-economy/article/3350981/muddy-yet-clear-cut-how-chinese-investors-are-turning-jungle-indonesias-new-capital?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>Rumours of China Forbidden City using 600,000 tonnes of pig blood to ‘dispel evil’ debunked</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-26</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">A long-standing and widely-circulated rumour that the Forbidden City in Beijing uses 600,000 tonnes of pig’s blood each year to dispel evil has been debunked. The liquid is actually used as a form of adhesive which is painted on the famous palace’s signature red walls and pillars, according to a rec…</div>
+    <div class="link"><a href="https://www.scmp.com/news/people-culture/environment/article/3350878/rumours-china-forbidden-city-using-600000-tonnes-pig-blood-dispel-evil-debunked?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>Gunman held, Trump uninjured after shots fired at White House correspondents’ dinner</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-26</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">US President Donald Trump and other top US leaders were evacuated from an annual White House correspondents dinner in Washington on Saturday night after a gunman fired several shots at the glitzy, high-profile event. The president, first lady Melania Trump, Vice-President J.D. Vance and cabinet memb…</div>
+    <div class="link"><a href="https://www.scmp.com/news/world/united-states-canada/article/3351447/trump-evacuated-white-house-correspondents-dinner-after-security-threat?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#7f8c8d">
+    <h3>Iran war: Trump cancels envoys' trip to Islamabad</h3>
+    <div class="meta">
+        <span>📌 德国之声（英语）</span>
+        <span>📅 2026-04-26</span>
+        <span class="tag" style="background:#7f8c8d">政治 · 国际 · 地缘政治</span>
+    </div>
+    <div class="summary">Donald Trump said that he didn't want US officials to "sit around talking about nothing" in Islamabad. It comes after Iran said that there would be no direct talks with the US. More on DW.</div>
+    <div class="link"><a href="https://www.dw.com/en/iran-war-trump-cancels-envoys-trip-to-islamabad/live-76929720?maca=en-rss-en-all-1573-rdf" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Landesverband bestätigt: AfD hat Rrredner Eichwald aus Partei geworfen</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-26</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">NS-Rhetorik oder Satire? Seine bizarre Rede im Hitler-Sound hatte die Berichte über die Gründung der neuen AfD-Jugend dominiert. Nun ist Alexander Eichwalds Parteiausschluss beschlossene Sache – falls er sich nicht wehrt.</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/politik/inland/afd-nrw-redner-alexander-eichwald-ausgeschlossen-accg-200768914.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Bahn verspricht stabile Fernticket-Preise für ein Jahr</h3>
+    <div class="meta">
+        <span>📌 德国新闻联播（经济频道）</span>
+        <span>📅 2026-04-26</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 财税</span>
+    </div>
+    <div class="summary">Für ein Jahr will die Deutsche Bahn auf Preiserhöhungen im Fernverkehr verzichten. Bahnchefin Palla kündigte an, die Preise für ICE-Tickets ab dem 1. Mai für zwölf Monate stabil halten zu wollen.</div>
+    <div class="link"><a href="https://www.tagesschau.de/wirtschaft/unternehmen/bahn-fernverkehr-ticketpreise-100.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#7f8c8d">
+    <h3>40 years after Chernobyl: Pripyat today</h3>
+    <div class="meta">
+        <span>📌 德国之声（英语）</span>
+        <span>📅 2026-04-26</span>
+        <span class="tag" style="background:#7f8c8d">政治 · 国际 · 地缘政治</span>
+    </div>
+    <div class="summary">After the catastrophic accident in the nearby nuclear reactor, the city of Pripyat had to be completely evacuated. Some 50,000 people left their homes forever. DW visited the town with a former resident 40 years later.</div>
+    <div class="link"><a href="https://www.dw.com/en/40-years-after-chernobyl-pripyat-today/a-76925905?maca=en-rss-en-all-1573-rdf" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>Explosive device kills 13 and injures 38 on bus in Colombia</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-26</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">An explosive device killed 13 people travelling on a bus in southwestern Colombia on Saturday, an attack the country’s army chief described as a “terrorist act” that also left at least 38 injured as violence linked to drug trafficking in the region escalates. Octavio Guzman, the governor of the regi…</div>
+    <div class="link"><a href="https://www.scmp.com/news/world/americas/article/3351446/explosive-device-kills-13-and-injures-38-bus-colombia?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>Irish footballers return to China 50 years after historic tour akin to ‘going to the moon’</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-26</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">When Paddy Dwyer arrived in China in 1976, crowds jostled to catch a glimpse of him and his companions: the first Western football team to play in the country. China at the time was emerging from the tumult of the Cultural Revolution, and on the brink of market reforms that would take the country fr…</div>
+    <div class="link"><a href="https://www.scmp.com/sport/football/article/3351410/irish-footballers-return-china-50-years-after-historic-tour-akin-going-moon?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>Will South Korea or Japan develop a nuclear deterrent of their own?</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-26</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">War on Iran has changed many things, not least of which is the tenor of nuclear debate in two of America’s closest Asian allies: countries that have long defined themselves by the weapons they do not possess. For decades, the question of whether South Korea and Japan might one day build their own nu…</div>
+    <div class="link"><a href="https://www.scmp.com/week-asia/politics/article/3351330/will-south-korea-or-japan-develop-nuclear-deterrent-their-own?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>This week in PostMag: toxic tomes, a trip to Fifa World Cup host Mexico City and ‘Carmen’ in Kowloon</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-26</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">Readers tend to be curious creatures – it’s in our nature to want to know, learn and absorb more, all for that deeply satisfying brain scratch. For me, the thirst for knowledge takes me into the depths of bookshops, the corners of libraries and countless other places – if not other worlds. When face…</div>
+    <div class="link"><a href="https://www.scmp.com/postmag/culture/article/3351188/week-postmag-toxic-tomes-trip-fifa-world-cup-host-mexico-city-and-carmen-kowloon?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>China’s Tianqi Lithium to favour domestic salt lakes over Africa amid resource nationalism</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">Amid geopolitical tensions, China’s Tianqi Lithium has decided to skip Africa and will stick to domestic salt lakes to secure the supply of a battery mineral, according to its president Frank Ha Chun-shing. The move comes as the oil shock stemming from Middle Eastern conflicts is driving up global d…</div>
+    <div class="link"><a href="https://www.scmp.com/business/commodities/article/3351363/chinas-tianqi-lithium-favour-domestic-salt-lakes-over-africa-amid-resource-nationalism?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Bahn will Preise für ICE-Tickets ein Jahr stabil halten</h3>
+    <div class="meta">
+        <span>📌 明镜周刊</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 政治 · 经济</span>
+    </div>
+    <div class="summary">Auf eines können sich Bahnkunden meist verlassen: die jährliche Preiserhöhung bei Fernzügen. Doch Ende 2026 fällt sie aus – nicht zum ersten Mal.</div>
+    <div class="link"><a href="https://www.spiegel.de/wirtschaft/bahn-will-preise-fuer-ice-tickets-ein-jahr-stabil-halten-a-27430610-088b-4b89-8c30-8ab56bb3b36f#ref=rss" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>Learn from Chernobyl as the world turns to nuclear energy again</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">Today marks the 40th anniversary of the Chernobyl disaster in the Soviet Union, the world’s most infamous nuclear accident. For decades, the shadow of Chernobyl – and later the Fukushima meltdown in Japan following an earthquake and a tsunami – cast doubt on the safety of nuclear energy. Yet amid cu…</div>
+    <div class="link"><a href="https://www.scmp.com/opinion/comment/article/3351285/learn-chernobyl-world-turns-nuclear-energy-again?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>Are you ageing well? 5 simple tests to get a picture of your biological age</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">If you had been a fly on my study wall this morning, you might have been startled to see me rise from a seated position on the floor several times, and then time myself as I stood on one leg, first with my eyes open and then with them closed. We can do simple tests like these at home to assess how w…</div>
+    <div class="link"><a href="https://www.scmp.com/lifestyle/health-wellness/article/3351122/are-you-ageing-well-5-simple-tests-get-picture-your-biological-age?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#7f8c8d">
+    <h3>Iran-Liveblog: ++ Netanjahu ordnet neue Angriffe im Libanon an ++</h3>
+    <div class="meta">
+        <span>📌 德国新闻联播（综合）</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#7f8c8d">政治 · 商业 · 综合</span>
+    </div>
+    <div class="summary">Israels Premier Netanjahu hat das Militär zu neuen massiven Angriffen auf Ziele der Terror-Miliz Hisbollah im Libanon aufgerufen. Das US-Militär hat eigenen Angaben zufolge einen Frachter der iranischen Schattenflotte abgefangen.</div>
+    <div class="link"><a href="https://www.tagesschau.de/newsticker/liveblog-iran-sonntag-112.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>Do more to preserve Hong Kong’s natural heritage amid holiday crush</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">The Labour Day holiday is expected to live up to its “golden week” name by providing a welcome boost to the Hong Kong economy, but it will also test the city’s ability to balance an expected tourism surge with environmental conservation. Authorities must apply lessons learned from problematic high s…</div>
+    <div class="link"><a href="https://www.scmp.com/opinion/comment/article/3351283/do-more-preserve-hong-kongs-natural-heritage-amid-holiday-crush?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Ungarn: Viktor Orbán verkündet Verzicht auf sein Abgeordnetenmandat</h3>
+    <div class="meta">
+        <span>📌 明镜周刊</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 政治 · 经济</span>
+    </div>
+    <div class="summary">16 Jahre regierte er Ungarn und legte sich immer wieder mit der EU an. Nach seiner Wahlniederlage will sich Viktor Orbán nun aus dem Parlament in Budapest zurückziehen. Er werde dort »derzeit« nicht gebraucht.</div>
+    <div class="link"><a href="https://www.spiegel.de/ausland/ungarn-viktor-orban-verkuendet-verzicht-auf-sein-abgeordnetenmandat-a-8c1953bc-d695-4c98-9ce1-e4995147fb3a#ref=rss" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#7f8c8d">
+    <h3>Vorerst keine neuen Friedensgespräche zwischen Iran und USA</h3>
+    <div class="meta">
+        <span>📌 德国新闻联播（综合）</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#7f8c8d">政治 · 商业 · 综合</span>
+    </div>
+    <div class="summary">Im Iran-Krieg gibt es vorerst keine weiteren Gespräche zwischen den USA und Vertretern aus Teheran. Der iranische Außenminister Araghtschi verließ Islamabad, bevor US-Vertreter anreisen konnten. Trump änderte seine Pläne.</div>
+    <div class="link"><a href="https://www.tagesschau.de/ausland/asien/islamabad-iran-gespraeche-100.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>New Israeli strikes reported in Lebanon after Netanyahu orders attacks</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">Lebanese state media reported a series of new Israeli strikes in the country’s south on Saturday night, after attacks earlier in the day killed six people despite a recently extended ceasefire in the war between Israel and Hezbollah. The new attacks followed orders from Israeli Prime Minister Benjam…</div>
+    <div class="link"><a href="https://www.scmp.com/news/world/middle-east/article/3351445/new-israeli-strikes-reported-lebanon-after-netanyahu-orders-attacks?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>Will China’s mathematicians join a global effort to boycott the United States?</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">In the world of mathematics, the United States is becoming an outlier. The International Congress of Mathematicians (ICM) – the world’s most important mathematics conference and the venue for awarding the prestigious Fields Medal – is facing worldwide opposition because the US is hosting this year’s…</div>
+    <div class="link"><a href="https://www.scmp.com/news/china/science/article/3351408/will-chinas-mathematicians-join-global-effort-boycott-united-states?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>Meet Jaafar Jackson, who plays his uncle Michael Jackson in the late star’s biopic</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">Michael Jackson’s nephew Jaafar Jackson is proving to be the perfect person to play his great uncle, as images and clips of him starring in director Antoine Fuqua’s highly anticipated biopic, Michael, came out ahead of the movie’s US premiere on April 24. The 29-year-old, whose starring role in the …</div>
+    <div class="link"><a href="https://www.scmp.com/magazines/style/people/celebrities/article/3351293/meet-jaafar-jackson-who-plays-his-uncle-michael-jackson-late-stars-biopic?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>The stone age: how watchmakers like Rolex, Chopard and Biver have embraced the hardstone dials trend</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">Hardstone dials are everywhere in watchmaking right now. Over the past few years, maisons from Van Cleef & Arpels and Piaget to independent family-owned makers like Biver have embraced slices of lapis, malachite, agate and other natural minerals, drawn to the depth and variation that stone brings to…</div>
+    <div class="link"><a href="https://www.scmp.com/magazines/style/luxury/watches/article/3350853/stone-age-how-watchmakers-rolex-chopard-and-biver-have-embraced-hardstone-dials-trend?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>To be the world No 2 financial centre, Hong Kong must be a rule maker</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">Hong Kong Financial Secretary Paul Chan Mo-po recently said the city could rise to become the world’s No 2 financial centre in 10-15 years. That is the right kind of ambition. In a world being reshaped by geopolitical fragmentation, China’s growing global weight and rapid technological change, Hong …</div>
+    <div class="link"><a href="https://www.scmp.com/opinion/hong-kong-opinion/article/3351042/be-world-no-2-financial-centre-hong-kong-must-be-rule-maker?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>heute journal vom 25. April 2026</h3>
+    <div class="meta">
+        <span>📌 ZDF今日经济</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济</span>
+    </div>
+    <div class="summary">Mit den Themen: Diplomatisches Hin und Her - Iran-Gespräche in Pakistan abgesagt; Keine Kürzungen bei der Rente -Merz für zusätzliche private Vorsorge; Deutschlands älteste Zeugen - Was wir von Uraltbäumen lernen können.</div>
+    <div class="link"><a href="https://www.zdfheute.de/video/heute-journal/heute-journal-vom-25-april-2026-102.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Drittes Playoff-Spiel: Orlando Magic gehen wieder in Führung</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Pistons-Star Cade Cunningham dreht das Spiel im letzten Viertel. Doch Franz Wagner und Paolo Banchiero entscheiden die Partie und bringen Orlando die Führung der Playoff-Runde zurück.</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/sport/mehr-sport/orlando-magic-uebernehmen-fuehrung-gegen-detroit-pistons-200768828.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Donald Trump erneuert Becken am Lincoln Memorial mit Schwimmbadbelag</h3>
+    <div class="meta">
+        <span>📌 明镜周刊</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 政治 · 经济</span>
+    </div>
+    <div class="summary">Einst hielt Martin Luther King hier seine berühmte »I have a Dream«-Rede. Nun verpasst US-Präsident Trump dem Wasserbecken am Lincoln Memorial einen neuen Boden. Und was für einen.</div>
+    <div class="link"><a href="https://www.spiegel.de/ausland/donald-trump-erneuert-becken-am-lincoln-memorial-mit-schwimmbadbelag-a-04f905bf-06db-45a2-85a6-59adda2c58e2#ref=rss" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>3:3 gegen Elversberg: Darmstadt muss den Traum vom Aufstieg wohl begraben</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Darmstadt gibt einen 2:0-Vorsprung aus der Hand. Elversberg kann nach einem 3:3 weiter auf den Aufstieg hoffen.</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/sport/fussball/bundesliga/2-bundesliga-elversberg-spielt-nur-3-3-in-darmstadt-200683036.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>Elle Fanning, Michelle Pfeiffer talk motherhood in Apple TV’s Margo’s Got Money Troubles</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">Michelle Pfeiffer and a toddler named Elle Fanning first crossed paths as screen partners in the early 2000s, in a story that explored matters of adulthood, parenthood, and the value of love and family amid the chaos of life. Fanning was playing a younger version of her sister Dakota, then seven yea…</div>
+    <div class="link"><a href="https://www.scmp.com/lifestyle/entertainment/article/3351234/elle-fanning-michelle-pfeiffer-talk-motherhood-apple-tvs-margos-got-money-troubles?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>Hungary’s Orban won’t take up parliament seat after landslide loss, wants to lead renewal</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">Hungary’s outgoing Prime Minister Viktor Orban said he would not take up his seat in parliament following his party’s landslide defeat in this month’s election but wants to stay on as Fidesz’s leader to lead a process of “renewal”. The most dominant figure in Hungarian politics since the fall of com…</div>
+    <div class="link"><a href="https://www.scmp.com/news/world/europe/article/3351444/hungarys-orban-wont-take-parliament-seat-after-landslide-loss-wants-lead-renewal?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#7f8c8d">
+    <h3>Mexico says alleged CIA agents 'not authorized' to operate on its soil</h3>
+    <div class="meta">
+        <span>📌 德国之声（英语）</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#7f8c8d">政治 · 国际 · 地缘政治</span>
+    </div>
+    <div class="summary">Two US citizens believed to be CIA agents were killed in a car accident following an anti-drug trafficking operation. Mexico says they entered the country as a tourist and a diplomat.</div>
+    <div class="link"><a href="https://www.dw.com/en/mexico-says-alleged-cia-agents-not-authorized-to-operate-on-its-soil/a-76937822?maca=en-rss-en-all-1573-rdf" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Sharon Dodua Otoo: Wenn sich Überleben und Edelmut ausschließen</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Wie viel Gewalt- und Kolonialgeschichte passt in ein paar Stunden auf der Autobahn? Im neuen Roman der Bachmannpreisträgerin Sharon Dodua Otoo, „So, in etwa, ist es geschehen“, fährt die Protagonistin alles an die Wand.</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/feuilleton/buecher/literatur/sharon-dodua-otoos-roman-so-in-etwa-ist-es-geschehen-200761250.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Krieg in der Ukraine: „Stillhalten, melden, am Leben bleiben“</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Fußsoldaten haben im Ukrainekrieg nur noch wenige Aufgaben. Das Töten erledigen Drohnen – wenn das Wetter gut ist. Bei Nebel oder Wind sind die Soldaten gefragt.</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/politik/ukraine/ukrainekrieg-wo-drohnen-alles-beherrschen-200746953.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#7f8c8d">
+    <h3>Rettungsversuch mit "Aquarium" geplant</h3>
+    <div class="meta">
+        <span>📌 德国新闻联播（综合）</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#7f8c8d">政治 · 商业 · 综合</span>
+    </div>
+    <div class="summary">Die Einsatzkräfte der privaten Rettungsinitiative haben ein neues Konzept für die Rettung des vor der Ostsee-Insel Poel gestrandeten Buckelwals erarbeitet. Mecklenburg-Vorpommerns Umweltminister Backhaus gab sein Einverständnis.</div>
+    <div class="link"><a href="https://www.tagesschau.de/inland/regional/mecklenburgvorpommern/ostsee-wal-vor-poel-transport-schute-soll-am-sonntag-eintreffen,wal-180.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>CIA in Mexiko: Verunglückte US-Agenten sollen ohne Erlaubnis gearbeitet haben</h3>
+    <div class="meta">
+        <span>📌 明镜周刊</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 政治 · 经济</span>
+    </div>
+    <div class="summary">Zwei mutmaßliche CIA-Agenten sind nach einer Drogenrazzia in Mexiko bei einem Autounfall ums Leben gekommen. Die dortige Regierung sagt nun: Die Männer seien nicht autorisiert gewesen, an Einsätzen teilzunehmen.</div>
+    <div class="link"><a href="https://www.spiegel.de/ausland/cia-in-mexiko-verunglueckte-us-agenten-sollen-ohne-erlaubnis-gearbeitet-haben-a-b3f1f0ae-fc1f-4a82-85f5-f5da21109208#ref=rss" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#2c3e50">
+    <h3>Orbán relinquishes seat in Hungary’s parliament</h3>
+    <div class="meta">
+        <span>📌 政客（欧洲版）</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#2c3e50">欧盟 · 政治 · 贸易</span>
+    </div>
+    <div class="summary">Outgoing prime minister plans to seek reelection as party leader in a vote scheduled for June.</div>
+    <div class="link"><a href="https://www.politico.eu/article/orban-relinquishes-seat-in-hungarys-parliament/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#7f8c8d">
+    <h3>40 Jahre Tschernobyl: Die Spuren einer Katastrophe</h3>
+    <div class="meta">
+        <span>📌 德国新闻联播（综合）</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#7f8c8d">政治 · 商业 · 综合</span>
+    </div>
+    <div class="summary">Mehr als 1.000 Kilometer liegen zwischen Deutschland und Tschernobyl in der heutigen Ukraine. Trotz dieser Entfernung: Der Atomunfall von 1986 lebt auch hier nach. Was hat sich seitdem verändert? Von Dominik Bartoschek.</div>
+    <div class="link"><a href="https://www.tagesschau.de/wissen/technologie/tschernobyl-40-jahre-100.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#7f8c8d">
+    <h3>Was vor 40 Jahren in Tschernobyl passierte</h3>
+    <div class="meta">
+        <span>📌 德国新闻联播（综合）</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#7f8c8d">政治 · 商业 · 综合</span>
+    </div>
+    <div class="summary">Die Explosion im Atomkraftwerk in Tschernobyl vor 40 Jahren schockierte die Welt. In vielen Ländern spürten die Menschen die Folgen. Warum kam es zum Super-GAU? Welche Rolle spielte der Wind? Wie viele Menschen waren betroffen?</div>
+    <div class="link"><a href="https://www.tagesschau.de/wissen/technologie/40-jahre-tschernobyl-hintergrund-100.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Ukraine-Krieg: Acht Tote nach stundenlangen Angriffen auf Dnipro</h3>
+    <div class="meta">
+        <span>📌 明镜周刊</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 政治 · 经济</span>
+    </div>
+    <div class="summary">Bei massiven russischen Luftangriffen auf die ostukrainische Stadt Dnipro sind mindestens acht Menschen getötet und Dutzende verletzt worden. Auch in anderen Regionen kam es zu weiteren Opfern durch Drohnenangriffe.</div>
+    <div class="link"><a href="https://www.spiegel.de/ausland/ukraine-krieg-acht-tote-nach-stundenlangen-angriffen-auf-dnipro-a-9d671b5c-8909-40a7-8c30-c590e6322323#ref=rss" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>NFL-Draft: Marlin Klein wird von den Houston Texans ausgewählt</h3>
+    <div class="meta">
+        <span>📌 明镜周刊</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 政治 · 经济</span>
+    </div>
+    <div class="summary">Bei der Auswahl neuer Spieler für die beste American-Football-Liga der Welt wurde Marlin Klein von den Houston Texans verpflichtet. In der NFL will er sich nun einen Namen machen: »Das hier ist erst der Anfang«, verspricht der 23-Jährige.</div>
+    <div class="link"><a href="https://www.spiegel.de/sport/american-football/nfl-draft-marlin-klein-wird-von-den-houston-texans-ausgewaehlt-a-97be0bf9-4df1-4629-ad07-e8e26df77707#ref=rss" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Gesundheitsrisiko: Ärzte fordern Steuer auf zuckerhaltige Getränke</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Ärzte und Foodwatch fordern eine Zuckersteuer. Widerstand kommt aus der Wirtschaft. Wie handelt die Koalition?</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/wirtschaft/mehr-wirtschaft/aerzte-fordern-steuer-auf-zuckerhaltige-getraenke-200768648.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#7f8c8d">
+    <h3>Bayern-Frauen punkten im Halbfinal-Krimi</h3>
+    <div class="meta">
+        <span>📌 德国新闻联播（综合）</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#7f8c8d">政治 · 商业 · 综合</span>
+    </div>
+    <div class="summary">Im Halbfinal-Hinspiel der Champions League lag der FC Bayern München gegen den FC Barcelona lange zurück. Franziska Kett konnte in einem dramatischen Spiel den 1:1-Ausgleich erzielen, bevor sie zur tragischen Heldin wurde.</div>
+    <div class="link"><a href="https://www.sportschau.de/regional/br/br-rot-fuer-kett-dramatisches-remis-der-fcb-frauen-gegen-barca-102.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Fußball-Bundesliga: Hamburger SV unterliegt TSG Hoffenheim und kommt dennoch dem Klassenerhalt näher</h3>
+    <div class="meta">
+        <span>📌 明镜周刊</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 政治 · 经济</span>
+    </div>
+    <div class="summary">Der Hamburger SV taumelt dem Saisonende entgegen, hält aber den Vorsprung auf den Relegationsplatz. Die Niederlage gegen die TSG Hoffenheim war der sechste sieglose Auftritt des Aufsteigers in Folge.</div>
+    <div class="link"><a href="https://www.spiegel.de/sport/fussball/fussball-bundesliga-hamburger-sv-unterliegt-tsg-hoffenheim-und-kommt-dennoch-dem-klassenerhalt-naeher-a-a5cf6cbf-28de-4c38-b000-9cd0d86bbd4d#ref=rss" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#7f8c8d">
+    <h3>Sieg beim HSV: Hoffenheim hofft weiter auf Champions League</h3>
+    <div class="meta">
+        <span>📌 德国新闻联播（综合）</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#7f8c8d">政治 · 商业 · 综合</span>
+    </div>
+    <div class="summary">Mit dem Auswärtssieg in Hamburg rücken die Hoffenheimer zumindest vorübergehend auf Platz vier und machen so die Tür in Richtung Champions-League-Qualifikation einen Spalt weiter auf.</div>
+    <div class="link"><a href="https://www.sportschau.de/fussball/bundesliga/hoffenheim-kann-weiter-auf-champions-league-hoffen,spielbericht-hamburger-sv-tsg-hoffenheim-100.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Nur 1:1 in Augsburg: Rieras Wunsch und Eintrachts Wirklichkeit</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Der Frankfurter Trainer Riera stellt ein besonders sehenswertes Spiel seiner Mannschaft in Aussicht. Doch die Realität kann mit seiner verheißungsvollen Vorhersage abermals nicht mithalten.</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/sport/rhein-main-sport/eintracht-frankfurt/nur-1-1-in-augsburg-rieras-wunsch-und-eintrachts-wirklichkeit-accg-200697045.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#7f8c8d">
+    <h3>Schweden: Atomkraft - ja, bitte</h3>
+    <div class="meta">
+        <span>📌 德国新闻联播（综合）</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#7f8c8d">政治 · 商业 · 综合</span>
+    </div>
+    <div class="summary">Schwedens Regierung hält Atomkraft für unverzichtbar, um den Energiebedarf des Landes klimaschonend zu decken. In den nächsten Jahren sollen neue Reaktoren entstehen. Doch gegen die Pläne gibt es auch Widerstand. Von Jana Sinram.</div>
+    <div class="link"><a href="https://www.tagesschau.de/ausland/europa/schweden-atomkraft-100.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>1:2 gegen Hoffenheim: HSV misslingt Befreiungsschlag</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Der Hamburger SV verpasst es, sich im Abstiegskampf in Sicherheit zu bringen. Die TSG Hoffenheim erweist sich im Abendspiel als cleverer.</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/sport/fussball/bundesliga/fussball-bundesliga-hsv-misslingt-befreiungsschlag-im-abstiegskampf-200697068.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Deutscher Trainer in der NHL: Marco Sturms besonderer Anspruch</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Als erster deutscher Cheftrainer in der NHL steht Marco Sturm unter dem Druck, sich und anderen etwas beweisen zu müssen. Ein erstes Ziel hat er mit den Boston Bruins schon erreicht.</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/sport/wintersport/eishockey-was-sich-trainer-marco-sturm-in-der-nhl-beweisen-muss-200765227.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>Roommate charged with murder of 2 Bangladeshi PhD students in US</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">A former University of South Florida student has been charged with killing his roommate and the roommate’s girlfriend – two doctoral students from Bangladesh who disappeared earlier this month, authorities said Saturday. Hisham Abugharbieh, 26, is facing two counts of premeditated murder in the firs…</div>
+    <div class="link"><a href="https://www.scmp.com/news/world/united-states-canada/article/3351443/roommate-charged-murder-2-bangladeshi-phd-students-us?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Abschied von Tim Cook: Apple gewinnt auch ohne KI</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Apple scheint im Rennen um die Künstliche Intelligenz abgehängt. Das ist ein Fehlschluss. Unter dem neuen Chef John Ternus könnte es zum großen Gewinner des KI-Booms werden.</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/wirtschaft/apple-wie-john-ternus-den-ki-boom-nutzt-200762999.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Veltins-Arena: Reinigungskraft findet Leiche in Schalke-Stadion</h3>
+    <div class="meta">
+        <span>📌 明镜周刊</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 政治 · 经济</span>
+    </div>
+    <div class="summary">Ein Mann ging im Schalke-Stadion auf die Toilette und kam nicht wieder heraus – und niemand bemerkte es. Am nächsten Tag fand ihn eine Putzkraft. Der Fußballverein zeigt sich bestürzt.</div>
+    <div class="link"><a href="https://www.spiegel.de/panorama/veltins-arena-reinigungskraft-findet-leiche-in-schalke-stadion-a-7fd01197-b333-439b-affc-7be2e277758f#ref=rss" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Ukraine: Historiker Eckart Conze über Wege zu Frieden und Kriegsende</h3>
+    <div class="meta">
+        <span>📌 明镜周刊</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 政治 · 经济</span>
+    </div>
+    <div class="summary">Wie man Kriege beendet und zu Frieden kommt, hat der Historiker Eckart Conze anhand deutscher Erfahrungen seit dem Dreißigjährigen Krieg untersucht. Was bedeutet das für den Krieg in der Ukraine?</div>
+    <div class="link"><a href="https://www.spiegel.de/geschichte/ukraine-historiker-eckart-conze-ueber-wege-zu-frieden-und-kriegsende-a-810fddfa-c18d-48b1-abbb-808167dd93e7#ref=rss" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Libanon: Waffenruhe brüchig – neue Tote trotz verlängerter Feuerpause</h3>
+    <div class="meta">
+        <span>📌 明镜周刊</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 政治 · 经济</span>
+    </div>
+    <div class="summary">Trotz der von Donald Trump vermittelten Feierpause hat es im Libanon erneut einen tödlichen israelischen Angriff gegeben. Vier Menschen starben. Israel zufolge handelte es sich dabei um Mitglieder der Hisbollah.</div>
+    <div class="link"><a href="https://www.spiegel.de/ausland/libanon-waffenruhe-bruechig-neue-tote-trotz-verlaengerter-feuerpause-a-edf91a38-6f44-4bc9-8389-2c4c368455b2#ref=rss" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Women's Champions League: FC Bayern München remis gegen FC Barcelona</h3>
+    <div class="meta">
+        <span>📌 明镜周刊</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 政治 · 经济</span>
+    </div>
+    <div class="summary">Als der FC Bayern seine Zurückhaltung aufgibt, wird das Halbfinalhinspiel der Women's Champions League eine aufregende Partie. In Barcelona müssen die Münchnerinnen allerdings auf ihre Beste und den Trainer verzichten.</div>
+    <div class="link"><a href="https://www.spiegel.de/sport/fussball/womens-champions-league-fc-bayern-muenchen-remis-gegen-fc-barcelona-a-b5596117-47c9-43d1-93ed-aaa463a071f4#ref=rss" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Tennis in Madrid: Zverev meistert Schwächephase</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Zwei Sätze „großartiges Tennis“, der Satz dazwischen dagegen „schrecklich“. Alexander Zverev zeigt sich mit seinem Auftaktspiel in Madrid nur zu zwei Dritteln zufrieden.</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/sport/mehr-sport/tennis-zverev-meistert-schwaechephase-bei-turnierauftakt-in-madrid-200768659.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#7f8c8d">
+    <h3>Iran-Krieg verschärft Krise im afrikanischen Luftverkehr</h3>
+    <div class="meta">
+        <span>📌 德国之声（德语）</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#7f8c8d">政治 · 商业 · 国际</span>
+    </div>
+    <div class="summary">Durch den Iran-Krieg steigen die Preise für Flugbenzin. Das zwingt afrikanische Fluggesellschaften, ihre Ticketpreise anzuheben, Flüge zu streichen und ihren Betrieb neu zu überdenken.</div>
+    <div class="link"><a href="https://www.dw.com/de/iran-krieg-verschärft-krise-im-afrikanischen-luftverkehr/a-76920709?maca=de-rss-de-all-1119-xml-mrss" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#7f8c8d">
+    <h3>Palästinensergebiete: Wählen unter besonderen Umständen</h3>
+    <div class="meta">
+        <span>📌 德国新闻联播（综合）</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#7f8c8d">政治 · 商业 · 综合</span>
+    </div>
+    <div class="summary">Wahlen in den Palästinensergebieten sind eine Seltenheit. Heute durften mehr als eine Million Menschen ihre kommunalen Vertreter bestimmen - auch in einer Stadt im Gazastreifen. Was das für die Menschen bedeutet, berichtet Lissy Kaufmann.</div>
+    <div class="link"><a href="https://www.tagesschau.de/ausland/asien/kommunalwahl-westjordanland-100.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>König von Dänemark reist mit Sirius-Schlittenpatrouille durch Grönland</h3>
+    <div class="meta">
+        <span>📌 明镜周刊</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 政治 · 经济</span>
+    </div>
+    <div class="summary">Gleich mehrere Tage war König Frederik X. von Dänemark mit Elitesoldaten und ihren Hundeschlitten auf Grönland unterwegs. Er schwärmte vom »Rausch der Natur« – und reagierte gleichzeitig vielleicht auch noch auf Donald Trump.</div>
+    <div class="link"><a href="https://www.spiegel.de/panorama/leute/koenig-von-daenemark-reist-mit-sirius-schlittenpatrouille-durch-groenland-a-12eb9c86-9b8d-4b43-b314-d687e673e7dd#ref=rss" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Marokkos Küche: Der Geschmack des Schmelztiegels</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Die Medina von Fès ist eine perfekte Bühne für die marokkanische Küche.</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/reise/koenigsstadt-fes-marokko-fuer-geniesser-200733299.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Goethe lieben Lernen: Er will gelesen werden, nicht gelesen sein</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Was die meisten Deutschlehrer vermissen lassen, liefert Gustav Seibt: ansteckende Begeisterung für Goethe. Mit seinem Buch „Ein Sommer mit Goethe“ macht er Werbung für den Nationaldichter.</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/feuilleton/buecher/goethe-verfuehrung-gustav-seibts-wege-zur-lektuere-des-werks-200764392.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#7f8c8d">
+    <h3>Iran-Krieg als neue Machtprobe zwischen Trump und Kongress</h3>
+    <div class="meta">
+        <span>📌 德国之声（德语）</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#7f8c8d">政治 · 商业 · 国际</span>
+    </div>
+    <div class="summary">Nur 60 Tage lang darf ein US-Präsident einen Militäreinsatz ohne Zustimmung des Kongresses befehligen - diese Frist endet am 1. Mai. Es gibt mehrere Szenarien, wie Präsident Donald Trump trotzdem weitermachen könnte.</div>
+    <div class="link"><a href="https://www.dw.com/de/iran-krieg-als-neue-machtprobe-zwischen-trump-und-kongress/a-76925856?maca=de-rss-de-all-1119-xml-mrss" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Geldanlage in unsicheren Zeiten: Für Privatanleger ist Handeln angesagt</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Der Ölpreis ist das Barometer der Märkte. Doch er taugt nicht zur langfristigen Neubewertung der eigenen Anlageziele.</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/wirtschaft/die-neuvermessung-des-risikos-200761135.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Siedler im Westjordanland: Sie attackieren mit Reizgas und Pfefferspray</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Im Westjordanland greifen radikale Siedler zu immer drastischeren Methoden. Selbst jüdische Aktivisten, die Palästinenser schützen wollen, werden mittlerweile gezielt angegriffen. Die Polizei tut nichts.</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/politik/ausland/westjordanland-gewalt-israelischer-siedler-eskaliert-200748807.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>JD Vance und der Vatikan: Wie der US-Vize im Katholiken-Kampf gegen den Papst scheiterte</h3>
+    <div class="meta">
+        <span>📌 明镜周刊</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 政治 · 经济</span>
+    </div>
+    <div class="summary">Bei der US-Rechten gilt das Katholische schon länger als schick. Doch nach dem verlorenen Konflikt mit dem Vatikan bemerkt nicht nur der US-Vizepräsident, dass er in einen Club eingetreten ist, dessen Regeln er nicht versteht.</div>
+    <div class="link"><a href="https://www.spiegel.de/kultur/jd-vance-und-der-vatikan-wie-der-us-vize-im-katholiken-kampf-gegen-den-papst-scheiterte-a-e41b9f29-9e27-4722-b289-a36a5afc7af4#ref=rss" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Mali: Dschihadisten starten schwerste koordinierte Angriffe seit Jahren</h3>
+    <div class="meta">
+        <span>📌 明镜周刊</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 政治 · 经济</span>
+    </div>
+    <div class="summary">Das Haus des Verteidigungsministers? Zerstört. Der wichtigste Militärstützpunkt? Unter Beschuss. Malis Junta ringt seit Jahren mit Islamisten und anderen Aufständischen. Nun haben sie im ganzen Land angegriffen.</div>
+    <div class="link"><a href="https://www.spiegel.de/ausland/mali-dschihadisten-starten-schwerste-koordinierte-angriffe-seit-jahren-a-ddbdc85d-9028-4c12-ba4b-9169676c904a#ref=rss" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Elif Eralp will Kai Wegner ablösen – mit ein bisschen Law and Order von links</h3>
+    <div class="meta">
+        <span>📌 明镜周刊</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 政治 · 经济</span>
+    </div>
+    <div class="summary">Die Linke Elif Eralp will Berlin regieren und tritt an mit dem Kampf gegen überteuerte Mieten und den Müll auf den Straßen. Ihre eigene Partei bleibt ein Risiko.</div>
+    <div class="link"><a href="https://www.spiegel.de/politik/deutschland/elif-eralp-will-kai-wegner-abloesen-mit-ein-bisschen-law-and-order-von-links-a-be27b163-5623-4c44-a020-4ffa16854ad3#ref=rss" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>Trump cancels envoys’ trip to Pakistan for peace talks</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">In the latest move as the US and Iran circle each other warily and the world holds its breath, US President Donald Trump on Saturday ordered his negotiating team not to travel to Pakistan for talks on ending the eight-week war that has upended the global economy. Trump told his son-in-law Jared Kush…</div>
+    <div class="link"><a href="https://www.scmp.com/news/china/diplomacy/article/3351442/trump-cancels-envoys-trip-pakistan-peace-talks?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Heizungsgesetz: Bauministerin Hubertz will Vermieter an Wärmekosten beteiligen</h3>
+    <div class="meta">
+        <span>📌 明镜周刊</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 政治 · 经济</span>
+    </div>
+    <div class="summary">Bauministerin Verena Hubertz will Mieter vor steigenden Energiekosten schützen und Vermieter bei Gas- und Ölheizungen in die Pflicht nehmen. Kritik kommt aus der Union, die negative Folgen für den Wohnungsmarkt befürchtet.</div>
+    <div class="link"><a href="https://www.spiegel.de/politik/deutschland/heizungsgesetz-bauministerin-hubertz-will-vermieter-an-waermekosten-beteiligen-a-ec669a37-7f9f-4b12-ad66-27b7392b0f91#ref=rss" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Iran: Masoud Pezeshkian ruft zum Stromsparen auf</h3>
+    <div class="meta">
+        <span>📌 明镜周刊</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 政治 · 经济</span>
+    </div>
+    <div class="summary">In Iran ist der Strom knapp. Der Präsident des Landes bittet nun die Bevölkerung, den Konsum einzuschränken. Darüber, was zu den Engpässen geführt hat, sind sich Regime und Experten nicht einig.</div>
+    <div class="link"><a href="https://www.spiegel.de/ausland/was-spricht-dagegen-irans-praesident-ruft-zum-stromsparen-auf-a-4ffc6c74-a771-4f04-8a0e-53b0c1050c32#ref=rss" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Rolling Stone & Co.: „Unsere Redakteure sind eigentlich selbst Popstars“</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">„Rolling Stone“, „Musikexpress“ und „Metal-Hammer“ sind Deutschlands wohl bekannteste Musikmagazine – und gedruckt weiterhin gefragt. Wie sieht ihre Zukunft im Zeitalter von KI aus? Ein Treffen mit Verlegerin Petra Kalb</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/wirtschaft/unternehmen/rolling-stone-verlegerin-unsere-redakteure-sind-selbst-popstars-accg-200729969.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#2c3e50">
+    <h3>Trump abruptly cancels Kushner-Witkoff Pakistan trip for Iran peace talks</h3>
+    <div class="meta">
+        <span>📌 政客（欧洲版）</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#2c3e50">欧盟 · 政治 · 贸易</span>
+    </div>
+    <div class="summary">The U.S. president cited “too much time wasted” and confusion in Tehran’s leadership for scrapping the planned meeting in Islamabad.</div>
+    <div class="link"><a href="https://www.politico.com/news/2026/04/25/trump-abruptly-cancels-kushner-witkoff-pakistan-trip-00892033?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>ZDF heute Sendung vom 25. April 2026</h3>
+    <div class="meta">
+        <span>📌 ZDF今日经济</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济</span>
+    </div>
+    <div class="summary">Mit folgenden Themen: Merz: Keine Kürzungen bei gesetzlicher Rente; Keine Iran-USA-Gespräche in Pakistan; Schwere Luftangriffe auf die Ukraine; weiteren Nachrichten, dem Sport und dem Wetter.</div>
+    <div class="link"><a href="https://www.zdfheute.de/video/heute-nachrichten/heute-19-uhr-vom-25-april-2026-100.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>F.A.Z.-Ausstellungskalender: Welches Museum zeigt was im Mai?</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Macht durch Haarpracht in München, Alex Katz in Tübingen und Rom aus Sicht des Romantikers Friedrich Nerly in Bremen: Der kuratierte Ausstellungskalender des F.A.Z.-Feuilletons für Mai 2026.</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/feuilleton/kunst-und-architektur/ausstellung/diese-ausstellungen-sind-im-mai-2026-besonders-bewundernswert-accg-200757835.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Rhein-Main-Liveblog: Odenwald: Fünf Schwerverletzte nach Frontalzusammenstoß</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Was ist los in Frankfurt & Hessen? Lesen Sie aktuelle News & Nachrichten im News-Ticker von heute ► Was heute wichtig ist, erfahren Sie bei der F.A.Z.</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/rhein-main/odenwald-fuenf-schwerverletzte-nach-frontalzusammenstoss-aktuelle-nachrichten-aus-frankfurt-hessen-faz-19735361.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Frankfurter Osthafen: Auto stürzt in den Main – Achtzehnjähriger gestorben</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Ein vollbesetztes Auto stürzt in Frankfurt in den Main und sinkt auf den Grund. Ein 18 Jahre alter Fahrzeuginsasse stirbt, eine Siebzehnjährige kämpft weiter um ihr Leben.</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/rhein-main/frankfurt/frankfurt-auto-stuerzt-in-den-main-18-jahre-alter-fahrzeuginsasse-stirbt-accg-200767648.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>4:3 nach 0:3 in mainz: Unwiderstehliche Aufholjagd der Bayern</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Einen solchen Spielverlauf zeigten die Bayern in der Bundesliga zuletzt vor 50 Jahren: Nach 0:3-Rückstand zur Pause gelingt den Münchnern eine spektakuläre Wende in Mainz.</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/sport/fussball/bundesliga/4-3-nach-0-3-unwiderstehliche-aufholjagd-der-bayern-in-mainz-accg-200697035.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Hannover: Der korrupte Staatsanwalt und die Drogenbande - SPIEGEL TV</h3>
+    <div class="meta">
+        <span>📌 明镜周刊</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 政治 · 经济</span>
+    </div>
+    <div class="summary">Für die Drogenbande war es wie ein Jackpot. Sie hatte es geschafft, einen Staatsanwalt zu bestechen. Der gab daraufhin geheime Informationen preis: Einsatzpläne der Polizei oder geplante Razzien.</div>
+    <div class="link"><a href="https://www.spiegel.de/panorama/justiz/hannover-der-korrupte-staatsanwalt-und-die-drogenbande-spiegel-tv-a-1d85aae9-533c-436f-914b-f53cb902e6a8#ref=rss" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#2c3e50">
+    <h3>Judge signals trouble for Trump’s $10B lawsuit against the IRS</h3>
+    <div class="meta">
+        <span>📌 政客（欧洲版）</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#2c3e50">欧盟 · 政治 · 贸易</span>
+    </div>
+    <div class="summary">Court sets May hearing on whether president can sue the government he oversees.</div>
+    <div class="link"><a href="https://www.politico.com/news/2026/04/24/trump-lawsuit-irs-00891894?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#7f8c8d">
+    <h3>UK-US ties tested: Britain courts Trump with King Charles</h3>
+    <div class="meta">
+        <span>📌 德国之声（英语）</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#7f8c8d">政治 · 国际 · 地缘政治</span>
+    </div>
+    <div class="summary">On a state visit to the US, the British monarch is being deployed to help steady increasingly strained US-UK relations. Can King Charles help repair the damaged so-called "special relationship?"</div>
+    <div class="link"><a href="https://www.dw.com/en/uk-us-ties-tested-britain-courts-trump-with-king-charles/a-76928978?maca=en-rss-en-all-1573-rdf" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Koalitionen in Frankfurt: Nicht ohne den Lieblingspartner</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Grüne und Volt wollen in Frankfurt nur gemeinsam regieren. Solche Verbindungen von Lieblingspartnern gab es in Frankfurt immer wieder mal. Nicht immer ging es gut.</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/rhein-main/frankfurt/frankfurt-diese-koalitionen-haben-seit-2001-zusammengearbeitet-accg-200762393.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Iran-Krieg: Donald Trump schickt Steve Witkoff und Jared Kushner nicht nach Pakistan</h3>
+    <div class="meta">
+        <span>📌 明镜周刊</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 政治 · 经济</span>
+    </div>
+    <div class="summary">Im Ringen um ein Ende des Golfkriegs hat US-Präsident Donald Trump die Reise seines Sondergesandten und seines Schwiegersohns gecancelt. Auch Irans Außenminister Abbas Araghchi hat Islamabad verlassen.</div>
+    <div class="link"><a href="https://www.spiegel.de/ausland/iran-krieg-donald-trump-schickt-steve-witkoff-und-jared-kushner-nicht-nach-pakistan-a-57820950-af6b-46ba-9035-706026e9ef50#ref=rss" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Offizieller Foto-Fake: US-Botschaft retuschiert unliebsamen Gala-Gast weg</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Die US-Botschaft in Luxemburg verbreitet ein Foto, auf dem bei einem Empfang mit der Staatsspitze ein Mann ohne Arm und Schulter zu sehen ist. Fehlt da was? Aber ja, da wurde jemand wegretuschiert. Wer und warum?</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/feuilleton/medien-und-film/medienpolitik/us-botschaft-in-luxemburg-verbreitet-offiziellen-foto-fake-accg-200768238.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Liveblog Irankrieg: Trump sagt Reise von Unterhändlern zu Iran-Gesprächen ab</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">US-Präsident: Iran kann jederzeit anrufen +++ Iranischer Außenminister verlässt Islamabad nach Gesprächen mit Vertretern Pakistans +++ Deutscher Minensucher ins Mittelmeer verlegt +++ alle Entwicklungen im Liveblog</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/politik/ausland/liveblog-iran-krieg-trump-sagt-reise-von-unterhaendlern-zu-iran-gespraechen-ab-faz-200583539.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#7f8c8d">
+    <h3>Bayern nicht zu stoppen - Sieg in Mainz trotz 0:3-Rückstand</h3>
+    <div class="meta">
+        <span>📌 德国新闻联播（综合）</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#7f8c8d">政治 · 商业 · 综合</span>
+    </div>
+    <div class="summary">Eine Halbzeit lang zeigte der FC Bayern, dass die Priorität auf dem Champions-League-Halbfinale gegen PSG liegt - doch auch drei Gegentore hielten die Münchner nicht von einem Sieg bei Mainz 05 ab.</div>
+    <div class="link"><a href="https://www.sportschau.de/fussball/bundesliga/auch-bei-03-rueckstand-fc-bayern-gewinnt-einfach-immer,spielbericht-fsv-mainz-bayern-muenchen-112.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Malizia-Crewmitglied gestorben: Boris Herrmanns Segelteam trauert</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Ein Mitsegler des Forschungsschiffs „Malizia Explorer“ ist nach Angaben des Teams von Boris Herrmann vor der brasilianischen Küste im Wasser ums Leben gekommen.</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/sport/mehr-sport/crewmitglied-der-malizia-gestorben-boris-herrmanns-segelteam-trauert-accg-200768478.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Aufsichtsratschef: „Bosch muss sich wandeln – sogar noch schneller als bisher“</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Der Konzern steckt in der Krise. Nicht nur die Autosparte hat Probleme. Der Vorsitzende des Aufsichtsrats spricht nun darüber, wie nötig ein hohes Veränderungstempo ist und wie „schmerzhaft“ mancher Schritt wird.</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/wirtschaft/unternehmen/bosch-muss-sich-wandeln-sogar-noch-schneller-als-bisher-accg-200762310.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Beamtenbesoldung: Rechner zeigt, wie viel Bundesbeamte der Ordnung A künftig verdienen</h3>
+    <div class="meta">
+        <span>📌 明镜周刊</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 政治 · 经济</span>
+    </div>
+    <div class="summary">Die meisten Bundesbeamten sollen mehr Geld bekommen, so sieht es ein Referentenentwurf aus dem Innenministerium vor. Wie viel kann jede und jeder Einzelne erwarten? Unser Rechner zur A-Besoldung zeigt es Ihnen.</div>
+    <div class="link"><a href="https://www.spiegel.de/politik/deutschland/beamtenbesoldung-rechner-zeigt-wie-viel-bundesbeamte-der-ordnung-a-kuenftig-verdienen-a-18d4cc03-e75b-4534-ba3d-7554d930c112#ref=rss" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#7f8c8d">
+    <h3>Sieg gegen St. Pauli: Heidenheim hält Hoffnung am Leben</h3>
+    <div class="meta">
+        <span>📌 德国新闻联播（综合）</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#7f8c8d">政治 · 商业 · 综合</span>
+    </div>
+    <div class="summary">Mit einer Niederlage gegen St. Pauli wäre der 1. FC Heidenheim aus der Bundesliga abgestiegen. Doch jetzt ist der Klassenerhalt wieder Thema.</div>
+    <div class="link"><a href="https://www.sportschau.de/fussball/bundesliga/heidenheim-haelt-fuenkchen-hoffnung-am-leben,spielbericht-heidenheim-st-pauli-100.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Private Rettung: Helfer dürfen neuen Rettungsversuch für Buckelwal starten</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Eine private Initiative will den gestrandeten Buckelwal über 400 Kilometer verlegen. Das Land Mecklenburg-Vorpommern duldet den Plan. Was genau geplant ist.</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/gesellschaft/tiere/buckelwal-aufwendiger-transport-fuer-timmy-geplant-accg-200767691.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>FC Bayern München dreht unglaubliche Partie beim FSV Mainz 05 nach Drei-Tore-Rückstand</h3>
+    <div class="meta">
+        <span>📌 明镜周刊</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 政治 · 经济</span>
+    </div>
+    <div class="summary">Erstmals seit 1976 gewinnen die Münchner noch nach einem Drei-Tore-Rückstand zur Halbzeit. In Wolfsburg ist ein Platzverweis der Höhepunkt und der 1. FC Heidenheim schöpft plötzlich wieder Hoffnung. Der Spieltag in der Übersicht.</div>
+    <div class="link"><a href="https://www.spiegel.de/sport/fussball/fc-bayern-muenchen-dreht-unglaubliche-partie-beim-fsv-mainz-05-nach-drei-tore-rueckstand-a-7c6ab62c-0340-44a7-b05c-ac998dc79377#ref=rss" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Indien: In Delhi fährt der wohl pünktlichste Zug der Deutschen Bahn</h3>
+    <div class="meta">
+        <span>📌 明镜周刊</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 政治 · 经济</span>
+    </div>
+    <div class="summary">Die Pendler in der indischen Hauptstadt Delhi lieben die Deutsche Bahn. Warum hat das Unternehmen ausgerechnet in Indien Erfolg?</div>
+    <div class="link"><a href="https://www.spiegel.de/ausland/indien-hier-faehrt-der-wohl-puenktlichste-zug-der-deutschen-bahn-a-63321206-c057-47aa-bf7a-ce9d9016a324#ref=rss" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Anne Hathaway sagt beiläufig »Inschallah« und trifft damit einen Nerv in der muslimischen Welt</h3>
+    <div class="meta">
+        <span>📌 明镜周刊</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 政治 · 经济</span>
+    </div>
+    <div class="summary">Der Hollywoodstar sagt beiläufig ein arabisches Wort – und löst einen Begeisterungssturm aus. Warum ein Begriff, der im Westen oft belächelt wird und in Familienchats zur Floskel verkommen ist, plötzlich gefeiert wird.</div>
+    <div class="link"><a href="https://www.spiegel.de/ausland/anne-hathaway-sagt-beilaeufig-inschallah-und-trifft-damit-einen-nerv-in-der-muslimischen-welt-a-34427d24-f6d2-4a6f-98ca-d278b7e9bbc2#ref=rss" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#7f8c8d">
+    <h3>Bundesregierung sieht Russland hinter Phishing-Attacke über Signal</h3>
+    <div class="meta">
+        <span>📌 德国新闻联播（综合）</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#7f8c8d">政治 · 商业 · 综合</span>
+    </div>
+    <div class="summary">Die Messenger-App Signal ist bei vielen Menschen beliebt, denen Privatsphäre wichtig ist. Nun gibt es eine große Phishing-Attacke, von der offenbar auch Bundesminister betroffen sind. Die Hinweise auf den Urheber verdichten sich. Von Philipp Eckstein.</div>
+    <div class="link"><a href="https://www.tagesschau.de/inland/innenpolitik/signal-phishing-attacke-bundesregierung-100.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Katholische Kirche: Bischof Bätzing widerspricht Papst nach Kritik an Segnungsfeiern für Homosexuelle</h3>
+    <div class="meta">
+        <span>📌 明镜周刊</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 政治 · 经济</span>
+    </div>
+    <div class="summary">Bischof Georg Bätzing wehrt sich gegen die Kritik von Papst Leo. Es gebe keinen Grund, die queere Segnungsfeier zurückzunehmen. Anders reagiert Kardinal Rainer Maria Woelki.</div>
+    <div class="link"><a href="https://www.spiegel.de/panorama/katholische-kirche-bischof-baetzing-widerspricht-papst-nach-kritik-an-segnungsfeiern-fuer-homosexuelle-a-4b4b1e9f-73bd-429c-ad82-c84ffc5d1c64#ref=rss" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#7f8c8d">
+    <h3>Wie die Ukraine ihr Energiesystem im Krieg umbaut</h3>
+    <div class="meta">
+        <span>📌 德国之声（德语）</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#7f8c8d">政治 · 商业 · 国际</span>
+    </div>
+    <div class="summary">Seit der Tschernobyl-Katastrophe lebt die Ukraine mit den Folgen eines nuklearen GAU. Nun, da Russland das Stromnetz angreift, ist das Land diesem Risiko erneut ausgesetzt. Andere Energieformen werden zur Lebensader.</div>
+    <div class="link"><a href="https://www.dw.com/de/wie-die-ukraine-ihr-energiesystem-im-krieg-umbaut/a-76928748?maca=de-rss-de-all-1119-xml-mrss" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>Pope Leo urges worldwide abolition of death penalty</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">Pope Leo has called for the worldwide abolition of the death penalty on Saturday, a day after the US administration mulled expanding the penalty. “The dignity of the person is not lost even after very serious crimes are committed,” Leo said in a video message marking the 15th anniversary of the abol…</div>
+    <div class="link"><a href="https://www.scmp.com/news/world/europe/article/3351441/pope-leo-urges-worldwide-abolition-death-penalty?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>Photo of labourer smoking on scaffolding triggers anger after Tai Po blaze</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">An image of a Hong Kong construction worker smoking a cigarette while on bamboo scaffolding at a residential building has prompted outrage among internet users, who have drawn comparisons with the suspected cause of the city’s deadliest fire in decades. An image shared on a Facebook page called the …</div>
+    <div class="link"><a href="https://www.scmp.com/news/hong-kong/society/article/3351440/photo-labourer-smoking-scaffolding-triggers-anger-after-tai-po-blaze?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Rentendebatte: Boris Rhein: Reformen dürfen arbeitende Mitte nicht belasten</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Hessens Ministerpräsident Boris Rhein mahnt bei den geplanten Reformen Augenmaß und Empathie an. Die arbeitende Mitte dürfe nicht durch Einschnitte belastet werden.</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/rhein-main/region-und-hessen/boris-rhein-zu-rentendebatte-reformen-duerfen-arbeitende-mitte-nicht-belasten-accg-200768425.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>New entry system for non-EU residents is chipping away at Europe’s image</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">The appeal of a trip to Europe, to gaze at historic landmarks like the Eiffel Tower, to ski in the Alps or sunbathe on a Greek beach, is well known to travellers. One of the attractions has long been the ease with which borders can be crossed. But while the war in Iran has disrupted travel around th…</div>
+    <div class="link"><a href="https://www.scmp.com/opinion/article/3351439/new-entry-system-non-eu-residents-chipping-away-europes-image?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#7f8c8d">
+    <h3>40 Jahre Tschernobyl: Unterwegs in den Ruinen von Prypjat</h3>
+    <div class="meta">
+        <span>📌 德国之声（德语）</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#7f8c8d">政治 · 商业 · 国际</span>
+    </div>
+    <div class="summary">Nach dem katastrophalen Atomunfall musste die Stadt Prypjat evakuiert werden. Fast 50.000 Menschen verließen ihre Heimat für immer. 40 Jahre später ist einer der Bewohner mit einer DW-Reporterin zurückgekehrt.</div>
+    <div class="link"><a href="https://www.dw.com/de/40-jahre-tschernobyl-unterwegs-in-den-ruinen-von-prypjat/a-76898184?maca=de-rss-de-all-1119-xml-mrss" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Neues vom Finanzplatz: Zuflüsse in labilen Markt für Private-Credit halbiert – Deutsche Bank exponiert</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Außerdem wird ein ehemaliger Bundesverteidigungsminister Verwaltungsrat der Kryptobörse Bitpanda, ABN Amro hat einen neuen Aufsichtsratschef und Fondsdienstleister Universal erweitert seine Führung um zwei Frauen. Was die Finanzwelt Mitte April noch bewegt – schon gehört, dass ...?</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/finanzen/guttenberg-geht-in-verwaltungsrat-von-bitpanda-accg-200764332.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>länderspiegel vom 25. April 2026</h3>
+    <div class="meta">
+        <span>📌 ZDF今日经济</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济</span>
+    </div>
+    <div class="summary">Mit den Themen: Wie wegkommen von Öl und Gas? – Energiewende im Kleinen / Traumata und Überlastung – Polizei im Saarland am Limit / Hammer der Woche – Geplantes LKW-Verbot kommt nicht</div>
+    <div class="link"><a href="https://www.zdfheute.de/video/laenderspiegel/laenderspiegel-vom-25-april-2026-100.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Oberster Rechnungsprüfer: Vom „Boomer-Egoismus“ und seinen Folgen</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Kay Scheller, Präsident des Bundesrechnungshofs, fordert Investitionen statt Konsum. Bürger müssten sich darauf einstellen, den Gürtel enger zu schnallen, damit auch nachfolgende Generationen handlungsfähig bleiben.</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/rhein-main/frankfurt/investition-statt-konsum-rechnungshofpraesident-kay-scheller-kritisiert-den-boomer-egoismus-accg-200745074.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>Palestinians bury pregnant woman and 2 of her children killed in Israeli attacks on Gaza</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">Palestinians on Saturday buried a woman pregnant with twins and two of her children who were among at least 13 people killed in Israeli strikes in Gaza. The toll on Friday included two men who were killed in Gaza City, and eight others killed in the southern city of Khan Younis, according to local h…</div>
+    <div class="link"><a href="https://www.scmp.com/news/world/middle-east/article/3351438/palestinians-bury-pregnant-woman-and-2-her-children-killed-israeli-attacks-gaza?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Filmklassiker „Der Teufel trägt Prada“: Eine boshaft gute Meryl Streep</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Lohnt es sich, kurz bevor der zweite Teil in die Kinos kommt, „Der Teufel trägt Prada" noch einmal zu sehen? Durchaus – auch wenn das ständige Bodyshaming an Frauenkörpern einen bitteren Beigeschmack hinterlässt.</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/feuilleton/medien-und-film/kino/boshaft-gut-allein-wegen-meryl-streep-lohnt-der-teufel-traegt-prada-accg-200764087.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Führung und Persönlichkeit: Deshalb sollten Chefs wissen, wie sie selbst ticken</h3>
+    <div class="meta">
+        <span>📌 经济周刊</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 金融</span>
+    </div>
+    <div class="summary">Wer sich selbst nicht kennt, stolpert eher durch die Karriere. Wie Führungskräfte ein besseres Gespür für das eigene Wesen entwickeln – und so erfolgreicher werden.</div>
+    <div class="link"><a href="https://www.wiwo.de/erfolg/management/fuehrung-und-persoenlichkeit-deshalb-sollten-chefs-wissen-wie-sie-selbst-ticken/100215635.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#2c3e50">
+    <h3>British jets scrambled as Russian drone debris crashes on Romanian territory</h3>
+    <div class="meta">
+        <span>📌 政客（欧洲版）</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#2c3e50">欧盟 · 政治 · 贸易</span>
+    </div>
+    <div class="summary">The U.K. fighter jets were tracking the drones as they were flying over the Ukrainian port city of Reni, 1.5 kilometers from the Romanian border.</div>
+    <div class="link"><a href="https://www.politico.eu/article/british-jets-scrambled-as-russian-drone-debris-crashes-on-romanian-territory/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Mode, Lampen, Schallplatten: Für Vintage-Liebhaber</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Seit 25 Jahren führt Karin Burkhart den Laden „Verkehr. Second Hand“ in der Mainzer Innenstadt. Von hochwertiger Vintage-Mode bis hin zu Lampen aus den Zwanzigerjahren gibt es dort vieles zu entdecken.</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/rhein-main/wirtschaft/verkehr-second-hand-hochwertige-vintage-mode-in-mainz-accg-200740791.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Abbau von Geldautomaten: In der Kleinstadt ohne Bargeld</h3>
+    <div class="meta">
+        <span>📌 德国新闻联播（经济频道）</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 财税</span>
+    </div>
+    <div class="summary">Vor allem ältere Menschen fühlen sich durch den Abbau klassischer Bankangebote abgehängt. Mancherorts kommt man kaum noch an Bargeld. Im brandenburgischen Spremberg sorgt der Abbau eines Automaten für Empörung. Von Jacqueline Piwon.</div>
+    <div class="link"><a href="https://www.tagesschau.de/wirtschaft/verbraucher/bargeld-geldautomaten-100.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>MARBURG: Merz: Es wird keine Kürzungen der Renten geben</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Der Bundeskanzler hat auf Kritik an seiner Äußerung reagiert, die gesetzliche Rente könne künftig eine „Basisabsicherung“ sein. Es werde mit der Union keine Kürzungen der gesetzlichen Renten geben, sagte der CDU-Vorsitzende.</div>
+    <div class="link"><a href="https://www.faz.net/video/merz-es-wird-keine-kuerzungen-der-rente-geben-200768257.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Zukunft der Bundeswehr: Pistorius hebt ab</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Das Verteidigungsministerium hält es nicht für nötig, den Reservistenverband für seine Strategie anzuhören. Das ist ein Muster, kommentiert Peter Carstens</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/politik/inland/verteidigungsminister-boris-pistorius-hebt-ab-200765487.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#2c3e50">
+    <h3>Paris and Athens exchange mutual defense pledges amid geopolitical turmoil</h3>
+    <div class="meta">
+        <span>📌 政客（欧洲版）</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#2c3e50">欧盟 · 政治 · 贸易</span>
+    </div>
+    <div class="summary">The two governments signed nine bilateral deals, including the extension of an overarching defense pact.</div>
+    <div class="link"><a href="https://www.politico.eu/article/france-and-greece-exchange-mutual-defense-promises-amid-geopolitical-turmoil/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>Taliban says Afghans stuck in Qatar who helped US in war can safely return home</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">Afghanistan’s foreign ministry says Afghans who helped America’s war effort and have been stuck in Qatar in the hope of reaching the United States can safely return to Afghanistan. The statement on Saturday by foreign ministry spokesman Abdul Qahar Balkhi comes after reports emerged that the Trump a…</div>
+    <div class="link"><a href="https://www.scmp.com/news/world/united-states-canada/article/3351436/taliban-says-afghans-stuck-qatar-who-helped-us-war-can-safely-return-home?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Video Millionen Mal aufgerufen: Klosterschwester isst mit 92 ersten Döner und geht viral</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Acht Ordensfrauen kehren nach einer Wallfahrt im Dönerladen ein. Für Schwester Irmingard wird es mit über 90 Jahren eine Premiere – und im Netz ein Millionenhit.</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/gesellschaft/smalltalk/klosterschwester-isst-mit-92-ihren-ersten-doener-und-geht-viral-accg-200768227.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>Will the future world order be determined by who controls low Earth orbit?</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">When US special forces raided Caracas and abducted president Nicolas Maduro and his wife in early January, the Venezuelan capital was hit by widespread power outages and communication blackouts. Yet, within hours of the attacks, connectivity began to return – not from paralysed ground infrastructure…</div>
+    <div class="link"><a href="https://www.scmp.com/news/china/military/article/3351345/will-future-world-order-be-determined-who-controls-low-earth-orbit?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#7f8c8d">
+    <h3>Schüsse und Detonationen in mehreren Städten Malis</h3>
+    <div class="meta">
+        <span>📌 德国之声（德语）</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#7f8c8d">政治 · 商业 · 国际</span>
+    </div>
+    <div class="summary">Aus dem westafrikanischen Land werden Angriffe unter anderem auf Kasernen gemeldet. Das Militär erklärt, die Lage sei unter Kontrolle. Das Auswärtige Amt warnt.</div>
+    <div class="link"><a href="https://www.dw.com/de/schüsse-und-detonationen-in-mehreren-städten-malis/a-76934470?maca=de-rss-de-all-1119-xml-mrss" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Autoshow in Peking: Chinas Autobranche demonstriert ihre Macht</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Auf der Messe in Peking strotzt Chinas Autobranche vor Kraft. Die deutschen Konzerne kämpfen – und wirken manchmal doch wie Zaungäste.</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/wirtschaft/unternehmen/peking-auto-show-2026-chinas-autobranche-demonstriert-ihre-macht-accg-200765597.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Import Export: Irans absurde Gesten des Triumphes</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Bei einer iranischen Militärparade haben Regimeanhängerinnen pinkfarbene Waffen präsentiert und die Regierung bringt KI-generierte Videos von Lego-Figuren seiner Feinde in Umlauf. Was bezweckt Iran damit?</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/feuilleton/debatten/lego-und-pinke-waffen-irans-absurde-triumphgesten-accg-200764281.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>SCMP Best Bets: Winning Ovation can be a crowd pleaser at Sha Tin</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">Jay Rooney COOL BOY - R6 (5) Comes out of a strong form race last start and can swoop from a wide gate Owen Goulding POWER OF VITAM - R8 (3) Had excuses when thundering home latest and has plenty of upside Olivia O'Sullivan LOVERO - R10 (5) Rejuvenated since joining Crawford, Purton stays on, looks …</div>
+    <div class="link"><a href="https://www.scmp.com/sport/racing/article/3351435/scmp-best-bets-winning-ovation-can-be-crowd-pleaser-sha-tin?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Reformen: Die Bundesregierung muss den Absturz verhindern!</h3>
+    <div class="meta">
+        <span>📌 经济周刊</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 金融</span>
+    </div>
+    <div class="summary">Tempo jetzt, sonst ist’s zu spät: Die Deutschen sind bereit für Reformen – was fehlt, ist eine politische Führung, die den Veränderungswillen ernst nimmt. Ein Essay.</div>
+    <div class="link"><a href="https://www.wiwo.de/politik/deutschland/reformen-die-bundesregierung-muss-den-absturz-verhindern/100219852.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#7f8c8d">
+    <h3>Militär in Mali: Angriffe durch "bewaffnete Terroristen"</h3>
+    <div class="meta">
+        <span>📌 德国新闻联播（综合）</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#7f8c8d">政治 · 商业 · 综合</span>
+    </div>
+    <div class="summary">Im westafrikanischen Mali soll es in verschiedenen Landesteilen Angriffe gegeben haben. In mehreren Städten waren Schüsse und Explosionen zu hören. Laut Armee handelte es sich bei den Angreifern um "unbekannte bewaffnete Terroristen".</div>
+    <div class="link"><a href="https://www.tagesschau.de/ausland/afrika/mali-angriffe-100.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>Mali junta reports ‘terrorist’ attacks on several targets</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">An attack by “unknown armed terrorists” has been carried out on military barracks and other targets in the capital Bamako, the military in Mali reported on Saturday. Attacks had also occurred in other locations in the country, the general staff reported. Fighting was ongoing, a brief statement said.…</div>
+    <div class="link"><a href="https://www.scmp.com/news/world/africa/article/3351434/mali-junta-reports-terrorist-attacks-several-targets?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Buch über Rosé-Wein: Als hätte man einen Sommelier-Crashkurs absolviert</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Mit dem Sommer kommt der Rosé. Aber wie findet man bei der Auswahl seinen Lieblingswein? Und woran erkennt man, welcher Rosé zu welchem Gericht passt? Ein neues Buch erklärt es.</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/stil/essen-trinken/getraenke/wie-findet-man-den-besten-rose-accg-200735135.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Vermögen schützen: So wird die Pflege nicht zum Risiko für Angehörige</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Die Pflege wird immer teurer. Einkünfte und Vermögen müssen eingesetzt werden. Mit frühzeitiger Planung lassen sich Vermögen und Eigenheim jedoch schützen.</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/finanzen/vermoegensschutz-im-pflegefall-accg-200763851.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>Hong Kong urged to clarify consent in reforms to close sexual offence loopholes</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">Including clear, comprehensive definitions of consent in Hong Kong’s reform of sexual offence laws will provide greater clarity for all parties and better protect victims, experts and a survivor have said. Barrister Stephen Keung Pit-chun said on Saturday current interpretations of consent relied on…</div>
+    <div class="link"><a href="https://www.scmp.com/news/hong-kong/law-and-crime/article/3351433/hong-kong-urged-clarify-consent-reforms-close-sexual-offence-loopholes?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#7f8c8d">
+    <h3>Merz: Keine Kürzungen bei der gesetzlichen Rente geplant</h3>
+    <div class="meta">
+        <span>📌 德国新闻联播（综合）</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#7f8c8d">政治 · 商业 · 综合</span>
+    </div>
+    <div class="summary">Nein zu Kürzungen bei der gesetzlichen Rente: Mit deutlichen Worten hat Kanzler Merz auf Irritationen nach seiner Aussage zur "Basisabsicherung" reagiert. Er glaube daran, mit der SPD eine tiefgreifende Sozialreform durchzusetzen.</div>
+    <div class="link"><a href="https://www.tagesschau.de/inland/innenpolitik/merz-rente-rede-100.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>Billionaire behind ‘American Factory’ firm warns of US exit amid trade friction with China</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">As one of the world’s largest automotive glass producers, and the subject of an Oscar-winning documentary, Fuyao Glass is a familiar name in the United States. Now, its founder has warned he is prepared to shut down his American plants if trade friction and tariffs cause severe losses. Responding to…</div>
+    <div class="link"><a href="https://www.scmp.com/economy/china-economy/article/3351347/billionaire-behind-american-factory-firm-warns-us-exit-amid-trade-friction-china?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Neue Elektroautos: Generation Zukunft</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Verbrenner oder Elektroauto? Verbote bringen den mobilen Menschen nicht weiter. Die junge Generation der Elektrischen fährt mit frischen Pluspunkten vor. Da könnte am Ende der mündige Verbraucher glatt selbst entscheiden.</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/technik-motor/elektromobilitaet/generation-zukunft-das-koennen-neue-elektroautos-accg-200749824.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Ausgezeichnete Sportart: Großes Tennis</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Die Verleihung der Laureus Awards zeigt: Neben dem Fußball bleibt nur eine Sportart übrig, die ständig Stars hervorbringt, die überall auf der Welt angehimmelt werden.</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/sport/mehr-sport/laureus-awards-nur-tennis-bringt-grosse-stars-hervor-200765443.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#2c3e50">
+    <h3>Iran’s foreign minister in Pakistan for peace talks</h3>
+    <div class="meta">
+        <span>📌 政客（欧洲版）</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#2c3e50">欧盟 · 政治 · 贸易</span>
+    </div>
+    <div class="summary">Abbas Araghchi met with Pakistani officials in Islamabad for about two hours on Saturday, but he left the city ahead of the expected arrival of U.S. envoys.</div>
+    <div class="link"><a href="https://www.politico.eu/article/iran-foreign-minister-abbas-araghchi-flies-to-pakistan-for-peace-talks/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#2c3e50">
+    <h3>France and Greece call for delaying Covid debt repayment and for more EU bonds</h3>
+    <div class="meta">
+        <span>📌 政客（欧洲版）</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#2c3e50">欧盟 · 政治 · 贸易</span>
+    </div>
+    <div class="summary">"It is idiotic" to immediately pay back post-pandemic loans, French President Emmanuel Macron says on visit to Athens.</div>
+    <div class="link"><a href="https://www.politico.eu/article/it-is-idiot-france-and-greece-call-for-delaying-covid-debt-repayment/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Merz korrigiert Renten-Aussage</h3>
+    <div class="meta">
+        <span>📌 明镜周刊</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 政治 · 经济</span>
+    </div>
+    <div class="summary">Mit der Aussage, die Rente sei künftig nur noch eine »Basisabsicherung«, sorgte der Kanzler für Unmut. Nun stellt er klar: Rentenkürzungen seien damit nicht gemeint.</div>
+    <div class="link"><a href="https://www.spiegel.de/politik/deutschland/merz-korrigiert-renten-aussage-a-dc5734b5-82f0-417c-a436-b05931dcee2d#ref=rss" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>Why Spain’s ‘fruit bowl’ diplomacy with China comes up rather empty</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">Every time a European leader lands in Beijing with a business delegation, the same speculation follows: is the Atlantic consensus beginning to crack? Is part of Europe drifting towards China and away from Washington? In Spain’s case, the drama expires on contact with the record. Prime Minister Pedro…</div>
+    <div class="link"><a href="https://www.scmp.com/opinion/world-opinion/article/3350963/why-spains-fruit-bowl-diplomacy-china-comes-rather-empty?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Energiekosten-Explosion: „Wir machen wieder die gleichen Fehler wie bei der Gaskrise“</h3>
+    <div class="meta">
+        <span>📌 经济周刊</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 金融</span>
+    </div>
+    <div class="summary">Pricing-Experte Oliver Roll über den drohenden Kerosinmangel und seine fatale Wirkung als Härtetest für die deutsche Wirtschaft.</div>
+    <div class="link"><a href="https://www.wiwo.de/politik/europa/energiekosten-explosion-wir-machen-wieder-die-gleichen-fehler-wie-bei-der-gaskrise/100219753.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Weltmeister-Trainer Herbert: „Nicht vorgestellt, dass Covid so gefährlich sein könnte“</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Der ehemalige Bundestrainer Gordon Herbert spricht über große gesundheitliche Probleme. Sein Herz machte Sorgen: „Ich weiß, dass Menschen schon daran gestorben sind.“</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/sport/mehr-sport/frueherer-basketball-bundestrainer-gordon-herbert-kaempfte-mit-dem-tod-accg-200768039.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#7f8c8d">
+    <h3>Liveblog: ++ Libanon meldet Tote nach Luftangriffen Israels ++</h3>
+    <div class="meta">
+        <span>📌 德国新闻联播（综合）</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#7f8c8d">政治 · 商业 · 综合</span>
+    </div>
+    <div class="summary">Nach israelischen Angriffen im Südlibanon sind nach libanesischen Angaben sechs Menschen getötet worden. Irans Außenminister Araghtschi plant offenbar keine Gespräche mit US-Vertretern.</div>
+    <div class="link"><a href="https://www.tagesschau.de/newsticker/liveblog-iran-samstag-114.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Buchmesse-Gastland Tschechien: Das mythische Prag - eine Erfindung der Literatur?</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Tschechien ist Gastland der diesjährigen Buchmesse in Frankfurt. Eine Reise nach Böhmen gibt Ausblicke auf den literarischen Herbst - und zeigt, dass hier eine neue, spannende Schriftstellergeneration heranwächst</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/feuilleton/buecher/literatur/die-allerschoenste-taeuschung-accg-200765875.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Automobilindustrie: VDA warnt vor Abwanderung von Stellen ins Ausland</h3>
+    <div class="meta">
+        <span>📌 经济周刊</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 金融</span>
+    </div>
+    <div class="summary">Der VDA warnt vor Jobverlusten und einer Abwanderung von Auto-Zulieferern aus Deutschland. Auf der Messe in Peking fordert der Verband schnelle Reformen.</div>
+    <div class="link"><a href="https://www.wiwo.de/unternehmen/auto/automobilindustrie-vda-warnt-vor-abwanderung-von-stellen-ins-ausland/100219943.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>»Die Kämpfer verlieren vor Hunger das Bewusstsein«</h3>
+    <div class="meta">
+        <span>📌 明镜周刊</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 政治 · 经济</span>
+    </div>
+    <div class="summary">Im Netz sind Bilder ausgezehrter ukrainischer Soldaten aufgetaucht. Die Armeeführung hat personelle Konsequenzen gezogen und Untersuchungen eingeleitet. Ignorierten die zuständigen Militärs bewusst Hilferufe, um die Lage zu beschönigen?</div>
+    <div class="link"><a href="https://www.spiegel.de/ausland/die-kaempfer-verlieren-vor-hunger-das-bewusstsein-a-23401653-93da-4bf8-90ea-ae0503431161#ref=rss" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>Japan evacuates thousands as hundreds of firefighters battle wildfires</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">Hundreds of firefighters were battling wildfires in the forests of northern Japan on Saturday, as authorities urged more than 3,200 people to evacuate their homes, government officials said. As of Saturday morning, blazes in the mountainous areas of Iwate region had burned about 700 hectares (1,730 …</div>
+    <div class="link"><a href="https://www.scmp.com/news/asia/east-asia/article/3351432/japan-evacuates-thousands-hundreds-firefighters-battle-wildfires?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>Trapped in the Gulf, ship crews run low on food, water – and mental health reserves</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">The United Nations’ maritime agency has highlighted the plight of seafarers trapped in the Persian Gulf, saying the weeks-long closure of the Strait of Hormuz was taking a high toll on the crews. International Maritime Organisation secretary general Arsenio Dominguez said that at least 10 seafarers …</div>
+    <div class="link"><a href="https://www.scmp.com/news/china/diplomacy/article/3351431/trapped-gulf-ship-crews-run-low-food-water-and-mental-health-reserves?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Charles III. besucht USA: Trump nennt ihn „Charles den Eroberer“</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Am Montag reist Charles nach Washington, um mit dem amerikanischen Präsidenten die Unabhängigkeit der USA zu feiern. Seine Mutter, die Queen, traf insgesamt 13 US-Präsidenten. Dabei lief auch einiges schief.</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/gesellschaft/menschen/am-montag-besucht-charles-trump-in-washington-accg-200765171.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Das Iran-Dilemma: Die Menschen gehen durch die Hölle</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Natalie Amiri: Der Regime-Change in Iran war eine heikle Idee</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/feuilleton/debatten/natalie-amiri-der-regimewechsel-war-eine-heikle-idee-accg-200764518.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Irankrieg: 47 Jahre Feindschaft</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Das Misstrauen aus Jahrzehnten macht die Verhandlungen zwischen den USA und Iran so schwierig. Das Geiseldrama von 1979 prägt bis heute Amerikas Blick auf Teheran.</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/politik/ausland/die-geschichte-der-feindschaft-zwischen-den-usa-und-iran-accg-200762580.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>Hong Kong police arrest 2 men over thefts targeting homeless people</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">Hong Kong police have arrested two men in connection with a series of thefts targeting homeless people in Yau Tsim Mong district that involved about HK$142,000 (US$18,100) worth of stolen property. Inspector Frankie Chiu of the district said on Saturday that police had begun to notice a rise in such…</div>
+    <div class="link"><a href="https://www.scmp.com/news/hong-kong/law-and-crime/article/3351430/hong-kong-police-arrest-2-men-over-thefts-targeting-homeless-people?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>Hong Kong’s Denise Yeung to become first Chinese woman to compete in Road to Le Mans</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">For Hong Kong driver Denise Yeung, the prospect of facing 75 minutes and around 728 corners, with the heaviest ones requiring a 110kg stomp on the brake pedal, has marked the realisation of a decade-long dream through physical exertion unimaginable for most. The real estate professional, who is in h…</div>
+    <div class="link"><a href="https://www.scmp.com/sport/motorsport/article/3351429/hong-kongs-denise-yeung-become-first-chinese-woman-compete-road-le-mans?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>Did China just drop a hint that its next aircraft carrier will be nuclear-powered?</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">A Chinese naval video has fuelled speculation that its next aircraft carrier is likely to be nuclear-powered. The film Into The Deep was released on Wednesday to mark the 77th anniversary of the founding of the People’s Liberation Army Navy. Highlighting the continuity of China’s maritime ambitions,…</div>
+    <div class="link"><a href="https://www.scmp.com/news/china/military/article/3351420/did-china-just-drop-hint-its-next-aircraft-carrier-will-be-nuclear-powered?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Ausbreitung eindämmen: Warum man Tigermücken gefühlvoll töten sollte</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Die Asiatische Tigermücke hat sich in Deutschland angesiedelt. Um deren Verbreitung zu verhindern, rät die „Kommunale Arbeitsgemeinschaft zur Bekämpfung der Schnakenplage“ zu ungewöhnlichen Mitteln.</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/rhein-main/region-und-hessen/verbreitung-verhindern-warum-man-die-asiatische-tigermuecke-gefuehlvoll-toeten-sollte-accg-200719775.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>CDA-Bundestagung: „Keine Kürzungen der gesetzlichen Renten“</h3>
+    <div class="meta">
+        <span>📌 经济周刊</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 金融</span>
+    </div>
+    <div class="summary">Der Kanzler hat mit einer Äußerung zur gesetzlichen Rente für Empörung gesorgt. Auf dem CDA-Bundeskongress erklärt er, wie er sie gemeint hat.</div>
+    <div class="link"><a href="https://www.wiwo.de/politik/deutschland/cda-bundestagung-merz-verspricht-keine-kuerzungen-der-gesetzlichen-renten/100219956.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#7f8c8d">
+    <h3>Papst fordert Abschaffung der Todesstrafe - USA verschärfen sie</h3>
+    <div class="meta">
+        <span>📌 德国新闻联播（综合）</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#7f8c8d">政治 · 商业 · 综合</span>
+    </div>
+    <div class="summary">In einer Rede für eine US-Universität hat Leo XIV. die weltweite Abschaffung der Todesstrafe gefordert - sie sei nach der Lehre der Kirche unzulässig. Kurz zuvor hatte die US-Regierung angekündigt, die Todesstrafe auszuweiten.</div>
+    <div class="link"><a href="https://www.tagesschau.de/ausland/europa/papst-todesstrafe-100.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>DNIPRO: Tote und Verletzte bei russischem Großangriff auf die Ukraine</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Hauptziel der Attacken war nach ukrainischen Angaben die Großstadt Dnipro im Südosten des Landes. Mehrere Menschen könnten noch unter Trümmern eingeschlossen sein, hieß es am Vormittag.</div>
+    <div class="link"><a href="https://www.faz.net/video/ukraine-tote-und-verletzte-bei-russischem-grossangriff-200767978.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Pixelpec: Bewegte Bilder aus Offenbach</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Die Kreativbranche befindet sich aufgrund Künstlicher Intelligenz im Umbruch. Das Animationsstudio Pixelpec aus Offenbach begreift das jedoch als Chance.</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/rhein-main/wirtschaft/offenbach-wie-beim-animationsstudio-pixelpec-bewegte-bilder-entstehen-accg-200710494.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Istanbul: Die türkische Meyhane: mehr als nur Essen und Trinken</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">In einer türkischen Meyhane trifft man auf gute Stimmung, Meze, Raki und anregende Musik. Hier wird gemeinsam gegessen, gelacht und getanzt – ein Ort für Genuss und Geselligkeit.</div>
+    <div class="link"><a href="https://www.faz.net/video/die-tuerkische-meyhane-mehr-als-nur-essen-und-trinken-200767896.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Iran provoziert mit angeblich verbliebenem Raketenarsenal</h3>
+    <div class="meta">
+        <span>📌 明镜周刊</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 政治 · 经济</span>
+    </div>
+    <div class="summary">»Der Feind« suche nach einem »gesichtswahrenden« Ausweg: Das Regime in Teheran inszeniert vor neuen Gesprächen in Islamabad seine vermeintliche militärische Stärke. Die Rüstungsindustrie sei intakt, heißt es.</div>
+    <div class="link"><a href="https://www.spiegel.de/ausland/iran-provoziert-mit-angeblich-verbliebenem-raketenarsenal-a-03aea34a-b5cd-4131-888f-f7f462d86a74#ref=rss" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>Argentina again calls for UK talks on Falklands, US confirms neutrality</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">Argentina has called for talks with the UK over the Falkland Islands after reports the US could review its position on the South Atlantic territory in retaliation for Prime Minister Keir Starmer’s lack of support for the war in Iran. Downing Street had earlier insisted the sovereignty of the Falklan…</div>
+    <div class="link"><a href="https://www.scmp.com/news/world/europe/article/3351428/argentina-renews-call-uk-talks-over-falklands-us-confirms-neutrality?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#7f8c8d">
+    <h3>Mobbing-Vorwürfe: Drei Polizei-Führungskräfte in NRW suspendiert</h3>
+    <div class="meta">
+        <span>📌 德国新闻联播（综合）</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#7f8c8d">政治 · 商业 · 综合</span>
+    </div>
+    <div class="summary">In Mönchengladbach sind drei Führungskräfte der Polizei nach schweren Vorwürfen vom Dienst suspendiert worden. Es geht um Fälle von Mobbing und grenzüberschreitendem Führungsverhalten. Von I. Uysal.</div>
+    <div class="link"><a href="https://www.tagesschau.de/inland/regional/nordrheinwestfalen/mobbingvorwurf-polizei-moenchengladbach-100.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Bildung in Deutschland: Darf die Uni etwas kosten?</h3>
+    <div class="meta">
+        <span>📌 经济周刊</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 金融</span>
+    </div>
+    <div class="summary">Die deutschen Hochschulen gelten vielfach als unterfinanziert. Zwei Bildungsforscher haben nun die Akzeptanz verschiedener Studiengebühren ermittelt – mit überraschenden Resultaten.</div>
+    <div class="link"><a href="https://www.wiwo.de/politik/konjunktur/bildung-in-deutschland-darf-die-uni-etwas-kosten/100201304.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Clark-Medaille: Die neue Wirtschaftsnobelpreis-Hoffnung</h3>
+    <div class="meta">
+        <span>📌 经济周刊</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 金融</span>
+    </div>
+    <div class="summary">Der Harvard-Professor Ludwig Straub hat den „kleinen Nobelpreis“ erhalten. In seinem Forschungsfeld setzt der Deutsche neue Impulse für eine moderne VWL.</div>
+    <div class="link"><a href="https://www.wiwo.de/politik/ausland/clark-medaille-ludwig-straub-ist-die-neue-wirtschaftsnobelpreis-hoffnung/100211708.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Deutschland-Liveblog: Merz spricht sich gegen Rentenkürzungen aus</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Arbeitgeberpräsident Dulger kritisiert Wirtschaftspolitik der Regierung +++ Bericht: Auch Bundesministerinnen Prien und Hubertz von Signal-Hacks betroffen +++ alle Entwicklungen im Liveblog</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/politik/inland/liveblog-merz-spricht-sich-gegen-rentenkuerzungen-aus-faz-110093143.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>SPD-Fraktionschef Miersch: Neue Schulden wegen Iran-Krise denkbar</h3>
+    <div class="meta">
+        <span>📌 德国新闻联播（经济频道）</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 财税</span>
+    </div>
+    <div class="summary">Wie lassen sich die Folgen abfedern, die der Iran-Krieg in Deutschland hat? SPD-Fraktionschef Miersch bringt nun das Aussetzen der Schuldenbremse ins Spiel - obwohl die Union weiteren Schulden bereits eine Absage erteilt hat.</div>
+    <div class="link"><a href="https://www.tagesschau.de/wirtschaft/miersch-schulden-iran-krise-100.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>What smokers need to know about Hong Kong’s new e-cigarette ban</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">Hong Kong’s new ban on possessing e-cigarettes, commonly known as vapes, and related products in public places will take effect on April 30. Residents and visitors caught violating the rule could face a fine of up to HK$50,000 (US$6,380) and a maximum of six months in jail. The South China Morning P…</div>
+    <div class="link"><a href="https://www.scmp.com/news/hong-kong/law-and-crime/article/3351426/what-smokers-need-know-about-hong-kongs-new-e-cigarette-ban?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Lebensmittel: Butterpreis sinkt wieder</h3>
+    <div class="meta">
+        <span>📌 经济周刊</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 金融</span>
+    </div>
+    <div class="summary">Nach der Erhöhung im März fällt der Preis für Markenbutter wieder. Das günstigste 250-Gramm-Päckchen kostet nur noch knapp mehr als einen Euro.</div>
+    <div class="link"><a href="https://www.wiwo.de/unternehmen/dienstleister/lebensmittel-butterpreis-sinkt-wieder/100219950.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Mieten in der Stadt: Die nächste Wohnungssuche</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Schon ein Wohnungsgesuch an einer Laterne gesehen? Die Zahl der Online-Angebote sinkt. Das passt zur Wohnungspolitik der Mietpreisbremse.</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/wirtschaft/immobilien-wohnen/mieten-vermieten/wohnungssuche-weniger-inserate-und-steigende-nachfrage-200756824.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Neues WHU-Studienprogramm: Karrieretipps von Wladimir Klitschko</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 政治</span>
+    </div>
+    <div class="summary">Der ehemalige Boxprofi schult künftig Führungskräfte an einer Wirtschaftshochschule. Wir konnten ihm vorab schon ein paar Tipps entlocken.</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/wirtschaft/diese-karrieretipps-hat-wladimir-klitschko-fuer-fuehrungskraefte-accg-200763033.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <h3>Mönchengladbach: Polizeiführungskräfte nach Mobbingvorwürfen suspendiert</h3>
+    <div class="meta">
+        <span>📌 明镜周刊</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 政治 · 经济</span>
+    </div>
+    <div class="summary">In Mönchengladbach sind drei Führungskräfte der Polizei nach schweren Vorwürfen vom Dienst suspendiert worden. Es geht um Fälle von Mobbing und grenzüberschreitendem Führungsverhalten.</div>
+    <div class="link"><a href="https://www.spiegel.de/panorama/justiz/moenchengladbach-polizeifuehrungskraefte-nach-mobbingvorwuerfen-suspendiert-a-13c44650-29ce-4b7d-9746-fa827c4c0aa3#ref=rss" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#2c3e50">
+    <h3>White House insiders see Rubio on the rise as a potential 2028 pick</h3>
+    <div class="meta">
+        <span>📌 政客（欧洲版）</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#2c3e50">欧盟 · 政治 · 贸易</span>
+    </div>
+    <div class="summary">A once-long shot candidate, Rubio's record has won him admirers in the White House and among the MAGA base.</div>
+    <div class="link"><a href="https://www.politico.com/news/2026/04/24/white-house-insiders-see-rubio-on-the-rise-as-a-potential-2028-pick-00891256?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <h3>Star gallopers Ka Ying Rising and Romantic Warrior headline exciting Champions Day at Sha Tin</h3>
+    <div class="meta">
+        <span>📌 南华早报</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#e74c3c">中国 · 亚洲 · 地缘政治</span>
+    </div>
+    <div class="summary">Ka Ying Rising and Romantic Warrior headline Sunday’s FWD Champions Day meeting at Sha Tin when the Hong Kong champions bid to extend their unbeaten records this season and repel a strong overseas contingent. First and second in the Longines World’s Best Racehorse Rankings for 2026 so far, Ka Ying R…</div>
+    <div class="link"><a href="https://www.scmp.com/sport/racing/article/3351427/star-gallopers-ka-ying-rising-and-romantic-warrior-headline-exciting-champions-day-sha-tin?utm_source=rss_feed" target="_blank">🔗 查看原文 →</a></div>
+</div>
+</div>
+<footer>共 3859 条新闻 · 仅显示最新200条</footer>
+<script>
+function toggleTheme() {
+    const html = document.documentElement;
+    const current = html.getAttribute('data-theme');
+    html.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+    localStorage.setItem('theme', html.getAttribute('data-theme'));
+}
+(function() {
+    const saved = localStorage.getItem('theme');
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+    else if (window.matchMedia('(prefers-color-scheme:dark)').matches)
+        document.documentElement.setAttribute('data-theme', 'dark');
+})();
+function filterCards() {
+    const q = document.getElementById('search').value.toLowerCase();
+    document.querySelectorAll('.card').forEach(c => {
+        c.style.display = c.textContent.toLowerCase().includes(q) ? '' : 'none';
+    });
+}
+</script>
+</body></html>

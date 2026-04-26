@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>关于</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg: #ffffff; --bg2: #f8f9fa; --text: #2c3e50; --text2: #7f8c8d;
+    --border: #ecf0f1; --accent: #e74c3c; --accent2: #c0392b;
+    --card-bg: #ffffff; --shadow: rgba(0,0,0,0.08);
+}
+[data-theme="dark"] {
+    --bg: #1a1a2e; --bg2: #16213e; --text: #eaeaea; --text2: #a0a0a0;
+    --border: #2a2a4a; --accent: #e74c3c; --accent2: #ff6b6b;
+    --card-bg: #16213e; --shadow: rgba(0,0,0,0.3);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Noto Sans SC', 'Noto Sans', -apple-system, sans-serif;
+    background: var(--bg); color: var(--text);
+    line-height: 1.7; transition: all 0.3s;
+}
+.container { max-width: 900px; margin: 0 auto; padding: 20px; }
+header {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: white; padding: 40px 0; text-align: center;
+    margin-bottom: 30px; border-radius: 0 0 20px 20px;
+}
+header h1 { font-size: 2em; margin-bottom: 8px; }
+header p { opacity: 0.85; font-size: 1.05em; }
+nav {
+    display: flex; gap: 15px; justify-content: center;
+    margin-top: 15px; flex-wrap: wrap;
+}
+nav a {
+    color: white; text-decoration: none; padding: 6px 16px;
+    border: 1px solid rgba(255,255,255,0.3); border-radius: 20px;
+    font-size: 0.9em; transition: all 0.2s;
+}
+nav a:hover, nav a.active {
+    background: rgba(255,255,255,0.2); border-color: white;
+}
+.stats-bar {
+    display: flex; gap: 20px; justify-content: center;
+    padding: 15px; background: var(--bg2); border-radius: 12px;
+    margin-bottom: 25px; flex-wrap: wrap;
+}
+.stat { text-align: center; }
+.stat .num { font-size: 1.8em; font-weight: 700; color: var(--accent); }
+.stat .label { font-size: 0.85em; color: var(--text2); }
+.card {
+    background: var(--card-bg); border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px; margin-bottom: 16px;
+    box-shadow: 0 2px 8px var(--shadow); transition: transform 0.2s;
+    border-left: 4px solid var(--accent);
+}
+.card:hover { transform: translateY(-2px); }
+.card .num {
+    display: inline-block; background: var(--accent); color: white;
+    width: 28px; height: 28px; line-height: 28px; text-align: center;
+    border-radius: 50%; font-size: 0.85em; font-weight: 700;
+    margin-right: 10px;
+}
+.card h3 { display: inline; font-size: 1.1em; }
+.card .meta {
+    margin: 8px 0; font-size: 0.88em; color: var(--text2);
+    display: flex; gap: 15px; flex-wrap: wrap; align-items: center;
+}
+.card .meta .tag {
+    display: inline-block; padding: 2px 10px; border-radius: 12px;
+    font-size: 0.8em; color: white;
+}
+.card .summary {
+    margin: 10px 0; font-size: 0.95em; line-height: 1.8;
+}
+.card .link a {
+    color: var(--accent); text-decoration: none; font-size: 0.9em;
+}
+.card .link a:hover { text-decoration: underline; }
+.toggle-btn {
+    position: fixed; top: 15px; right: 15px; z-index: 100;
+    background: var(--card-bg); border: 1px solid var(--border);
+    border-radius: 50%; width: 40px; height: 40px; cursor: pointer;
+    font-size: 1.2em; display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 2px 8px var(--shadow);
+}
+footer {
+    text-align: center; padding: 30px; color: var(--text2);
+    font-size: 0.85em; border-top: 1px solid var(--border); margin-top: 40px;
+}
+.search-box {
+    width: 100%; padding: 12px 18px; border: 2px solid var(--border);
+    border-radius: 10px; font-size: 1em; margin-bottom: 20px;
+    background: var(--bg); color: var(--text);
+    font-family: inherit;
+}
+.search-box:focus { border-color: var(--accent); outline: none; }
+@media(max-width:600px) {
+    header h1 { font-size: 1.4em; }
+    .stats-bar { gap: 10px; }
+    .card { padding: 15px; }
+}
+</style>
+</head>
+<body>
+<button class="toggle-btn" onclick="toggleTheme()">🌓</button>
+<header>
+    <h1>📰 关于本项目</h1>
+    <p>新闻数据库系统</p>
+    <nav>
+        <a href="index.html">📅 今日简报</a>
+        <a href="database.html">🗄️ 新闻库</a>
+        <a href="archive.html">📚 历史归档</a>
+        <a href="about.html" class="active">ℹ️ 关于</a>
+    </nav>
+</header>
+<div class="container">
+<div class="card">
+<h3>🎯 项目目标</h3>
+<div class="summary">
+为在德国（柏林）经营餐饮业的用户，建立一套系统化的新闻情报体系。<br>
+覆盖餐饮法规、商业经济、财税政策、国际政治等核心领域。
+</div></div>
+<div class="card">
+<h3>📡 数据来源（20+ RSS源）</h3>
+<div class="summary">
+<strong>餐饮核心：</strong>AHGZ 餐饮酒店报、DEHOGA 柏林协会<br>
+<strong>政府官方：</strong>BMEL 联邦食品农业部<br>
+<strong>德国商业：</strong>Tagesschau、Spiegel、FAZ、WiWo、Manager Magazin、ZDF<br>
+<strong>国际政治：</strong>南华早报、Politico EU、EUobserver、欧盟委员会<br>
+<strong>食品安全：</strong>EFSA 欧洲食品安全局<br>
+<strong>国际媒体：</strong>德国之声（德/英）
+</div></div>
+<div class="card">
+<h3>⚙️ 工作机制</h3>
+<div class="summary">
+1. 每日自动从20+ RSS源抓取新闻<br>
+2. 智能去重，建立新闻数据库<br>
+3. 按优先级精选10条最有价值的新闻<br>
+4. 自动生成中文摘要和影响分析<br>
+5. 推送到Discord频道，同时更新本网站
+</div></div>
+<div class="card">
+<h3>🔧 技术架构</h3>
+<div class="summary">
+<strong>抓取：</strong>Python + feedparser（RSS解析）<br>
+<strong>数据库：</strong>JSON（news-db.json）<br>
+<strong>网站：</strong>纯静态HTML/CSS/JS<br>
+<strong>调度：</strong>Hermes Agent cron job（每日7:00柏林时间）<br>
+<strong>投递：</strong>Discord + 静态网站
+</div></div>
+</div>
+<footer>Houyi（后羿）新闻系统 · 自动更新</footer>
+<script>
+function toggleTheme() {
+    const html = document.documentElement;
+    const current = html.getAttribute('data-theme');
+    html.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+    localStorage.setItem('theme', html.getAttribute('data-theme'));
+}
+(function() {
+    const saved = localStorage.getItem('theme');
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+    else if (window.matchMedia('(prefers-color-scheme:dark)').matches)
+        document.documentElement.setAttribute('data-theme', 'dark');
+})();
+function filterCards() {
+    const q = document.getElementById('search').value.toLowerCase();
+    document.querySelectorAll('.card').forEach(c => {
+        c.style.display = c.textContent.toLowerCase().includes(q) ? '' : 'none';
+    });
+}
+</script>
+</body></html>

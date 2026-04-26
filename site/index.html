@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日新闻简报 — 2026-04-26</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg: #ffffff; --bg2: #f8f9fa; --text: #2c3e50; --text2: #7f8c8d;
+    --border: #ecf0f1; --accent: #e74c3c; --accent2: #c0392b;
+    --card-bg: #ffffff; --shadow: rgba(0,0,0,0.08);
+}
+[data-theme="dark"] {
+    --bg: #1a1a2e; --bg2: #16213e; --text: #eaeaea; --text2: #a0a0a0;
+    --border: #2a2a4a; --accent: #e74c3c; --accent2: #ff6b6b;
+    --card-bg: #16213e; --shadow: rgba(0,0,0,0.3);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Noto Sans SC', 'Noto Sans', -apple-system, sans-serif;
+    background: var(--bg); color: var(--text);
+    line-height: 1.7; transition: all 0.3s;
+}
+.container { max-width: 900px; margin: 0 auto; padding: 20px; }
+header {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: white; padding: 40px 0; text-align: center;
+    margin-bottom: 30px; border-radius: 0 0 20px 20px;
+}
+header h1 { font-size: 2em; margin-bottom: 8px; }
+header p { opacity: 0.85; font-size: 1.05em; }
+nav {
+    display: flex; gap: 15px; justify-content: center;
+    margin-top: 15px; flex-wrap: wrap;
+}
+nav a {
+    color: white; text-decoration: none; padding: 6px 16px;
+    border: 1px solid rgba(255,255,255,0.3); border-radius: 20px;
+    font-size: 0.9em; transition: all 0.2s;
+}
+nav a:hover, nav a.active {
+    background: rgba(255,255,255,0.2); border-color: white;
+}
+.stats-bar {
+    display: flex; gap: 20px; justify-content: center;
+    padding: 15px; background: var(--bg2); border-radius: 12px;
+    margin-bottom: 25px; flex-wrap: wrap;
+}
+.stat { text-align: center; }
+.stat .num { font-size: 1.8em; font-weight: 700; color: var(--accent); }
+.stat .label { font-size: 0.85em; color: var(--text2); }
+.card {
+    background: var(--card-bg); border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px; margin-bottom: 16px;
+    box-shadow: 0 2px 8px var(--shadow); transition: transform 0.2s;
+    border-left: 4px solid var(--accent);
+}
+.card:hover { transform: translateY(-2px); }
+.card .num {
+    display: inline-block; background: var(--accent); color: white;
+    width: 28px; height: 28px; line-height: 28px; text-align: center;
+    border-radius: 50%; font-size: 0.85em; font-weight: 700;
+    margin-right: 10px;
+}
+.card h3 { display: inline; font-size: 1.1em; }
+.card .meta {
+    margin: 8px 0; font-size: 0.88em; color: var(--text2);
+    display: flex; gap: 15px; flex-wrap: wrap; align-items: center;
+}
+.card .meta .tag {
+    display: inline-block; padding: 2px 10px; border-radius: 12px;
+    font-size: 0.8em; color: white;
+}
+.card .summary {
+    margin: 10px 0; font-size: 0.95em; line-height: 1.8;
+}
+.card .link a {
+    color: var(--accent); text-decoration: none; font-size: 0.9em;
+}
+.card .link a:hover { text-decoration: underline; }
+.toggle-btn {
+    position: fixed; top: 15px; right: 15px; z-index: 100;
+    background: var(--card-bg); border: 1px solid var(--border);
+    border-radius: 50%; width: 40px; height: 40px; cursor: pointer;
+    font-size: 1.2em; display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 2px 8px var(--shadow);
+}
+footer {
+    text-align: center; padding: 30px; color: var(--text2);
+    font-size: 0.85em; border-top: 1px solid var(--border); margin-top: 40px;
+}
+.search-box {
+    width: 100%; padding: 12px 18px; border: 2px solid var(--border);
+    border-radius: 10px; font-size: 1em; margin-bottom: 20px;
+    background: var(--bg); color: var(--text);
+    font-family: inherit;
+}
+.search-box:focus { border-color: var(--accent); outline: none; }
+@media(max-width:600px) {
+    header h1 { font-size: 1.4em; }
+    .stats-bar { gap: 10px; }
+    .card { padding: 15px; }
+}
+</style>
+</head>
+<body>
+<button class="toggle-btn" onclick="toggleTheme()">🌓</button>
+<header>
+    <h1>📰 每日新闻简报</h1>
+    <p>2026-04-26 · 柏林 07:05 · 精选10条</p>
+    <nav>
+        <a href="index.html" class="active">📅 今日简报</a>
+        <a href="database.html">🗄️ 新闻库</a>
+        <a href="archive.html">📚 历史归档</a>
+        <a href="about.html">ℹ️ 关于</a>
+    </nav>
+</header>
+<div class="container">
+<div class="stats-bar">
+    <div class="stat"><div class="num">3859</div><div class="label">总新闻</div></div>
+    <div class="stat"><div class="num">129</div><div class="label">已播报</div></div>
+    <div class="stat"><div class="num">3730</div><div class="label">待播报</div></div>
+    <div class="stat"><div class="num">20</div><div class="label">新闻源</div></div>
+</div>
+<div class="card" style="border-left-color:#e74c3c">
+    <span class="num">1</span><h3>GKV-Reform: DEHOGA sieht Auswirkungen auf Minijobs kritisch</h3>
+    <div class="meta">
+        <span>📌 柏林餐饮酒店协会</span>
+        <span>📅 2026-04-22</span>
+        <span class="tag" style="background:#e74c3c">餐饮 · 柏林 · 法律法规</span>
+    </div>
+    <div class="summary">Die Reformvorschlaege von Nina Warken zur Stabilisierung der gesetzlichen Krankenversicherung sorgen fuer Diskussionen. Die Gesundheitsministerin legte ein Sparpaket vor, das die gesetzlichen Krankenkassen um rund 22 Milliarden Euro entlasten soll. DEHOGA Berlin kritisiert die Plaene massiv, da Mini…</div>
+    <div class="link"><a href="https://dehoga-berlin.de/2026/04/22/gkv-reform-dehoga-sieht-auswirkungen-auf-minijobs-kritisch/" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <span class="num">2</span><h3>Gastgewerbeumsatz auch im Februar ohne echte Erholungsperspektive</h3>
+    <div class="meta">
+        <span>📌 柏林餐饮酒店协会</span>
+        <span>📅 2026-04-22</span>
+        <span class="tag" style="background:#e74c3c">餐饮 · 柏林 · 法律法规</span>
+    </div>
+    <div class="summary">Das Gastgewerbe in Deutschland hat nach Angabe des Statistischen Bundesamtes im Februar 2026 real 4,5 Prozent weniger und nominal 2,4 Prozent mehr umgesetzt als im Februar 2025. Nominal zwar gestiegen - aber real, also nach Inflationsbereinigung, ein deutliches Minus. DEHOGA Berlin warnt: Die Branch…</div>
+    <div class="link"><a href="https://dehoga-berlin.de/2026/04/22/gastgewerbeumsatz-auch-im-februar-ohne-echte-erholungsperspektive/" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <span class="num">3</span><h3>Ministeriums-Entwurf: Tierhaltungslogo fuer Restaurants auf dem Weg</h3>
+    <div class="meta">
+        <span>📌 德国餐饮酒店报（餐饮频道）</span>
+        <span>📅 2026-04-22</span>
+        <span class="tag" style="background:#e74c3c">餐饮 · 商业 · 法律法规</span>
+    </div>
+    <div class="summary">Beim Fleischkauf soll nach vielen Verzoegerungen bald ein amtliches Siegel ueber Bedingungen in den Staellen informieren - auch auf Speisekarten in Gaststaetten und Imbissen. Ein neuer Gesetzesentwurf des Landwirtschaftsministeriums sieht vor, dass Restaurants ab 2027 verpflichtend ueber die Herkunf…</div>
+    <div class="link"><a href="https://www.ahgz.de/gastronomie/news/ministeriums-entwurf-tierhaltungslogo-fuer-restaurants-auf-dem-weg-318793" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <span class="num">4</span><h3>Entlastung fuer Arbeitnehmer: Wir werden die 1000-Euro-Praemie nicht bezahlen</h3>
+    <div class="meta">
+        <span>📌 法兰克福汇报</span>
+        <span>📅 2026-04-14</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 金融</span>
+    </div>
+    <div class="summary">Die Koalition will Arbeitnehmer mit einer 1000-Euro-Praemie entlasten - die Unternehmen sollen zahlen. Die Wirtschaft ist empört: unlike der Inflationspraemie von 2022 seien die Betriebe diesmal nicht in die Planung einbezogen worden. DEHOGA lehnt die Zwangsabgabe ab. Branchenkenner erwarten, dass k…</div>
+    <div class="link"><a href="https://www.faz.net/aktuell/wirtschaft/gerhard-erdmann-kritisiert-friedrich-merz-1000-euro-praemie-unter-beschuss-200729028.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <span class="num">5</span><h3>Mehrwertsteuer hoch? Drei unbequeme Wahrheiten</h3>
+    <div class="meta">
+        <span>📌 ZDF今日经济</span>
+        <span>📅 2026-04-11</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 财税</span>
+    </div>
+    <div class="summary">Die Diskussion um eine Mehrwertsteuererhoehung wird konkreter. Erstens: Eine Erhoehung von 7% auf 19% in der Gastronomie trifft besonders hart, da Personalkosten nicht absetzbar sind. Zweitens: Die Streichung des reduzierten MWSt-Satzes wuerde die kriselnde Branche weiter schwächen. Drittens: Der In…</div>
+    <div class="link"><a href="https://www.zdfheute.de/video/wiso/wiso-wirtschaft-erklaert-mehrwertsteuer-erhoehung-100.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <span class="num">6</span><h3>Lebensmittel: Butterpreis sinkt wieder</h3>
+    <div class="meta">
+        <span>📌 经济周刊</span>
+        <span>📅 2026-04-25</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 金融</span>
+    </div>
+    <div class="summary">Nach der Preiserhoehung im Maerz ist der Butterpreis wieder gesunken. Das guenstigste 250-Gramm-Päckchen Markenbutter kostet nur noch knapp ueber einem Euro. Fuer Gastronomiebetriebe, die Butter als Beilage oder in der Kueche verwenden, ist dies eine leichte Kostenentlastung - ein positives Signal i…</div>
+    <div class="link"><a href="https://www.wiwo.de/unternehmen/dienstleister/lebensmittel-butterpreis-sinkt-wieder/100219950.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <span class="num">7</span><h3>Wechsel in der Fuehrungsspitze beim DEHOGA Berlin: Joern Peter Brinkmann einstimmig</h3>
+    <div class="meta">
+        <span>📌 柏林餐饮酒店协会</span>
+        <span>📅 2026-04-21</span>
+        <span class="tag" style="background:#e74c3c">餐饮 · 柏林 · 法律法规</span>
+    </div>
+    <div class="summary">Der Geschaeftsfuehrer des Polit-Kult-Lokals 'Staendige Vertretung' am Schiffbauerdamm, Joern Peter Brinkmann (46), wurde einstimmig zum neuen Praesidenten des Hotel- und Gastronomieverbandes Berlin gewaehlt. Er tritt die Nachfolge von Christian Andresen an, der nach acht Jahren Amtszeit nicht erneut…</div>
+    <div class="link"><a href="https://dehoga-berlin.de/2026/04/21/wechsel-in-der-fuehrungsspitze-beim-dehoga-berlin/" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#3498db">
+    <span class="num">8</span><h3>Bahn verspricht stabile Fernticket-Preise fuer ein Jahr</h3>
+    <div class="meta">
+        <span>📌 德国新闻联播（经济频道）</span>
+        <span>📅 2026-04-26</span>
+        <span class="tag" style="background:#3498db">商业 · 经济 · 财税</span>
+    </div>
+    <div class="summary">Die Deutsche Bahn will die Preise fuer ICE-Tickets ab dem 1. Mai fuer zwoelf Monate stabil halten. Fuer die Gastronomie und den Tourismus ist dies ein positives Signal: stabile Zugpreise foerdern Tagesreisen und Geschaeftsreisen per Bahn, was direkt der Hotellerie und Gastronomie in Grossstaedten zu…</div>
+    <div class="link"><a href="https://www.tagesschau.de/wirtschaft/unternehmen/bahn-fernverkehr-ticketpreise-100.html" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <span class="num">9</span><h3>Neueröffnungen: Accor setzt Expansion weltweit fort</h3>
+    <div class="meta">
+        <span>📌 德国餐饮酒店报（综合）</span>
+        <span>📅 2026-04-15</span>
+        <span class="tag" style="background:#e74c3c">餐饮 · 酒店 · 商业</span>
+    </div>
+    <div class="summary">Die Accor-Gruppe setzt ihre weltweite Expansion mit zahlreichen Neueröffnungen fort. Allein in Deutschland wurden mehrere neue Hotels in der gehobenen Kategorie eroeffnet. Fuer den Gastronomiesektor bedeutet dies zunehmenden Wettbewerb - aber auch Impulse fuer Catering- und Foodservice-Partnerschaft…</div>
+    <div class="link"><a href="https://www.ahgz.de/hotellerie/news/privathotellerie-expansion-accol-mark-318730" target="_blank">🔗 查看原文 →</a></div>
+</div><div class="card" style="border-left-color:#e74c3c">
+    <span class="num">10</span><h3>Foodtrend: Glutenfreies gehoert zum gastronomischen Angebot</h3>
+    <div class="meta">
+        <span>📌 德国餐饮酒店报（供应商）</span>
+        <span>📅 2026-04-22</span>
+        <span class="tag" style="background:#e74c3c">供应链 · 设备 · 餐饮</span>
+    </div>
+    <div class="summary">Laut Schär-Key-Account-Manager Andreas Kirchner gehoert glutenfreies Essen laengst zum Standard gastronomischer Angebote. Die Nachfrage wächst stetig - besonders in Grossstaedten. Fuer Restaurants bedeutet das: Wer keine oder zu wenige glutenfreie Optionen anbietet, verliert zunehmend eine wachsende…</div>
+    <div class="link"><a href="https://www.ahgz.de/zulieferer/news/foodtrends-glutenfreies-gehoert-zum-gastronomischen-angebot-318769" target="_blank">🔗 查看原文 →</a></div>
+</div>
+</div>
+<footer>数据来源：20个RSS源 · 自动生成于 2026-04-26 07:05</footer>
+<script>
+function toggleTheme() {
+    const html = document.documentElement;
+    const current = html.getAttribute('data-theme');
+    html.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+    localStorage.setItem('theme', html.getAttribute('data-theme'));
+}
+(function() {
+    const saved = localStorage.getItem('theme');
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+    else if (window.matchMedia('(prefers-color-scheme:dark)').matches)
+        document.documentElement.setAttribute('data-theme', 'dark');
+})();
+function filterCards() {
+    const q = document.getElementById('search').value.toLowerCase();
+    document.querySelectorAll('.card').forEach(c => {
+        c.style.display = c.textContent.toLowerCase().includes(q) ? '' : 'none';
+    });
+}
+</script>
+</body></html>
