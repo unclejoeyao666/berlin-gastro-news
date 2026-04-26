@@ -1,0 +1,51 @@
+---
+import { SITE_TITLE } from "../consts";
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const links = [
+  { href: `${base}/`, label: "首页" },
+  { href: `${base}/archive`, label: "归档" },
+  { href: `${base}/about`, label: "关于" },
+];
+---
+
+<header>
+  <div class="container">
+    <a href={`${base}/`} class="brand">📰 {SITE_TITLE}</a>
+    <nav>
+      {links.map((l) => <a href={l.href}>{l.label}</a>)}
+    </nav>
+  </div>
+</header>
+
+<style>
+  header {
+    background: var(--bg-soft);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 0;
+    margin-bottom: 24px;
+  }
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .brand {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--text);
+  }
+  nav {
+    display: flex;
+    gap: 16px;
+  }
+  nav a {
+    color: var(--text-soft);
+    font-size: 0.95rem;
+  }
+  nav a:hover {
+    color: var(--accent);
+    text-decoration: none;
+  }
+</style>

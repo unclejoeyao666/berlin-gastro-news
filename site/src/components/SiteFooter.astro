@@ -1,0 +1,28 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer>
+  <div class="container">
+    <p>© {year} 柏林餐饮商业新闻 · 数据来源：23+ 权威 RSS 订阅 · 自动生成</p>
+    <p>
+      <a href={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/rss.xml`}>RSS</a>
+      ·
+      <a href={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/about`}>项目说明</a>
+    </p>
+  </div>
+</footer>
+
+<style>
+  footer {
+    border-top: 1px solid var(--border);
+    margin-top: 60px;
+    padding: 30px 0;
+    color: var(--text-soft);
+    font-size: 0.85rem;
+    text-align: center;
+  }
+  footer p {
+    margin: 0.4em 0;
+  }
+</style>

@@ -1,0 +1,83 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import TagBadge from "../components/TagBadge.astro";
+
+interface Props {
+  title: string;
+  titleOriginal: string;
+  description: string;
+  pubDate: Date;
+  sourceName: string;
+  sourceUrl: string;
+  sourceLang: "de" | "en" | "zh";
+  tags: string[];
+  heroImage?: string;
+}
+const props = Astro.props;
+const dateStr = props.pubDate.toISOString().slice(0, 10);
+---
+
+<BaseLayout title={props.title} description={props.description} ogType="article">
+  <article class="article">
+    <header>
+      <h1>{props.title}</h1>
+      <p class="subtitle">{props.titleOriginal}</p>
+      <div class="meta">
+        <span>📌 {props.sourceName}</span>
+        <span>📅 {dateStr}</span>
+        <span>🌐 {props.sourceLang.toUpperCase()}</span>
+      </div>
+      <div class="tags">
+        {props.tags.map((t) => <TagBadge slug={t} />)}
+      </div>
+    </header>
+    <div class="body">
+      <slot />
+    </div>
+    <footer>
+      <p class="back">
+        <a href={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/`}>← 返回首页</a>
+      </p>
+    </footer>
+  </article>
+</BaseLayout>
+
+<style>
+  .article header {
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+  .article h1 {
+    margin: 0;
+    font-size: 1.9rem;
+  }
+  .subtitle {
+    color: var(--text-soft);
+    font-style: italic;
+    font-size: 0.95rem;
+    margin: 8px 0;
+  }
+  .meta {
+    display: flex;
+    gap: 14px;
+    color: var(--text-soft);
+    font-size: 0.88rem;
+    margin: 10px 0;
+    flex-wrap: wrap;
+  }
+  .tags {
+    margin-top: 10px;
+  }
+  .body :global(blockquote) {
+    font-size: 0.95rem;
+  }
+  footer {
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+  .back a {
+    color: var(--text-soft);
+  }
+</style>

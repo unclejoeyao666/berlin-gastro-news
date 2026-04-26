@@ -1,0 +1,63 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const articles = (await getCollection("articles"))
+  .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+
+const byMonth = new Map<string, typeof articles>();
+for (const a of articles) {
+  const key = a.data.pubDate.toISOString().slice(0, 7);
+  if (!byMonth.has(key)) byMonth.set(key, []);
+  byMonth.get(key)!.push(a);
+}
+const months = Array.from(byMonth.entries()).sort((a, b) => b[0].localeCompare(a[0]));
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+---
+
+<BaseLayout title="归档" description="按月份浏览所有文章">
+  <h1>📚 归档</h1>
+  <p class="meta">共 {articles.length} 篇文章 · {months.length} 个月份</p>
+  {months.map(([month, posts]) => (
+    <section>
+      <h2>{month}</h2>
+      <ul>
+        {posts.map((a) => (
+          <li>
+            <span class="d">{a.data.pubDate.toISOString().slice(8, 10)}</span>
+            <a href={`${base}/articles/${a.id}`}>{a.data.title}</a>
+            <span class="src">— {a.data.sourceName}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  ))}
+</BaseLayout>
+
+<style>
+  .meta {
+    color: var(--text-soft);
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  li {
+    padding: 6px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+    flex-wrap: wrap;
+  }
+  .d {
+    font-family: var(--font-mono);
+    color: var(--text-soft);
+    font-size: 0.85rem;
+    min-width: 30px;
+  }
+  .src {
+    color: var(--text-soft);
+    font-size: 0.85rem;
+  }
+</style>

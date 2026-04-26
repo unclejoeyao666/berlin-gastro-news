@@ -1,0 +1,33 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import AudioPlayer from "../components/AudioPlayer.astro";
+
+interface Props {
+  title: string;
+  date: Date;
+  audioUrl?: string;
+}
+const props = Astro.props;
+const dateStr = props.date.toISOString().slice(0, 10);
+---
+
+<BaseLayout title={props.title} description={`柏林餐饮商业新闻 ${dateStr} 期`}>
+  <header class="briefing-head">
+    <h1>{props.title}</h1>
+    <p class="date">📅 {dateStr}</p>
+    {props.audioUrl && <AudioPlayer src={props.audioUrl} date={dateStr} />}
+  </header>
+  <div class="briefing-body">
+    <slot />
+  </div>
+</BaseLayout>
+
+<style>
+  .briefing-head h1 {
+    margin: 0 0 6px;
+  }
+  .briefing-head .date {
+    color: var(--text-soft);
+    margin: 4px 0 16px;
+  }
+</style>

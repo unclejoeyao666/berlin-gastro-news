@@ -1,0 +1,48 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { TAG_LABELS } from "../consts";
+---
+
+<BaseLayout title="关于" description="项目说明、数据来源与工作机制">
+  <h1>ℹ️ 关于本项目</h1>
+
+  <h2>🎯 目标</h2>
+  <p>
+    为在德国（柏林）经营餐饮业的从业者，建立一套自动化的中文新闻情报体系。
+    覆盖餐饮法规、财税、招工、能源、食材、卫生、数字化、场地、营销、消费趋势、国际贸易、柏林本地等核心领域。
+  </p>
+
+  <h2>📡 数据来源</h2>
+  <ul>
+    <li><strong>餐饮专业：</strong>AHGZ Gastronomie / DEHOGA Berlin</li>
+    <li><strong>政府官方：</strong>BMEL（联邦食品农业部）/ EFSA（欧洲食品安全局）</li>
+    <li><strong>德国主流商业媒体：</strong>Tagesschau、Der Spiegel、FAZ、WirtschaftsWoche、Manager Magazin、ZDF</li>
+    <li><strong>国际政治：</strong>南华早报、Politico EU、EUobserver、欧盟委员会</li>
+    <li><strong>德语国际：</strong>Deutsche Welle (DE/EN)</li>
+  </ul>
+
+  <h2>🏷️ 行业标签</h2>
+  <ul>
+    {Object.entries(TAG_LABELS).map(([slug, label]) => (
+      <li><code>{slug}</code> — {label}</li>
+    ))}
+  </ul>
+
+  <h2>⚙️ 工作机制</h2>
+  <ol>
+    <li>每天早上自动从 23 个 RSS 源抓取最新新闻（去重）</li>
+    <li>从未播报池中选出当日 Top10（按重要性 + 时效性打分）</li>
+    <li>AI 对每篇做中文翻译 + 影响分析 + 行业打标</li>
+    <li>生成静态网页 + 中文音频简报</li>
+    <li>推送到 Discord 供决策参考</li>
+  </ol>
+
+  <h2>🔧 技术栈</h2>
+  <ul>
+    <li><strong>抓取：</strong>Python + feedparser</li>
+    <li><strong>数据库：</strong>SQLite + FTS5</li>
+    <li><strong>站点：</strong>Astro 6</li>
+    <li><strong>音频：</strong>Microsoft Edge TTS（zh-CN-XiaoxiaoNeural）</li>
+    <li><strong>部署：</strong>GitHub Actions → GitHub Pages</li>
+  </ul>
+</BaseLayout>

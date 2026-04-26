@@ -1,0 +1,31 @@
+---
+interface Props {
+  src: string;
+  date?: string;
+}
+const { src, date } = Astro.props;
+---
+
+<div class="audio-player">
+  <div class="meta">
+    🎙️ {date ? `${date} · ` : ""}音频版简报
+  </div>
+  <audio controls preload="none" src={src}>
+    您的浏览器不支持 audio 元素。<a href={src}>下载音频</a>
+  </audio>
+</div>
+
+<style>
+  .audio-player {
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+    margin: 16px 0;
+  }
+  .meta {
+    font-size: 0.88rem;
+    color: var(--text-soft);
+    margin-bottom: 8px;
+  }
+</style>
