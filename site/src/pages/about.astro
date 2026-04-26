@@ -1,48 +1,114 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { TAG_LABELS } from "../consts";
+import { TAG_LABELS, TAG_COLORS } from "../consts";
 ---
 
 <BaseLayout title="关于" description="项目说明、数据来源与工作机制">
-  <h1>ℹ️ 关于本项目</h1>
+  <article class="about prose">
+    <header class="about-head">
+      <p class="eyebrow">关于</p>
+      <h1>项目说明</h1>
+      <p class="lede">
+        为在德国（柏林）经营餐饮业的从业者，建立一套自动化的中文新闻情报体系。
+      </p>
+    </header>
 
-  <h2>🎯 目标</h2>
-  <p>
-    为在德国（柏林）经营餐饮业的从业者，建立一套自动化的中文新闻情报体系。
-    覆盖餐饮法规、财税、招工、能源、食材、卫生、数字化、场地、营销、消费趋势、国际贸易、柏林本地等核心领域。
-  </p>
+    <h2>覆盖范围</h2>
+    <p>
+      餐饮法规、财税补贴、招工人力、能源成本、食材供应链、卫生与食品安全、
+      数字化与 AI、场地与租赁、活动与营销、消费趋势、国际贸易、柏林本地动态。
+    </p>
 
-  <h2>📡 数据来源</h2>
-  <ul>
-    <li><strong>餐饮专业：</strong>AHGZ Gastronomie / DEHOGA Berlin</li>
-    <li><strong>政府官方：</strong>BMEL（联邦食品农业部）/ EFSA（欧洲食品安全局）</li>
-    <li><strong>德国主流商业媒体：</strong>Tagesschau、Der Spiegel、FAZ、WirtschaftsWoche、Manager Magazin、ZDF</li>
-    <li><strong>国际政治：</strong>南华早报、Politico EU、EUobserver、欧盟委员会</li>
-    <li><strong>德语国际：</strong>Deutsche Welle (DE/EN)</li>
-  </ul>
+    <h2>数据来源（23 个权威 RSS 源）</h2>
+    <ul>
+      <li><strong>餐饮专业：</strong>AHGZ Gastronomie / DEHOGA Berlin</li>
+      <li><strong>政府官方：</strong>BMEL（联邦食品农业部）/ EFSA（欧洲食品安全局）</li>
+      <li><strong>德国主流：</strong>Tagesschau / Spiegel / FAZ / WiWo / Manager Magazin / ZDF</li>
+      <li><strong>国际政治：</strong>南华早报 / Politico EU / EUobserver / 欧盟委员会</li>
+      <li><strong>德语国际：</strong>Deutsche Welle (DE / EN)</li>
+    </ul>
 
-  <h2>🏷️ 行业标签</h2>
-  <ul>
-    {Object.entries(TAG_LABELS).map(([slug, label]) => (
-      <li><code>{slug}</code> — {label}</li>
-    ))}
-  </ul>
+    <h2>主题分类</h2>
+    <p>所有文章会被打上 1-3 个主题标签，便于按方向浏览：</p>
+    <div class="tag-grid">
+      {Object.entries(TAG_LABELS).map(([slug, label]) => (
+        <span class="t-row" style={`--tag-color: ${TAG_COLORS[slug]}`}>
+          <span class="t-dot"></span>
+          <code>{slug}</code>
+          <span>{label}</span>
+        </span>
+      ))}
+    </div>
 
-  <h2>⚙️ 工作机制</h2>
-  <ol>
-    <li>每天早上自动从 23 个 RSS 源抓取最新新闻（去重）</li>
-    <li>从未播报池中选出当日 Top10（按重要性 + 时效性打分）</li>
-    <li>AI 对每篇做中文翻译 + 影响分析 + 行业打标</li>
-    <li>生成静态网页 + 中文音频简报</li>
-    <li>推送到 Discord 供决策参考</li>
-  </ol>
+    <h2>每日工作流</h2>
+    <ol>
+      <li>从 23 个 RSS 源抓取最新新闻（自动去重）</li>
+      <li>按"来源权威性 + 行业相关性 + 时效性"打分，选出当日 Top 10</li>
+      <li>AI 完成中文翻译 + 影响分析 + 主题打标</li>
+      <li>生成静态网页 + 8-12 分钟中文音频简报</li>
+      <li>推送到 Discord 频道供决策参考</li>
+    </ol>
 
-  <h2>🔧 技术栈</h2>
-  <ul>
-    <li><strong>抓取：</strong>Python + feedparser</li>
-    <li><strong>数据库：</strong>SQLite + FTS5</li>
-    <li><strong>站点：</strong>Astro 6</li>
-    <li><strong>音频：</strong>Microsoft Edge TTS（zh-CN-XiaoxiaoNeural）</li>
-    <li><strong>部署：</strong>GitHub Actions → GitHub Pages</li>
-  </ul>
+    <h2>技术栈</h2>
+    <ul>
+      <li><strong>抓取：</strong>Python + feedparser（自动 URL 归一化去重）</li>
+      <li><strong>数据库：</strong>SQLite + FTS5 + Bloom Filter</li>
+      <li><strong>站点：</strong>Astro 6 + 静态生成</li>
+      <li><strong>搜索：</strong>Pagefind（构建期索引，零服务端）</li>
+      <li><strong>音频：</strong>Microsoft Edge TTS / MiniMax speech-2.8-hd</li>
+      <li><strong>部署：</strong>GitHub Actions → GitHub Pages</li>
+    </ul>
+
+    <h2>反馈与源码</h2>
+    <p>
+      项目代码与设计文档均开源在
+      <a href="https://github.com/unclejoeyao666/berlin-gastro-news">GitHub</a>。
+      欢迎通过 Issue 反馈。
+    </p>
+  </article>
 </BaseLayout>
+
+<style>
+  .about { max-width: var(--content-width); margin: 0 auto; }
+  .about-head {
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    border-bottom: 2px solid var(--text);
+  }
+  .about-head h1 {
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    margin: 4px 0 12px;
+  }
+  .lede {
+    font-family: var(--font-serif);
+    font-size: 1.18rem;
+    color: var(--text-muted);
+    margin: 0;
+  }
+  .tag-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 8px 24px;
+    margin: 12px 0 24px;
+  }
+  .t-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-sans);
+    font-size: 0.92rem;
+  }
+  .t-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--tag-color);
+  }
+  .t-row code {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    background: var(--surface-tint);
+    padding: 0 6px;
+  }
+</style>

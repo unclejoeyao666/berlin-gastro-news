@@ -26,8 +26,19 @@ const articles = (
   date={briefing.data.date}
   audioUrl={briefing.data.audioUrl}
 >
-  <Content />
-  <div class="cards">
-    {articles.map((a, i) => <ArticleCard article={a} index={i + 1} />)}
+  <div class="brf-intro prose">
+    <Content />
+  </div>
+  <div class="brf-cards">
+    {articles.map((a, i) => <ArticleCard article={a} index={i + 1} variant="default" />)}
   </div>
 </BriefingLayout>
+
+<style>
+  .brf-intro:not(:empty) {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px dashed var(--border);
+  }
+  .brf-cards { margin-top: 16px; }
+</style>

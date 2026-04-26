@@ -9,25 +9,49 @@ interface Props {
 }
 const props = Astro.props;
 const dateStr = props.date.toISOString().slice(0, 10);
+const weekdays = ["日", "一", "二", "三", "四", "五", "六"];
+const weekday = weekdays[props.date.getUTCDay()];
 ---
 
-<BaseLayout title={props.title} description={`柏林餐饮商业新闻 ${dateStr} 期`}>
-  <header class="briefing-head">
+<BaseLayout
+  title={props.title}
+  description={`柏林餐饮商业新闻 ${dateStr} 期`}
+  highlightDate={dateStr}
+>
+  <header class="brf-head">
+    <p class="eyebrow">每日简报</p>
     <h1>{props.title}</h1>
-    <p class="date">📅 {dateStr}</p>
+    <p class="brf-date">
+      <time>{dateStr}</time> · 星期{weekday}
+    </p>
     {props.audioUrl && <AudioPlayer src={props.audioUrl} date={dateStr} />}
   </header>
-  <div class="briefing-body">
+  <div class="brf-body">
     <slot />
   </div>
 </BaseLayout>
 
 <style>
-  .briefing-head h1 {
-    margin: 0 0 6px;
+  .brf-head {
+    padding: 8px 0 4px;
+    border-bottom: 2px solid var(--text);
+    margin-bottom: 24px;
   }
-  .briefing-head .date {
-    color: var(--text-soft);
-    margin: 4px 0 16px;
+  .brf-head h1 {
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    margin: 4px 0 6px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+  .brf-date {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin: 0 0 16px;
+    font-family: var(--font-sans);
+  }
+  .brf-date time { font-family: var(--font-mono); }
+  @media (max-width: 600px) {
+    .brf-head h1 { font-size: 1.7rem; }
   }
 </style>
