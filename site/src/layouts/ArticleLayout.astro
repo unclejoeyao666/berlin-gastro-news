@@ -12,6 +12,7 @@ interface Props {
   sourceLang: "de" | "en" | "zh";
   tags: string[];
   heroImage?: string;
+  archived?: boolean;
 }
 const props = Astro.props;
 const dateStr = props.pubDate.toISOString().slice(0, 10);
@@ -25,6 +26,15 @@ const langLabel = { de: "德语原文", en: "英语原文", zh: "中文原创" }
   highlightDate={dateStr}
 >
   <article class="article" data-pagefind-body>
+    {props.archived && (
+      <aside class="archive-banner" role="note">
+        <strong>归档说明</strong>
+        <p>
+          此文为系统冷启动 / 测试期产物，内容可能不符合本站当前的「柏林餐饮商业」编辑标准，
+          仅供历史回溯。请以最新简报为准。
+        </p>
+      </aside>
+    )}
     <header class="art-head">
       <div class="art-tags">
         {props.tags.map((t) => <TagBadge slug={t} />)}
@@ -125,4 +135,23 @@ const langLabel = { de: "德语原文", en: "英语原文", zh: "中文原创" }
     .article h1 { font-size: 1.8rem; }
     .art-lede { font-size: 1.05rem; }
   }
+  .archive-banner {
+    background: var(--surface-tint, #fff5e0);
+    border-left: 3px solid var(--gold, #c08810);
+    padding: 12px 16px;
+    margin: 0 0 24px;
+    color: var(--text-muted, #555);
+    font-size: 0.9rem;
+    border-radius: 4px;
+  }
+  .archive-banner strong {
+    display: block;
+    color: var(--gold, #c08810);
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 4px;
+  }
+  .archive-banner p { margin: 0; }
 </style>

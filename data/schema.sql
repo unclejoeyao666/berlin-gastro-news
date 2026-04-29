@@ -49,6 +49,7 @@ CREATE TABLE IF NOT EXISTS news_articles (
     published_briefing_date  TEXT,
 
     raw_json                 TEXT,
+    quarantine_reason        TEXT,
     CONSTRAINT uq_story_hash UNIQUE (story_hash)
 );
 

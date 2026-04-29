@@ -9,8 +9,10 @@ interface Props {
 }
 const { highlightDate } = Astro.props;
 
-const articles = await getCollection("articles");
+const articles = (await getCollection("articles"))
+  .filter((a) => !a.data.archived);
 const briefings = (await getCollection("briefings"))
+  .filter((b) => !b.data.archived)
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 
 // Tag counts (skip empty tags)

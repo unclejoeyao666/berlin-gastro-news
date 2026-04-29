@@ -16,7 +16,9 @@ site/.astro/
 
 # Intermediate state
 daily-selected.json
+daily-wake.log
 *.tmp.txt
+.playwright-mcp/
 
 # OS
 .DS_Store

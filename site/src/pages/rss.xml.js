@@ -4,6 +4,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 
 export async function GET(context) {
   const posts = (await getCollection("articles"))
+    .filter((a) => !a.data.archived)
     .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
     .slice(0, 50);
   return rss({

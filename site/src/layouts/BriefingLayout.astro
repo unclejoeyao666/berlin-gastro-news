@@ -6,6 +6,7 @@ interface Props {
   title: string;
   date: Date;
   audioUrl?: string;
+  archived?: boolean;
 }
 const props = Astro.props;
 const dateStr = props.date.toISOString().slice(0, 10);
@@ -25,6 +26,15 @@ const weekday = weekdays[props.date.getUTCDay()];
       <time>{dateStr}</time> · 星期{weekday}
     </p>
     {props.audioUrl && <AudioPlayer src={props.audioUrl} date={dateStr} />}
+    {props.archived && (
+      <aside class="archive-banner" role="note">
+        <strong>归档说明</strong>
+        <p>
+          这一期为冷启动 / 测试期产物，内容不符合本站当前的「柏林餐饮商业」编辑标准，
+          仅作为历史保留。请参考更新日期之后的简报。
+        </p>
+      </aside>
+    )}
   </header>
   <div class="brf-body">
     <slot />
@@ -54,4 +64,23 @@ const weekday = weekdays[props.date.getUTCDay()];
   @media (max-width: 600px) {
     .brf-head h1 { font-size: 1.7rem; }
   }
+  .archive-banner {
+    background: var(--surface-tint, #fff5e0);
+    border-left: 3px solid var(--gold, #c08810);
+    padding: 12px 16px;
+    margin: 12px 0 0;
+    color: var(--text-muted, #555);
+    font-size: 0.9rem;
+    border-radius: 4px;
+  }
+  .archive-banner strong {
+    display: block;
+    color: var(--gold, #c08810);
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 4px;
+  }
+  .archive-banner p { margin: 0; }
 </style>

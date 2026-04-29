@@ -11,7 +11,7 @@ import json
 import hashlib
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Optional, List, Dict, Any, Union
+from typing import Any, Dict, List, Optional, Sequence, Union
 
 from .normalize import normalize_url
 
@@ -216,6 +216,171 @@ class NewsDB:
             ORDER BY importance DESC, discovered_at DESC
             LIMIT ?
         """, (min_importance, limit)).fetchall()
+
+    def get_unplayed_by_quota(
+        self,
+        gastro_quota: int = 5,
+        keyword_quota: int = 3,
+        general_quota: int = 2,
+        gastro_sources: Optional[Sequence[str]] = None,
+        keywords: Optional[Sequence[str]] = None,
+        keyword_blocked_sources: Optional[Sequence[str]] = None,
+        max_general_per_source: int = 3,
+        recency_days: int = 7,
+    ) -> Dict[str, List[sqlite3.Row]]:
+        """Pull unplayed articles split into 3 pools.
+
+        Pools:
+          * ``gastro``: rows whose ``source_id`` is in ``gastro_sources``.
+          * ``keyword``: rows from non-gastro sources whose
+            ``title || summary`` contains any of ``keywords``.
+          * ``general``: highest-importance rows that don't fit above,
+            capped at ``max_general_per_source`` from each single source
+            so a busy feed can't dominate.
+
+        Slots flow downward — if a higher-priority pool can't fill its
+        quota, the unfilled slots roll into the next pool.
+
+        Returns a dict ``{"gastro": [...], "keyword": [...], "general":
+        [...], "fillover_used": int}``. Caller decides how to merge.
+        """
+        if not gastro_sources:
+            gastro_sources = []
+        if not keywords:
+            keywords = []
+        if not keyword_blocked_sources:
+            keyword_blocked_sources = []
+
+        conn = self.connect()
+
+        recency_clause = ""
+        params: List[Any] = []
+        if recency_days and recency_days > 0:
+            recency_clause = (
+                "AND (published_at IS NULL OR "
+                "datetime(published_at) >= datetime('now', ?))"
+            )
+            params.append(f"-{int(recency_days)} days")
+
+        # ── Pool 1: gastro sources ──
+        gastro: List[sqlite3.Row] = []
+        if gastro_sources:
+            placeholders = ",".join("?" * len(gastro_sources))
+            sql = f"""
+                SELECT * FROM news_articles
+                 WHERE broadcast_status = 'unplayed'
+                   AND source_id IN ({placeholders})
+                   {recency_clause}
+                 ORDER BY importance DESC, discovered_at DESC
+                 LIMIT ?
+            """
+            gastro = list(conn.execute(
+                sql,
+                list(gastro_sources) + params + [gastro_quota],
+            ).fetchall())
+
+        # ── Pool 2: keyword hits in non-gastro sources ──
+        keyword: List[sqlite3.Row] = []
+        used_ids = {r["id"] for r in gastro}
+        if keywords:
+            kw_clauses = " OR ".join(
+                "(LOWER(title) LIKE ? OR LOWER(summary) LIKE ?)"
+                for _ in keywords
+            )
+            kw_params: List[Any] = []
+            for kw in keywords:
+                like = f"%{kw.lower()}%"
+                kw_params.extend([like, like])
+
+            blocked_clause = ""
+            if keyword_blocked_sources:
+                ph = ",".join("?" * len(keyword_blocked_sources))
+                blocked_clause = f"AND source_id NOT IN ({ph})"
+
+            sql = f"""
+                SELECT * FROM news_articles
+                 WHERE broadcast_status = 'unplayed'
+                   AND ({kw_clauses})
+                   {blocked_clause}
+                   {recency_clause}
+                 ORDER BY importance DESC, discovered_at DESC
+                 LIMIT ?
+            """
+            limit_keyword = keyword_quota + max(
+                0, gastro_quota - len(gastro)
+            )
+            keyword_rows = conn.execute(
+                sql,
+                kw_params + list(keyword_blocked_sources) + params
+                + [limit_keyword + 50],  # buffer for de-dup
+            ).fetchall()
+            for row in keyword_rows:
+                if row["id"] in used_ids:
+                    continue
+                keyword.append(row)
+                used_ids.add(row["id"])
+                if len(keyword) >= limit_keyword:
+                    break
+
+        # ── Pool 3: general fill ──
+        gastro_set = set(gastro_sources)
+        general: List[sqlite3.Row] = []
+        per_source_count: Dict[str, int] = {}
+        general_target = (
+            general_quota
+            + max(0, gastro_quota - len(gastro))
+            + max(0, keyword_quota - len(keyword))
+        )
+        if general_target > 0:
+            # Pull a generous candidate set then apply per-source cap.
+            sql = f"""
+                SELECT * FROM news_articles
+                 WHERE broadcast_status = 'unplayed'
+                   {recency_clause}
+                 ORDER BY importance DESC, discovered_at DESC
+                 LIMIT ?
+            """
+            candidate_limit = (general_target + 30) * 4
+            for row in conn.execute(
+                sql, params + [candidate_limit],
+            ).fetchall():
+                if row["id"] in used_ids:
+                    continue
+                src = row["source_id"] or ""
+                if src in gastro_set:
+                    continue  # we already drew from this pool
+                if per_source_count.get(src, 0) >= max_general_per_source:
+                    continue
+                general.append(row)
+                used_ids.add(row["id"])
+                per_source_count[src] = per_source_count.get(src, 0) + 1
+                if len(general) >= general_target:
+                    break
+
+        return {
+            "gastro": gastro,
+            "keyword": keyword,
+            "general": general,
+            "fillover": (gastro_quota - len(gastro))
+                        + (keyword_quota - len(keyword)),
+        }
+
+    def quarantine(self, article_ids: Sequence[int], reason: str) -> int:
+        """Mark articles as ``broadcast_status='archived'`` with reason."""
+        if not article_ids:
+            return 0
+        conn = self.connect()
+        placeholders = ",".join("?" * len(article_ids))
+        cur = conn.execute(
+            f"""
+            UPDATE news_articles
+               SET broadcast_status = 'archived',
+                   quarantine_reason = ?
+             WHERE id IN ({placeholders})
+            """,
+            [reason] + list(article_ids),
+        )
+        return cur.rowcount
 
     def get_by_id(self, article_id: int) -> Optional[sqlite3.Row]:
         conn = self.connect()

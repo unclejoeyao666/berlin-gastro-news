@@ -16,6 +16,7 @@ const articles = defineCollection({
     sourceLang: z.enum(['de', 'en', 'zh']).default('de'),
     tags: z.array(tagEnum).min(1).max(3),
     heroImage: z.string().optional(),
+    archived: z.boolean().optional().default(false),
   }),
 });
 
@@ -26,6 +27,7 @@ const briefings = defineCollection({
     date: z.coerce.date(),
     audioUrl: z.string().optional(),
     articles: z.array(z.string()).min(1).max(15),
+    archived: z.boolean().optional().default(false),
   }),
 });
 

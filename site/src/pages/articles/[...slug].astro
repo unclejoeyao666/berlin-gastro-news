@@ -12,6 +12,6 @@ const post = Astro.props;
 const { Content } = await render(post);
 ---
 
-<ArticleLayout {...post.data}>
+<ArticleLayout {...post.data} archived={post.data.archived ?? false}>
   <Content />
 </ArticleLayout>

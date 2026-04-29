@@ -25,6 +25,7 @@ const articles = (
   title={briefing.data.title}
   date={briefing.data.date}
   audioUrl={briefing.data.audioUrl}
+  archived={briefing.data.archived ?? false}
 >
   <div class="brf-intro prose">
     <Content />

@@ -85,13 +85,17 @@ def main():
     p.add_argument("--selected", default=str(SELECTED_JSON))
     p.add_argument("--site-url",
                    default="https://unclejoeyao666.github.io/berlin-gastro-news")
+    p.add_argument("--log-broadcast", action="store_true",
+                   help="Write broadcast_log row inline. Default off; "
+                        "daily_pipeline writes it after audio step.")
     args = p.parse_args()
 
     date_str = parse_date(args.date)
     selected = json.loads(Path(args.selected).read_text(encoding="utf-8"))
-    ids = [a["id"] for a in selected["articles"]]
+    # Skip articles the agent flagged as off-topic via translate_helper skip.
+    ids = [a["id"] for a in selected["articles"] if not a.get("_skipped")]
     if not ids:
-        print("⚠️  no articles in daily-selected.json")
+        print("⚠️  no translated articles in daily-selected.json (all skipped?)")
         sys.exit(0)
 
     audio_rel = f"{SITE_BASE}/audio/{date_str}.mp3"
@@ -154,13 +158,14 @@ def main():
         meta_path.write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
         print(f"✅ {meta_path.relative_to(ROOT)}")
 
-        db.log_broadcast(
-            broadcast_date=date_str,
-            article_ids=[r["id"] for r in rows],
-            briefing_url=briefing_url_full,
-            audio_url=audio_url_full,
-            audio_path=str((daily_dir / "audio.mp3").relative_to(ROOT)),
-        )
+        if args.log_broadcast:
+            db.log_broadcast(
+                broadcast_date=date_str,
+                article_ids=[r["id"] for r in rows],
+                briefing_url=briefing_url_full,
+                audio_url=audio_url_full,
+                audio_path=str((daily_dir / "audio.mp3").relative_to(ROOT)),
+            )
 
 
 if __name__ == "__main__":

@@ -4,6 +4,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import CalendarMonth from "../../components/CalendarMonth.astro";
 
 const briefings = (await getCollection("briefings"))
+  .filter((b) => !b.data.archived)
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 
 // Build set of ISO dates with briefings

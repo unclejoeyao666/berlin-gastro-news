@@ -19,13 +19,19 @@ from scripts.lib.news_db import NewsDB
 DB_PATH = ROOT / "data" / "news.db"
 
 CATEGORY_WEIGHTS = {
-    "gastronomie": 10, "law": 9, "tax": 9, "food-safety": 8,
-    "business": 7, "economy": 7, "berlin": 6, "trade": 6,
-    "regulations": 6, "subsidies": 5, "finance": 5, "china": 5,
-    "asia": 4, "geopolitics": 4, "eu": 4, "politics": 3,
-    "health": 3, "hygiene": 3, "supply-chain": 2, "equipment": 2,
-    "hotellerie": 2, "events": 1, "general": 1, "international": 1,
-    "management": 1, "agriculture": 1,
+    # Boosted gastro-relevant categories so non-gastro sources can't
+    # outscore tier-1 industry feeds purely on volume.
+    "gastronomie": 22, "hotellerie": 16, "food-safety": 18,
+    "berlin": 14, "supply-chain": 8, "hygiene": 8, "agriculture": 6,
+    # Moderate weights for general business / finance / law.
+    "law": 9, "tax": 9, "business": 7, "economy": 7,
+    "regulations": 7, "subsidies": 6, "finance": 5,
+    # Geopolitics: still relevant for trade impact, but downweighted.
+    "trade": 6, "china": 5, "asia": 4, "geopolitics": 4, "eu": 4,
+    "politics": 2, "health": 3,
+    # Truly generic / off-topic categories pinned low.
+    "equipment": 2, "events": 1, "general": 1,
+    "international": 1, "management": 1,
 }
 
 NOISE_URL_PATTERNS = [
