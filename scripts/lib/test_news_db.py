@@ -142,3 +142,163 @@ def test_bloom_filter_basic():
     bf.add("hello")
     assert "hello" in bf
     assert "world" not in bf  # unlikely false positive at this scale
+
+
+# ── url_seen ledger ────────────────────────────────────
+
+
+def test_make_url_hash_deterministic():
+    h1 = NewsDB.make_url_hash("https://example.com/x")
+    h2 = NewsDB.make_url_hash("https://example.com/x")
+    assert h1 == h2 and len(h1) == 64
+    assert NewsDB.make_url_hash("a") != NewsDB.make_url_hash("b")
+
+
+def test_add_article_writes_url_seen(tmp_db):
+    with NewsDB(tmp_db) as db:
+        rid = db.add_article(make_article(source_url="https://example.com/x"))
+        assert rid is not None
+        url_hash = db.make_url_hash("https://example.com/x")
+        assert db.is_url_seen(url_hash) is True
+
+
+def test_is_url_seen_falls_back_to_title_hash(tmp_db):
+    with NewsDB(tmp_db) as db:
+        title_hash = db.make_hash("My Title", "Source")
+        db.record_url_seen(
+            url_hash="abc123",
+            title_hash=title_hash,
+            source_id="test-source",
+        )
+        # Lookup by title_hash succeeds even when url_hash is unknown
+        assert db.is_url_seen(url_hash=None, title_hash=title_hash) is True
+
+
+def test_record_url_seen_idempotent(tmp_db):
+    with NewsDB(tmp_db) as db:
+        first = db.record_url_seen("hash-1", "th-1", "src")
+        second = db.record_url_seen("hash-1", "th-1", "src")
+        assert first is True
+        assert second is False
+
+
+def test_record_url_seen_skips_when_no_url_hash(tmp_db):
+    with NewsDB(tmp_db) as db:
+        assert db.record_url_seen(url_hash=None, title_hash="th") is False
+
+
+def test_record_url_seen_batch(tmp_db):
+    with NewsDB(tmp_db) as db:
+        rows = [
+            {"url_hash": "h1", "title_hash": "t1", "source_id": "s1"},
+            {"url_hash": "h2", "title_hash": "t2", "source_id": "s1"},
+            {"url_hash": None, "title_hash": "t3"},  # skipped
+        ]
+        n = db.record_url_seen_batch(rows)
+        assert n == 2
+
+
+def test_dedup_via_url_seen_after_article_pruned(tmp_db):
+    """The ledger must outlive aging — once url_seen knows a URL, future
+    harvests skip it even if the news_articles row is gone."""
+    with NewsDB(tmp_db) as db:
+        rid = db.add_article(make_article(source_url="https://example.com/x"))
+        url_hash = db.make_url_hash("https://example.com/x")
+
+        # Simulate aging deleting the article row.
+        db.connect().execute("DELETE FROM news_articles WHERE id = ?", (rid,))
+
+        # Article gone, but url_seen retains the dedup signal.
+        assert db.connect().execute(
+            "SELECT COUNT(*) FROM news_articles"
+        ).fetchone()[0] == 0
+        assert db.is_url_seen(url_hash) is True
+
+
+# ── pruning ────────────────────────────────────────────
+
+
+def test_prune_articles_unplayed_cutoff(tmp_db):
+    with NewsDB(tmp_db) as db:
+        conn = db.connect()
+        # Insert two unplayed articles with explicit discovered_at.
+        db.add_article(make_article(title="old", source_url="https://e.com/old"))
+        db.add_article(make_article(title="new", source_url="https://e.com/new"))
+        conn.execute(
+            "UPDATE news_articles SET discovered_at = '2025-01-01T00:00:00' "
+            "WHERE title = 'old'"
+        )
+        conn.execute(
+            "UPDATE news_articles SET discovered_at = '2026-04-29T00:00:00' "
+            "WHERE title = 'new'"
+        )
+
+        counts = db.prune_articles(unplayed_cutoff="2025-06-01T00:00:00")
+        assert counts["unplayed"] == 1
+        rows = conn.execute(
+            "SELECT title FROM news_articles ORDER BY title"
+        ).fetchall()
+        assert [r["title"] for r in rows] == ["new"]
+
+
+def test_prune_articles_skips_played_when_cutoff_none(tmp_db):
+    with NewsDB(tmp_db) as db:
+        rid = db.add_article(make_article(source_url="https://e.com/x"))
+        db.update_translation(rid, "ct", "cs", "cb", "ia", ["gastro-law"], "slug-x")
+        db.mark_played([rid], briefing_date="2025-01-01")
+
+        # played_cutoff=None → played articles untouched
+        counts = db.prune_articles(
+            played_cutoff=None,
+            unplayed_cutoff="2030-01-01T00:00:00",
+            archived_cutoff="2030-01-01T00:00:00",
+        )
+        assert counts["played"] == 0
+        n = db.connect().execute("SELECT COUNT(*) FROM news_articles").fetchone()[0]
+        assert n == 1
+
+
+def test_prune_articles_archived_cutoff(tmp_db):
+    with NewsDB(tmp_db) as db:
+        rid_old = db.add_article(make_article(
+            title="old-arch", source_url="https://e.com/old"
+        ))
+        rid_new = db.add_article(make_article(
+            title="new-arch", source_url="https://e.com/new"
+        ))
+        db.quarantine([rid_old, rid_new], reason="test")
+        db.connect().execute(
+            "UPDATE news_articles SET discovered_at = '2025-01-01T00:00:00' "
+            "WHERE id = ?", (rid_old,)
+        )
+        db.connect().execute(
+            "UPDATE news_articles SET discovered_at = '2026-04-29T00:00:00' "
+            "WHERE id = ?", (rid_new,)
+        )
+
+        counts = db.prune_articles(archived_cutoff="2026-01-01T00:00:00")
+        assert counts["archived"] == 1
+        remaining = db.connect().execute(
+            "SELECT id FROM news_articles WHERE broadcast_status = 'archived'"
+        ).fetchall()
+        assert [r["id"] for r in remaining] == [rid_new]
+
+
+def test_prune_url_seen(tmp_db):
+    with NewsDB(tmp_db) as db:
+        db.record_url_seen("h-old", "t1", "src", seen_at="2024-01-01T00:00:00")
+        db.record_url_seen("h-new", "t2", "src", seen_at="2026-04-29T00:00:00")
+        n = db.prune_url_seen(cutoff="2025-06-01T00:00:00")
+        assert n == 1
+        remaining = db.connect().execute(
+            "SELECT url_hash FROM url_seen"
+        ).fetchall()
+        assert [r["url_hash"] for r in remaining] == ["h-new"]
+
+
+def test_stats_includes_url_seen(tmp_db):
+    with NewsDB(tmp_db) as db:
+        db.record_url_seen("h1", "t1", "src")
+        db.record_url_seen("h2", "t2", "src")
+        s = db.stats()
+        assert s["url_seen"] == 2

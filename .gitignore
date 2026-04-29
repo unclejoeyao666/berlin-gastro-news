@@ -8,6 +8,7 @@ __pycache__/
 # SQLite WAL/SHM (db file itself IS tracked)
 data/news.db-shm
 data/news.db-wal
+data/*.bak
 
 # Astro
 site/node_modules/

@@ -39,9 +39,13 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
 from scripts.lib import state as st
+from scripts.lib.aging import RetentionConfig, prune
+from scripts.lib.news_db import NewsDB
 
 DAILY_ROOT = ROOT / "daily"
 LOG_PATH = ROOT / "daily-wake.log"
+DB_PATH = ROOT / "data" / "news.db"
+AGING_MIN_BUDGET_SECONDS = 30
 
 
 def parse_today() -> str:
@@ -92,6 +96,20 @@ def run_pipeline(date_str: str, budget_seconds: int) -> Tuple[int, str]:
     return r.returncode, out
 
 
+def run_aging(remaining_seconds: int) -> dict:
+    """Apply DB retention + intermediate file cleanup. Idempotent."""
+    if remaining_seconds < AGING_MIN_BUDGET_SECONDS:
+        return {"skipped": "budget", "remaining": remaining_seconds}
+    if not DB_PATH.exists():
+        return {"skipped": "no-db"}
+    cfg = RetentionConfig()
+    try:
+        with NewsDB(str(DB_PATH), use_bloom=False) as db:
+            return prune(db, cfg, daily_root=DAILY_ROOT)
+    except Exception as e:
+        return {"error": str(e)[:200]}
+
+
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--lookback-days", type=int, default=2,
@@ -121,40 +139,60 @@ def main():
     if not todo:
         append_log({"event": "wake", "todo": [], "note": "all caught up"})
         print(f"✅ wake: nothing to do (all dates complete)")
-        return
+    else:
+        print(f"⏰ wake: dates to advance = {todo}")
+        append_log({"event": "wake", "todo": todo,
+                    "budget_seconds": args.budget_seconds})
 
-    print(f"⏰ wake: dates to advance = {todo}")
-    append_log({"event": "wake", "todo": todo,
-                "budget_seconds": args.budget_seconds})
+        if args.dry_run:
+            print("(dry-run — exiting)")
+            return
+
+        for d in todo:
+            remaining = max(0, int(deadline - time.monotonic()))
+            if remaining < 60:
+                append_log({"event": "budget-exhausted",
+                            "remaining": remaining, "next": d})
+                print(f"⏸  budget exhausted ({remaining}s) before {d}")
+                return
+            print(f"\n=== {d} (budget {remaining}s) ===")
+            rc, output = run_pipeline(d, remaining)
+            # Always print pipeline output so cron logs are useful
+            sys.stdout.write(output)
+            sys.stdout.flush()
+            # Reload state to log progress
+            state = st.load(state_path_for(d), d)
+            finished = sum(1 for s in st.STEPS if st.is_done(state, s))
+            append_log({"event": "step-batch", "date": d,
+                        "rc": rc,
+                        "steps_done": finished,
+                        "total_steps": len(st.STEPS)})
+            if rc != 0 and not is_complete(state):
+                # Don't bail — try the next date; cron will retry this one
+                # next wake-up.
+                print(f"⚠️  {d} pipeline returned rc={rc}; "
+                      f"will retry on next wake")
 
     if args.dry_run:
-        print("(dry-run — exiting)")
         return
 
-    for d in todo:
-        remaining = max(0, int(deadline - time.monotonic()))
-        if remaining < 60:
-            append_log({"event": "budget-exhausted",
-                        "remaining": remaining, "next": d})
-            print(f"⏸  budget exhausted ({remaining}s) before {d}")
-            return
-        print(f"\n=== {d} (budget {remaining}s) ===")
-        rc, output = run_pipeline(d, remaining)
-        # Always print pipeline output so cron logs are useful
-        sys.stdout.write(output)
-        sys.stdout.flush()
-        # Reload state to log progress
-        state = st.load(state_path_for(d), d)
-        finished = sum(1 for s in st.STEPS if st.is_done(state, s))
-        append_log({"event": "step-batch", "date": d,
-                    "rc": rc,
-                    "steps_done": finished,
-                    "total_steps": len(st.STEPS)})
-        if rc != 0 and not is_complete(state):
-            # Don't bail — try the next date; cron will retry this one
-            # next wake-up.
-            print(f"⚠️  {d} pipeline returned rc={rc}; "
-                  f"will retry on next wake")
+    # Tail: run aging once (idempotent) before we exit. Independent of
+    # whether any date moved; aging is a global concern.
+    remaining = max(0, int(deadline - time.monotonic()))
+    age_result = run_aging(remaining)
+    if "skipped" in age_result:
+        print(f"🕰  age: skipped ({age_result['skipped']})")
+    elif "error" in age_result:
+        print(f"🕰  age: error — {age_result['error']}")
+    else:
+        print(f"🕰  age: pruned "
+              f"played={age_result['played']} "
+              f"unplayed={age_result['unplayed']} "
+              f"archived={age_result['archived']} "
+              f"url_seen={age_result['url_seen']} "
+              f"files={age_result['files_removed']} "
+              f"vacuumed={age_result['vacuumed']}")
+    append_log({"event": "age", **age_result})
     append_log({"event": "wake-complete", "todo": todo})
 
 

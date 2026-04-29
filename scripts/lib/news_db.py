@@ -96,6 +96,10 @@ class NewsDB:
         raw = f"{title.strip()}::{source_name.strip()}".encode("utf-8")
         return hashlib.sha256(raw).hexdigest()
 
+    @staticmethod
+    def make_url_hash(url_normalized: str) -> str:
+        return hashlib.sha256(url_normalized.encode("utf-8")).hexdigest()
+
     # ── Sources ────────────────────────────────────────
 
     def import_sources(self, sources_json_path: Union[str, Path]) -> Dict[str, int]:
@@ -161,12 +165,17 @@ class NewsDB:
     # ── Articles ───────────────────────────────────────
 
     def add_article(self, article: Dict[str, Any]) -> Optional[int]:
-        """Insert one article. Returns rowid on insert, None on duplicate."""
+        """Insert one article. Returns rowid on insert, None on duplicate.
+
+        On successful INSERT, also records the URL in ``url_seen`` so the
+        ledger survives later aging of news_articles rows.
+        """
         conn = self.connect()
         title = article["title"].strip()
         source_name = article["source_name"].strip()
         story_hash = self.make_hash(title, source_name)
         url_norm = normalize_url(article.get("source_url"))
+        url_hash = self.make_url_hash(url_norm) if url_norm else None
 
         if url_norm:
             row = conn.execute(
@@ -203,6 +212,13 @@ class NewsDB:
             if cur.lastrowid and cur.rowcount > 0:
                 if self._bloom:
                     self._bloom.add(story_hash)
+                if url_hash:
+                    conn.execute(
+                        "INSERT OR IGNORE INTO url_seen "
+                        "(url_hash, title_hash, first_seen_at, source_id) "
+                        "VALUES (?, ?, datetime('now'), ?)",
+                        (url_hash, story_hash, article.get("source_id")),
+                    )
                 return cur.lastrowid
             return None
         except sqlite3.IntegrityError:
@@ -382,6 +398,144 @@ class NewsDB:
         )
         return cur.rowcount
 
+    # ── url_seen ledger ────────────────────────────────
+
+    def is_url_seen(
+        self,
+        url_hash: Optional[str],
+        title_hash: Optional[str] = None,
+    ) -> bool:
+        """Returns True if either hash is recorded in ``url_seen``."""
+        conn = self.connect()
+        if url_hash:
+            row = conn.execute(
+                "SELECT 1 FROM url_seen WHERE url_hash = ? LIMIT 1",
+                (url_hash,),
+            ).fetchone()
+            if row:
+                return True
+        if title_hash:
+            row = conn.execute(
+                "SELECT 1 FROM url_seen WHERE title_hash = ? LIMIT 1",
+                (title_hash,),
+            ).fetchone()
+            if row:
+                return True
+        return False
+
+    def record_url_seen(
+        self,
+        url_hash: Optional[str],
+        title_hash: Optional[str] = None,
+        source_id: Optional[str] = None,
+        seen_at: Optional[str] = None,
+    ) -> bool:
+        """Idempotent. Returns True if a new row was inserted.
+
+        Skips silently when ``url_hash`` is missing — title_hash alone is
+        not unique enough to store as a primary key.
+        """
+        if not url_hash:
+            return False
+        conn = self.connect()
+        cur = conn.execute(
+            "INSERT OR IGNORE INTO url_seen "
+            "(url_hash, title_hash, first_seen_at, source_id) "
+            "VALUES (?, ?, COALESCE(?, datetime('now')), ?)",
+            (url_hash, title_hash, seen_at, source_id),
+        )
+        return cur.rowcount > 0
+
+    def record_url_seen_batch(
+        self,
+        rows: Sequence[Dict[str, Any]],
+    ) -> int:
+        """Bulk insert. Each row needs ``url_hash``; ``title_hash``,
+        ``source_id``, ``seen_at`` are optional. Returns insert count."""
+        if not rows:
+            return 0
+        conn = self.connect()
+        inserted = 0
+        conn.execute("BEGIN")
+        try:
+            for r in rows:
+                if not r.get("url_hash"):
+                    continue
+                cur = conn.execute(
+                    "INSERT OR IGNORE INTO url_seen "
+                    "(url_hash, title_hash, first_seen_at, source_id) "
+                    "VALUES (?, ?, COALESCE(?, datetime('now')), ?)",
+                    (
+                        r["url_hash"],
+                        r.get("title_hash"),
+                        r.get("seen_at"),
+                        r.get("source_id"),
+                    ),
+                )
+                inserted += cur.rowcount
+            conn.execute("COMMIT")
+        except Exception:
+            conn.execute("ROLLBACK")
+            raise
+        return inserted
+
+    # ── pruning / aging ────────────────────────────────
+
+    def prune_articles(
+        self,
+        played_cutoff: Optional[str] = None,
+        unplayed_cutoff: Optional[str] = None,
+        archived_cutoff: Optional[str] = None,
+    ) -> Dict[str, int]:
+        """Delete articles older than the given ISO cutoffs by status.
+
+        ``None`` for any cutoff means skip that bucket.
+
+        ``played_cutoff`` matches against ``COALESCE(broadcast_date,
+        discovered_at)`` so an article that lost its broadcast_date still
+        ages from when it was harvested.
+
+        Returns ``{"played": n, "unplayed": n, "archived": n}``.
+        """
+        conn = self.connect()
+        counts = {"played": 0, "unplayed": 0, "archived": 0}
+        if played_cutoff is not None:
+            cur = conn.execute(
+                "DELETE FROM news_articles "
+                "WHERE broadcast_status = 'played' "
+                "  AND COALESCE(broadcast_date, discovered_at) < ?",
+                (played_cutoff,),
+            )
+            counts["played"] = cur.rowcount
+        if unplayed_cutoff is not None:
+            cur = conn.execute(
+                "DELETE FROM news_articles "
+                "WHERE broadcast_status = 'unplayed' "
+                "  AND discovered_at < ?",
+                (unplayed_cutoff,),
+            )
+            counts["unplayed"] = cur.rowcount
+        if archived_cutoff is not None:
+            cur = conn.execute(
+                "DELETE FROM news_articles "
+                "WHERE broadcast_status = 'archived' "
+                "  AND discovered_at < ?",
+                (archived_cutoff,),
+            )
+            counts["archived"] = cur.rowcount
+        return counts
+
+    def prune_url_seen(self, cutoff: str) -> int:
+        """Delete url_seen rows whose first_seen_at < cutoff."""
+        conn = self.connect()
+        cur = conn.execute(
+            "DELETE FROM url_seen WHERE first_seen_at < ?", (cutoff,)
+        )
+        return cur.rowcount
+
+    def vacuum(self) -> None:
+        self.connect().execute("VACUUM")
+
     def get_by_id(self, article_id: int) -> Optional[sqlite3.Row]:
         conn = self.connect()
         return conn.execute(
@@ -483,18 +637,27 @@ class NewsDB:
             SELECT COUNT(*) AS total,
                    SUM(broadcast_status = 'unplayed') AS unplayed,
                    SUM(broadcast_status = 'played') AS played,
+                   SUM(broadcast_status = 'archived') AS archived,
                    SUM(slug IS NOT NULL) AS published
               FROM news_articles
         """).fetchone()
         sources_n = conn.execute(
             "SELECT COUNT(*) FROM sources WHERE enabled = 1"
         ).fetchone()[0]
+        try:
+            url_seen_n = conn.execute(
+                "SELECT COUNT(*) FROM url_seen"
+            ).fetchone()[0]
+        except sqlite3.OperationalError:
+            url_seen_n = 0
         return {
             "total_articles": row["total"] or 0,
             "unplayed": row["unplayed"] or 0,
             "played": row["played"] or 0,
+            "archived": row["archived"] or 0,
             "published": row["published"] or 0,
             "active_sources": sources_n,
+            "url_seen": url_seen_n,
         }
 
 

@@ -92,6 +92,16 @@ CREATE TABLE IF NOT EXISTS broadcast_log (
     created_at      TEXT NOT NULL DEFAULT (datetime('now'))
 );
 
+-- Persistent dedup ledger. Outlives news_articles aging — keeps the
+-- knowledge that a URL was once fetched even after the article row is
+-- pruned, so harvest doesn't re-add a story we've already seen.
+CREATE TABLE IF NOT EXISTS url_seen (
+    url_hash       TEXT PRIMARY KEY,
+    title_hash     TEXT,
+    first_seen_at  TEXT NOT NULL DEFAULT (datetime('now')),
+    source_id      TEXT
+);
+
 -- Indexes
 CREATE INDEX IF NOT EXISTS idx_articles_status ON news_articles(broadcast_status);
 CREATE INDEX IF NOT EXISTS idx_articles_hash ON news_articles(story_hash);
@@ -106,5 +116,7 @@ CREATE UNIQUE INDEX IF NOT EXISTS idx_articles_slug
 CREATE INDEX IF NOT EXISTS idx_articles_briefing
     ON news_articles(published_briefing_date) WHERE published_briefing_date IS NOT NULL;
 CREATE INDEX IF NOT EXISTS idx_sources_enabled ON sources(enabled);
+CREATE INDEX IF NOT EXISTS idx_url_seen_title ON url_seen(title_hash);
+CREATE INDEX IF NOT EXISTS idx_url_seen_seen_at ON url_seen(first_seen_at);
 
 PRAGMA user_version = 2;
