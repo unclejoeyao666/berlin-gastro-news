@@ -7,6 +7,8 @@ sourceName: "Tagesschau Wirtschaft"
 sourceUrl: "https://www.tagesschau.de/wirtschaft/unternehmen/start-up-china-meta-deal-100.html"
 sourceLang: de
 tags: ["digital-tech", "geopolitics-trade", "gastro-law"]
+archived: true
+archiveReason: "off-topic Tagesschau selection with mis-tagged gastro-law"
 ---
 这宗交易破裂反映了中国对AI技术和人才外流的高度警惕。北京将Manus的AI能力视为国家战略性资产，不愿看到其落入美国公司之手。据报道，中国监管机构担心若交易达成，公司积累的先进AI技术将为中国培养的顶尖人才所掌握，这与美国科技巨头掌握全球最前沿的AI能力形成战略对抗。中国通过这种方式明确传达信号：在AI领域，涉及核心技术和关键人才的跨境并购将面临更严格的国家安全审查。
 

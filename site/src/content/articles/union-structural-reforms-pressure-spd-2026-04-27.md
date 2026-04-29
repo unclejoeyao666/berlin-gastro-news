@@ -7,6 +7,8 @@ sourceName: "Tagesschau Wirtschaft"
 sourceUrl: "https://www.tagesschau.de/inland/innenpolitik/union-fraktion-reformen-100.html"
 sourceLang: de
 tags: ["tax-finance", "gastro-law", "energy-cost"]
+archived: true
+archiveReason: "off-topic Tagesschau selection with mis-tagged gastro-law"
 ---
 联盟党的这份改革路线图核心论点是：没有经济增长，财政稳定、社会保障和外交政策都缺乏基础。文件指出，德国企业的税收和社保负担在国际比较中处于高位，能源价格竞争力不足，而来自欧盟的监管负担也在持续增加。文件要求明年启动的个人所得税减税方案必须通过削减财政补贴等方式自筹资金，而非通过增加债务实现。联盟党主张，公共支出应与税收收入匹配，而非反过来。
 

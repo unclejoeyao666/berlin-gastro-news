@@ -7,6 +7,8 @@ sourceName: "Tagesschau Wirtschaft"
 sourceUrl: "https://www.tagesschau.de/wirtschaft/weltwirtschaft/automesse-peking-124.html"
 sourceLang: de
 tags: ["geopolitics-trade", "digital-tech", "gastro-law"]
+archived: true
+archiveReason: "off-topic Tagesschau selection with mis-tagged gastro-law"
 ---
 中国电动车市场已从早期的价格战升级为技术与品牌的全面竞争。华为赋能的车载智能系统成为Stelato的重要卖点，而吉利的Zeekr品牌则以高端电动MPV切入家庭消费市场。这些品牌的共同特点是将车辆定位为智能生活空间，而非单纯的交通工具。相比之下，德国制造商虽然拥有百年品牌积淀，但在车机系统的本土化适配方面仍面临挑战。北京车展的参观热度也反映出中国消费者对新能源车的高度热情，这为本土品牌提供了充足的市场反馈和产品迭代机会。
 

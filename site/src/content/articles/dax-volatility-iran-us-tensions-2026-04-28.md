@@ -7,6 +7,8 @@ sourceName: "Tagesschau Wirtschaft"
 sourceUrl: "https://www.tagesschau.de/wirtschaft/finanzen/marktberichte/marktbericht-dax-dow-geldanlage-124.html"
 sourceLang: de
 tags: ["tax-finance", "geopolitics-trade", "energy-cost"]
+archived: true
+archiveReason: "off-topic Tagesschau selection with mis-tagged gastro-law"
 ---
 专家分析认为，只要美伊之间缺乏明确的政治解决方案，市场将维持高不确定性。美国若进一步上调利率，将对已经疲弱的实体经济造成额外压力，进而抑制企业盈利并拖累股市。德国作为出口导向型经济体，其股市对全球利率环境变化高度敏感。能源价格持续高企也会进一步挤压工业企业利润空间，增加经济下行风险。投资者普遍采取观望态度，等待本周多个重大事件靴子落地。
 

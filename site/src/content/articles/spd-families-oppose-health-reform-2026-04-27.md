@@ -7,6 +7,8 @@ sourceName: "Tagesschau Wirtschaft"
 sourceUrl: "https://www.tagesschau.de/inland/innenpolitik/spd-reformen-positionspapier-100.html"
 sourceLang: de
 tags: ["gastro-law", "tax-finance"]
+archived: true
+archiveReason: "off-topic Tagesschau selection with mis-tagged gastro-law"
 ---
 社民党地方议员联盟的这份文件是在向联邦党团施压，要求在医保改革中保护家庭利益。他们主张，应当由医疗服务提供者、医疗保险机构和高等收入群体共同分担改革成本，而非让家庭承受额外压力。文件特别强调，家庭成员之间的相互照顾是社会的重要功能，其价值长期被低估，因此应当得到政策支持而非新的经济负担。
 

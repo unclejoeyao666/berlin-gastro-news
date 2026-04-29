@@ -7,6 +7,8 @@ sourceName: "Tagesschau Wirtschaft"
 sourceUrl: "https://www.tagesschau.de/wirtschaft/unternehmen/lindner-autoland-ag-100.html"
 sourceLang: de
 tags: ["gastro-law", "berlin-local", "tax-finance"]
+archived: true
+archiveReason: "off-topic Tagesschau selection with mis-tagged gastro-law"
 ---
 自去年十月加入Autoland担任销售董事以来，林德纳一直在为最终接任CEO做铺垫。他选择汽车行业，是因为德国实体经济的核心在那里。这符合他从政界向商界转型的整体规划。对于Autoland而言，引入一位具有政策人脉和公众知名度的高端职业经理人，有助于其在竞争激烈的德国汽车零售市场中实现差异化定位。林德纳在联邦议会和内阁的多年经历，为公司处理监管合规和政策沟通提供了独特优势。
 

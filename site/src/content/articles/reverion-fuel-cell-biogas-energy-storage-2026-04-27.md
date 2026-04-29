@@ -7,6 +7,8 @@ sourceName: "Tagesschau Wirtschaft"
 sourceUrl: "https://www.tagesschau.de/wissen/technologie/energie-kraftwerke-brennstoffzellen-100.html"
 sourceLang: de
 tags: ["energy-cost", "digital-tech", "gastro-law"]
+archived: true
+archiveReason: "off-topic Tagesschau selection with mis-tagged gastro-law"
 ---
 这项技术的核心在于高温固体氧化物燃料电池，工作温度超过六百摄氏度，能量转化效率远超传统内燃机。在电力供给过剩时，这套系统能够吸收可再生能源并将其转化为化学能储存；在电力短缺时，所储存的甲烷可以重新转化为电力输出。沼气厂因此从单一的电力生产者转变为兼具储能与调峰功能的综合能源节点。这一模式若大规模推广，将有效解决可再生能源的间歇性问题，提升电网对风光电的消纳能力。
 

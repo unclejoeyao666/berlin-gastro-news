@@ -7,6 +7,8 @@ sourceName: "Tagesschau Wirtschaft"
 sourceUrl: "https://www.tagesschau.de/wirtschaft/unternehmen/palantir-manifest-karp-ki-technofaschismus-100.html"
 sourceLang: de
 tags: ["digital-tech", "geopolitics-trade", "gastro-law"]
+archived: true
+archiveReason: "off-topic Tagesschau selection with mis-tagged gastro-law"
 ---
 帕兰提尔CEO亚历克斯·卡普的这份宣言引发了巨大争议。他在文中呼吁军事扩军，并主张美国应加速发展AI武器系统。支持者认为这是对国家安全的前瞻性思考；反对者则警告，这代表着技术精英试图以算法和监控替代民主治理的危险倾向。帕兰提尔作为美国国防部的重要供应商，其商业利益与卡普的公开立场之间的关联值得关注。这场争论也折射出在全球AI竞争加剧的背景下，商业、军事与政治利益日益交织的复杂局面。
 

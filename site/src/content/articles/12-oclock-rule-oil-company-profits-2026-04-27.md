@@ -7,6 +7,8 @@ sourceName: "Tagesschau Wirtschaft"
 sourceUrl: "https://www.tagesschau.de/wirtschaft/spritpreise-12-uhr-regel-profit-100.html"
 sourceLang: de
 tags: ["tax-finance", "gastro-law", "energy-cost"]
+archived: true
+archiveReason: "off-topic Tagesschau selection with mis-tagged gastro-law"
 ---
 每天中午十二点，加油站普遍上调油价，其中超级汽油每升平均上涨约零点零九欧元，柴油每升上涨约零点一零五欧元。涨价后，油价缓慢回落，下午六点左右降至当日低点。根据德国汽车俱乐部对全国一万四千多个加油站的数据分析，中午十二点之前是全日最便宜的加油时机，此时油价低于日均价格约零点零二七欧元。价格上限规定反而被石油公司用来更稳定地维持高价——当价格只能变动一次时，供应商倾向于将价格定在较高的均衡点。
 

@@ -7,6 +7,8 @@ sourceName: "Tagesschau Wirtschaft"
 sourceUrl: "https://www.tagesschau.de/wirtschaft/verbraucher/hausverwaltung-immobilie-betrug-100.html"
 sourceLang: de
 tags: ["trends-consumer", "tax-finance", "gastro-law"]
+archived: true
+archiveReason: "cold-start placeholder translations (dry_run_translate prefix)"
 ---
 > 此文为系统冷启动期间的占位内容，实际翻译由 OpenClaw 每日会话产出。
 
