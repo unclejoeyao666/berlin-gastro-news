@@ -1,0 +1,646 @@
+{
+  "timestamp": "2026-05-01T05:03:55+00:00",
+  "caps": {
+    "HARVEST_CAP": 25,
+    "KEYWORD_KEEP": 10,
+    "GENERAL_KEEP": 5
+  },
+  "buckets": {
+    "gastro_t1": {
+      "total": 19,
+      "kept": 16
+    },
+    "gastro_t2": {
+      "total": 7,
+      "kept": 0
+    },
+    "general_keyword": {
+      "total": 46,
+      "kept": 4
+    },
+    "general_other": {
+      "total": 307,
+      "kept": 5
+    }
+  },
+  "totals": {
+    "kept": 25,
+    "dropped": 347
+  },
+  "per_source": {
+    "ahgz-gastro": {
+      "name": "AHGZ Gastronomie",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 21,
+      "candidates": 4,
+      "errors": []
+    },
+    "bmel": {
+      "name": "BMEL Pressemitteilungen",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 48,
+      "candidates": 2,
+      "errors": []
+    },
+    "dehoga-berlin": {
+      "name": "DEHOGA Berlin",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 7,
+      "candidates": 3,
+      "errors": []
+    },
+    "faz": {
+      "name": "FAZ Aktuell",
+      "fetched": 127,
+      "noise": 0,
+      "seen": 53,
+      "candidates": 74,
+      "errors": []
+    },
+    "manager-magazin": {
+      "name": "Manager Magazin",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 20,
+      "errors": []
+    },
+    "politico-eu": {
+      "name": "Politico EU",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 10,
+      "errors": []
+    },
+    "scmp": {
+      "name": "South China Morning Post",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 50,
+      "errors": []
+    },
+    "spiegel": {
+      "name": "Der Spiegel",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 30,
+      "errors": []
+    },
+    "tagesschau-wirtschaft": {
+      "name": "Tagesschau Wirtschaft",
+      "fetched": 48,
+      "noise": 0,
+      "seen": 33,
+      "candidates": 15,
+      "errors": []
+    },
+    "wiwo": {
+      "name": "WirtschaftsWoche",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 1,
+      "candidates": 19,
+      "errors": []
+    },
+    "ahgz-all": {
+      "name": "AHGZ Allgemein",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 15,
+      "candidates": 10,
+      "errors": []
+    },
+    "ahgz-suppliers": {
+      "name": "AHGZ Zulieferer",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 25,
+      "candidates": 0,
+      "errors": []
+    },
+    "dw-de": {
+      "name": "Deutsche Welle (DE)",
+      "fetched": 88,
+      "noise": 0,
+      "seen": 62,
+      "candidates": 26,
+      "errors": []
+    },
+    "dw-en": {
+      "name": "Deutsche Welle (EN)",
+      "fetched": 123,
+      "noise": 0,
+      "seen": 103,
+      "candidates": 20,
+      "errors": []
+    },
+    "ec-press": {
+      "name": "European Commission Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 4,
+      "candidates": 6,
+      "errors": []
+    },
+    "efsa-press": {
+      "name": "EFSA Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 9,
+      "candidates": 1,
+      "errors": []
+    },
+    "euobserver": {
+      "name": "EUobserver",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 11,
+      "candidates": 9,
+      "errors": []
+    },
+    "tagesschau-all": {
+      "name": "Tagesschau All",
+      "fetched": 63,
+      "noise": 0,
+      "seen": 22,
+      "candidates": 41,
+      "errors": []
+    },
+    "wiwo-politik": {
+      "name": "WiWo Politik",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 1,
+      "candidates": 19,
+      "errors": []
+    },
+    "zdf-wirtschaft": {
+      "name": "ZDFheute Wirtschaft",
+      "fetched": 77,
+      "noise": 0,
+      "seen": 57,
+      "candidates": 20,
+      "errors": []
+    }
+  },
+  "kept_titles": [
+    {
+      "title": "Urteil zu Online-Bewertungen: Löschen von Online-Bewertungen ist eine Rechtsdienstleistung",
+      "source_id": "dehoga-berlin",
+      "score": 100,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Geschäftsreiseanalyse: Geschäftsreisen stiegen trotz Rezession, Unternehmen setzen auf persönliche Präsenz",
+      "source_id": "dehoga-berlin",
+      "score": 100,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Hotelstars: Slowakei als 22. Mitglied aufgenommen – Forderung nach europaweit einheitlicher und transparenter Darstellung der Hotelsterne",
+      "source_id": "dehoga-berlin",
+      "score": 100,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Führungsposition: Shahriar Javaheri ist General Manager von Elemente und Air Bar 13",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Datenanalyse: Leipzig im Gastroprofil: Das sind die Zahlen",
+      "source_id": "ahgz-gastro",
+      "score": 88,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Umfrage: Mehrheit schränkt sich wegen hoher Preise ein",
+      "source_id": "ahgz-gastro",
+      "score": 88,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Scheidender Fed-Chef Powell will im Vorstand der US-Notenbank bleiben",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Trotz Iran-Kriegs: Deutsche Wirtschaft zu Jahresbeginn leicht gewachsen",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Wirtschaft vor acht vom 30.04.2026",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Update Wirtschaft vom 30.04.2026",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Ab dem 1. Mai gilt der Tankrabatt: Was Autofahrer wissen sollten",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kritik an Kompromiss zum Gebäudemodernisierungsgesetz",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "EZB wartet weiter ab: Leitzins bleibt bei 2,0 Prozent",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Bauarbeiten zwischen Hamburg und Hannover: Was das für Reisende bedeutet",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "KI-Investitionen der Tech-Konzerne steigen auf 725 Milliarden Dollar",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Magazin: Kühle Frische für die Küche",
+      "source_id": "ahgz-gastro",
+      "score": 83,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "GAP wird einfacher: Neue Möglichkeiten für Betriebe mit Grünland",
+      "source_id": "bmel",
+      "score": 83,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Schutz bedrohter Aale: BMLEH legt Aalschonzeit in der Nordsee fest",
+      "source_id": "bmel",
+      "score": 83,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Lohnkosten: Arbeitsstunde kostet 45 Euro",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Das neue ahgz E-Paper: Titelthema: Die Top 100 Markenhotels in Deutschland",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Führungsposition: Shahriar Javaheri ist General Manager von Elemente und Air Bar 13",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Budget sinkt deutlich: Franzosen sparen am Sommerurlaub",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Deal : Der Öschberghof wird verkauft",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Im Maßstab 1:1: Miniatur Wunderland plant zweites Hotel",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Hotelmarkt : Die spannendsten Hoteleröffnungen im April 2026",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    }
+  ],
+  "dropped_titles": [
+    {
+      "title": "Electrovac und die neue Generation der Börsenunternehmen",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Zehntausende Preiserhöhungen - Tankstellen missachten 12-Uhr-Regel",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Zahl der Arbeitslosen verharrt über Drei-Millionen-Marke",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Gewinn von Volkswagen um 28 Prozent eingebrochen",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Preis für Nordseeöl steigt über 125 Dollar pro Fass",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Marktbericht: DAX geht im Plus ins lange Wochenende",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Bilanz: Über 1 Milliarde Euro Umsatz für Motel One",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Jubiläum : Unitels Consulting feiert 30-jähriges Bestehen",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Alina Meissner-Bebrout: Wie ein Tapas-Abend mit Pulpo zum Erfolg wurde",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Britney Spears: Anklage gegen nach Fahrt unter Alkohol und Drogen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Fall Fabian: Es scheint, als wolle der Vater die Wahrheit nicht sehen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Mai-Feiern: »Der Maibaum ist bei uns ein Zeichen der Liebe«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Frankreich: Vater soll 34 Kinder bei Pyjamapartys sexuell missbraucht haben",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Illuminaten-Orden unter Weltherrschafts-Verdacht: So gefährlich war der Geheimbund tatsächlich",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "US-Regierung rechnet das Ende des Irankriegs herbei",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Iran-Krieg: Senatoren grillen Trumps Verteidigungsminister und Pete Hegseth keilt zurück",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "US-Staatsanwältin veröffentlicht Video des Angriffs auf Pressegala",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Energieriese Total verlängert Spritpreis-Deckel für Frankreich",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Nach Besuch von König Charles III: Donald Trump will Zölle auf schottischen Whisky streichen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Baden-Württemberg: Grüne und CDU besiegeln Koalitionsvertrag",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Jair Bolsonaro: Brasiliens Kongress verkürzt Haft auf zwei Jahre",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "König Charles König Charles verabschiedet sich von Donald Trump – in nur sechs Minuten",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Antisemitismus: Jede zweite jüdische Gemeinde erlebt antisemitische Vorfälle",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Fußball-WM 2026: Gianni IInfantino geht von Irans Teilnahme an WM aus – Donald Trump findet es »okay«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ukraine-Krieg: Verbessert sich die Lage für das von Russland angegriffene Land?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Alexander Dobrindt im SPIEGEL-Talk: »Merz muss mit dem zurechtkommen, was er hat«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Biennale in Venedig: Jury tritt geschlossen zurück",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Volker Hage ist tot: SPIEGEL-Literaturkritiker im Alter von 76 Jahren gestorben",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Alexander Dobrindt im SPIEGEL-Talk: »Merz muss mit dem zurechtkommen, was er hat«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Jan Josef Liefers: Schauspieler erzählt von Ketamin-Trip",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Georg Baselitz ist tot: Der Schlachtenmaler - Nachruf",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Mittelmeer: Israelische Marine stoppt größte Gaza-Hilfsflotte",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "KI: Spotify will von Menschen produzierte Musik kennzeichnen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Baden-Württemberg: Islamlehrer wegen Missbrauchs in Internat verurteilt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Minden: SIM-Karte führt Ermittler zu Verdächtigem wegen Militärspionage",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "»Ungeskriptet« von Ben Berndt: Wer ist der Podcaster, der Björn Höcke eine Bühne bietet?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Myanmar: Aung San Suu Kyi von Gefängnis in Hausarrest verlegt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "»White Tiger«: Die 15-Jährige, die erst Opfer und dann Täterin im Netz wurde - Podcast",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Deutschland-Liveblog: Der Tankrabatt ist in Kraft",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Sportmediziner über Alkohol: „Mit einem Bier mache ich den Trainingseffekt nicht kaputt“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Digitalwirtschaft-Podcast: Wann verschwindet das Lenkrad wirklich?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Weltgrößter Musikkonzern: Universal verkauft Spotify-Aktien: Was Taylor Swift damit zu tun hat",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Frankreich: Vater soll 34 Kinder bei Pyjama-Partys missbraucht haben",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Gerstensaft fürs Gedächtnis?: Vitamin-Bomben im Biergarten",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Liveblog Irankrieg: US-Regierung erklärt Feindseligkeiten mit Iran „im Sinne des Gesetzes“ für beendet",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Neue Details: Wie der Mossad das iranische Regime stürzen wollte",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Nachruf auf Craig J. Venter: Wie war das mit der Unsterblichkeit, Craig?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Liveblog USA unter Trump: US-Staatsanwältin veröffentlicht Video von Angriff bei Gala",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Mutmasslicher Sexualmord: Wutausbruch in Alice Springs",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "TV-Kritik Maybrit Illner: Bei der Vermögensteuer reden plötzlich alle durcheinander",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    }
+  ]
+}

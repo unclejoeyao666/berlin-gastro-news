@@ -1,0 +1,36 @@
+# 📰 柏林餐饮商业新闻简报 — 2026-05-01
+
+🎧 [今日音频](https://unclejoeyao666.github.io/berlin-gastro-news/audio/2026-05-01.mp3) · 🌐 [完整网页](https://unclejoeyao666.github.io/berlin-gastro-news)
+
+## 1. [法院裁决：删除Google差评属于法律服务](https://unclejoeyao666.github.io/berlin-gastro-news/articles/urteil-online-bewertungen-rechtsdienstleistung-2026-04-30)
+法兰克福高等法院裁定，移除或申诉Google评价属于法律服务范畴，业者不得无偿提供此类服务，须由执业律师执行。
+
+## 2. [商务旅行逆势增长：德国企业坚守面对面沟通](https://unclejoeyao666.github.io/berlin-gastro-news/articles/geschaeftsreisen-trotz-rezession-persoenliche-prae-2026-04-3)
+德国企业旅行协会报告显示，尽管连续两年经济衰退，二零二五年商务旅行仍大幅增长，全年共执行一亿一千六百一十万次旅行，较上年显著上升，显示企业对面对面商务的持续重视。
+
+## 3. [酒店星级联盟迎来第二十二个成员国：斯洛伐克加入，呼吁欧洲统一标准](https://unclejoeyao666.github.io/berlin-gastro-news/articles/hotelstars-slowakei-22-mitglied-europaeinheitliche-2026-04-3)
+Hotelstars Union在科克举行第十一次会员大会，吸收斯洛伐克为第二十二个成员，同时呼吁欧盟范围内统一并透明地执行酒店星级评定标准，以提升跨国可比性。
+
+## 4. [汉堡鲁尔巴酒店集团任命沙里亚尔·贾瓦赫里为埃莱mente与空中十三酒吧总经理](https://unclejoeyao666.github.io/berlin-gastro-news/articles/shahriar-javaheri-general-manager-elemente-air-bar-2026-04-3)
+汉堡鲁尔巴酒店集团宣布任命沙里亚尔·贾瓦赫里为西菲尔德汉堡越界广场内埃莱mente餐厅及空中十三酒吧总经理，全面负责两项业态的运营管理。
+
+## 5. [数据透视莱比锡餐饮：这份数字报告揭示了什么](https://unclejoeyao666.github.io/berlin-gastro-news/articles/datenanalyse-leipzig-gastroprofil-zahlen-2026-04-30)
+数据分析机构Meotoon独家为德国餐饮酒店报提供莱比锡餐饮市场专项分析，涵盖价格走势、消费结构及主要产品竞争力等关键维度。
+
+## 6. [民调显示：物价高企，多数消费者缩减餐饮娱乐支出](https://unclejoeyao666.github.io/berlin-gastro-news/articles/umfrage-mehrheit-schraenkt-sich-wegen-hoher-preise-2026-04-2)
+最新调查显示，持续的物价上涨导致大多数消费者削减餐饮、娱乐及大件消费。消费行为的转变正在对餐饮服务业产生结构性影响。
+
+## 7. [营养政策前沿：糖税在德国还有戏吗](https://unclejoeyao666.github.io/berlin-gastro-news/articles/ernaehrungspolitik-zuckersteuer-chancen-2026-04-28)
+针对含糖饮料的征税议题在德国一直存在争议。糖税曾长期陷入政治僵局，如今重新被提上议程，其推进前景取决于多方利益的博弈与公众健康压力。
+
+## 8. [美联储宣布维持利率不变，离任主席鲍威尔寻求留任](https://unclejoeyao666.github.io/berlin-gastro-news/articles/fed-powell-leitzins-bleibt-unveraendert-vorstand-2026-04-30)
+美联储在最新货币会议上决定保持基准利率不变。现任主席鲍威尔在离任前明确表示希望继续留在美联储委员会。能源价格波动与通胀压力仍是货币政策的主要考量因素。
+
+## 9. [伊朗冲突阴影下，德国经济年初仍实现小幅增长](https://unclejoeyao666.github.io/berlin-gastro-news/articles/trotz-iran-krieg-deutschland-wirtschaft-jahresbegi-2026-04-3)
+即便在伊朗战争带来的地缘政治压力下，德国经济在年初仍小幅增长。数据显示内需与出口均有贡献，但这一增长势头能否持续仍存疑问。
+
+## 10. [德广联经济频道晚间经济节目二零二六年四月三十日](https://unclejoeyao666.github.io/berlin-gastro-news/articles/wirtschaft-vor-acht-2026-04-30-2026-04-30)
+德国广播电视联合网经济频道当晚播出的经济综述节目，涵盖德国经济现状、外贸动态及企业运营等多维度内容。
+
+---
+*共 10 条 · 来源：德国新闻联播（经济频道）, 德国餐饮酒店报（餐饮频道）, 柏林餐饮酒店协会*
