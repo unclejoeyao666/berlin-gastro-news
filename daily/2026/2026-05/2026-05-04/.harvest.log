@@ -1,0 +1,610 @@
+{
+  "timestamp": "2026-05-04T05:04:25+00:00",
+  "caps": {
+    "HARVEST_CAP": 25,
+    "KEYWORD_KEEP": 10,
+    "GENERAL_KEEP": 5
+  },
+  "buckets": {
+    "gastro_t1": {
+      "total": 4,
+      "kept": 4
+    },
+    "gastro_t2": {
+      "total": 0,
+      "kept": 0
+    },
+    "general_keyword": {
+      "total": 20,
+      "kept": 10
+    },
+    "general_other": {
+      "total": 234,
+      "kept": 5
+    }
+  },
+  "totals": {
+    "kept": 19,
+    "dropped": 237
+  },
+  "per_source": {
+    "ahgz-gastro": {
+      "name": "AHGZ Gastronomie",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 24,
+      "candidates": 1,
+      "errors": []
+    },
+    "bmel": {
+      "name": "BMEL Pressemitteilungen",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 50,
+      "candidates": 0,
+      "errors": []
+    },
+    "dehoga-berlin": {
+      "name": "DEHOGA Berlin",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 9,
+      "candidates": 1,
+      "errors": []
+    },
+    "faz": {
+      "name": "FAZ Aktuell",
+      "fetched": 122,
+      "noise": 0,
+      "seen": 59,
+      "candidates": 63,
+      "errors": []
+    },
+    "manager-magazin": {
+      "name": "Manager Magazin",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 14,
+      "candidates": 6,
+      "errors": []
+    },
+    "politico-eu": {
+      "name": "Politico EU",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 10,
+      "errors": []
+    },
+    "scmp": {
+      "name": "South China Morning Post",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 50,
+      "errors": []
+    },
+    "spiegel": {
+      "name": "Der Spiegel",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 30,
+      "errors": []
+    },
+    "tagesschau-wirtschaft": {
+      "name": "Tagesschau Wirtschaft",
+      "fetched": 58,
+      "noise": 0,
+      "seen": 56,
+      "candidates": 2,
+      "errors": []
+    },
+    "wiwo": {
+      "name": "WirtschaftsWoche",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 7,
+      "candidates": 13,
+      "errors": []
+    },
+    "ahgz-all": {
+      "name": "AHGZ Allgemein",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 23,
+      "candidates": 2,
+      "errors": []
+    },
+    "ahgz-suppliers": {
+      "name": "AHGZ Zulieferer",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 25,
+      "candidates": 0,
+      "errors": []
+    },
+    "dw-de": {
+      "name": "Deutsche Welle (DE)",
+      "fetched": 82,
+      "noise": 0,
+      "seen": 73,
+      "candidates": 9,
+      "errors": []
+    },
+    "dw-en": {
+      "name": "Deutsche Welle (EN)",
+      "fetched": 126,
+      "noise": 0,
+      "seen": 113,
+      "candidates": 13,
+      "errors": []
+    },
+    "ec-press": {
+      "name": "European Commission Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "efsa-press": {
+      "name": "EFSA Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "euobserver": {
+      "name": "EUobserver",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 17,
+      "candidates": 3,
+      "errors": []
+    },
+    "tagesschau-all": {
+      "name": "Tagesschau All",
+      "fetched": 60,
+      "noise": 0,
+      "seen": 29,
+      "candidates": 31,
+      "errors": []
+    },
+    "wiwo-politik": {
+      "name": "WiWo Politik",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 8,
+      "candidates": 12,
+      "errors": []
+    },
+    "zdf-wirtschaft": {
+      "name": "ZDFheute Wirtschaft",
+      "fetched": 79,
+      "noise": 0,
+      "seen": 67,
+      "candidates": 12,
+      "errors": []
+    }
+  },
+  "kept_titles": [
+    {
+      "title": "Geplante Ausweitung der Tierhaltungskennzeichnung: Verbändebündnis legt Positionspapier vor",
+      "source_id": "dehoga-berlin",
+      "score": 100,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Ausstattung: Bei Tabletop gilt: Optik trifft Funktion",
+      "source_id": "ahgz-gastro",
+      "score": 88,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Nach Änderungen im Gesetz: Widerstand gegen Windkraft zwecklos?",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ein Traum mit Preisschild: Lohnt sich das Ferienhaus wirklich?",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Waffenrecht in den USA: So agiert die National Rifle Association, eine der mächtigsten Lobbygruppen der Welt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Krankenkassen-Reform: Koalitionsspitzen mahnen Nachbesserungen und Geschlossenheit",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Iran-Krieg: Donald Trump plant Einsatz in Straße von Hormus - »Project Freedom«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kredite im Schatten: Die Angst vor einer neuen Finanzkrise wächst",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Bücher-Podcast: Anschreiben gegen die Trostlosigkeit",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Zolldrohung: Trump nimmt die deutsche Wirtschaft ins Visier",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Ökonom Achim Wambach: „So schlecht geht es uns gar nicht“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Ethan über Jacob Taubes: Am Rande des Größenwahns",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Deutscher Hidden Champion: Avocado-Roboter und Waschstraßen für Salat",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Frühlingsgetränke: Mit diesen Weinen schmecken Erdbeeren am besten",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Maiwochenende in Rhein-Main: Das Band der Region",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Ausstattung: Bei Tabletop gilt: Optik trifft Funktion",
+      "source_id": "ahgz-all",
+      "score": 75,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "The matador and the moderate: Andalusia’s president courts far right in the bullring",
+      "source_id": "politico-eu",
+      "score": 74,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "China bride’s botched cold treatment causes 3-month coma, wakes 2 days before wedding",
+      "source_id": "scmp",
+      "score": 74,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Hotelimmobilien in Europa: Warum die Relevanz von Serviced Apartments steigt",
+      "source_id": "ahgz-all",
+      "score": 70,
+      "bucket": "gastro_t1"
+    }
+  ],
+  "dropped_titles": [
+    {
+      "title": "News: Ein Jahr Schwarz-Rot, Winfried Kretschmann, Dominik Krause, Militärseelsorge",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Work-Life-Balance: Wie Sie Ihren freien Tag schützen, ohne illoyal zu wirken",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "ADHS und Hochsensibiliät: So gelingt Betroffenen die ideale Mischung aus Büro und Homeoffice",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "»Tatort«-Vote: Wie gefiel Ihnen »Könige der Nacht«?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Friedrich Merz bei Caren Miosga: Was der Kanzler zu Donald Trump, dem Iran-Krieg und dem Koalitions-Zoff sagte",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Alexander Dobrindt will Grenzkontrollen trotz gesunkener Migrationszahlen fortsetzen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Rudy Giuliani: Ex-Anwalt von Donald Trump in kritischem Zustand im Krankenhaus",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Orlando Magic verlieren in der NBA: Playoffs für Franz und Moritz Wagner beendet",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Deutsche Bahn/Italo: Luca Cordero di Montezemolo plant Einstieg ab 2028",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kreuzfahrtschiff im Atlantik: Ausbruch von Atemwegserkrankungen mit drei Toten",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Großer Preis von Miami: Kimi Antonelli gewinnt erneut, aber Lando Norris und Oscar Piastri kommen näher",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Zohran Mamdani: 100 Tage war der Bürgermeister von New York ruhig - damit ist jetzt Schluss",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Marokko: Suche nach zwei vermissten US-Soldaten im Küstengebiet",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Watches and Wonders: Bertrand Meylan von Moser & Cie. über Luxusuhren, Rolex und Humor",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Friedrich Merz bei Caren Miosga: Kanzler verteidigt Kurs zu Trump und Iran-Konflikt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Alexander Zverev unterliegt Jannik Sinner im Finale von Madrid deutlich",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kuba: Miguel Díaz-Canel verurteilt Trumps Drohung als »kriminellen Akt«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Premier League: Manchester United schlägt FC Liverpool, bucht Champions-League-Platz und sorgt sich um Sir Alex Ferguson",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Champions League: 2:4 beim FC Barcelona – Bayern Münchens Fußballerinnen im Halbfinale",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Missbrauch im Leistungssport: Turnerinnen zum Erfolg gedrillt? - SPIEGEL TV für Arte Re",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ostsee: Der Wal ist weg – diese offenen Fragen bleiben",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Hitze in Deutschland: 29,4 Grad in Cottbus nahe Temperaturrekord",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Aziz Ansari karikiert Kash Patel bei »Saturday Night Live«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Fuhlsbüttel: Flugverkehr in Hamburg vorübergehend eingestellt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Bundesliga: Ideenloses St. Pauli verliert gegen Mainz und steckt weiter tief im Abstiegskampf",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "US-Truppenabzug: Rolf Mützenich rät zu Abrüstungsgesprächen mit Russland",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Armenien: Emmanuel Macron springt für Friedrich Merz beim Europagipfel ein",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Liveblog Irankrieg: USA wollen Schiffe in Straße von Hormus befreien",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "TV-Kritik Caren Miosga: „Ich habe kein Mandat, die CDU umzubringen“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Deutsche Außenpolitik: Kanzler ohne klaren Kurs",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "5000 Soldaten: Was der US-Truppenabzug aus Deutschland bedeutet",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Videoüberwachung mit KI: Wenn der Staat Gesichter scannt",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Bildschirmzeit: „Zu viel Zeit vor den Geräten schädigt Kinder schon ab dem Säuglingsalter“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "F.A.Z. frühdenker: Showdown im Übernahmekampf: Was bietet Unicredit für die Commerzbank?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Bundesliga-Rückkehr: Die Wandlung des Giganten Schalke 04",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Wenn Therapie nicht hilft: „Ein Drittel der psychischen Störungen chronifiziert sich – und kann nicht richtig behandelt werden“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Brandmauer-Koalitionen: Erst die Partei, dann das Land?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Weltrekord mit 100 Jahren: Als Lester Wright zu schnell für den Computer war",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Flüchtlinge: Ist eine Rückkehr nach Syrien unzumutbar?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Historische Änderungen: Japans neues Auftreten",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Regieren in der Koalition: Und was ist die Alternative?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Frankfurt in der Krise: Markus Krösches schiefes Eintracht-Gerüst",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Formel 1 in den USA: Antonelli gewinnt auch in Miami – Drama für Leclerc",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Atemwegserkrankungen: Drei Tote auf Kreuzfahrtschiff im Atlantik",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Fußball-Bundesliga: Wolfsburg verpasst Sieg nach Führung in Freiburg",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Deutschland-Liveblog: Dobrindt will trotz gesunkener Migrationszahlen Grenzkontrollen fortsetzen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Die Kraft des Fotoautomaten: Vielleicht wird er sogar das iPhone überleben",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "toxische Beziehung: Zurück zur Werkseinstellung",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Besserung bei ME/CFS: „Nach drei Wochen konnte ich wieder am Sozialleben teilnehmen“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Koalition in not: Lamentieren bringt auch nichts",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    }
+  ]
+}
