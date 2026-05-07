@@ -1,0 +1,646 @@
+{
+  "timestamp": "2026-05-07T05:03:53+00:00",
+  "caps": {
+    "HARVEST_CAP": 25,
+    "KEYWORD_KEEP": 10,
+    "GENERAL_KEEP": 5
+  },
+  "buckets": {
+    "gastro_t1": {
+      "total": 18,
+      "kept": 16
+    },
+    "gastro_t2": {
+      "total": 8,
+      "kept": 0
+    },
+    "general_keyword": {
+      "total": 23,
+      "kept": 4
+    },
+    "general_other": {
+      "total": 319,
+      "kept": 5
+    }
+  },
+  "totals": {
+    "kept": 25,
+    "dropped": 334
+  },
+  "per_source": {
+    "ahgz-gastro": {
+      "name": "AHGZ Gastronomie",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 23,
+      "candidates": 2,
+      "errors": []
+    },
+    "bmel": {
+      "name": "BMEL Pressemitteilungen",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 48,
+      "candidates": 2,
+      "errors": []
+    },
+    "dehoga-berlin": {
+      "name": "DEHOGA Berlin",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "faz": {
+      "name": "FAZ Aktuell",
+      "fetched": 133,
+      "noise": 0,
+      "seen": 57,
+      "candidates": 76,
+      "errors": []
+    },
+    "manager-magazin": {
+      "name": "Manager Magazin",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 8,
+      "candidates": 22,
+      "errors": []
+    },
+    "politico-eu": {
+      "name": "Politico EU",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 10,
+      "errors": []
+    },
+    "scmp": {
+      "name": "South China Morning Post",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 50,
+      "errors": []
+    },
+    "spiegel": {
+      "name": "Der Spiegel",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 30,
+      "errors": []
+    },
+    "tagesschau-wirtschaft": {
+      "name": "Tagesschau Wirtschaft",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 17,
+      "candidates": 13,
+      "errors": []
+    },
+    "wiwo": {
+      "name": "WirtschaftsWoche",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 2,
+      "candidates": 18,
+      "errors": []
+    },
+    "ahgz-all": {
+      "name": "AHGZ Allgemein",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 12,
+      "candidates": 13,
+      "errors": []
+    },
+    "ahgz-suppliers": {
+      "name": "AHGZ Zulieferer",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 24,
+      "candidates": 1,
+      "errors": []
+    },
+    "dw-de": {
+      "name": "Deutsche Welle (DE)",
+      "fetched": 87,
+      "noise": 0,
+      "seen": 66,
+      "candidates": 21,
+      "errors": []
+    },
+    "dw-en": {
+      "name": "Deutsche Welle (EN)",
+      "fetched": 133,
+      "noise": 0,
+      "seen": 112,
+      "candidates": 21,
+      "errors": []
+    },
+    "ec-press": {
+      "name": "European Commission Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 2,
+      "candidates": 8,
+      "errors": []
+    },
+    "efsa-press": {
+      "name": "EFSA Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "euobserver": {
+      "name": "EUobserver",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 10,
+      "errors": []
+    },
+    "tagesschau-all": {
+      "name": "Tagesschau All",
+      "fetched": 65,
+      "noise": 0,
+      "seen": 16,
+      "candidates": 49,
+      "errors": []
+    },
+    "wiwo-politik": {
+      "name": "WiWo Politik",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 9,
+      "candidates": 11,
+      "errors": []
+    },
+    "zdf-wirtschaft": {
+      "name": "ZDFheute Wirtschaft",
+      "fetched": 75,
+      "noise": 0,
+      "seen": 64,
+      "candidates": 11,
+      "errors": []
+    }
+  },
+  "kept_titles": [
+    {
+      "title": "Public Viewing: Fanjubel bei Fußball-WM zu nächtlicher Stunde",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Gastro-Initiative: Lokalhelden gehen in die Endrunde",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Israel will Deutschland mit Kerosin-Lieferungen unterstützen",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Straße von Malakka: Sorge um die weltweit wichtigste Meerenge",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Wirtschaft vor acht vom 06.05.2026",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Update Wirtschaft vom 06.05.2026",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Autobranche: Warum BMW besser dasteht als VW und Mercedes",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Arbeitsmarkt: Millionen Menschen in \"Stiller Reserve\"",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "CNN-Gründer Ted Turner mit 87 Jahren gestorben",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Quartalsbilanz: Maschinenbau steckt in Strukturkrise fest",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Wer profitiert in Deutschland vom KI-Boom?",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Mehr Wettbewerbsfähigkeit für Sonderkulturen durch moderne Technik: BMLEH fördert alternative Antriebe in der Landwirtschaft mit 72 Millionen Euro",
+      "source_id": "bmel",
+      "score": 83,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Ein Jahr Bundesregierung: Kurswechsel in Landwirtschaftspolitik vollzogen",
+      "source_id": "bmel",
+      "score": 83,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Public Viewing: Fanjubel bei Fußball-WM zu nächtlicher Stunde",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Hotelprojekt : MHP Hotel AG bringt Mooons nach Deutschland",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Kooperation: Accor und Uber starten Partnerschaft",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Hotelmarkt: Köln ist Spitzenreiter in Nordrhein-Westfalen",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Petra Weindl im Interview: Ringhotels setzt auf Orientierung, Entlastung und Zusammenhalt",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Tourismus: Schlaftourismus wird in Füssen zum Reisetrend",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Hotelbuchungen: Uber geht Partnerschaft mit Expedia ein",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Betriebspraxis: Brita nimmt Wasserqualität ernst",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Kettenhotellerie: 1912 Hotels stockt Führungsteam auf",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Nach Streikandrohung: Dehoga Hessen sucht das Gespräch mit NGG",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Jahresabschluss 2025 : MHP Hotel AG legt gute Zahlen vor",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Gastro-Initiative: Lokalhelden gehen in die Endrunde",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    }
+  ],
+  "dropped_titles": [
+    {
+      "title": "Gewinn von Daimler Truck um 80 Prozent eingebrochen",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kritik am BioNTech-Rückzug aus Deutschland",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Zoll kontrolliert bundesweit Paketbranche wegen Schwarzarbeit",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Marktbericht: DAX-Anleger scharren mit den Hufen",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Buckel-Wal Timmy: Gibt es noch Hoffnung auf ein Lebenszeichen?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Berufseinstieg als Baumpflegerin: Ohne Ausbildung bis zu 5000 Euro im Monat verdienen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Verteidigung in Europa: Abgeordnete werben für Umbau der EU zur Verteidigungsunion",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Hybrider Krieg: Moskau bildet in einem geheimen Uni-Programm Spione und Hacker aus",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "News: Russland-Agenten in Deutschland, Johann Wadephul, USA, Peilsender am Buckel-Wal",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Zwangsstörungen: Warum Zwangsgedanken oft »Gehirnschrott« sind und was dagegen hilft",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Iran-Krieg: US-Einsatz in Straße von Hormus laut Medien wegen Streit mit Saudi-Arabien unterbrochen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Feuerwehr bringt deutschen Hantavirus-Verdachtsfall nach Düsseldorf",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Jane Fonda nach Tod von Ex-Mann Ted Turner: »Er kam wie ein Wirbelwind in mein Leben... und ich war nie mehr dieselbe«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Fall Jeffrey Epstein: US-Richter veröffentlicht angeblichen Abschiedsbrief Epsteins",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Frankreich: Bürgermeister hängt Porträt von Emmanuel Macron ab und bekommt prompt Ärger",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Angriffskrieg in der Ukraine: Russland dringt auf Evakuierung ausländischer Botschaften in Kyjiw",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Jeffrey Epstein: US-Minister Howard Lutnick berichtet von Erinnerungslücken",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Champions League: Bayern München spielt nur 1:1 gegen Paris Saint-Germain und verpasst den Finaleinzug",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "FC Bayern München: Einzelkritik – Joshua Kimmich fehlt Ruhe, Jamal Musiala Leichtigkeit",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Champions League: FC Bayern vs. Paris Saint-Germain - Manuel Neuer: »Wir waren heute keine Killer«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Iran-Krieg: Trump sieht Einigung nahe – Iran prüft mögliches Abkommen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "WM in den USA: 50.000 Dollar für alle Spiele – Sender sucht »Chief World Cup Watcher«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Israel bombardiert erstmals seit Waffenruhe Beiruter Vorort",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Memmingen: Getöteter 14-Jähriger – Tatverdächtiger und Jugendlicher kannten sich",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "»Hit Me Hard and Soft: The Tour«: Den Billie-Eilish-Effekt gibt es jetzt im Kino",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Stephen Colbert als US-Präsident? Barack Obama hat schon schlechtere Kandidaten gesehen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Zum Tod von Ted Turner: Gefühle, Emotionen, Schwäche – großes Fernsehen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Pussy Riot: »Moskau schickt Künstler im Dienst der Staatspropaganda zur Biennale«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Wärmepumpen: Wie Flusswärmepumpen Großstädte günstig mit Wärme versorgen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "»Iron Beam«: So kann Israels stärkster Laser den Vereinigten Arabischen Emiraten helfen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Hantavirus-Ausbruch auf Kreuzfahrtschiff: Passagier berichtet von angespannter Lage auf der »Hondius«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Straße von Hormus: Frankreich verlegt Flugzeugträger für Marine-Mission",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Einkommensteuer: Wer von der Reform profitieren könnte – und wer mehr zahlen müsste",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Champions League: FC Bayern München vs. Paris Saint-Germain im Liveticker",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "F.A.Z. Frühdenker: Irankrieg und Krise der Wirtschaft – Wie hoch fallen die Steuereinnahmen aus?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Vor den Wahlen: Großbritanniens politische Landkarte wird bunt",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Bundessozialgericht: Solidarprinzip",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Katrin kocht: Emmis superfluffiger Biskuitboden mit Erdbeeren und Sahne",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Künstliche Intelligenz: EU will KI für sexualisierte Deepfakes verbieten",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Nur 1:1 gegen Paris: Ein Fehler ist für die Bayern an diesem Abend einer zu viel",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Frank Schätzing Interview: „Ich habe mehr Angst vor menschlicher Dummheit als vor künstlicher Intelligenz“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Hantaviren: Droht die nächste Pandemie?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "TV-Kritik: „Maischberger“: „Merz ist noch in der Ausbildung“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Friedrich Merz im ZDF: Liebt der Kanzler sein Land?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "F.A.Z. PODCAST FÜR DEUTSCHLAND: „Merz als Kanzler eine 3 von 10“ - Ein Jahr Regierung",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Scholz meldet sich: Scholz’ Antwort im Kanzlerfernduell",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Gebrochene Waffenruhe: Moskaus Eingeständnis von Schwäche",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Lastwagenhersteller: Fatale Abhängigkeit für Daimler Truck",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Vorgaben für Biobrennstoffe: Der Staat im Heizungskeller",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Liveblog USA unter Trump: Anti-Terror-Strategie der USA bezeichnet Europa als „Brutkasten“ für Terrorismus",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    }
+  ]
+}
