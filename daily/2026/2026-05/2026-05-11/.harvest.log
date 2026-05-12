@@ -1,0 +1,598 @@
+{
+  "timestamp": "2026-05-11T05:04:38+00:00",
+  "caps": {
+    "HARVEST_CAP": 25,
+    "KEYWORD_KEEP": 10,
+    "GENERAL_KEEP": 5
+  },
+  "buckets": {
+    "gastro_t1": {
+      "total": 2,
+      "kept": 2
+    },
+    "gastro_t2": {
+      "total": 0,
+      "kept": 0
+    },
+    "general_keyword": {
+      "total": 25,
+      "kept": 10
+    },
+    "general_other": {
+      "total": 221,
+      "kept": 5
+    }
+  },
+  "totals": {
+    "kept": 17,
+    "dropped": 229
+  },
+  "per_source": {
+    "ahgz-gastro": {
+      "name": "AHGZ Gastronomie",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 25,
+      "candidates": 0,
+      "errors": []
+    },
+    "bmel": {
+      "name": "BMEL Pressemitteilungen",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 50,
+      "candidates": 0,
+      "errors": []
+    },
+    "dehoga-berlin": {
+      "name": "DEHOGA Berlin",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "faz": {
+      "name": "FAZ Aktuell",
+      "fetched": 126,
+      "noise": 0,
+      "seen": 63,
+      "candidates": 63,
+      "errors": []
+    },
+    "manager-magazin": {
+      "name": "Manager Magazin",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 24,
+      "candidates": 6,
+      "errors": []
+    },
+    "politico-eu": {
+      "name": "Politico EU",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 10,
+      "errors": []
+    },
+    "scmp": {
+      "name": "South China Morning Post",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 50,
+      "errors": []
+    },
+    "spiegel": {
+      "name": "Der Spiegel",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 2,
+      "candidates": 28,
+      "errors": []
+    },
+    "tagesschau-wirtschaft": {
+      "name": "Tagesschau Wirtschaft",
+      "fetched": 22,
+      "noise": 0,
+      "seen": 20,
+      "candidates": 2,
+      "errors": []
+    },
+    "wiwo": {
+      "name": "WirtschaftsWoche",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 8,
+      "candidates": 12,
+      "errors": []
+    },
+    "ahgz-all": {
+      "name": "AHGZ Allgemein",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 23,
+      "candidates": 2,
+      "errors": []
+    },
+    "ahgz-suppliers": {
+      "name": "AHGZ Zulieferer",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 25,
+      "candidates": 0,
+      "errors": []
+    },
+    "dw-de": {
+      "name": "Deutsche Welle (DE)",
+      "fetched": 84,
+      "noise": 0,
+      "seen": 76,
+      "candidates": 8,
+      "errors": []
+    },
+    "dw-en": {
+      "name": "Deutsche Welle (EN)",
+      "fetched": 130,
+      "noise": 0,
+      "seen": 114,
+      "candidates": 16,
+      "errors": []
+    },
+    "ec-press": {
+      "name": "European Commission Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "efsa-press": {
+      "name": "EFSA Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "euobserver": {
+      "name": "EUobserver",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 17,
+      "candidates": 3,
+      "errors": []
+    },
+    "tagesschau-all": {
+      "name": "Tagesschau All",
+      "fetched": 74,
+      "noise": 0,
+      "seen": 35,
+      "candidates": 39,
+      "errors": []
+    },
+    "wiwo-politik": {
+      "name": "WiWo Politik",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 15,
+      "candidates": 5,
+      "errors": []
+    },
+    "zdf-wirtschaft": {
+      "name": "ZDFheute Wirtschaft",
+      "fetched": 74,
+      "noise": 0,
+      "seen": 70,
+      "candidates": 4,
+      "errors": []
+    }
+  },
+  "kept_titles": [
+    {
+      "title": "Neue E-Auto-Prämie: Lohnt sich das?",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Sommerurlaub in Krisenzeiten: Lahntal statt Thailand",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Interview: Cocoon trotzt den Kettenhotels",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Luxushotellerie: Four Seasons The Park Gstaad nimmt Gestalt an",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Zwickau: Dirk Panter schlägt chinesische Partner für Volkswagen-Werk vor",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Martin Short spricht erstmals über den Tod seiner Tochter Katherine Short",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "AfD gewinnt erstmals Bürgermeister-Wahl in Brandenburg: René Stadtkewitz siegt in Zehdenick",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Clásico: FC Barcelona sichert vorzeitig die spanische Meisterschaft gegen Real Madrid",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Leben mit der Flut: Wie sich die Folgen von Extremwetter abmildern lassen - SPIEGEL TV für Arte Re",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Markus Söder und Manuela Schwesig stellen sich gegen 1000-Euro-Prämie",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Frankreich: Warum der Streit um ein Macron-Foto ein böses Omen für das Land ist",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Pro-Palästina-Aktivisten vor Gericht: Der Tumult um die »Ulm 5«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "2:0 Heimsieg: Barça gewinnt Clásico und ist vorzeitig Meister",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Augenbrauen-Produkte im Test: „Unsere Augenbrauen beeinflussen maßgeblich unsere Ausstrahlung“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Deutschland-Liveblog: Söder über 1000-Euro-Prämie: „Ich glaube, die ist vom Tisch“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Innovation Made in China: Warum Südostasien positiver auf Chinas Expansion blickt als der Westen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Adele Neuhauser im Fragebogen: „Gerade macht mir das Rauchen wieder Spaß“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    }
+  ],
+  "dropped_titles": [
+    {
+      "title": "Aleks Petrović: Ganz TV-Deutschland hasst diesen Mann. Brauchen wir ihn gerade deshalb?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "News: Koalition, Manuela Schwesig vs. Bundesregierung, Gerhard Schröder als Ukraine-Vermittler",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Manuela Schwesig im Talk bei Caren Miosga: Klang fast wie Selbstkritik",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Krankmeldungen im Job: Eine Mitarbeiterin ist ständig krank – ist Kündigung erlaubt?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Musik beim Arbeiten: Mehr Konzentration und Leistung mit dem richtigen Song?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Marokko: Armee findet Leiche eines vermissten US-Soldaten, der bei Militär-Übung verschwand",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Donald Trump reist am Mittwoch nach China zu Xi Jinping: Das sind die Themen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Iran-Krieg: Donald Trump weist iranische Antwort als »inakzeptabel« zurück",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Syrien: Ex-Geheimdienstchef Atif Nadschib wegen mutmaßlicher Kriegsverbrechen angeklagt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ukraine-Krieg: Russland rechnet mit zeitnaher Ankunft von US-Unterhändlern Steve Witkoff und Jared Kushner",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Berliner Arda Saatçi schafft 600-Kilometer-Lauf durch die Wüste – und geht mit Mutter Eis essen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Dua Lipa: Samsung wirbt offenbar mit Gesicht der Sängerin – ohne ihre Zustimmung",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Drohnen-Vorfall in Lettland: Verteidigungsminister Andris Spruds legt Amt nieder",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Hantavirus auf der »Hondius«: Einer ruft: »Wenn irgendjemand das Schiff sieht, sagt uns Bescheid!«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Bundesliga: Marie-Louise Eta feiert ersten Sieg mit Union Berlin",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Iran-Krieg: Iran droht Frankreich und Großbritannien in Straße von Hormus",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Wings for Life Run: Die beeindruckende Geschichte der Lauf-Stewardess Mikky Keetels",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Hantavirus auf Kreuzfahrtschiff MV »Hondius«: Evakuierter Franzose zeigt Symptome",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Markus Söder erklärt Entlastungsprämie für gescheitert",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Coaching: Wie Sie lernen, Gefühle zu akzeptieren, zu verstehen – und zu nutzen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Steer-by-wire im EQS: Das Runde muss ins Eckige",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Bärbel Bas: Ministerin mit Totenkopf-Mentalität",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "TV-Kritik Caren Miosga: „Bald macht die SPD Bekanntschaft mit der Fünfprozenthürde“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Parteien in Deutschland: AfD liegt in Umfragen vor der CDU",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Liveblog Irankrieg: Trump: Teherans Antwort auf US-Vorschlag „vollkommen inakzeptabel“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "F.a.Z. Frühdenker: Worum geht es im nächsten großen Prozess gegen Ekrem İmamoğlu?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Evakuierung der „Hondius“: Die Passagiere wirken, als kämen sie von einem anderen Planeten",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Abfertigungsentgelte: Fraport und Lufthansa zanken wieder",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Große Auswertung der F.A.S.: 1000 Prozent Rendite in 25 Jahren",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kolumne „Richtig essen“: Der Hype ums Protein ist außer Kontrolle geraten",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Waffenruhe zur Parade: Trübe Wirklichkeit trifft auf Putins ungebrochene Maximalansprüche",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Vermittler in der Ukraine?: Schröder ist Putins Mann",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Liveblog Ukrainekrieg: Lettischer Verteidigungsminister tritt zurück",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Tankrabatt & Co.: Der Vollkasko-Staat lähmt das Land",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Frankfurter Zukunftshoffnung: Baut die Eintracht um Can Uzun!",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Osnabrücker Edelfan: Boris Pistorius findet’s „geil“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Reformen: Berlin und die Traumtänzer",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Bosnien-Hercegovina: Die USA gegen Europas Stabilität",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "600 Kilometer: Läufer Saatçi erreicht nach 123 Stunden Ziel in Kalifornien",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Wegen Foto: Dua Lipa verklagt Elektronikkonzern auf Schadenersatz",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kerber und Ivanovic: „Mein Tennisleben hilft mir auch als Mutter“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Mütter im Visier: Wenn „Mutter“ zum Schimpfwort wird",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Das Beste aus der F.A.S.: „Dieses Bolognese-Rezept bleibt unerreicht“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Pakistan: Tote bei Anschlag auf Polizeiposten",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Nach dem Orban-Ende: Budapest zwischen Machtwechsel und Tanz-Show",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Bücher-Podcast: Diese stachelige Seele: Franziska Hauser über ihren Roman „Am Ende der Kleinigkeiten“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "3:1 in Mainz: Marie-Louise Etas erster Sieg mit Union Berlin",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Umbruch im Tischtennis: Der chinesische Riese wankt, aber er fällt nicht",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "3:1-Sieg in Köln: Heidenheims Hoffnung aufs Fußball-Wunder lebt",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Premier League: Arsenals Zittersieg nach Videobeweis",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    }
+  ]
+}

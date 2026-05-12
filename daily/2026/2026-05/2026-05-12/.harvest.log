@@ -1,0 +1,646 @@
+{
+  "timestamp": "2026-05-12T05:03:47+00:00",
+  "caps": {
+    "HARVEST_CAP": 25,
+    "KEYWORD_KEEP": 10,
+    "GENERAL_KEEP": 5
+  },
+  "buckets": {
+    "gastro_t1": {
+      "total": 18,
+      "kept": 16
+    },
+    "gastro_t2": {
+      "total": 9,
+      "kept": 0
+    },
+    "general_keyword": {
+      "total": 31,
+      "kept": 4
+    },
+    "general_other": {
+      "total": 309,
+      "kept": 5
+    }
+  },
+  "totals": {
+    "kept": 25,
+    "dropped": 333
+  },
+  "per_source": {
+    "ahgz-gastro": {
+      "name": "AHGZ Gastronomie",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 20,
+      "candidates": 5,
+      "errors": []
+    },
+    "bmel": {
+      "name": "BMEL Pressemitteilungen",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 50,
+      "candidates": 0,
+      "errors": []
+    },
+    "dehoga-berlin": {
+      "name": "DEHOGA Berlin",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "faz": {
+      "name": "FAZ Aktuell",
+      "fetched": 125,
+      "noise": 0,
+      "seen": 55,
+      "candidates": 70,
+      "errors": []
+    },
+    "manager-magazin": {
+      "name": "Manager Magazin",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 12,
+      "candidates": 18,
+      "errors": []
+    },
+    "politico-eu": {
+      "name": "Politico EU",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 10,
+      "errors": []
+    },
+    "scmp": {
+      "name": "South China Morning Post",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 50,
+      "errors": []
+    },
+    "spiegel": {
+      "name": "Der Spiegel",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 1,
+      "candidates": 29,
+      "errors": []
+    },
+    "tagesschau-wirtschaft": {
+      "name": "Tagesschau Wirtschaft",
+      "fetched": 29,
+      "noise": 0,
+      "seen": 16,
+      "candidates": 13,
+      "errors": []
+    },
+    "wiwo": {
+      "name": "WirtschaftsWoche",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 6,
+      "candidates": 14,
+      "errors": []
+    },
+    "ahgz-all": {
+      "name": "AHGZ Allgemein",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 13,
+      "candidates": 12,
+      "errors": []
+    },
+    "ahgz-suppliers": {
+      "name": "AHGZ Zulieferer",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 24,
+      "candidates": 1,
+      "errors": []
+    },
+    "dw-de": {
+      "name": "Deutsche Welle (DE)",
+      "fetched": 94,
+      "noise": 0,
+      "seen": 75,
+      "candidates": 19,
+      "errors": []
+    },
+    "dw-en": {
+      "name": "Deutsche Welle (EN)",
+      "fetched": 131,
+      "noise": 0,
+      "seen": 108,
+      "candidates": 23,
+      "errors": []
+    },
+    "ec-press": {
+      "name": "European Commission Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 1,
+      "candidates": 9,
+      "errors": []
+    },
+    "efsa-press": {
+      "name": "EFSA Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "euobserver": {
+      "name": "EUobserver",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 10,
+      "errors": []
+    },
+    "tagesschau-all": {
+      "name": "Tagesschau All",
+      "fetched": 74,
+      "noise": 0,
+      "seen": 24,
+      "candidates": 50,
+      "errors": []
+    },
+    "wiwo-politik": {
+      "name": "WiWo Politik",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 3,
+      "candidates": 17,
+      "errors": []
+    },
+    "zdf-wirtschaft": {
+      "name": "ZDFheute Wirtschaft",
+      "fetched": 75,
+      "noise": 0,
+      "seen": 58,
+      "candidates": 17,
+      "errors": []
+    }
+  },
+  "kept_titles": [
+    {
+      "title": "Wirtshauskonzept: Wohlfühlküche hinter dem Hofbräuhaus im Elsa München",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Exklusiv | Oktoberfest: Trio mit Manfred Kneifel übernimmt Wiesn-Zelt",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Gastro-Initiative: Katrin Koch ist die Lokalheldin 2026",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Sterneverleihung: „Der Michelin ist der Kompass für die Qualitätsgastronomie“",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Gourmetgastronomie : Restaurant‑Ikone Obauer schließt im Herbst",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Wirtschaftsministerin Reiche rechnet nicht mit Kerosin-Knappheit",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "IW-Experte Lesch sieht Gewerkschaften vor Strategiefrage",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Wirtschaft vor acht vom 11.05.2026",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Update Wirtschaft vom 11.05.2026",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "DGB-Bundeskongress bestätigt Vorsitzende Fahimi im Amt",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Söder und Schwesig raten von Entlastungsprämie ab",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Cybersicherheitsmonitor: Jeder Neunte von Internetkriminalität betroffen",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Telekom und Rheinmetall arbeiten an einer Drohnenabwehr",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Jeder Neunte lebt in Deutschland in einer zu kleinen Wohnung",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Wirtshauskonzept: Wohlfühlküche hinter dem Hofbräuhaus im Elsa München",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Exklusiv | Oktoberfest: Trio mit Manfred Kneifel übernimmt Wiesn-Zelt",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Familienbetrieb: Wellnesshotel Prinz-Luitpold-Bad schließt Renovierung ab",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Jakarta: Neuer General Manager im 25hours Hotels The Oddbird",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Gastro-Initiative: Katrin Koch ist die Lokalheldin 2026",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Nachfolger gefunden: DSR Hotel Holding besetzt Chefposten",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Schadensersatzklage: Trivago verklagt Google wegen Hotel-Metasuche",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Sterneverleihung: „Der Michelin ist der Kompass für die Qualitätsgastronomie“",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Ausländische Investoren: Bekanntes Santorin-Hotel für 28 Millionen Euro verkauft",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Technologie: Like Magic: Sehe, was Deine Gäste sehen",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Tourismus: Übernachtungszahlen steigen im März 2026",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    }
+  ],
+  "dropped_titles": [
+    {
+      "title": "Menschen mit Uni-Abschluss immer häufiger auf Jobsuche",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kann ein europäisches Netzwerk die Social-Media-Riesen schlagen?",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Schweiz und Österreich Top-Ziele für deutsche Auswanderer",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Marktbericht: Ruhiger Wochenauftakt an der Börse",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Namibia: Deutsche Unternehmerfamilie bei Flugzeugabsturz in Namibia ums Leben gekommen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Jens Spahn will pauschal fünf Prozent aller Subventionen streichen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Koalitionsausschuss: Union und SPD suchen Ersatz für Entlastungsprämie",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Wassenberg in NRW: Mann erschossen, Täter auf der Flucht",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Frühstück: Hilft es beim Abnehmen, wenn ich am Morgen nichts esse?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "»Unconditional«: Ist diese Serie aus Israel noch Unterhaltung oder schon Politik?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "News: Koalitionsausschuss im Kanzleramt, Bärbel Bas, Keir Starmer, Arbeitszeit",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Fitness-Training mit Kettlebell: So werden Sie schlanker und stärker – trotz Alltag mit Kind",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Aktive Erholung im Sport: Warum Nichtstun oft die schlechtere Pause ist",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Iran-Krieg: Donald Trump sieht Waffenruhe »auf der Intensivstation«, Iran bleibt unbeeindruckt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ukraine meldet massive russische Drohnenangriffe – und bietet sich Berlin als Waffenlieferant an",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Anders Fogh Rasmussen: Ex-Nato-Chef wirbt für Aufbau von neuem Staatenbündnis D7",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Oberstes US-Gericht erlaubt Postversand von Abtreibungspillen vorerst weiter",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "»Hart aber fair« mit Hubert Aiwanger zum ESC: Wadde hadde dudde da, Hubert?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Iran-Krieg: Zwei Drittel der US-Bürger wissen nicht, was Trumps Ziele in Iran sind",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Paar hat offenbar Sex im Flugzeug – und wird nach der Landung in Argentinien von Polizei empfangen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ärztepräsident fordert Aufschub der Krankenkassenreform",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Großbritannien: Keir Starmer unter Druck - Ministerinnen drängen Premier offenbar zum Rücktritt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Hantavirus: Spanischer Passagier der »Hondius« positiv getestet",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ukraine: Andrij Jermak wird der Geldwäsche verdächtigt – Behörden ermitteln gegen Wolodymyr Seleskyjs ehemaligen Vertrauten",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ukraine: Tiere und Pfleger im Krieg – Mykolajiw, der größte Zoo des Landes",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Berlin: Kitakinder finden Schatz aus Schmuck, Uhren und Bargeld",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Siedlungsbau und Gewalt im Westjordanland: Jeden Tag stirbt die Zweistaatenlösung ein Stück mehr",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Irankrieg: Donald Trump will Kraftstoffsteuer in den USA aussetzen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "China: Chinesischer Automarkt bricht wegen Irankrieg um mehr als 20 Prozent ein",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Griechenland: Rätsel um mutmaßliche ukrainische Kamikazedrohne vor Lefkada",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Fußball-Bundesliga: Manuel Baum und der FC Augsburg sind die Überraschung der Saison",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Frankreich: Emmanuel Macron sorgt mit Auftritt in Kenia für Beifall",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Gerhard Schröder, Ukraine und Russland: Warum auch über Angela Merkel spekuliert wird",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Irankrieg: Europa bleibt Zaungast",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Radprofi Juri Hollmann: „Ich war am Winseln und Weinen – bis ich ohnmächtig wurde“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Urbane Landwirtschaft: Gemüse vom Dach – ein Drittel von Europas Bedarf ließe sich decken",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "„Was Deutschland verbindet“: Die ARD lässt 84 völlig Fremde über Demokratie reden",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Boom der Privatfliegerei: Ultraleicht oder ultrateuer",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Liveblog Irankrieg: Trump: Waffenruhe mit Iran „liegt auf der Intensivstation“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "F.A.Z. Frühdenker: Kommt eine Alternative zur 1000-Euro-Entlastungsprämie?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Liveblog Ukrainekrieg: Tomahawk-Ersatz: Ukraine bietet Lieferung weitreichender Drohnen und Raketen an",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "TV-KRITIK „HART ABER FAIR“: Aiwanger ging es um Conchita Wurst",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Männliche Bildungsverlierer: Sind sie am Ende einfach zu faul?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Deutschland-Liveblog: Spahn plädiert für pauschale Kürzung aller Subventionen um fünf Prozent",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Wege aus der Einseitigkeit: Meine Partnerin sagt nie, was sie will. Wie gehe ich damit um?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "DGB-Kongress: Fahimi droht mit der Straße",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "„Tatort“-Stopp bis 2028: Der MDR hat sein Konto überzogen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kritische Infrastruktur: Rüstung als Wachstumshoffnung",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Marschflugkörper: Wir brauchen diese Raketen, um Putin abzuschrecken",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Liveblog USA unter Trump: Oberstes US-Gericht ebnet Republikanern den Weg für umstrittene Wahlkreiszuschnitte",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    }
+  ]
+}
