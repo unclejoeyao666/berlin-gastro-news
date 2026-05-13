@@ -1,0 +1,646 @@
+{
+  "timestamp": "2026-05-13T05:03:02+00:00",
+  "caps": {
+    "HARVEST_CAP": 25,
+    "KEYWORD_KEEP": 10,
+    "GENERAL_KEEP": 5
+  },
+  "buckets": {
+    "gastro_t1": {
+      "total": 18,
+      "kept": 16
+    },
+    "gastro_t2": {
+      "total": 8,
+      "kept": 0
+    },
+    "general_keyword": {
+      "total": 40,
+      "kept": 4
+    },
+    "general_other": {
+      "total": 309,
+      "kept": 5
+    }
+  },
+  "totals": {
+    "kept": 25,
+    "dropped": 342
+  },
+  "per_source": {
+    "ahgz-gastro": {
+      "name": "AHGZ Gastronomie",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 22,
+      "candidates": 3,
+      "errors": []
+    },
+    "bmel": {
+      "name": "BMEL Pressemitteilungen",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 50,
+      "candidates": 0,
+      "errors": []
+    },
+    "dehoga-berlin": {
+      "name": "DEHOGA Berlin",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 7,
+      "candidates": 3,
+      "errors": []
+    },
+    "faz": {
+      "name": "FAZ Aktuell",
+      "fetched": 130,
+      "noise": 0,
+      "seen": 52,
+      "candidates": 78,
+      "errors": []
+    },
+    "manager-magazin": {
+      "name": "Manager Magazin",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 9,
+      "candidates": 21,
+      "errors": []
+    },
+    "politico-eu": {
+      "name": "Politico EU",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 1,
+      "candidates": 9,
+      "errors": []
+    },
+    "scmp": {
+      "name": "South China Morning Post",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 50,
+      "errors": []
+    },
+    "spiegel": {
+      "name": "Der Spiegel",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 30,
+      "errors": []
+    },
+    "tagesschau-wirtschaft": {
+      "name": "Tagesschau Wirtschaft",
+      "fetched": 34,
+      "noise": 0,
+      "seen": 19,
+      "candidates": 15,
+      "errors": []
+    },
+    "wiwo": {
+      "name": "WirtschaftsWoche",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 20,
+      "errors": []
+    },
+    "ahgz-all": {
+      "name": "AHGZ Allgemein",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 13,
+      "candidates": 12,
+      "errors": []
+    },
+    "ahgz-suppliers": {
+      "name": "AHGZ Zulieferer",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 25,
+      "candidates": 0,
+      "errors": []
+    },
+    "dw-de": {
+      "name": "Deutsche Welle (DE)",
+      "fetched": 90,
+      "noise": 0,
+      "seen": 76,
+      "candidates": 14,
+      "errors": []
+    },
+    "dw-en": {
+      "name": "Deutsche Welle (EN)",
+      "fetched": 133,
+      "noise": 0,
+      "seen": 109,
+      "candidates": 24,
+      "errors": []
+    },
+    "ec-press": {
+      "name": "European Commission Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 3,
+      "candidates": 7,
+      "errors": []
+    },
+    "efsa-press": {
+      "name": "EFSA Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 9,
+      "candidates": 1,
+      "errors": []
+    },
+    "euobserver": {
+      "name": "EUobserver",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 11,
+      "candidates": 9,
+      "errors": []
+    },
+    "tagesschau-all": {
+      "name": "Tagesschau All",
+      "fetched": 70,
+      "noise": 0,
+      "seen": 15,
+      "candidates": 55,
+      "errors": []
+    },
+    "wiwo-politik": {
+      "name": "WiWo Politik",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 8,
+      "candidates": 12,
+      "errors": []
+    },
+    "zdf-wirtschaft": {
+      "name": "ZDFheute Wirtschaft",
+      "fetched": 74,
+      "noise": 0,
+      "seen": 62,
+      "candidates": 12,
+      "errors": []
+    }
+  },
+  "kept_titles": [
+    {
+      "title": "Fußball-WM: Sky startet Kooperation mit Deutsche Telekom für Gastronomie und Public Viewings",
+      "source_id": "dehoga-berlin",
+      "score": 100,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "GEMA: Frist zur Geltendmachung der Erstattungen im FS-Tarif endet am 15. Mai 2026",
+      "source_id": "dehoga-berlin",
+      "score": 100,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Fortsetzung der erfolgreichen Beratertage: Ihr Betrieb. Ihre Fragen. Ihre Lösung",
+      "source_id": "dehoga-berlin",
+      "score": 96,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Hotelgastronomie: Tim Lentl wird Küchenchef im Qiu",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Bio-Markt: Bio ist für die Gastronomie kein Nischenthema mehr",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Interior Design: Schönste Restaurants, Hotels & Bars 2027 gesucht",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Non-Food-Discounter MÄC-GEIZ meldet Insolvenz an",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Pfiffe und Buhrufe für Merz beim DGB-Kongress wegen Sparplänen",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Wirtschaft vor acht vom 12.05.2026",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Update Wirtschaft vom 12.05.2026",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Cum-Ex-Schlüsselfigur Berger muss zehn Jahre ins Gefängnis",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "US-Verbraucherpreise steigen im April auf Drei-Jahres-Hoch",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Wie Unternehmensberater Firmen retten - Insolvenz häufig vermeidbar",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Tankrabatt kommt laut Monopolkommission an",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Diesel an einigen Tankstellen wohl wegen Panne überraschend günstig",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Hotelmarkt: Das sind die Top 10 Standorte im ersten Quartal",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Hotelgastronomie: Tim Lentl wird Küchenchef im Qiu",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Veranstaltungen: Seehotel Niedernberg bietet „Rent a Dorf“-Konzept",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Massentourismus: Athen plant schärfere Regeln für Hotelbau in Griechenland",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Wettbewerb : Bayerische Jugendmeister 2026 stehen fest",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Bio-Markt: Bio ist für die Gastronomie kein Nischenthema mehr",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Trauner Verlag: Fachbuch geht der Fluktuation auf den Grund",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Wettbewerb: Sachsens Jugendmeister gekürt",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Debüt: Neue Hotelmarke Hiamo öffnet erstes Haus",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Porsche Design Tower: Neuer General Manager für Radisson Blu Hotel Stuttgart",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    }
+  ],
+  "dropped_titles": [
+    {
+      "title": "Solarparks sollen in der Wüste Regen erzeugen",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Grüne Investments: Nachhaltige Geldanlagen weniger gefragt",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Deutsche Bahn stellt Flinkster und Call a Bike auf den Prüfstand",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Mehr wichtige Medikamente sollen in Europa hergestellt werden",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Gelingt Schwarz-Rot beim Koalitionsausschuss der Neustart?",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Marktbericht: DAX fällt unter 24.000er-Marke",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ranking Einzelhotels: Die Prognosen der Top 100 Hotels für 2026",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Private Krankenversicherung: Hohe Beiträge – gibt es einen Weg zurück in die GKV?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Private Krankenversicherung: Für wen sich der Wechsel nach der Reform rechnet",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Mercedes-Benz verkauft Autohäuser in Berlin und Brandenburg",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Wiesbaden: Fliegerbombe nahe US-Kaserne gefunden - Bahnstrecke und A66 dicht",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Bundesregierung: Koalition verständigt sich auf »Arbeitsprozess«. Und will den CO₂-Preis stabil halten",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Darf Milka die Schokoladentafel ohne Hinweis schrumpfen? Worum es in dem Fall geht",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Donald Trump bei Xi Jinping: »Unsere größte Furcht ist, dass Taiwan auf der Speisekarte landet«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Netflix wird gefühlt immer schlechter. Soll ich noch 14 Euro für ein Abo zahlen?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "News: Trump bei Xi, Cem Özdemir, schwarz-rote Koalition",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Donald Trump: Republikaner in South Carolina widersetzen sich Druck des US-Präsidenten",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "ESC-Halbfinale 1: Finnland, Griechenland und Island weiter, Boy George draußen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Iran-Krieg: Hegseth verteidigt horrende Kosten und bestreitet Engpässe bei der Munition",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Brandon Clarke: NBA-Profi der Memphis Grizzlies mit 29 Jahren gestorben",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "US-Berufungsgericht lässt Donald Trumps Zehn-Prozent-Zoll vorerst bestehen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "ESC-Halbfinale: Zehn Länder lösen Finaltickets",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "»Golden Dome«: US-Kongress warnt vor Milliardenexplosion bei Trumps Raketen-Abwehrsystem",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Nach Umfragetief für Wladimir Putin: Inszenierte Küsschen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ukraine-Krieg: So geschwächt ist Russlands Luftverteidigung",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Fußball-WM: Mexikos Regierung stoppt vorgezogene Sommerferien",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "NSDAP Mitglieder: »Das waren normale Menschen wie wir« – Spitzengespräch",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Real Madrid: Präsident Florentino Pérez attackiert spanische Presse und kündigt Neuwahlen an",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Deutsche Nato-Soldaten in den Niederlanden attackiert",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Hanno Berger: Zehn Jahre Haft für Cum-Ex-Steuerbetrüger",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Russland testet Sarmat-Interkontinentalrakete – laut Wladimir Putin erfolgreich",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Bundesregierung einigt sich auf Kürzungen bei Integrationskursen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Demokratie in der Krise: Ruprecht Polenz über AfD, CDU und sein Kinderbuch",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Android 17 und Googlebooks: Google greift das MacBook Neo an",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "NSDAP Mitglieder: »Das waren normale Menschen wie wir« – Talk",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "DGB-Kongress: Friedrich Merz hat es schwer bei den Gewerkschaftern",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "USA planen drei neue Militärbasen, Grönland zeigt sich offen – Medienberichte",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Business-Ticker: Mercedes-Benz verkauft Autohäuser in Berlin und Brandenburg",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Britische Regierungskrise: Der brutale Abstieg der Labour-Partei",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Kolumne Märkte Inside: Droht Private Credit eine Krise wie 2007?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Partei sucht ihr Profil: Wagen die Grünen jetzt mehr Özdemir?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Bafin-Präsident: „Die hohen Risiken spiegeln die Kursentwicklung nicht wider“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Im Alter von 101: Holocaustüberlebender Albrecht Weinberg gestorben",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Riesling-Symposium: Große Weine sterben nie",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Grosser Camper von VW: Hotel California",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "NS-Raubkunst-Funde: „Es wurde geraubt, erzähl’ niemandem davon“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Trump reist nach Peking: Ein Deal und sonst nicht viel",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Staatsbesuch in Peking: Trumps Werk und Chinas Beitrag",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Liveblog Irankrieg: Irans Raketenarsenal soll weitgehend intakt sein",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Brief aus dem Irankrieg: Bleiben oder gehen?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    }
+  ]
+}
