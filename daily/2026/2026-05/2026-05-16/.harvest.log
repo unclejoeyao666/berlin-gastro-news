@@ -1,0 +1,646 @@
+{
+  "timestamp": "2026-05-16T05:04:07+00:00",
+  "caps": {
+    "HARVEST_CAP": 25,
+    "KEYWORD_KEEP": 10,
+    "GENERAL_KEEP": 5
+  },
+  "buckets": {
+    "gastro_t1": {
+      "total": 21,
+      "kept": 10
+    },
+    "gastro_t2": {
+      "total": 5,
+      "kept": 0
+    },
+    "general_keyword": {
+      "total": 35,
+      "kept": 10
+    },
+    "general_other": {
+      "total": 368,
+      "kept": 5
+    }
+  },
+  "totals": {
+    "kept": 25,
+    "dropped": 391
+  },
+  "per_source": {
+    "ahgz-gastro": {
+      "name": "AHGZ Gastronomie",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 21,
+      "candidates": 4,
+      "errors": []
+    },
+    "bmel": {
+      "name": "BMEL Pressemitteilungen",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 50,
+      "candidates": 0,
+      "errors": []
+    },
+    "dehoga-berlin": {
+      "name": "DEHOGA Berlin",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "faz": {
+      "name": "FAZ Aktuell",
+      "fetched": 135,
+      "noise": 0,
+      "seen": 41,
+      "candidates": 94,
+      "errors": []
+    },
+    "manager-magazin": {
+      "name": "Manager Magazin",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 4,
+      "candidates": 26,
+      "errors": []
+    },
+    "politico-eu": {
+      "name": "Politico EU",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 10,
+      "errors": []
+    },
+    "scmp": {
+      "name": "South China Morning Post",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 50,
+      "errors": []
+    },
+    "spiegel": {
+      "name": "Der Spiegel",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 30,
+      "errors": []
+    },
+    "tagesschau-wirtschaft": {
+      "name": "Tagesschau Wirtschaft",
+      "fetched": 22,
+      "noise": 0,
+      "seen": 11,
+      "candidates": 11,
+      "errors": []
+    },
+    "wiwo": {
+      "name": "WirtschaftsWoche",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 20,
+      "errors": []
+    },
+    "ahgz-all": {
+      "name": "AHGZ Allgemein",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 12,
+      "candidates": 13,
+      "errors": []
+    },
+    "ahgz-suppliers": {
+      "name": "AHGZ Zulieferer",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 21,
+      "candidates": 4,
+      "errors": []
+    },
+    "dw-de": {
+      "name": "Deutsche Welle (DE)",
+      "fetched": 90,
+      "noise": 0,
+      "seen": 66,
+      "candidates": 24,
+      "errors": []
+    },
+    "dw-en": {
+      "name": "Deutsche Welle (EN)",
+      "fetched": 136,
+      "noise": 0,
+      "seen": 107,
+      "candidates": 29,
+      "errors": []
+    },
+    "ec-press": {
+      "name": "European Commission Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 5,
+      "candidates": 5,
+      "errors": []
+    },
+    "efsa-press": {
+      "name": "EFSA Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "euobserver": {
+      "name": "EUobserver",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 8,
+      "candidates": 12,
+      "errors": []
+    },
+    "tagesschau-all": {
+      "name": "Tagesschau All",
+      "fetched": 79,
+      "noise": 0,
+      "seen": 16,
+      "candidates": 63,
+      "errors": []
+    },
+    "wiwo-politik": {
+      "name": "WiWo Politik",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 2,
+      "candidates": 18,
+      "errors": []
+    },
+    "zdf-wirtschaft": {
+      "name": "ZDFheute Wirtschaft",
+      "fetched": 75,
+      "noise": 0,
+      "seen": 59,
+      "candidates": 16,
+      "errors": []
+    }
+  },
+  "kept_titles": [
+    {
+      "title": "Fine Dining: Hier gibt Japan kulinarisch den Takt an",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Schweizer Spitzenduo : „Der dritte Stern im Schloss Schauenstein war sicher ein Katalysator“",
+      "source_id": "ahgz-gastro",
+      "score": 88,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Florentin Hotel: Kein Hotelrestaurant, sondern eine Oase",
+      "source_id": "ahgz-gastro",
+      "score": 88,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Porträt: Faible für Drinks ohne Alkohol",
+      "source_id": "ahgz-gastro",
+      "score": 88,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Oberlandesgericht Köln: Penny gewinnt Streit um Preisangaben im Prospekt",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Iran-Krieg: Regierung erwartet deutlichen Konjunkturdämpfer",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Wirtschaft vor acht vom 15.05.2026",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Update Wirtschaft vom 15.05.2026",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Kevin Warsh - der Fed-Chef, der Trump enttäuschen könnte",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Energieintensive Branchen schrumpfen seit Beginn des Ukraine-Kriegs",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Afrikas reichster Mann plant riesige Raffinerie in Ostafrika",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Marktbericht: DAX fällt dem Wochenende entgegen",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Reformpläne: Was bedeutet Warkens Vorhaben für Pflegebedürftige?",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 82,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Filmfestspiele: Hotel Carlton Cannes empfängt internationale Filmwelt",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Digital Restaurant Day 2026: Berlin wird Treffpunkt für digitale Gastronomie",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Motel One: Einsatz von KI in der Hotelkommunikation",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Wirtschaft: Regierung erwartet Konjunktur-Dämpfer",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Fine Dining: Hier gibt Japan kulinarisch den Takt an",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Beleuchtung: Licht als Gestaltungselement bei Duni",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Wie Sie als Vater endlich mit Ihren Kindern ins Gespräch kommen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Harvey Weinstein: Erneut Vergewaltigungsprozess gegen ihn geplatzt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Hamburg: Rassistische Parolen am Vatertag – Polizei nimmt 18 Verdächtige fest",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Krankenhausreform: Geburtskliniken sind unverzichtbar",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Liveblog Ukrainekrieg: Selenskyj kündigt weitere Drohnenangriffe auf Russland an",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Eskalation in Rumänien: Auf die politische Krise folgt der Absturz der Wirtschaft",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    }
+  ],
+  "dropped_titles": [
+    {
+      "title": "Teure Kleinwagen: Steht eine ganze Fahrzeugklasse vor dem Aus?",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 82,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Normenkontrollrat: Scharfe Kritik am Gebäudemodernisierungsgesetz",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 82,
+      "bucket": "general_other"
+    },
+    {
+      "title": "AfD in Mecklenburg-Vorpommern: Bei Wahlsieg Remigration und Rückführungspolizei geplant",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "News: Manuel Neuer vor Comeback für Deutschland, Tucker Carlson vs. Donald Trump, ESC-Finale in Wien",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Umsätze der Dax-Konzerne sinken, aber Gewinne steigen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Samenspende: Wie »Donor Dan« über soziale Medien Kinderwünsche erfüllt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Trump will Entscheidung über Waffenverkauf an Taiwan als Druckmittel nutzen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ostsee-Wal-News heute: Toter Wal vor dänischer Insel trägt keinen Sender",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "»Knight Rider«-Auto K.I.T.T. bekommt Strafzettel, obwohl es im Museum steht",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Mercedes-Chef Källenius hält Einstieg in Rüstungsproduktion für denkbar",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Trump rechnet nicht mit Freilassung von Hongkonger Verleger Lai",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Finanzdienstleister Euroclear soll für eingefrorene russische Gelder Schadenersatz leisten",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Demokratische Republik Kongo: Neuer Ebola-Ausbruch mit 246 Verdachtsfällen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Filmfestspiele in Cannes: Festivalpräsident ehrt John Travolta",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Israel und Libanon: USA verkünden Verlängerung der Waffenruhe um 45 Tage",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kanye West: Konzert von Ye in Indien abgesagt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Türkei: Ex-Bürgermeister der CHP zu 46 Jahren Haft verurteilt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "FDP-Krise: Warum die Liberalen sowohl Kubicki als auch Höne brauchen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "MV »Hondius«: WHO findet keine Hinweise auf gefährliche Hantavirus-Mutation",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Filmfestspiele in Cannes: Asghar Farhadi kritisiert Iran, Israel und USA",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Donald Trump und Xi Jinping: Gipfel in Peking mit vielen warmen Worten",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Trump und Xi: Wie China die USA dominiert - Podcast",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Friedrich Merz: Der Pyromane als Lagerfeuermacher - Kolumne",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Anholt/Dänemark: Ist der tote Wal Buckelwal »Timmy«?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Friedrich Merz spricht auf Katholikentag über USA unter Trump und deutsche Arbeitsmoral",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "NSDAP-Mitgliedschaft: »Es gab keinen Zwang – aber sozialen Druck«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Großbritannien untersagt elf Menschen die Einreise vor rechter Demonstration in London",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Sudetendeutsche: Streit um Sudetentreffen in Tschechien mit Markus Söder",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Valie Export: Die Menschinistin, ihre Schamhaare und die Genitalpanik",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kriselnder Arbeitsmarkt: Hier gibt es noch Arbeitsplätze",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Synthetische Steine: Wann ist ein Diamant ein Diamant?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Die Karrierefrage: Wie kann ich mich für lästige Aufgaben motivieren?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Hessen: Landwirte geben Entwarnung: Wetter keine Gefahr für Ernte",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Sorgen vor dem ersten Kind: Wie wird man ein guter Vater?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Liveblog USA unter Trump: Trump zu Waffenverkauf an Taiwan: Gutes Druckmittel für USA",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Aktiengeschäfte: Trumps Aktienkäufe werfen Fragen auf",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Katholikentag und AfD: In der Kirche hilft keine Brandmauer",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kanzler beim Katholikentag: Nur beim Gebet weicht er aus",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Alleinregierung in Magdeburg: Der interne Machtplan der AfD",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Lage an der Front: Die Ukraine trifft den russischen Nachschub",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "FDP stellt sich neu auf: „Jetzt heißt das Team Kubicki-Höne“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Nach dem Stellenabbau: Welche Zukunft hat Biontech ohne seine Star-Gründer?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Michael Jackson als Täter: „Wenn du mich liebst, tust du das“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kitt steht im Msueum: „Knight Rider“-Auto bekommt Strafzettel",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Krise in Autoindustrie: Mercedes-Chef Källenius denkt über Einstieg in Rüstungsproduktion nach",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Partner-Mitversicherung: Was ist „gelebte Frauenpolitik“?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "GesundheitsReform: Macht mit, liebe Mediziner!",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Gipfel in Peking: Er hat Trump im Griff",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Verfassungsklage von ARD und ZDF: Wie rechnet Karlsruhe den Rundfunkbeitrag ab?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Höne und Kubicki: Eine salomonische Lösung für die FDP",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    }
+  ]
+}

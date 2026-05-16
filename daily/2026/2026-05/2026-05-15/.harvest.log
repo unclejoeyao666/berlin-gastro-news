@@ -1,0 +1,646 @@
+{
+  "timestamp": "2026-05-15T05:02:56+00:00",
+  "caps": {
+    "HARVEST_CAP": 25,
+    "KEYWORD_KEEP": 10,
+    "GENERAL_KEEP": 5
+  },
+  "buckets": {
+    "gastro_t1": {
+      "total": 12,
+      "kept": 10
+    },
+    "gastro_t2": {
+      "total": 2,
+      "kept": 0
+    },
+    "general_keyword": {
+      "total": 25,
+      "kept": 10
+    },
+    "general_other": {
+      "total": 247,
+      "kept": 5
+    }
+  },
+  "totals": {
+    "kept": 25,
+    "dropped": 257
+  },
+  "per_source": {
+    "ahgz-gastro": {
+      "name": "AHGZ Gastronomie",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 22,
+      "candidates": 3,
+      "errors": []
+    },
+    "bmel": {
+      "name": "BMEL Pressemitteilungen",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 50,
+      "candidates": 0,
+      "errors": []
+    },
+    "dehoga-berlin": {
+      "name": "DEHOGA Berlin",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "faz": {
+      "name": "FAZ Aktuell",
+      "fetched": 133,
+      "noise": 0,
+      "seen": 65,
+      "candidates": 68,
+      "errors": []
+    },
+    "manager-magazin": {
+      "name": "Manager Magazin",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 23,
+      "candidates": 7,
+      "errors": []
+    },
+    "politico-eu": {
+      "name": "Politico EU",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 10,
+      "errors": []
+    },
+    "scmp": {
+      "name": "South China Morning Post",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 50,
+      "errors": []
+    },
+    "spiegel": {
+      "name": "Der Spiegel",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 30,
+      "errors": []
+    },
+    "tagesschau-wirtschaft": {
+      "name": "Tagesschau Wirtschaft",
+      "fetched": 36,
+      "noise": 0,
+      "seen": 34,
+      "candidates": 2,
+      "errors": []
+    },
+    "wiwo": {
+      "name": "WirtschaftsWoche",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 1,
+      "candidates": 19,
+      "errors": []
+    },
+    "ahgz-all": {
+      "name": "AHGZ Allgemein",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 18,
+      "candidates": 7,
+      "errors": []
+    },
+    "ahgz-suppliers": {
+      "name": "AHGZ Zulieferer",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 23,
+      "candidates": 2,
+      "errors": []
+    },
+    "dw-de": {
+      "name": "Deutsche Welle (DE)",
+      "fetched": 90,
+      "noise": 0,
+      "seen": 78,
+      "candidates": 12,
+      "errors": []
+    },
+    "dw-en": {
+      "name": "Deutsche Welle (EN)",
+      "fetched": 138,
+      "noise": 0,
+      "seen": 115,
+      "candidates": 23,
+      "errors": []
+    },
+    "ec-press": {
+      "name": "European Commission Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 8,
+      "candidates": 2,
+      "errors": []
+    },
+    "efsa-press": {
+      "name": "EFSA Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "euobserver": {
+      "name": "EUobserver",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 14,
+      "candidates": 6,
+      "errors": []
+    },
+    "tagesschau-all": {
+      "name": "Tagesschau All",
+      "fetched": 60,
+      "noise": 0,
+      "seen": 31,
+      "candidates": 29,
+      "errors": []
+    },
+    "wiwo-politik": {
+      "name": "WiWo Politik",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 10,
+      "errors": []
+    },
+    "zdf-wirtschaft": {
+      "name": "ZDFheute Wirtschaft",
+      "fetched": 74,
+      "noise": 0,
+      "seen": 68,
+      "candidates": 6,
+      "errors": []
+    }
+  },
+  "kept_titles": [
+    {
+      "title": "Schweizer Spitzenduo : „Der dritte Stern im Schloss Schauenstein war sicher ein Katalysator“",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Florentin Hotel: Kein Hotelrestaurant, sondern eine Oase",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Porträt: Faible für Drinks ohne Alkohol",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Teure Kleinwagen: Steht eine ganze Fahrzeugklasse vor dem Aus?",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Reformpläne: Was bedeutet Warkens Vorhaben für Pflegebedürftige?",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Digitale Technik: Siteminder baut KI-gestützte Buchungskanäle aus",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Florentin Hotel: Kein Hotelrestaurant, sondern eine Oase",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "196+ Forum München: Hotelimmobilie des Jahres gesucht",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Expansion: One&Only kommt nach Frankreich",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Porträt: Faible für Drinks ohne Alkohol",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Backwaren: Neues von Délifrance",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "IHA-Branchenreport : Hotellerie erholt sich, aber Margen sind unter Druck",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Sommerdrinks: Erdbeeren und Wein – fünf gelungene Kombinationen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Wirtshäuser: Ort des gesellschaftlichen Zusammenhalts und Kontrolle",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Malediven: Fünf italienische Todesopfer nach Tauchunfall befürchtet",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "AfD in Brandenburg: Bericht legt DDR-Vergangenheit von AfD-Politikern offen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Vatertag: Männer demonstrieren gegen Gewalt an Frauen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Wie Influencerinnen arbeiten: »Irgendwann dachte ich: Das ist doch bescheuert«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Haiti: Kämpfe zwischen Gangs – Uno berichtet von mindestens 78 Toten",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Deutsche Bahn: Wird Zug fahren teurer, weil die Bundesregierung eine Reform verzögert?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "VW ID.Era 9x im Test: Jetzt kommt’s dicke",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Staatliche Zinslast: Raus aus der Schuldenfalle!",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Trump und Xi: Treffen der Pleitiers",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Schwaches Wachstum: Welchen Einfluss hat der Irankrieg auf die deutsche Wirtschaft?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Filmfest Cannes: Als Thomas Mann nach Deutschland zurückkehrte",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    }
+  ],
+  "dropped_titles": [
+    {
+      "title": "Sarah Engels beim Eurovision Song Contest: Wie stehen ihre ESC-Chancen?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "News: US-Präsident Donald Trump trifft erneut auf Chinas Staatschef Xi, Chaos in der britischen Regierung, Bundeskanzler Friedrich Merz beim Katholikentag",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Gastgeben als Akt des Widerstands: Eine neue Generation entdeckt das Einladen zum Essen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "ESC in Wien: Würge-Song und Retro-Ballade ziehen ins Finale ein",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ukraine meldet 21 Tote nach russischem Großangriff auf Kyjiw",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Supreme Court: Versand von Abtreibungspillen in USA vorerst weiter möglich",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kolumbien: US-Küstenwache stoppt drei Boote mit tonnenweise Kokain",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "James Bond: Amazon MGM Studios äußern sich zur Suche nach neuem 007",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "CIA-Chef John Ratcliffe zu Gesprächen in Kuba",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "ORF-Skandal um Roland Weißmann: Er schickte seiner Mitarbeiterin Penisbilder",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "US-Grenzschutzchef Michael Banks überraschend zurückgetreten",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Trumps Kürzungen bei der Entwicklungshilfe: Studie zeigt dramatische Folgen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "LGBTQ in Polen: Rathaus in Warschau erkennt erstmals gleichgeschlechtliche Ehe an",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Feministische Kunstpionierin Valie Export gestorben",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Abnehmspritzen Wegovy und Mounjaro: Was gegen den Jo-Jo-Effekt helfen könnte",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kolumbien: Rotes Kreuz meldet schlimmste Gewalt seit Jahren",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Krieg in Iran: US-Admiral dementiert Berichte über iranische Raketenstellungen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Antarktis: Forscher finden im Eis Spuren einer Sternexplosion",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "FC Bayern München vs. VfL Wolfsburg: Alexandra Popp geht als Legende, aber ohne Titel",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kuba: Leere Zapfsäulen, Stromausfälle, verdorbenes Essen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Großbritannien: Wes Streeting - Der Mann, der die Vorhänge ausmaß",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "in Hamburg und Berlin: Männer demonstrieren am Vatertag gegen Gewalt an Frauen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Erster Einsatz in Frankfurt: Für den Lieferdienst kocht jetzt der Roboter",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Kastanienbäume: Die Blüte im Bier",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Neuer Fed-Chef Warsh: Ein Notenbanker wie aus dem Bilderbuch",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Jerome Powell: Der Mann, der Trump widerstand",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "F.a.Z. Frühdenker: Wird Warsh sein Versprechen halten?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Neue Viertel, halbe Sachen: Wenn das Gefühl von Heimat nicht aufkommt",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Liveblog Irankrieg: Saudi-Arabien und Emirate sollen Iran angegriffen haben",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Psychologie-kolumne: Warum manche Menschen besser durch Krisen kommen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "KI im Wahlkampf: Virale Apokalypse",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Staatsbesuch in Peking: Xi setzt Trump die Pistole auf die Brust",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Lust in der Lebensmitte: „Es gibt eine gute Standardpenislänge, die reicht den meisten Frauen“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Krieg gegen die Ukraine: Russlands gut geplanter Angriff",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "FBI-Chef vor Ausschuss: Kash Patel ist nicht zu fassen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Klavierfestival Ruhr: Ellenbogen vom Tich!",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Besuch in China: Trump könnte es Peking schwerer machen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Energiewende: Das Klimaziel ist nicht das Problem",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ratschläge der Kanzlerin: Warum Merkels politische Herzlichkeit nicht weiterhilft",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Liebig Centre in Linden: Pionierarbeit für die Welt",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "F.A.Z. Exklusiv: Verlag „Tredition“ streicht KI-Schrott",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Strandfund: Weiße Substanz an Nordseestränden angespült",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "50 Meter Tiefe: Fünf italienische Taucher auf Malediven tödlich verunglückt",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Liveblog USA unter Trump: CIA-Chef trifft sich auf Kuba mit Regierungsvertretern",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "ESC-Tagebuch aus Wien (6): Dänemarks gläserne Party geht auch im Finale weiter",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Mathias Gidsel im Interview: „Es gibt etwas, das in mir ringt“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Gute Nachrichten: 25 Dinge, die uns Freude machen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Dieselskandal: Warum VW den größten Skandal seiner Geschichte nicht loswird",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "AACHEN: Karlspreis für Draghi: Merz mahnt EU-Haushaltsreform an",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "HAVANA: Proteste in Havanna nach massiven Stromausfällen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    }
+  ]
+}
