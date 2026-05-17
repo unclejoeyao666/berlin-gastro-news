@@ -1,0 +1,604 @@
+{
+  "timestamp": "2026-05-17T05:03:43+00:00",
+  "caps": {
+    "HARVEST_CAP": 25,
+    "KEYWORD_KEEP": 10,
+    "GENERAL_KEEP": 5
+  },
+  "buckets": {
+    "gastro_t1": {
+      "total": 3,
+      "kept": 3
+    },
+    "gastro_t2": {
+      "total": 0,
+      "kept": 0
+    },
+    "general_keyword": {
+      "total": 28,
+      "kept": 10
+    },
+    "general_other": {
+      "total": 243,
+      "kept": 5
+    }
+  },
+  "totals": {
+    "kept": 18,
+    "dropped": 254
+  },
+  "per_source": {
+    "ahgz-gastro": {
+      "name": "AHGZ Gastronomie",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 24,
+      "candidates": 1,
+      "errors": []
+    },
+    "bmel": {
+      "name": "BMEL Pressemitteilungen",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 50,
+      "candidates": 0,
+      "errors": []
+    },
+    "dehoga-berlin": {
+      "name": "DEHOGA Berlin",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "faz": {
+      "name": "FAZ Aktuell",
+      "fetched": 135,
+      "noise": 0,
+      "seen": 61,
+      "candidates": 74,
+      "errors": []
+    },
+    "manager-magazin": {
+      "name": "Manager Magazin",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 23,
+      "candidates": 7,
+      "errors": []
+    },
+    "politico-eu": {
+      "name": "Politico EU",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 10,
+      "errors": []
+    },
+    "scmp": {
+      "name": "South China Morning Post",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 50,
+      "errors": []
+    },
+    "spiegel": {
+      "name": "Der Spiegel",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 30,
+      "errors": []
+    },
+    "tagesschau-wirtschaft": {
+      "name": "Tagesschau Wirtschaft",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 22,
+      "candidates": 3,
+      "errors": []
+    },
+    "wiwo": {
+      "name": "WirtschaftsWoche",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 4,
+      "candidates": 16,
+      "errors": []
+    },
+    "ahgz-all": {
+      "name": "AHGZ Allgemein",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 23,
+      "candidates": 2,
+      "errors": []
+    },
+    "ahgz-suppliers": {
+      "name": "AHGZ Zulieferer",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 25,
+      "candidates": 0,
+      "errors": []
+    },
+    "dw-de": {
+      "name": "Deutsche Welle (DE)",
+      "fetched": 89,
+      "noise": 0,
+      "seen": 79,
+      "candidates": 10,
+      "errors": []
+    },
+    "dw-en": {
+      "name": "Deutsche Welle (EN)",
+      "fetched": 137,
+      "noise": 0,
+      "seen": 119,
+      "candidates": 18,
+      "errors": []
+    },
+    "ec-press": {
+      "name": "European Commission Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "efsa-press": {
+      "name": "EFSA Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "euobserver": {
+      "name": "EUobserver",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 18,
+      "candidates": 2,
+      "errors": []
+    },
+    "tagesschau-all": {
+      "name": "Tagesschau All",
+      "fetched": 70,
+      "noise": 0,
+      "seen": 32,
+      "candidates": 38,
+      "errors": []
+    },
+    "wiwo-politik": {
+      "name": "WiWo Politik",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 16,
+      "candidates": 4,
+      "errors": []
+    },
+    "zdf-wirtschaft": {
+      "name": "ZDFheute Wirtschaft",
+      "fetched": 74,
+      "noise": 0,
+      "seen": 65,
+      "candidates": 9,
+      "errors": []
+    }
+  },
+  "kept_titles": [
+    {
+      "title": "Kommentar: Die wahren Folgen von Ozempic in der Gastronomie",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Die Inflation ist zurück - die Deutschen bleiben im Sparmodus",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Ausbildung in der Pflege: \"Manchmal ist es einfach zu viel\"",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Endlich in Rente: Wie gelingt der ideale Zugang zum Vermögen?",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kommentar: Die wahren Folgen von Ozempic in der Gastronomie",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Katholische Kirche: Markus Söder kritisiert Vatikan für Umgang mit Missbrauchsskandal",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Italien: Auto rast in Modena in Menschenmenge - mehrere Verletzte",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Volksabstimmung in der Schweiz: Die Schweiz streitet über deutsche Zuwanderer",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Sexueller Belästigung: Berichte von Übergriffen auf deutschem Ärztetag",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Langzeitbeziehungen: Wie eine Teenager-Liebe zur langjährigen Partnerschaft wurde",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Donald Trump: Ballsaal des US-Präsidenten droht eine Blockade im US-Senat",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Erstes Verliebtsein: Wie Eltern reagieren können, wenn Teenager lieben",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Liveblog Ukrainekrieg: Putin reist am Dienstag nach China",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Streit um Alkoholausschank: Tennisverein stellt sich auf Klagen bis zum BGH ein",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Digitalwirtschaft-Podcast: Unsere digitale Souveränität hängt von vier Dingen ab",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Regierungskrise in London: Die Briten zahlen einen hohen Preis",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Digitalwirtschaft: Bigtech sitzt immer mit am Tisch",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "196+ Forum München: Hotelimmobilie des Jahres gesucht",
+      "source_id": "ahgz-all",
+      "score": 70,
+      "bucket": "gastro_t1"
+    }
+  ],
+  "dropped_titles": [
+    {
+      "title": "ESC-Gewinnerin Dara im Porträt: Sie machte Europa ganz »bangaranga«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Australien: Mann stirbt bei mutmaßlichem Haiangriff vor Perth im Westen des Landes",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ebola: Weltgesundheitsorganisation schlägt Alarm wegen Ausbruchs in Kongo und Uganda",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kuba veröffentlicht Handbuch für Kriegsfall und erntet Kritik im Netz",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Bundestrainer im ZDF-Sportstudio: Der Eiertanz des Julian Nagelsmann",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "ESC 2026 in Wien: Dara aus Bulgarien gewinnt Eurovision mit »Bangaranga«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Buckelwal aus der Ostsee: »Timmy« schwamm vor seinem Tod wohl in die falsche Richtung",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Verteilungsneid: »Was mein Nachbar schon hat, kann ich selbst nicht mehr ergattern«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Transnistrien: Kreml erleichtert Einwohnern den Erhalt russischer Pässe",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Swatch: Chaos um Kollektion Royal Pop mit Audemars Piguet",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Neue Kartenspiele: Vom Superheldenduell bis zum kooperativen Stichspiel",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ebola: Demokratische Republik Kongo meldet 80 Tote",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Matthew McConaughey: Warum er sich für 22 Tage nach Peru zurückzog",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Berlin: Bundespolizei geht mit Verbotszonen an Bahnhöfen gegen Gewalt und Drogen vor",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Medien und Journalismus: Wie sich ein SPIEGEL-Redakteur im Generationswechsel behauptet",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "»GTA: VI«: Warmspielen mit »GTA: Vice City« und anderen Vorgänger – so geht's",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "FA-Cup: Prinz William und Noel Gallagher sehen Sieg von Manchester City gegen FC Chelsea",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kindesmissbrauch im Sportverein: »Die wenigsten wollen eine solche Ungeheuerlichkeit wahrhaben«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Fußball-Bundesliga kompakt: Beim VfL Wolfsburg brennt noch Licht",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Wes Streeting will britischen Premier Keir Starmer ablösen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Pflegereform: CSU warnt Bundesregierung vor »Kurs in soziale Kälte«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Letzter Bundesliga-Spieltag: Wolfsburg rettet sich in die Relegation – St. Pauli und Heidenheim steigen ab",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "SPD in der Krise: Ist die Partei noch zu retten?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "festival „Various Others“: Alles, was München an Kunst zu bieten hat",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Bensheim: Brand in leerstehendem Hotel – Feuerwehr rettet Obdachlosen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Deutschland auf Rang 23: Dara aus Bulgarien gewinnt sensationell ESC-Finale in Wien",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Angriff auf Europa?: Putins Fenster öffnet sich jetzt",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kolumne „Lost and Found“: Flieder und Asche – Kiew im fünften Kriegsfrühling",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "WHO ruft Alarm aus: Ebola-Ausbruch könnte „viel größer als bislang entdeckt“ sein",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Bundesjustizministerin: „Nur Ja heißt Ja“ im Sexualstrafrecht für Hubig denkbar",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Liveblog USA unter Trump: Rückschlag für Trumps Ballsaal-Projekt",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Rechtsextreme Kundgebung: Zehntausende demonstrieren in London",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Gestrandeter Ostseewal: Behörden: Toter Wal vor Dänemark ist Timmy",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "DFB-Kader für Fußball-WM: Nagelsmann verrät nichts über Comeback von Manuel Neuer",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Verletzte in Frankfurt: „Diese Aktion ist ein Wahnsinn und vollkommen inakzeptabel“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Abstieg aus Bundesliga: Heidenheims Fußball-Märchen ist auserzählt",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Deutscher Reformstau: Bas hat keine Courage",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Künstliche Intelligenz: Popmusik aus der Retorte",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ein Kölner Volksheld: Knipps Hennes",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Bettelverbot in Darmstadt: Wo beginnt Hartnäckigkeit?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Rassemblement National: Bardella biedert sich an",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Keine Schiri-Kritik: Wirklich wertvoll",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Neue Verkehrssprache: Die Bahn hat die Fußgänger abgeschafft",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Dax-Entwicklung: Keine Panik!",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Die vorhersehbare Liga: Was tun gegen die Bundesliga-Langeweile?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Schmidts Rücktritt: Auf dem Balkan sind Europäer und Amerikaner Rivalen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "mehrere Verletzte: Auto rast in Italien in Menschenmenge",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Hannover: Medizinstudentinnen berichten von Übergriffen am Deutschen Ärztetag",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Deutschland-Liveblog: Söder warnt vor „Weimarer Verhältnissen“ bei Koalitionsscheitern",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Tradition mit Kerben und Kanten: Holzschnittkunst",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    }
+  ]
+}
