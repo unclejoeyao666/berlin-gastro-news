@@ -1,0 +1,604 @@
+{
+  "timestamp": "2026-05-18T05:03:25+00:00",
+  "caps": {
+    "HARVEST_CAP": 25,
+    "KEYWORD_KEEP": 10,
+    "GENERAL_KEEP": 5
+  },
+  "buckets": {
+    "gastro_t1": {
+      "total": 2,
+      "kept": 2
+    },
+    "gastro_t2": {
+      "total": 1,
+      "kept": 1
+    },
+    "general_keyword": {
+      "total": 25,
+      "kept": 10
+    },
+    "general_other": {
+      "total": 249,
+      "kept": 5
+    }
+  },
+  "totals": {
+    "kept": 18,
+    "dropped": 257
+  },
+  "per_source": {
+    "ahgz-gastro": {
+      "name": "AHGZ Gastronomie",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 24,
+      "candidates": 1,
+      "errors": []
+    },
+    "bmel": {
+      "name": "BMEL Pressemitteilungen",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 50,
+      "candidates": 0,
+      "errors": []
+    },
+    "dehoga-berlin": {
+      "name": "DEHOGA Berlin",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "faz": {
+      "name": "FAZ Aktuell",
+      "fetched": 133,
+      "noise": 0,
+      "seen": 62,
+      "candidates": 71,
+      "errors": []
+    },
+    "manager-magazin": {
+      "name": "Manager Magazin",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 21,
+      "candidates": 9,
+      "errors": []
+    },
+    "politico-eu": {
+      "name": "Politico EU",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 10,
+      "errors": []
+    },
+    "scmp": {
+      "name": "South China Morning Post",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 50,
+      "errors": []
+    },
+    "spiegel": {
+      "name": "Der Spiegel",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 30,
+      "errors": []
+    },
+    "tagesschau-wirtschaft": {
+      "name": "Tagesschau Wirtschaft",
+      "fetched": 26,
+      "noise": 0,
+      "seen": 25,
+      "candidates": 1,
+      "errors": []
+    },
+    "wiwo": {
+      "name": "WirtschaftsWoche",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 7,
+      "candidates": 13,
+      "errors": []
+    },
+    "ahgz-all": {
+      "name": "AHGZ Allgemein",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 24,
+      "candidates": 1,
+      "errors": []
+    },
+    "ahgz-suppliers": {
+      "name": "AHGZ Zulieferer",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 25,
+      "candidates": 0,
+      "errors": []
+    },
+    "dw-de": {
+      "name": "Deutsche Welle (DE)",
+      "fetched": 90,
+      "noise": 0,
+      "seen": 78,
+      "candidates": 12,
+      "errors": []
+    },
+    "dw-en": {
+      "name": "Deutsche Welle (EN)",
+      "fetched": 135,
+      "noise": 0,
+      "seen": 119,
+      "candidates": 16,
+      "errors": []
+    },
+    "ec-press": {
+      "name": "European Commission Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 9,
+      "candidates": 1,
+      "errors": []
+    },
+    "efsa-press": {
+      "name": "EFSA Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "euobserver": {
+      "name": "EUobserver",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 16,
+      "candidates": 4,
+      "errors": []
+    },
+    "tagesschau-all": {
+      "name": "Tagesschau All",
+      "fetched": 68,
+      "noise": 0,
+      "seen": 21,
+      "candidates": 47,
+      "errors": []
+    },
+    "wiwo-politik": {
+      "name": "WiWo Politik",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 13,
+      "candidates": 7,
+      "errors": []
+    },
+    "zdf-wirtschaft": {
+      "name": "ZDFheute Wirtschaft",
+      "fetched": 74,
+      "noise": 0,
+      "seen": 70,
+      "candidates": 4,
+      "errors": []
+    }
+  },
+  "kept_titles": [
+    {
+      "title": "Trend: Was hinter der 30-Pflanzen-Challenge steckt",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Kälbermast in den Niederlanden: Wie deutsche Standards umgangen werden",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Trend: Was hinter der 30-Pflanzen-Challenge steckt",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Dölzig bei Leipzig: Tierschützer fordern nach Ausbruch von Tiger ein Durchgreifen der Bundesregierung",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Andalusien: Konservative PP verliert in spanischer Regionalwahl absolute Mehrheit",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Italien: Schwerverletzter Frau mussten nach Amokfahrt beide Beine amputiert werden",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Amerika 250: Donald Trump lädt zum Massengebet nach Washington",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Sein erster Tourstopp in Europa ist nicht ausverkauft. Ist Harry Styles schon in seiner »Flop-Era«?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "News: Ebola-Ausbruch, WHO, Afrika, Angela Merkel, AfD, SV Elversberg, ESC",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kündigung: Welche Schritte nach der Entlassung sinnvoll sind und was man vermeiden sollte",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "F.A.Z. Frühdenker: Wie gefährlich ist die neue Variante des Ebola-Virus?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Rezession: Die Angst vor der Wahrheit",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Renten-Reform: Im neuen Riester ist für jeden was dabei",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Artgerechte Landwirtschaft: Das „Putenurteil“ zieht weite Kreise",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Die Karrierefrage: Wie gelingt eine Initiativbewerbung?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Steigende Kosten und Regen: Wiesbadener Kranzplatzfest in Gefahr",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Schlusslicht: Drinnen und Draußen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Statement by President von der Leyen with Swedish Prime Minister Kristersson and Indian Prime Minister Modi",
+      "source_id": "ec-press",
+      "score": 70,
+      "bucket": "gastro_t2"
+    }
+  ],
+  "dropped_titles": [
+    {
+      "title": "Iran-Krieg: Ölpreis steigt nach Angriff auf Kraftwerk in Emiraten, Drohnen über Saudi-Arabien abgefangen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Fußball: Neymar (FC Santos) wird aus Versehen ausgewechselt - kurz vor Brasiliens WM-Kader-Bekanntgabe",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Todesstrafe: Amnesty sieht weltweit massiven Anstieg von Hinrichtungen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "NBA: Shai Gilgeous-Alexander verteidigt Auszeichnung als wertvollster Basketballer der Liga",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Adam Driver und Lena Dunham: Schauspieler äußert sich in Cannes zu »Famesick«-Passage",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Eintracht Frankfurt wirft Trainer Riera raus",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Iran-Krise: »Mein Leben ist gelähmt. Einkommen weg, ich verkaufe Sachen«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Donald Trump droht Iran erneut mit Zerstörung",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kuba kauft wohl Militärdrohnen und besteht auf Recht auf Selbstverteidigung",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Deutschland, Frustland: Warum sich die Bundesregierung so schwer mit Reformen tut",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ver.di-Chef: Merz suchte bislang keinen Konsens mit Gewerkschaften",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Österreich: Dutzende Kühe greifen Ehepaar auf Weide an – Frau stirbt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "»Alle meine Mütter« von Lena Gorelik: So wichtig ist die Beziehung zur Mutter",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Tennis: Erfolg in Rom - Jannik Sinner ist einfach nicht zu stoppen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Nepal: Zwei Sherpa brechen eigene Everest-Rekorde",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Plattentektonik: Afrika reißt im Süden auseinander. Entsteht ein neuer Kontinent?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "FC Bayern München: Bei der Meisterfeier starren die Stars auf ein XXL-Banner samt Beleidigung",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Bulgarien: Bärin tötet Mann in Gebirge nahe Sofia - erstmals nach 16 Jahren",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Gewaltherrschaft in Iran: Viele Linke sind blind für diktatorische Strömungen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Adele Neuhauser: Schauspielerin spricht in »Kölner Treff« über ihre Depressionen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Syrien: Der Mann im Käfig spricht, als wäre er noch immer der Chef",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Würfelspiele im Test: »Daydream«; »Parks«; »Locus« und »Der Hobbit – Hin und zurück«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Zweite Fußball-Bundesliga: SV Elversberg schafft Aufstieg – Paderborn in Relegation",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Netzrätsel: Es zischt und knallt",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Zukunft der Schulen: Die schrillen Töne der Bildungszerstörer",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Meinungsfreiheit in Indien: Der Teenager, der Modi trotzt",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Cold Case Wiesenfeld: Ihren Leichnam fand man in der Güllegrube",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "TV-Kritik: Caren Miosga: „Das Land erwartet einen Ruck nach vorne“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Zugfahren heute: Bei der Bahn ist Schönreden jetzt Machen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Frankfurt: Festnahme nach Tod von Neunzehnjährigem",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Liveblog Ukrainekrieg: Ukraine meldet russische Angriffe auf Odessa und Dnipro",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Lettische Regierungskrise: Zu viele Drohnen und zwei Rücktritte",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Hoffnungsträger Ukraine: Wird die Ukraine zum Rohstoffriesen?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Wahl in Sachsen-Anhalt: Das unredliche Spiel der AfD",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Britischer Umbruch: Die Jäger sind Gejagte",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Xabi Alonso bei Chelsea: Der Achte in nicht einmal vier Jahren",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Video zu „In the Stars“: Der Mensch in der Gestalt als Rolling Stone altert nicht",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Waffen für Taiwan: Auch in Asien ist kein Verlass auf Trump",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ortsbeiräte in Frankfurt: Konfrontationskurs nicht angebracht",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Entscheidungen: Wer länger nachdenken muss, ist im Nachteil",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Teure Konzerte: Wabi-Sabi mit Domingo",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Was Deutschland falsch macht: Es war absehbar, dass Sarah Engels’ Lied „Fire“ scheitern würde",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "AMnesty International: Zahl der Hinrichtungen weltweit deutlich gestiegen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Liveblog USA unter Trump: Bericht: Kuba erwägt Drohnenangriffe auf US-Ziele",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Eishockey-WM: Viertelfinale stark in Gefahr: DEB enttäuscht gegen Lettland",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Fußball-Bundesliga: Nun ist es offiziell: Die Eintracht trennt sich von Trainer Riera",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Düsseldorfs Abstiegsdrama: „Das, was heute passiert ist, ist mit nichts zu entschuldigen“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Torwartfrage im DFB-Team: Das Risiko des Bundestrainers mit Neuer",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Toter Buckelwal: Aus der Wal-Traum",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Tour-Auftakt in Amsterdam: Wollen die Fans wirklich, dass sich Harry Styles verändert?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    }
+  ]
+}
