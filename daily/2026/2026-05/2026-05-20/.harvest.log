@@ -1,0 +1,646 @@
+{
+  "timestamp": "2026-05-20T05:03:58+00:00",
+  "caps": {
+    "HARVEST_CAP": 25,
+    "KEYWORD_KEEP": 10,
+    "GENERAL_KEEP": 5
+  },
+  "buckets": {
+    "gastro_t1": {
+      "total": 18,
+      "kept": 16
+    },
+    "gastro_t2": {
+      "total": 6,
+      "kept": 0
+    },
+    "general_keyword": {
+      "total": 29,
+      "kept": 4
+    },
+    "general_other": {
+      "total": 312,
+      "kept": 5
+    }
+  },
+  "totals": {
+    "kept": 25,
+    "dropped": 333
+  },
+  "per_source": {
+    "ahgz-gastro": {
+      "name": "AHGZ Gastronomie",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 21,
+      "candidates": 4,
+      "errors": []
+    },
+    "bmel": {
+      "name": "BMEL Pressemitteilungen",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 49,
+      "candidates": 1,
+      "errors": []
+    },
+    "dehoga-berlin": {
+      "name": "DEHOGA Berlin",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 9,
+      "candidates": 1,
+      "errors": []
+    },
+    "faz": {
+      "name": "FAZ Aktuell",
+      "fetched": 130,
+      "noise": 0,
+      "seen": 47,
+      "candidates": 83,
+      "errors": []
+    },
+    "manager-magazin": {
+      "name": "Manager Magazin",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 9,
+      "candidates": 21,
+      "errors": []
+    },
+    "politico-eu": {
+      "name": "Politico EU",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 10,
+      "errors": []
+    },
+    "scmp": {
+      "name": "South China Morning Post",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 50,
+      "errors": []
+    },
+    "spiegel": {
+      "name": "Der Spiegel",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 30,
+      "errors": []
+    },
+    "tagesschau-wirtschaft": {
+      "name": "Tagesschau Wirtschaft",
+      "fetched": 29,
+      "noise": 0,
+      "seen": 17,
+      "candidates": 12,
+      "errors": []
+    },
+    "wiwo": {
+      "name": "WirtschaftsWoche",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 1,
+      "candidates": 19,
+      "errors": []
+    },
+    "ahgz-all": {
+      "name": "AHGZ Allgemein",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 14,
+      "candidates": 11,
+      "errors": []
+    },
+    "ahgz-suppliers": {
+      "name": "AHGZ Zulieferer",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 24,
+      "candidates": 1,
+      "errors": []
+    },
+    "dw-de": {
+      "name": "Deutsche Welle (DE)",
+      "fetched": 92,
+      "noise": 0,
+      "seen": 80,
+      "candidates": 12,
+      "errors": []
+    },
+    "dw-en": {
+      "name": "Deutsche Welle (EN)",
+      "fetched": 137,
+      "noise": 0,
+      "seen": 114,
+      "candidates": 23,
+      "errors": []
+    },
+    "ec-press": {
+      "name": "European Commission Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 4,
+      "candidates": 6,
+      "errors": []
+    },
+    "efsa-press": {
+      "name": "EFSA Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "euobserver": {
+      "name": "EUobserver",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 10,
+      "errors": []
+    },
+    "tagesschau-all": {
+      "name": "Tagesschau All",
+      "fetched": 66,
+      "noise": 0,
+      "seen": 15,
+      "candidates": 51,
+      "errors": []
+    },
+    "wiwo-politik": {
+      "name": "WiWo Politik",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 10,
+      "errors": []
+    },
+    "zdf-wirtschaft": {
+      "name": "ZDFheute Wirtschaft",
+      "fetched": 75,
+      "noise": 0,
+      "seen": 65,
+      "candidates": 10,
+      "errors": []
+    }
+  },
+  "kept_titles": [
+    {
+      "title": "Digital Restaurant Day 2026: Digitale Trends live in Berlin",
+      "source_id": "dehoga-berlin",
+      "score": 100,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Service: Gewerkschaft wirbt für großzügige Trinkgelder im Restaurant",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Verbraucher: Umfrage zur Nachhaltigkeit in Restaurants",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Ranking: Das ist das sichtbarste Wiener Kaffeehaus auf Instagram",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Lebensmittel in der Gastro: Molkereiprodukte zwischen Trend und Tradition",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Bund startet Verkauf seiner Anteile am Energiekonzern Uniper",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Update Wirtschaft vom 19.05.2026",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Einigung in der EU: US-Zollabkommen soll umgesetzt werden",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Wie ist der aktuelle Stand im Zollstreit zwischen EU und USA?",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Wohnungstausch gegen Wohnungsnot auf dem Immobilienmarkt",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Arbeitsministerin Bas fordert Regulierung von KI im Arbeitsmarkt",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "So fördert der Staat Kauf neuer E-Autos - Anträge ab heute möglich",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Waldzustandserhebung 2025: Waldumbau stärkt die Zukunft unserer Wälder – Waldzustand hat sich stabilisiert",
+      "source_id": "bmel",
+      "score": 83,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Service: Gewerkschaft wirbt für großzügige Trinkgelder im Restaurant",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Verbraucher: Umfrage zur Nachhaltigkeit in Restaurants",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Ranking: Das ist das sichtbarste Wiener Kaffeehaus auf Instagram",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Noted Collection by IHG : IHG setzt auf Theobalds Estate in Großbritannien",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Bilanz: H World Group meldet starkes erstes Quartal",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Veggie-Boom: Fleischersatz-Produkte gehen ins Absatz-Minus",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Wochenarbeitszeit: IW-Chef für andere Verteilung der Arbeitszeit",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Eröffnung 2030: Minor Hotels mit neuem Resort in Somabay",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Lebensmittel in der Gastro: Molkereiprodukte zwischen Trend und Tradition",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Tarifverhandlungen Hessen: NGG ruft zu Streiks in Frankfurter Messe-Hotels auf",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Campino: Sänger der Toten Hosen ist noch mal Vater geworden",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Weingarten in Oberschwaben: Aufwachsen im »Ceausescu-Viertel«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    }
+  ],
+  "dropped_titles": [
+    {
+      "title": "Reis, Tee und Gewürze häufig mit verbotenen Pestiziden belastet",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Öffentlich-rechtlicher Rundfunk in Frankreich unter Druck",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Sammelklage gegen Amazon wegen Reklame auf Prime Video",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Weniger Steuern - aber für wen und auf wessen Kosten?",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Marktbericht: DAX-Plus schmilzt zusammen",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Diego Maradona: Tochter erhebt schwere Vorwürfe gegen ehemaligen Leibarzt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Handelsstreit mit den USA: EU setzt Trumps Null-Zoll-Deal unter Zeitdruck um",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Trinkgeld: 20 Prozent bitte! Warum sich die Vorschläge auf Kartenterminals so mies anfühlen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Neue Methode zur Diagnose von Demenz: »Die Handschrift ist wie ein Fenster zum Gehirn«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "News: Angela Merkel tritt auf, Wladimir Putin bei Xi Jinping, Nationaltorwart Manuel Neuer",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Scheidung: Was Trennungen emotional und finanziell so teuer macht",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Suche nach Vermissten in Görlitz geht weiter",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Tyrannosaurus: Warum fleischfressende Dinos so kleine Arme hatten",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "EU stimmt Zolldeal mit USA zu",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Iran-Krieg: US-Senat stimmt dafür, Befugnisse von Donald Trump einzuschränken - mit Republikaner-Stimmen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Donald Trump: Steuer-Behörde IRS darf seine früheren Steuererklärungen nicht mehr prüfen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "New Yorker Richter schränkt Festnahme von Migranten in Gerichtsgebäuden ein",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "FC Arsenal vorzeitig englischer Meister – wegen Patzer von Manchester City",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "San Diego: Todesopfer sollen bei Angriff etliche Leben gerettet haben",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Grönland: Donald Trump hält an seiner Fixierung fest – und die Arktisinsel ist besorgt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "FC Southampton wegen Spionageskandals von Aufstiegs-Finale ausgeschlossen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Google I/O 2026: Google zeigt smart Brillen und Shopping-Agenten",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Donald Trump versucht, kritischen Abgeordneten aus dem Amt zu drängen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "NSDAP-Mitgliedschaft und andere Familiengeheimnisse: So sprechen Sie mit Verwandten darüber",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "NFL: Jaxon Smith-Njigba bekommt falsche Trophäe – will sie aber behalten",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Tokio: Affenbaby Punch geht erneut viral nach Einbruch ins Gehege",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Friedrich Merz in der SPD-Fraktion: Nur an einer Stelle widerspricht der Kanzler",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Cold Cases: Was ist die »Identify Me«-Kampagne?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Russland-Ukraine-Krieg: Kyjiw zieht bei Gleitbomben nach",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kindeswohl in Deutschland: »Man müsste ein Wal sein« – über fehlende Aufmerksamkeit",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "San Diego: Angriff auf islamisches Zentrum - Hinweise auf Hassverbrechen verdichten sich",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Timmy: Dänemark will toten Buckelwal doch bergen und obduzieren",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Fördermittel-Affäre: Joe Chialo kommt nicht zum Untersuchungsausschuss – offenbar wegen verspäteter Einladung",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Mercosur-abkommen: Gibt es bald keine Fleischimporte mehr aus Brasilien?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "F.A.Z.-Musterstrategien: Diese drei Depots zeigen, was an der Börse gerade funktioniert",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Schlaf und Ernährung: „Je länger ich schlafe, desto mehr Zeit hat der Körper, Fett abzubauen“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Rhein-Main-Feierabendbriefing: Eurobike nicht mal halb so groß wie im vergangenen Jahr",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Künstliche Intelligenz: Deutsche Spitzenchips für Europas digitale Souveränität",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Glücks-Ort BAckStube: Rettet die kleinen Bäckereien!",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Privates Kapital: Warum Großinvestor Ardian Deutschland so gut findet",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Dünger Und Landwirtschaft: Pünktchen und Amazone",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Bekanntes Nudelgericht: Wer hat Pad Thai erfunden?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Brüssel: EU-Verhandler einigen sich auf Umsetzung von US-Zolldeal",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Besuch in Serbien geplant: Vučić lässt Selenskyj in Putins Hinterhof auftreten",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Liveblog Ukrainekrieg: Putin und Xi betonen bei Treffen enge Beziehungen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "F.A.Z. PODCAST FÜR DEUTSCHLAND: Militärexperte Lange: „Putin hat eine Schwächephase“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "TV-Kritik: Maischberger: Alle bleiben in ihrer Wagenburg",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "USA unter Trump: Pentagon: Reduzieren Zahl der Brigaden in Europa von vier auf drei",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kolumne „Midlife-Crisis“: Und ich kann mir nicht mal meine Einzimmerwohnung leisten!",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Narzissmus bei Kindern: „Einfach dieses ständige Ich, Ich, Ich“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    }
+  ]
+}
