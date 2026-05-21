@@ -1,0 +1,646 @@
+{
+  "timestamp": "2026-05-21T05:03:23+00:00",
+  "caps": {
+    "HARVEST_CAP": 25,
+    "KEYWORD_KEEP": 10,
+    "GENERAL_KEEP": 5
+  },
+  "buckets": {
+    "gastro_t1": {
+      "total": 27,
+      "kept": 15
+    },
+    "gastro_t2": {
+      "total": 9,
+      "kept": 0
+    },
+    "general_keyword": {
+      "total": 27,
+      "kept": 5
+    },
+    "general_other": {
+      "total": 332,
+      "kept": 5
+    }
+  },
+  "totals": {
+    "kept": 25,
+    "dropped": 360
+  },
+  "per_source": {
+    "ahgz-gastro": {
+      "name": "AHGZ Gastronomie",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 20,
+      "candidates": 5,
+      "errors": []
+    },
+    "bmel": {
+      "name": "BMEL Pressemitteilungen",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 49,
+      "candidates": 1,
+      "errors": []
+    },
+    "dehoga-berlin": {
+      "name": "DEHOGA Berlin",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 5,
+      "candidates": 5,
+      "errors": []
+    },
+    "faz": {
+      "name": "FAZ Aktuell",
+      "fetched": 134,
+      "noise": 0,
+      "seen": 53,
+      "candidates": 81,
+      "errors": []
+    },
+    "manager-magazin": {
+      "name": "Manager Magazin",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 3,
+      "candidates": 27,
+      "errors": []
+    },
+    "politico-eu": {
+      "name": "Politico EU",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 10,
+      "errors": []
+    },
+    "scmp": {
+      "name": "South China Morning Post",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 50,
+      "errors": []
+    },
+    "spiegel": {
+      "name": "Der Spiegel",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 30,
+      "errors": []
+    },
+    "tagesschau-wirtschaft": {
+      "name": "Tagesschau Wirtschaft",
+      "fetched": 27,
+      "noise": 0,
+      "seen": 13,
+      "candidates": 14,
+      "errors": []
+    },
+    "wiwo": {
+      "name": "WirtschaftsWoche",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 3,
+      "candidates": 17,
+      "errors": []
+    },
+    "ahgz-all": {
+      "name": "AHGZ Allgemein",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 11,
+      "candidates": 14,
+      "errors": []
+    },
+    "ahgz-suppliers": {
+      "name": "AHGZ Zulieferer",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 23,
+      "candidates": 2,
+      "errors": []
+    },
+    "dw-de": {
+      "name": "Deutsche Welle (DE)",
+      "fetched": 94,
+      "noise": 0,
+      "seen": 72,
+      "candidates": 22,
+      "errors": []
+    },
+    "dw-en": {
+      "name": "Deutsche Welle (EN)",
+      "fetched": 134,
+      "noise": 0,
+      "seen": 113,
+      "candidates": 21,
+      "errors": []
+    },
+    "ec-press": {
+      "name": "European Commission Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 1,
+      "candidates": 9,
+      "errors": []
+    },
+    "efsa-press": {
+      "name": "EFSA Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "euobserver": {
+      "name": "EUobserver",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 8,
+      "candidates": 12,
+      "errors": []
+    },
+    "tagesschau-all": {
+      "name": "Tagesschau All",
+      "fetched": 64,
+      "noise": 0,
+      "seen": 14,
+      "candidates": 50,
+      "errors": []
+    },
+    "wiwo-politik": {
+      "name": "WiWo Politik",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 7,
+      "candidates": 13,
+      "errors": []
+    },
+    "zdf-wirtschaft": {
+      "name": "ZDFheute Wirtschaft",
+      "fetched": 73,
+      "noise": 0,
+      "seen": 61,
+      "candidates": 12,
+      "errors": []
+    }
+  },
+  "kept_titles": [
+    {
+      "title": "IPK International-Zahlen 2025: Deutschland bleibt weltweit führendes Geschäftsreiseziel",
+      "source_id": "dehoga-berlin",
+      "score": 100,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "BTW-Umfrage: Reiselust bleibt hoch – wirtschaftliche Sorgen bremsen die Nachfrage",
+      "source_id": "dehoga-berlin",
+      "score": 100,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "EU vereinfacht Nachhaltigkeitsberichterstattung für Unternehmen",
+      "source_id": "dehoga-berlin",
+      "score": 100,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Die schönsten Restaurants, Hotels & Bars 2027: Jetzt bewerben!",
+      "source_id": "dehoga-berlin",
+      "score": 100,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Neuer IHA-Branchenreport „Hotelmarkt Deutschland 2026“ erschienen",
+      "source_id": "dehoga-berlin",
+      "score": 96,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Eigenregie: BASF Weinkeller feiert 125 Jahre",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Kulinarik-Event: Stimmungsvoller Auftakt der Sterne über Frankfurt",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Gourmetgastronomie: Tantris-CEO Matthias Hahn geht, Sabine Eichbauer übernimmt",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Wie die Commerzbank-Aktionäre zu einer Übernahme durch UniCredit stehen",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Durch Inflationssorgen: Umsatz im Gastgewerbe auf Corona-Niveau",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Warum Samsung ein historischer Generalstreik bevorsteht",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Wirtschaft vor acht vom 19.05.2026",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Update Wirtschaft vom 20.05.2026",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "SpaceX: Musk kündigt bislang wohl größten Börsengang an",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Samsung wendet Streik vorerst ab",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "China-Importe steigen, deutsche Exporte in das Land brechen ein",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Hohe Inflation - das neue Normal?",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "EU und USA: Ja zum Zoll-Deal - aber die Konflikte bleiben",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Westfield : Hamburg-Überseequartier verliert Starkoch",
+      "source_id": "ahgz-gastro",
+      "score": 83,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Wissenschaftlicher Beirat für Agrarpolitik, Ernährung und gesundheitlichen Verbraucherschutz startet in neue Berufungsperiode",
+      "source_id": "bmel",
+      "score": 83,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Strategie: Minor feiert Markendebüt in Florenz",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Oberstaufen: Bergkristall eröffnet Seesuiten am eigenen Bergsee",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Serviced Apartments: Neue Kategorien bei Branchenpreis So Apart Awards",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Kulinarik-Event: Stimmungsvoller Auftakt der Sterne über Frankfurt",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Destatis: Umsatz im Gastgewerbe sackt preisbereinigt ab",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    }
+  ],
+  "dropped_titles": [
+    {
+      "title": "Honig aus Deutschland: Was junge Menschen für die Imkerei begeistert",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Gesetzentwurf: Kabinett beschließt Reform des Führerscheins",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Bundesregierung will Hersteller zur Reparatur verpflichten",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Marktbericht: Zwischen Hoffnung und Eskalationsangst",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Umfrage: Wirtschaftliche Unsicherheit bremst Reiselust",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Positionierung: Hotels Halm & Alte Post in Konstanz verpflichten Georg Ziegler",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Führungswechsel: Neuer Chef für Hamburger Marriott-Doppel",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Indian Hotel Company Limited: Indischer Luxus im Taj Hessischer Hof Frankfurt",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Umfrage: Wie Künstliche Intelligenz zum Hotelbetrieb dazugehört",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Selbstständigkeit: Junge Leute gründen gern in Deutschland",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Kleinkinder in Portugal mutmaßlich von Eltern ausgesetzt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Bundestag: AfD-Kandidat erhält unerwartete Stimmen aus anderen Fraktionen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Wacken-Gründer fände Auftritt der Toten Hosen beim Heavy-Metal-Festival mega",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Konjunktur: Ausländische Direktinvestitionen in Deutschland sinken zum achten Mal in Folge",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Europäische Union: Friedrich Merz schlägt EU-Sonderstatus für Ukraine vor",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ist es ein Skandal, wenn Literaturnobelpreisträgerin Olga Tokarczuk zugibt, dass sie für ihre Bücher KI benutzt?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kuba: Geht Donald Trump nun auch noch Raúl Castro an den Kragen?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "News: Lars Klingbeil, Marco Rubio, Nato, Alican Uludağ, Manuel Hagel, Cem Özdemir",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Yoga: Tief in den Bauch atmen? Nicht ganz",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Erste Hilfe für mentale Gesundheit: Ein Freund erzählt dir von Suizidgedanken. Was du jetzt tun kannst",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Meta: Entlassungwelle bei Mutterkonzern von Facebook läuft – 8000 Beschäftigte müssen gehen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kampfjet aus Russland bedrängt britisches Aufklärungsflugzeug bis auf wenige Meter",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Frauenleiche nach Hauseinsturz in Görlitz gefunden",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "US-Medien berichten über hitziges Telefonat zwischen Trump und Netanyahu",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Video von Itamar Ben-Gvir: Johann Wadephul verurteilt »unsägliches Verhalten« von israelischem Minister",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Jamal Musiala: Profi des FC Bayern akzeptiert Strafe nach Unfall mit Tempo 194",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Europa League: SC Freiburg unterliegt Aston Villa 0:3 – Gerüchte um Abgang von Noah Atubolu",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kiel: Cyberkriminelle bestehlen Landeshauptstadt mit gefälschter Rechnung",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "USA: Harvard University beschränkt die Zahl der Bestnoten - mit einer Quote",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Großbritannien: Radiosender meldet irrtümlich Tod von König Charles III.",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Österreich: Russisches Spionagenetzwerk - Ex-Beamter in Wien verurteilt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Bundestag: Baukommission stimmt für Stopp von Neubau",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Toter Buckelwal in Dänemark: »Ihr solltet kommen und den Wal holen«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "USA gegen Kuba: Vereinigte Staaten klagen Ex-Staatschef Raúl Castro an",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Europa-League-Finale: SC Freiburg gegen Aston Villa im Liveticker",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Gesundheit: Warum Forscher jetzt mehr als zehn Stunden Sport pro Woche empfehlen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Sarah Engels: Warum die ESC-Sängerin Feminismus mit Männerhass verwechselt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Heizungsgesetz: Kabinett beschließt umstrittenen Entwurf ohne Rechtsprüfung",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Atef Najib vor Gericht: Diesen Mann wollen viele in Syrien tot sehen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Theatertreffen 2026: So erklärt man Arbeiten von Frauen im Theater rückwirkend für Müll",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Digital Restaurant Day 2026: Berlin wird Treffpunkt für digitale Gastronomie",
+      "source_id": "ahgz-gastro",
+      "score": 78,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Frauen oft betroffen: „Eisenmangel kann sehr belastend für das gesamte Leben sein“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Machtkampf bei Labour: Starmer zeigt einen neuen Elan",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Statt schnellem Beitritt: Wie Merz sich einen Sonderstatus für die Ukraine vorstellt",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Liveblog Ukrainekrieg: Sorge vor russischer Offensive im Norden der Ukraine",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Niederlage in Istanbul: Traum des SC Freiburg platzt im Europa-League-Finale",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Deutschland-Liveblog: Kommission will angeblich Rente mit 70 empfehlen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Raumfahrtunternehmen: Musk macht sich bei SpaceX unkündbar",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "F.A.Z. Frühdenker: Werden Flugtickets im Sommer günstiger?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Allensbach-Umfrage: Das Wählerpotential der FDP wächst wieder",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    }
+  ]
+}
