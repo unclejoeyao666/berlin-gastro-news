@@ -1,0 +1,598 @@
+{
+  "timestamp": "2026-05-24T05:03:31+00:00",
+  "caps": {
+    "HARVEST_CAP": 25,
+    "KEYWORD_KEEP": 10,
+    "GENERAL_KEEP": 5
+  },
+  "buckets": {
+    "gastro_t1": {
+      "total": 1,
+      "kept": 1
+    },
+    "gastro_t2": {
+      "total": 1,
+      "kept": 1
+    },
+    "general_keyword": {
+      "total": 15,
+      "kept": 10
+    },
+    "general_other": {
+      "total": 239,
+      "kept": 5
+    }
+  },
+  "totals": {
+    "kept": 17,
+    "dropped": 236
+  },
+  "per_source": {
+    "ahgz-gastro": {
+      "name": "AHGZ Gastronomie",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 25,
+      "candidates": 0,
+      "errors": []
+    },
+    "bmel": {
+      "name": "BMEL Pressemitteilungen",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 50,
+      "candidates": 0,
+      "errors": []
+    },
+    "dehoga-berlin": {
+      "name": "DEHOGA Berlin",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "faz": {
+      "name": "FAZ Aktuell",
+      "fetched": 96,
+      "noise": 0,
+      "seen": 35,
+      "candidates": 61,
+      "errors": []
+    },
+    "manager-magazin": {
+      "name": "Manager Magazin",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 25,
+      "candidates": 5,
+      "errors": []
+    },
+    "politico-eu": {
+      "name": "Politico EU",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 10,
+      "errors": []
+    },
+    "scmp": {
+      "name": "South China Morning Post",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 50,
+      "errors": []
+    },
+    "spiegel": {
+      "name": "Der Spiegel",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 30,
+      "errors": []
+    },
+    "tagesschau-wirtschaft": {
+      "name": "Tagesschau Wirtschaft",
+      "fetched": 32,
+      "noise": 0,
+      "seen": 31,
+      "candidates": 1,
+      "errors": []
+    },
+    "wiwo": {
+      "name": "WirtschaftsWoche",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 1,
+      "candidates": 19,
+      "errors": []
+    },
+    "ahgz-all": {
+      "name": "AHGZ Allgemein",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 24,
+      "candidates": 1,
+      "errors": []
+    },
+    "ahgz-suppliers": {
+      "name": "AHGZ Zulieferer",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 25,
+      "candidates": 0,
+      "errors": []
+    },
+    "dw-de": {
+      "name": "Deutsche Welle (DE)",
+      "fetched": 87,
+      "noise": 0,
+      "seen": 77,
+      "candidates": 10,
+      "errors": []
+    },
+    "dw-en": {
+      "name": "Deutsche Welle (EN)",
+      "fetched": 140,
+      "noise": 0,
+      "seen": 122,
+      "candidates": 18,
+      "errors": []
+    },
+    "ec-press": {
+      "name": "European Commission Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 9,
+      "candidates": 1,
+      "errors": []
+    },
+    "efsa-press": {
+      "name": "EFSA Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "euobserver": {
+      "name": "EUobserver",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 19,
+      "candidates": 1,
+      "errors": []
+    },
+    "tagesschau-all": {
+      "name": "Tagesschau All",
+      "fetched": 74,
+      "noise": 0,
+      "seen": 34,
+      "candidates": 40,
+      "errors": []
+    },
+    "wiwo-politik": {
+      "name": "WiWo Politik",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 16,
+      "candidates": 4,
+      "errors": []
+    },
+    "zdf-wirtschaft": {
+      "name": "ZDFheute Wirtschaft",
+      "fetched": 73,
+      "noise": 0,
+      "seen": 68,
+      "candidates": 5,
+      "errors": []
+    }
+  },
+  "kept_titles": [
+    {
+      "title": "200 Jahre Klosterfrau: Wie eine Nonne den Grundstein einer Weltmarke legte",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Markenhotellerie: Marriott übernimmt Boardinghouse in Unterföhring",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "USA-Iran-Abkommen: Das soll im Deal zwischen den USA und Iran stehen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "General Erich von Manstein: Hitlers williges Werkzeug",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "»Ostfriesenkrimi«: Was lernt man bei der ZDF-Krimireihe über Ostfriesland?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Wie Verliebtheit Schmetterlinge im Bauch auslöst",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kolumne Geschmackssache: Sind Sternelokale zu teuer?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Federico Sturzenegger: „Ich bin die Kettensäge“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Sinologe im Gespräch: „China ist kein Feind“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Kern einer Finanzkrise?: Der Boom der Privatkredite macht das Kreditwesen fragiler",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Mainland brands power Hong Kong retail recovery as F&B is joined by fashion and beauty",
+      "source_id": "scmp",
+      "score": 74,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "How Mr Mahjong is telling Hong Kong stories through his one-of-a-kind outdoor exhibition",
+      "source_id": "scmp",
+      "score": 74,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Hong Kong can turn Hung Shui Kiu into a northwest stronghold",
+      "source_id": "scmp",
+      "score": 74,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Hong Kong’s astronaut to gather data using observatory developed by local teams",
+      "source_id": "scmp",
+      "score": 74,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Wirtschaftswachstum: Deutschland droht ein verlorenes Jahrzehnt",
+      "source_id": "wiwo",
+      "score": 74,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Mein Wendepunkt: „Dann drehten wir jeden Stein um“",
+      "source_id": "wiwo",
+      "score": 74,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Remarks by Commissioner Dombrovskis at informal ECOFIN press conference",
+      "source_id": "ec-press",
+      "score": 70,
+      "bucket": "gastro_t2"
+    }
+  ],
+  "dropped_titles": [
+    {
+      "title": "Beziehung: Welcher Bindungstyp Sie sind – und was das für die Liebe bedeutet",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Massiver russischer Angriff auf Kyjiw mit Raketen und Drohnen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Fußball-WM: Iran verlegt Quartier aus den USA nach Mexiko",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Belgrad: Zehntausende protestieren gegen Serbiens Präsidenten Vučić",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Schüsse nahe dem Weißen Haus – Secret Service erschießt Angreifer",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Iran: Atomwaffenexperte über die Zerstörung des Atomprogramms",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "6:2 gegen Österreich, doch das deutsche Turnier-Aus rückt näher",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "DFB-Pokalsieg des FC Bayern: Einer behält im Berliner Pyro-Nebel den Durchblick",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Angola: Mindestens 28 Tote bei Einsturz illegaler Goldmine",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Filmfestspiele von Cannes: Cristian Mungiu gewinnt Goldene Palme",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Birlenbach: Elfjähriger stirbt nach Badeunfall in Schwimmbad",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "DFB-Pokal-Finale: Die Bayern gewinnen das Endspiel gegen den VfB Stuttgart dank Harry Kane",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Irankrieg: USA und Iran melden Fortschritte bei Verhandlungen – es gibt wohl ein vorläufiges Abkommen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Idris Elba war »nie im Rennen« für den nächsten Bond",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Formel 1 in Kanada: George Russell gewinnt den Sprint",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ukraine: Selenskyj warnt vor Schlag mit russischer Oreschnik-Rakete",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Champions League der Frauen: FC Barcelona triumphiert dank Ewa Pajor gegen Olympique Lyon",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Neuharlingersiel in Ostfriesland: Sauna-Aufguss-Meisterschaft an Pfingsten bei 95 Grad",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "China: Blogger berichtet, wie ein Überwachungstool ihn selbst erfasste",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Uber will Delivery Hero übernehmen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Berlin: Das Vergewaltigungsnetzwerk, das sich »Fahrschule für Experten« nannte",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ukraine-Krieg: Feuer in russischem Ölhafen – offenbar 18 Tote in Studentenwohnheim",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Jasmin Wagner (Blümchen) findet manche »Bravo«-Artikel über sich heute »widerlich«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Berlin-Mitte: Bundesrat-Anbau wird noch später fertig",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Giro d'Italia: Jonas Vingegaard gewinnt erste Bergankunft und übernimmt Gesamtführung",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "ADAC-Mitglieder müssen ab Januar 2027 mehr zahlen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "USA unter Trump: Vorfall nahe dem Weißen Haus: Verdächtiger stirbt nach Schusswechsel",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Liveblog Irankrieg: Iran will Kontrolle über Straße von Hormus behalten",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "3:0 gegen VfB Stuttgart: King Kane führt den FC Bayern zum DFB-Pokalsieg",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Liveblog Ukrainekrieg: Schwere russische Luftangriffe auf Kiew",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Filmfest Cannes: Deutsche Regisseurin Grisebach in Cannes ausgezeichnet",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "EU-Finanzminister: IWF warnt EU vor neuer Schuldenkrise",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "WM-Gastgeber USA: Das Fest und die Schergen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Putin und Trump bei Xi: Chinas Stärke sollte Europa zu denken geben",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Festgeläut zu Pfingsten: Glockentöne, die im Buch stehen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Frieden in Ukraine?: Fünf Dinge, die der Westen jetzt tun muss",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "WM-NominieRung des DFB: Nagelsmanns Kaderkino",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Vorsorge für den Ruhestand: Die Reform der Riester-Rente ist gut, greift aber zu kurz",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Republikaner: Trump hat den Bogen überspannt",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Eishockey in der Schweiz: Deutschland droht trotz 6:2-Sieg das frühe WM-Aus",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Trauer um Norbert Kartmann: Ein jovial gemütlicher, aber auch rigoroser Protestant",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "4:0 in Oslo: Barcelona gewinnt gegen Lyon die Champions League",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Trumps Woche: Ein Fonds, Immunität und weitere Aufreger",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Hundertwasser-Architektur: Häuser wie aus dem Märchen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Hochzeiten: Trauzeugin, ich? Nie wieder!",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kinder und Krisen: „Eltern können viel beitragen, um den inneren Schutzschild ihres Kindes zu stärken“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ü-50-Partys: Wie geil ist das denn!",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Temperaturen um die 30 Grad: Sommerwetter zum Pfingstwochenende",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Virus breitet sich aus: Uganda meldet neue Ebola-Fälle",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Drohender Chemieunfall: Zehntausende Menschen in Südkalifornien evakuiert",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    }
+  ]
+}
