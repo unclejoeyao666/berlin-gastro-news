@@ -1,0 +1,604 @@
+{
+  "timestamp": "2026-05-25T05:03:33+00:00",
+  "caps": {
+    "HARVEST_CAP": 25,
+    "KEYWORD_KEEP": 10,
+    "GENERAL_KEEP": 5
+  },
+  "buckets": {
+    "gastro_t1": {
+      "total": 3,
+      "kept": 3
+    },
+    "gastro_t2": {
+      "total": 0,
+      "kept": 0
+    },
+    "general_keyword": {
+      "total": 24,
+      "kept": 10
+    },
+    "general_other": {
+      "total": 224,
+      "kept": 5
+    }
+  },
+  "totals": {
+    "kept": 18,
+    "dropped": 231
+  },
+  "per_source": {
+    "ahgz-gastro": {
+      "name": "AHGZ Gastronomie",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 24,
+      "candidates": 1,
+      "errors": []
+    },
+    "bmel": {
+      "name": "BMEL Pressemitteilungen",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 50,
+      "candidates": 0,
+      "errors": []
+    },
+    "dehoga-berlin": {
+      "name": "DEHOGA Berlin",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "faz": {
+      "name": "FAZ Aktuell",
+      "fetched": 98,
+      "noise": 0,
+      "seen": 40,
+      "candidates": 58,
+      "errors": []
+    },
+    "manager-magazin": {
+      "name": "Manager Magazin",
+      "fetched": 29,
+      "noise": 0,
+      "seen": 25,
+      "candidates": 4,
+      "errors": []
+    },
+    "politico-eu": {
+      "name": "Politico EU",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 10,
+      "errors": []
+    },
+    "scmp": {
+      "name": "South China Morning Post",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 50,
+      "errors": []
+    },
+    "spiegel": {
+      "name": "Der Spiegel",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 30,
+      "errors": []
+    },
+    "tagesschau-wirtschaft": {
+      "name": "Tagesschau Wirtschaft",
+      "fetched": 34,
+      "noise": 0,
+      "seen": 32,
+      "candidates": 2,
+      "errors": []
+    },
+    "wiwo": {
+      "name": "WirtschaftsWoche",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 5,
+      "candidates": 15,
+      "errors": []
+    },
+    "ahgz-all": {
+      "name": "AHGZ Allgemein",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 23,
+      "candidates": 2,
+      "errors": []
+    },
+    "ahgz-suppliers": {
+      "name": "AHGZ Zulieferer",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 25,
+      "candidates": 0,
+      "errors": []
+    },
+    "dw-de": {
+      "name": "Deutsche Welle (DE)",
+      "fetched": 85,
+      "noise": 0,
+      "seen": 75,
+      "candidates": 10,
+      "errors": []
+    },
+    "dw-en": {
+      "name": "Deutsche Welle (EN)",
+      "fetched": 140,
+      "noise": 0,
+      "seen": 125,
+      "candidates": 15,
+      "errors": []
+    },
+    "ec-press": {
+      "name": "European Commission Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "efsa-press": {
+      "name": "EFSA Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "euobserver": {
+      "name": "EUobserver",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 18,
+      "candidates": 2,
+      "errors": []
+    },
+    "tagesschau-all": {
+      "name": "Tagesschau All",
+      "fetched": 68,
+      "noise": 0,
+      "seen": 25,
+      "candidates": 43,
+      "errors": []
+    },
+    "wiwo-politik": {
+      "name": "WiWo Politik",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 16,
+      "candidates": 4,
+      "errors": []
+    },
+    "zdf-wirtschaft": {
+      "name": "ZDFheute Wirtschaft",
+      "fetched": 74,
+      "noise": 0,
+      "seen": 69,
+      "candidates": 5,
+      "errors": []
+    }
+  },
+  "kept_titles": [
+    {
+      "title": "Sterne über Frankfurt: Gastro-Kritik als Herausforderung",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Wo die Deutschen ihren Sommerurlaub verbringen wollen",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Wie sich die Spanier gegen hohe Mieten wehren",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Sterne über Frankfurt: Gastro-Kritik als Herausforderung",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Zielgruppen: Das Kranzbach lädt zum Dog-Retreat",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Wirtschaftsweiser Achim Truger will Beamte in gesetzliche Krankenversicherung (GKV) holen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Sibel Kekilli: Ex-»Tatort«-Star gibt überraschende Hochzeit bekannt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Bosnien-Krieg: Zahl der mutmaßlichen Menschenjäger von Sarajevo wächst",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "China: Vom Trump-Xi-Gipfel bleiben Nudeln mit Soße",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Donald Trump will 80. Geburtstag mit Schlägern und Blutwürgern feiern – ist das seine erste gute Idee?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Verhandeln im Job: Wie arbeite ich mit jemandem zusammen, den ich nicht ausstehen kann?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kommunikation: Wie man mit endlosen Redebeiträgen im Meeting umgeht - Coaching",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Mangel und Blockade: Kubas schwerste Krise?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Singapur und die KI: „Das Tempo des Wandels wird schneller sein als alles, was wir bisher erlebt haben“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Deutschland-Liveblog: Wirtschaftsweiser: Beamte sollten in gesetzliche Krankenversicherung",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Bayern-Sieg im DFB-Pokal: Die Bierruhe des Vincent Kompany",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Tagesgeld: Gute Nachrichten für Sparer",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Gastronom werden: So haben sich zwei Paare den Traum vom eigenen Restaurant erfüllt",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    }
+  ],
+  "dropped_titles": [
+    {
+      "title": "Donald Trump: Was über den möglichen USA-Iran-Deal bekannt ist",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Türkei: Präsident Erdoğan macht Schließung von liberaler Bilgi-Universität in Istanbul rückgängig",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Feuerwehr findet Riss in Chemikalientank – das ist offenbar eine gute Nachricht",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Formel 1: Kimi Antonelli gewinnt Großen Preis von Kanada vor Lewis Hamilton und Max Verstappen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ebola: Zahl der Verdachtsfälle in der Demokratischen Republik Kongo steigt auf über 900",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Frankreich: Deutsche stirbt in starker Strömung an Atlantikküste nahe Bordeaux",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Türkei: Erdoğan schließt erneut Bilgi-Universität – Studierende protestieren",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Österreich: Kleinflugzeug zerfetzt Gleitschirm – Pilotin nur leicht verletzt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kyle Busch ist tot: Nascar-Star starb an Lungenentzündung und Sepsis",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "SadSvit aus der Ukraine: »Als Musiker kann ich mehr für mein Land tun als mit einem Gewehr in der Hand«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ukraine beantragt sofortige Sitzung im Uno-Sicherheitsrat",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Olympia 1972: Wie ein Soldat aus Landshut zum Chauffeur des japanischen Prinzen wurde",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Türkei: Polizei setzt Tränengas und Gummigeschosse bei Sturm auf CHP-Zentrale ein",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Frankreich: Missbrauchsskandal in Schulen und Kindergärten",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Können Sie mit Brüchen rechnen? - Rätsel der Woche",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "»Wer wird Millionär?« mit Günther Jauch: Pfingsten-Spezial mit zwei Millionen Euro möglich",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Elterngeld: SPD-Fraktion will pauschale Kürzungen verhindern",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Gefühle: So verstehen Sie, warum Sie fühlen, was Sie gerade fühlen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Irankrieg: Plötzlich will Trump in den Verhandlungen »nichts überstürzen«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "USA: TV-Teams nehmen zufällig Schüsse in der Nähe des Weißen Hauses auf",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "French Open 2026: Alexander Zverev in Runde zwei von Paris",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Human Rights in the US: Meet the Transgender Americans Forced to Flee GOP Persecution",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "FC Schalke 04: Ermittlungen gegen Mitarbeiter wegen Missbrauchsverdachts",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Bücher-Podcast: Wenn die Mutter spricht: Martin Piekar über seinen Roman „Vom Fällen eines Stammbaums“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Vorstellung im Vatikan: Der Papst stellt seine Enzyklika mit einem KI-Pionier vor",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Liveblog Irankrieg: Trump dämpft Hoffnung auf schnellen Iran-Deal: „Es darf keine Fehler geben!“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Sebastian Haffners Buch: Der deutsch-russische Teufelspakt",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Premier League: Tottenham rettet sich – Guardiola und Salah verabschieden sich",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Liveblog Ukrainekrieg: Merz kritisiert Einsatz der russischen Oreschnik-Rakete",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Emotionaler Erstrundensieg: „Es war eines der schwierigsten Matches meiner Karriere“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Angriffe auf die Ukraine: Putin befiehlt, Kiew brennt",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "KI im Krieg: Wenn der „Killerroboter“ zum Kampfbegriff wird",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Sparmaßnahme im Wald: Mülleimer als Luxus",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Debatte über Diäten: Die Abgeordneten machen sich selbst klein",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Frankreich: Deutsche ertrinkt in starker Strömung an Atlantikküste",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Tiefsee-Sensation: Blauer Mini-Oktopus vor den Galápagos-Inseln entdeckt",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Laut WHO: Mehr als 900 Ebola-Verdachtsfälle im Kongo",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "French Open: Djokovic siegt und tanzt im Rekordmatch",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Großer Preis voN kanada: Antonelli gewinnt das nächste hitzige Mercedes-Duell",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Filmklassiker: „Außer Atem“: Erst belächelt, dann verraten",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Blood-FLow-Restriction-Training: „Es fühlt sich an, als würde der Muskel platzen“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "CANNES: Goldene Palme für rumänischen Film „Fjord“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Waffe gezogen: Secret Service erschießt Mann am Weißen Haus",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Hunderte Geschosse: Russland greift nahe Kiew mit Oreschnik-Rakete an",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Vogel siegt in Aachen: „Wir haben alles auf eine Karte gesetzt“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Enttäuschte Sprinter beim Giro: „Heute haben Motorräder leider den Ausgang des Rennens beeinflusst“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Pyro-Eskalation im Stadion: Die Eintracht steht vor der Bewährungsprobe",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "„Besser, langsamer zu starten“: Zverev siegt zum Start, doch er bekleckert sich nicht mit Ruhm",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Folgen des Wahlrechts: Amerika gespalten? No way, sagt dieser Republikaner",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Türkische Opposition: Was hinter dem Sturm auf die CHP-Zentrale steckt",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    }
+  ]
+}
