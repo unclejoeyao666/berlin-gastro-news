@@ -1,0 +1,646 @@
+{
+  "timestamp": "2026-05-27T05:03:12+00:00",
+  "caps": {
+    "HARVEST_CAP": 25,
+    "KEYWORD_KEEP": 10,
+    "GENERAL_KEEP": 5
+  },
+  "buckets": {
+    "gastro_t1": {
+      "total": 15,
+      "kept": 14
+    },
+    "gastro_t2": {
+      "total": 6,
+      "kept": 0
+    },
+    "general_keyword": {
+      "total": 34,
+      "kept": 6
+    },
+    "general_other": {
+      "total": 300,
+      "kept": 5
+    }
+  },
+  "totals": {
+    "kept": 25,
+    "dropped": 320
+  },
+  "per_source": {
+    "ahgz-gastro": {
+      "name": "AHGZ Gastronomie",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 22,
+      "candidates": 3,
+      "errors": []
+    },
+    "bmel": {
+      "name": "BMEL Pressemitteilungen",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 50,
+      "candidates": 0,
+      "errors": []
+    },
+    "dehoga-berlin": {
+      "name": "DEHOGA Berlin",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "faz": {
+      "name": "FAZ Aktuell",
+      "fetched": 101,
+      "noise": 0,
+      "seen": 23,
+      "candidates": 78,
+      "errors": []
+    },
+    "manager-magazin": {
+      "name": "Manager Magazin",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 20,
+      "errors": []
+    },
+    "politico-eu": {
+      "name": "Politico EU",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 10,
+      "errors": []
+    },
+    "scmp": {
+      "name": "South China Morning Post",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 50,
+      "errors": []
+    },
+    "spiegel": {
+      "name": "Der Spiegel",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 30,
+      "errors": []
+    },
+    "tagesschau-wirtschaft": {
+      "name": "Tagesschau Wirtschaft",
+      "fetched": 29,
+      "noise": 0,
+      "seen": 17,
+      "candidates": 12,
+      "errors": []
+    },
+    "wiwo": {
+      "name": "WirtschaftsWoche",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 3,
+      "candidates": 17,
+      "errors": []
+    },
+    "ahgz-all": {
+      "name": "AHGZ Allgemein",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 13,
+      "candidates": 12,
+      "errors": []
+    },
+    "ahgz-suppliers": {
+      "name": "AHGZ Zulieferer",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 25,
+      "candidates": 0,
+      "errors": []
+    },
+    "dw-de": {
+      "name": "Deutsche Welle (DE)",
+      "fetched": 78,
+      "noise": 0,
+      "seen": 63,
+      "candidates": 15,
+      "errors": []
+    },
+    "dw-en": {
+      "name": "Deutsche Welle (EN)",
+      "fetched": 140,
+      "noise": 0,
+      "seen": 120,
+      "candidates": 20,
+      "errors": []
+    },
+    "ec-press": {
+      "name": "European Commission Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 4,
+      "candidates": 6,
+      "errors": []
+    },
+    "efsa-press": {
+      "name": "EFSA Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "euobserver": {
+      "name": "EUobserver",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 11,
+      "candidates": 9,
+      "errors": []
+    },
+    "tagesschau-all": {
+      "name": "Tagesschau All",
+      "fetched": 67,
+      "noise": 0,
+      "seen": 14,
+      "candidates": 53,
+      "errors": []
+    },
+    "wiwo-politik": {
+      "name": "WiWo Politik",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 9,
+      "candidates": 11,
+      "errors": []
+    },
+    "zdf-wirtschaft": {
+      "name": "ZDFheute Wirtschaft",
+      "fetched": 76,
+      "noise": 0,
+      "seen": 67,
+      "candidates": 9,
+      "errors": []
+    }
+  },
+  "kept_titles": [
+    {
+      "title": "Verpackungen: Nachhaltig unterwegs im To-go-Geschäft",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Wettbewerb: Zehn Michelin-Sterne in der Jury",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Getränketrends: Warum Tee zu einem Lifestylegetränk wird",
+      "source_id": "ahgz-gastro",
+      "score": 88,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Deutschland bei wichtigen Gütern immer abhängiger von China",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Wie die Fußballproduktion Frauen in Pakistan hilft",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Wirtschaft vor acht vom 26.05.2026",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Update Wirtschaft vom 26.05.2026",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Warum Diesel wieder günstiger ist als Benzin",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Marktbericht: Anleger verlieren die Geduld",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kritik an Warken-Plänen zu höheren Pflegebeiträgen für Kinderlose",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "EU-Kommission genehmigt Einstieg des Bundes bei Tennet Deutschland",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Acht Prozent der Flüge 2025 waren innerhalb von Deutschland",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Wirtschaftsministerin Reiche erwarten in China schwierige Themen",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 82,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "IHA Inside am Nürburgring: Finalisten für Branchenaward 2026 stehen fest",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Motel One Group: Cloud One startet in Portugal",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Technologie: Plattformanbieter Mews und Fahrdienstvermittler Uber kooperieren",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Expansion: Hilton bringt Tapestry Collection erstmals nach Deutschland",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Azubi-Recruiting Trends 2026: Wie KI die Ausbildung herausfordert",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Kooperation : Zwei neue Ringhotels in Friesland",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Verpackungen: Nachhaltig unterwegs im To-go-Geschäft",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Buchungsplattform: Airbnb will App mit KI personalisieren",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Tourismus-Koordinator: Krisen als Chance für heimische Reiseziele?",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Exklusiv-Interview: Katharina Darisse: Erfolg zählt, aber nicht auf Kosten der Mitarbeiter",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Wettbewerb: Zehn Michelin-Sterne in der Jury",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Italien: Frau zieht für Recht auf Leitungswasser im Restaurant vor oberstes Gericht – und scheitert",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    }
+  ],
+  "dropped_titles": [
+    {
+      "title": "Firmeninsolvenzen holen Berlins Digital-Staatssekretär ein",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Erste EZB-Zinserhöhung naht",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Nasdaq 100 überspringt erstmals 30.000-Punkte-Marke",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Brasilien: Drogenboss nach jahrelanger Flucht in Bolivien gefasst",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Verfassungsschutz: Präsident Sinan Selen fordert mehr Befugnisse",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Citroen 2CV: Die Ente kehrt zurück - was kommt da noch?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Quiz: Wie viel arbeiten die Deutschen wirklich?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Vermögensverteilung in Deutschland: Zahl der Superreichen steigt deutlich",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Daniel Günther: Wird die Northvolt-Pleite für ihn doch noch gefährlich?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "News: Gerüchte um Friedrich Merz, Markus Söder wackelt, Urteil gegen Daniela Klette",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Altersvorsorge für Kinder: So machen Sie Ihren Nachwuchs zum Millionär",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Eurojackpot geht nach Tschechien: 120 Millionen Euro an Gewinner",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Nebraska in den USA: Hund verletzt Frau mit Schrotflinte",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Russland erlaubt Banken eigene Drohnenabwehr – Firmen wollen nachziehen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Robert F. Kennedy Jr.: US-Gesundheitsminister lässt sich beim Schlangen-Fangen filmen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Israel meldet Tötung des neuen Hamas-Militärchefs",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Republikaner in South Carolina verweigern Trump auch im zweiten Anlauf den Gehorsam",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "»Spider-Noir«-Serie bei Prime Video: Nicolas Cage spielt jetzt Spider-Man. Kann das gut gehen?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "US-Einwanderungsbehörde dementiert Misshandlungsvorwürfe",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Frankreich: Jugendliche töten Elfjährigen wegen Streit über Angelzubehör",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "USA: Gericht blockiert vorläufig Wahlkreiszuschnitt in Alabama – Niederlage für Republikaner",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Nazi-Kartei: Die Machtmaschine der Nazis – der Aufstieg der NSDAP",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Griechenland: 39 Festnahmen im Betrugsskandal um EU-Agrarsubventionen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Mit diesen Rückennummern tritt Deutschland bei der WM an",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Russlands Oreschnik-Rakete: »Schwer abwehrbare Terrorwaffe«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Gesundheitscheck für US-Staatsoberhäupter: Wie frühere US-Präsidenten ihre Krankheiten verheimlichten",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "EU-Abgeordnete in Babypause dürfen ihre Stimme übertragen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "USA: Trump-Regierung will NDAs von Bundesbediensteten",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Donald Trump bescheinigt sich »perfekte« Gesundheit in jährlicher Untersuchung",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "KTM: Motorrad-Hersteller bringt reihenweise illegale Maschinen auf die Straße",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Unfallchirurg über Verkehr in Indien: »In Indien können wir Mobilität schwer verbieten: weder der Kuh noch dem Motorradfahrer«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ministerin in Peking: Reiche betont Bedeutung fairer Wettbewerbsbedingungen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "F.A.Z. Frühdenker: Endet heute der Prozess gegen die ehemalige RAF-Terroristin Daniela Klette?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Küchenschaben-Volkspartei: Indiens Jugend erklärt eine Kakerlake zum Anführer",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Wachstum ohne Jobs: Indiens Akademiker arbeiten als Lieferfahrer und leben wie im Slum",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Vater wartet auf wiedersehen: In Portugal ausgesetzte Brüder sollen nach Frankreich zurückkehren",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Mondfahrzeuge und mehr: NASA vergibt Aufträge für Mondmissionen an Privatunternehmen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Walfleisch in Japan: „Die, die laut schimpfen, sind am Ende überrascht, wie gut das Fleisch schmeckt“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Wohlstandsgefälle: Wie viel ärmer ist Europa wirklich?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Bilanz des Irankriegs: Iran traf mehr, als Amerika zugibt",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Liveblog Irankrieg: Israel weitet Bodeneinsatz in Libanon aus",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "F.A.Z. Podcast für Deutschland: Militärexperte Lange: „Sieht nach US-Niederlage in Iran aus“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Sex im Alter: „Er sagt, der Orgasmus sei sogar viel schöner als früher“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Russisches Reality-TV: Kriegt Kinder, Mädels!",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Bosnien-Hercegovina: Schafft den Hohen Repräsentanten ab!",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Relegation gegen Essen: Fürth verhindert nach Sieg im Rückspiel den Abstieg",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Rückkehrzentren: Ein Ende des Asyl-Schlupflochs",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Elterngeld und Pflege: Familienpolitik aus einem Guss",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Nummer eins Hierzulande: Das Gold wird überschätzt",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Missliebige Unterhaltung: Die vergessene Kunst des Abschaltens",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    }
+  ]
+}
