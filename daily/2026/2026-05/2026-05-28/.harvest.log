@@ -1,0 +1,646 @@
+{
+  "timestamp": "2026-05-28T05:04:24+00:00",
+  "caps": {
+    "HARVEST_CAP": 25,
+    "KEYWORD_KEEP": 10,
+    "GENERAL_KEEP": 5
+  },
+  "buckets": {
+    "gastro_t1": {
+      "total": 14,
+      "kept": 13
+    },
+    "gastro_t2": {
+      "total": 8,
+      "kept": 0
+    },
+    "general_keyword": {
+      "total": 54,
+      "kept": 7
+    },
+    "general_other": {
+      "total": 307,
+      "kept": 5
+    }
+  },
+  "totals": {
+    "kept": 25,
+    "dropped": 351
+  },
+  "per_source": {
+    "ahgz-gastro": {
+      "name": "AHGZ Gastronomie",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 24,
+      "candidates": 1,
+      "errors": []
+    },
+    "bmel": {
+      "name": "BMEL Pressemitteilungen",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 48,
+      "candidates": 2,
+      "errors": []
+    },
+    "dehoga-berlin": {
+      "name": "DEHOGA Berlin",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "faz": {
+      "name": "FAZ Aktuell",
+      "fetched": 95,
+      "noise": 0,
+      "seen": 17,
+      "candidates": 78,
+      "errors": []
+    },
+    "manager-magazin": {
+      "name": "Manager Magazin",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 8,
+      "candidates": 22,
+      "errors": []
+    },
+    "politico-eu": {
+      "name": "Politico EU",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 10,
+      "errors": []
+    },
+    "scmp": {
+      "name": "South China Morning Post",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 50,
+      "errors": []
+    },
+    "spiegel": {
+      "name": "Der Spiegel",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 30,
+      "errors": []
+    },
+    "tagesschau-wirtschaft": {
+      "name": "Tagesschau Wirtschaft",
+      "fetched": 31,
+      "noise": 0,
+      "seen": 16,
+      "candidates": 15,
+      "errors": []
+    },
+    "wiwo": {
+      "name": "WirtschaftsWoche",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 3,
+      "candidates": 17,
+      "errors": []
+    },
+    "ahgz-all": {
+      "name": "AHGZ Allgemein",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 14,
+      "candidates": 11,
+      "errors": []
+    },
+    "ahgz-suppliers": {
+      "name": "AHGZ Zulieferer",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 25,
+      "candidates": 0,
+      "errors": []
+    },
+    "dw-de": {
+      "name": "Deutsche Welle (DE)",
+      "fetched": 86,
+      "noise": 0,
+      "seen": 72,
+      "candidates": 14,
+      "errors": []
+    },
+    "dw-en": {
+      "name": "Deutsche Welle (EN)",
+      "fetched": 137,
+      "noise": 0,
+      "seen": 112,
+      "candidates": 25,
+      "errors": []
+    },
+    "ec-press": {
+      "name": "European Commission Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 2,
+      "candidates": 8,
+      "errors": []
+    },
+    "efsa-press": {
+      "name": "EFSA Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "euobserver": {
+      "name": "EUobserver",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 11,
+      "candidates": 9,
+      "errors": []
+    },
+    "tagesschau-all": {
+      "name": "Tagesschau All",
+      "fetched": 71,
+      "noise": 0,
+      "seen": 14,
+      "candidates": 57,
+      "errors": []
+    },
+    "wiwo-politik": {
+      "name": "WiWo Politik",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 7,
+      "candidates": 13,
+      "errors": []
+    },
+    "zdf-wirtschaft": {
+      "name": "ZDFheute Wirtschaft",
+      "fetched": 76,
+      "noise": 0,
+      "seen": 55,
+      "candidates": 21,
+      "errors": []
+    }
+  },
+  "kept_titles": [
+    {
+      "title": "Wen Cheng Expansion: Trendfood Biang-Biang-Noodles",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Mehr Eigenverantwortung für Betriebe: Bundeskabinett bringt nationale GAP-Vereinfachungen auf den Weg",
+      "source_id": "bmel",
+      "score": 88,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Wirtschaftsministerin in China: Kooperation statt Konfrontation",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Frühjahrsgutachten: Wirtschaftsweise senken Prognose deutlich",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Wirtschaftsministerin in China - Reiche mahnt fairen Wettbewerb an",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Wirtschaft vor acht vom 27.05.2026",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Update Wirtschaft vom 27.05.2026",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Meta führt kostenpflichtige Plus-Modelle ein",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Warum das Chinageschäft für europäische Firmen weiterhin gut läuft",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Rüstungsboom beschert deutscher Luft- und Raumfahrt Rekorde",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "So viele Beschäftigte in Teilzeit wie noch nie",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Zahl der Superreichen in Deutschland steigt stark",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Bundeskabinett beschließt Erleichterungen beim Stallumbau",
+      "source_id": "bmel",
+      "score": 83,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Schwerpunkt Wasserknappheit: Accor startet Programm zur Nachhaltigkeit",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Neue Kampagne: Wie die USA ihr Mice‑Profil neu schärfen",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Führungsposition: Evelyn Lotz steigt bei Best Western auf",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Pionierbetriebe: So klappt Inklusion als Arbeitgeber",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Wen Cheng Expansion: Trendfood Biang-Biang-Noodles",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Luxushotellerie : Relais & Châteaux steigert Umsatz deutlich",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Betreiberwechsel: Propetti vermietet Hotel in Freiburg neu",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Kulinarik: Bayerische Vielfalt beim 2. Gourmet Festival Schwangau",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Lifestyle-Hospitality: Steffi Stark steuert Marke Urban Loft",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Insolvenz: Revo Update: H-Hotels zurück zur Gründerfamilie?",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "News: China-Reise von Katherina Reiche, EU-Außenministertreffen, Hauptversammlung Deutsche Bank",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Iran: Das Regime hat den Krieg gewonnen. Kann es den Frieden überleben?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    }
+  ],
+  "dropped_titles": [
+    {
+      "title": "Jetzt steigt auch Ferrari ein: Elektromobilität für Superreiche",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Strukturkrise in Deutschland: \"Von der Politik im Stich gelassen\"",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Neue Regeln im Baurecht sollen Wohnungsbau beschleunigen",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Samsung-Gewerkschaft nimmt Einigung auf Rekordboni an",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Nikkei auf Rekordhoch: Investoren blicken wieder nach Japan",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Katherina Reiche spricht auf Chinareise über fairen Wettbewerb",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Hamburg und die Olympia-Bewerbung: Pläne fürs Olympiastadion und die Nachnutzung",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Israel greift weitere Ziele im Südlibanon an",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Antonio Stradivari: Das macht die Instrumente des Meisters so besonders",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Wal-Reporter in Dänemark: Männer, die auf einen Kadaver starren",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "EU-Chefdiplomatin Kaja Kallas: »Russland ist in diesem Krieg in einer Sackgasse angelangt«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "PDA und Spinalanästhesie: Warum haben so viele Frauen Schmerzen beim Kaiserschnitt?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Viersen in Nordrhein-Westfalen: Dritter tödlicher Unfall an Bahnübergang in in einem Jahr",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Donald Trump: Kalifornien will Zahlungen aus Fonds für »politische Opfer« zu 100 Prozent besteuern",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "USA fliegen erneut Angriffe in Iran – Regime reagiert offenbar mit Gegenschlag",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Iran-Krieg: USA werden Jahre brauchen, um Waffen zu ersetzen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Instagram, WhatsApp und Facebook: Meta startet kostenpflichtige Plus-Modelle",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Luce: Ferrari hat sein erstes reines Elektroauto vorgestellt, viele Fans fühlen sich verraten",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Iran-Krieg: Donald Trump droht Verbündetem Oman mit Angriff bei Kooperation mit Iran",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Donald Trump vs Joe Biden: Jill Biden dachte, ihr Mann hatte beim TV-Duell 2024 einen Schlaganfall",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Chemie-Unfall in den USA: Vermisste Menschen sind vermutlich alle tot",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Conference League: Oliver Glasner schenkt Crystal Palace zum Abschied einen letzten Titel",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Villach: Lebenslange Haft für Messerangriff in Österreich",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "French Open: Alexander Zverev in Runde drei, Eva Lys unter Tränen raus",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Verteidigunsabkommen: Norwegen kommt unter Frankreichs nuklearen Schutzschirm",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Bekannt aus »Tatort«: Schauspielerin Schönfeld ist tot",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Verstorbener »Friends«-Star: Ex-Assistent von Matthew Perry muss 41 Monate in Haft",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Straße von Hormus: Wie Irans Geisterflotte Donald Trumps Blockade aushebelt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Passau: Mann fährt Frauen und Kind mit Auto an – Haftstrafe",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "WM 2026: Hohe Ticketpreise – US-Justiz verlangt Aufklärung von der Fifa",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ukraine: Kampfdrohne Hornet mit KI macht Russland zu schaffen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Die Toten Hosen: »Trink aus, wir müssen gehen!« trifft die Stimmung des halben Landes",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "French Open: Jakub Mensik bricht nach Marathon-Match erschöpft zusammen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Private Käufer: So attraktiv werden E-Autos durch die aktuelle Förderung",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Frühjahrsgutachten: Mehr Markt bringt Wachstum",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Familiencafé Stadtmäuse: „In anderen Cafés wird man blöd angeschaut, wenn die Kinder lauter sind“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Besuch in Peking: Reiche wirbt für faire Wirtschaftsbeziehungen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Italo in Deutschland: Die Deutsche Bahn braucht wahre Wettbewerber",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Finanzstabilitätsbericht: EZB sorgt sich über Ausverkauf am Anleihemarkt",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Nach Generalaudienz: Papst Leo hilft kollabiertem Mann auf dem Petersplatz",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Luxus in London: Zeitreise zu Oscar Wilde",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Irankrieg: Teheran taktiert, Trump droht und lässt bomben",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Liveblog Irankrieg: Iran meldet Vergeltungsangriff auf US-Stützpunkt",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "USA unter Trump: Fonds von Trumps „Friedensrat“ ist offenbar leer",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Geld anlegen: So investieren Sie, um wirklich Vermögen aufzubauen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Pflegereform: Union will Eigenheim zur Finanzierung der Pflege heranziehen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "F.A.Z. Frühdenker: Erschüttert der „Klinikaufstand“ Warkens Reformpläne?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Hype um Selbstoptimierung: „Man kann sich in Routinen auch reinsteigern“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Koalition in Frankfurt: Basar im Römer",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "debatte um Reformen: Wer keine Kinder hat, sollte weniger Rente bekommen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    }
+  ]
+}
