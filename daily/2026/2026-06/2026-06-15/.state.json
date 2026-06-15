@@ -61,9 +61,8 @@
       "article_count": 8
     },
     "push": {
-      "status": "failed",
-      "finished_at": "2026-06-15T01:08:22.698400+00:00",
-      "error": "git_publish rc=128"
+      "status": "running",
+      "started_at": "2026-06-15T01:35:39.272839+00:00"
     }
   }
 }
