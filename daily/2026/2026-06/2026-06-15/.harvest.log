@@ -1,0 +1,646 @@
+{
+  "timestamp": "2026-06-15T00:41:39+00:00",
+  "caps": {
+    "HARVEST_CAP": 25,
+    "KEYWORD_KEEP": 10,
+    "GENERAL_KEEP": 5
+  },
+  "buckets": {
+    "gastro_t1": {
+      "total": 53,
+      "kept": 17
+    },
+    "gastro_t2": {
+      "total": 10,
+      "kept": 0
+    },
+    "general_keyword": {
+      "total": 61,
+      "kept": 3
+    },
+    "general_other": {
+      "total": 508,
+      "kept": 5
+    }
+  },
+  "totals": {
+    "kept": 25,
+    "dropped": 591
+  },
+  "per_source": {
+    "ahgz-gastro": {
+      "name": "AHGZ Gastronomie",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 15,
+      "errors": []
+    },
+    "bmel": {
+      "name": "BMEL Pressemitteilungen",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 47,
+      "candidates": 3,
+      "errors": []
+    },
+    "dehoga-berlin": {
+      "name": "DEHOGA Berlin",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 5,
+      "candidates": 5,
+      "errors": []
+    },
+    "faz": {
+      "name": "FAZ Aktuell",
+      "fetched": 101,
+      "noise": 0,
+      "seen": 1,
+      "candidates": 100,
+      "errors": []
+    },
+    "manager-magazin": {
+      "name": "Manager Magazin",
+      "fetched": 27,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 27,
+      "errors": []
+    },
+    "politico-eu": {
+      "name": "Politico EU",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 10,
+      "errors": []
+    },
+    "scmp": {
+      "name": "South China Morning Post",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 50,
+      "errors": []
+    },
+    "spiegel": {
+      "name": "Der Spiegel",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 30,
+      "errors": []
+    },
+    "tagesschau-wirtschaft": {
+      "name": "Tagesschau Wirtschaft",
+      "fetched": 60,
+      "noise": 0,
+      "seen": 12,
+      "candidates": 48,
+      "errors": []
+    },
+    "wiwo": {
+      "name": "WirtschaftsWoche",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 20,
+      "errors": []
+    },
+    "ahgz-all": {
+      "name": "AHGZ Allgemein",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 25,
+      "errors": []
+    },
+    "ahgz-suppliers": {
+      "name": "AHGZ Zulieferer",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 20,
+      "candidates": 5,
+      "errors": []
+    },
+    "dw-de": {
+      "name": "Deutsche Welle (DE)",
+      "fetched": 86,
+      "noise": 0,
+      "seen": 24,
+      "candidates": 62,
+      "errors": []
+    },
+    "dw-en": {
+      "name": "Deutsche Welle (EN)",
+      "fetched": 149,
+      "noise": 0,
+      "seen": 79,
+      "candidates": 70,
+      "errors": []
+    },
+    "ec-press": {
+      "name": "European Commission Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 1,
+      "candidates": 9,
+      "errors": []
+    },
+    "efsa-press": {
+      "name": "EFSA Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 9,
+      "candidates": 1,
+      "errors": []
+    },
+    "euobserver": {
+      "name": "EUobserver",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 20,
+      "errors": []
+    },
+    "tagesschau-all": {
+      "name": "Tagesschau All",
+      "fetched": 76,
+      "noise": 0,
+      "seen": 9,
+      "candidates": 67,
+      "errors": []
+    },
+    "wiwo-politik": {
+      "name": "WiWo Politik",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 20,
+      "errors": []
+    },
+    "zdf-wirtschaft": {
+      "name": "ZDFheute Wirtschaft",
+      "fetched": 74,
+      "noise": 0,
+      "seen": 29,
+      "candidates": 45,
+      "errors": []
+    }
+  },
+  "kept_titles": [
+    {
+      "title": "Umfrage zur WM: Gen Z liebt Public Viewing",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Erfolgreicher Systemer: Joe Peñas setzt auf Tex-Mex seit fast 40 Jahren",
+      "source_id": "ahgz-gastro",
+      "score": 88,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Klimawandel ermöglicht Anbau von tropischem Ingwer in Schwaben",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Was bei der Finanzierung des Hauskaufs zu beachten ist",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "EVG-Analyse: Italo-Züge könnten für 16 Städte Nachteile im Fernverkehr bedeuten",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Umsetzung von EU-Recht: Marmelade darf wieder Marmelade heißen",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Club Convention 2026: Jetzt Frühbucherticket über den BDT sichern",
+      "source_id": "dehoga-berlin",
+      "score": 86,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Fußball-WM: Zu diesen Zeiten darf die Berliner Außengastronomie Spiele zeigen",
+      "source_id": "dehoga-berlin",
+      "score": 86,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Fine Dining in Azubi-Hand",
+      "source_id": "dehoga-berlin",
+      "score": 86,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Aus Brüssel drohen Hotels neue Bürokratiebelastungen bei der Umsetzung der EU-Verpackungsverordnung",
+      "source_id": "dehoga-berlin",
+      "score": 86,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "BerlinPay – Tu Gutes für Gutes: Berlin belohnt Engagement am und auf dem Wasser",
+      "source_id": "dehoga-berlin",
+      "score": 86,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Fußball-WM: Anton Schmaus will die DFB-Elf beflügeln",
+      "source_id": "ahgz-gastro",
+      "score": 83,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Braunkohle-Ausstieg - werden ländliche Regionen abgehängt?",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 82,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Panini-WM-Sticker: \"Mit dieser Nachfrage hätten wir nicht gerechnet\"",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 82,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Umfrage zur WM: Gen Z liebt Public Viewing",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Fußball-WM 2026: DFB-Team gegen Curaçao in der Einzelkritik",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Schweiz - Volksabstimmung über Begrenzung der Migration: Ende eines Erfolgsrezepts",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Datenanalyse: Hannover im Gastroprofil: Das sind die Zahlen",
+      "source_id": "ahgz-gastro",
+      "score": 78,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Umfrage: Gäste schätzen gutes Servicepersonal besonders",
+      "source_id": "ahgz-gastro",
+      "score": 78,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Gründung: „Oft fehlt das kaufmännische Fundament“",
+      "source_id": "ahgz-gastro",
+      "score": 78,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Aktionswoche: Gustoso Gruppe mit Blutspenden-Kampagne",
+      "source_id": "ahgz-gastro",
+      "score": 78,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "YouGov-Studie: Flexible Ernährung ersetzt klassische Diäten",
+      "source_id": "ahgz-gastro",
+      "score": 78,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Gastrokonzept: Neues Format soll Gäste an einen Tisch bringen",
+      "source_id": "ahgz-gastro",
+      "score": 78,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Hotelgastronomie: Greta Oto stellt neues gastronomisches Führungsteam vor",
+      "source_id": "ahgz-gastro",
+      "score": 78,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Elsass: Le Chambard feiert 25 Jahre Gastlichkeit",
+      "source_id": "ahgz-gastro",
+      "score": 78,
+      "bucket": "gastro_t1"
+    }
+  ],
+  "dropped_titles": [
+    {
+      "title": "Russland überzieht Ukraine mit Angriffen – Polen lässt Kampfjets aufsteigen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Iran-Krieg: USA und Iran einigen sich auf Friedensvereinbarung",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Oliver Tree: US-Sänger stirbt bei Helikopter-Kollision über Rio de Janeiro",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Fußball-WM 2026: Niederlande und Japan trennen sich unentschieden in Dallas",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "WM 2026 live: Gewitterwarnung für Ecuador - Elfenbeinküste",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "US-Republikaner Mitch McConnell offenbar im Krankenhaus",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Jürgen Klopp bittet Julian Nagelsmann für »Noch«-Bemerkung um Verzeihung",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "New York Knicks in den NBA-Finals: Chaos nach Sieg – WM-Bus brennt auf Times Square",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "WM 2026: Deutschland besiegt Curaçao mit 7:1: Ein Tag, an dem fast alles gelingt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Fußball-WM 2026: Deutschland startet mit 7:1-Auftaktsieg gegen Curaçao",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Israel und Libanon: Donald Trump spricht Benjamin Netanyahu Urteilsvermögen ab",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Handball-Champions-League: Füchse Berlin mit Mathias Gidsel verlieren Finale",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Schweiz: Was die Ablehnung der Zehnmillioneninitiative über Volksentscheide sagt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Genf: Großaufgebot der Polizei bei Protesten gegen G7-Gipfel am Genfer See",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Aufregung um Spruch von Jürgen Klopp: Bundestrainer Julian Nagelsmann reagiert gelassen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ed Sheeran entdeckt lang vergessene Platte von 1978 – und verhilft ihr zu später Aufmerksamkeit",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "CDU und AfD: Das »Kumpel-Foto«, der Witz und die Frage, was CDU und AfD in Sachsen-Anhalt noch trennt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kreis Unna in Nordrhein-Westfalen: Windrad in Flammen – Bahnstrecke gesperrt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Fußball-WM 2026 per TV oder Stream: So sehen Sie die Tore als erster",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Formel 1 in Barcelona: Lewis Hamilton gewinnt erstmals für Ferrari",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Fußball-WM heute: Das sollten Sie vor den Spielen am Abend und in der Nacht wissen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Fußball-WM 2026: Deutschland vs. Curaçao - Alles Wichtige zur Nationalelf",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Fußball-WM 2026: Was Sie über das Spiel der Nationalmannschaft gegen Curaçao wissen müssen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "US-Migration: Tod von Haitianerin nach ICE-Entlassung als Tötung eingestuft",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "NBA: Jalen Brunson wird vom unterschätzten Talent zum Erlöser der New Yorks Knicks",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Schöner schreiben: Wie Rainald Goetz die deutsche Sprache zum Klingen bringt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "KI-Rechenzentren in den USA: Diese Menschen kämpfen gegen die Maschinenfarmen der Techriesen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Libanon: Israel meldet Angriffe auf Hisbollah-Ziele in Beiruter Vororten",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Interaktive Karte: Rauchverbote in Bundesländern – ein Überblick",
+      "source_id": "ahgz-gastro",
+      "score": 78,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Event-Reihe: Fährhaus Koblenz lädt zum Gourmet-Sommer",
+      "source_id": "ahgz-gastro",
+      "score": 78,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Expansion: Big Mamma geht in die USA",
+      "source_id": "ahgz-gastro",
+      "score": 78,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Brandkatastrophe von Crans-Montana: Jetzt werden die Bar-Betreiber gemeinsam befragt",
+      "source_id": "ahgz-gastro",
+      "score": 78,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "\"Echt kuh-l!\" 2026: BMLEH prämiert Schülerinnen und Schüler",
+      "source_id": "bmel",
+      "score": 78,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Wirtschaft vor acht vom 12.06.2026",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 77,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Update Wirtschaft vom 12.06.2026",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 77,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "EU-Einigung: Fluggastrechte werden erweitert",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 77,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Börsengang von SpaceX: Riskante Wette auf Raketen, Satelliten und Visionen",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 77,
+      "bucket": "general_other"
+    },
+    {
+      "title": "SpaceX-Aktie nach Börsenstart auf Höhenflug",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 77,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Marktbericht: DAX legt zu Wochenschluss kräftig zu",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 77,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Warum der SpaceX-Börsengang für Anleger riskant ist",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 77,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Elon Musk: Der erste Billionär durch den SpaceX-Börsengang?",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 77,
+      "bucket": "general_other"
+    },
+    {
+      "title": "ifo-Umfrage: Viele Firmen sehen KI als Ersatz für Akademiker",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 77,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Proteste in Berlin und Völklingen - IG Metall bangt um Stahljobs",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 77,
+      "bucket": "general_other"
+    },
+    {
+      "title": "US-Gericht: USA dürfen Zölle vorerst weiter erheben",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 77,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Marktbericht: Ölpreise geben deutlich nach - wie lange noch?",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 77,
+      "bucket": "general_other"
+    },
+    {
+      "title": "VolksAbstimmung: „Nein“ zur Migrationsgrenze lässt die Schweizer Wirtschaft aufatmen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Die Gier der FIFA: Abpfiff für Normalverdiener",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Wirtschaftsflaute: Die deutsche Krise in zehn Zahlen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Hanks Welt: Mein Kopf, mein Bauch und der Dom",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "VW und BMW denken um: Unabhängiger von China durch Kreislaufwirtschaft",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    }
+  ]
+}

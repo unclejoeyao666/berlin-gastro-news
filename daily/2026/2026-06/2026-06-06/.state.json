@@ -1,0 +1,50 @@
+{
+  "date": "2026-06-06",
+  "started_at": "2026-06-06T05:00:07.527971+00:00",
+  "steps": {
+    "harvest": {
+      "status": "ok",
+      "finished_at": "2026-06-06T05:00:20.794290+00:00",
+      "stats": {
+        "unplayed": 5313,
+        "total": 5754
+      }
+    },
+    "select": {
+      "status": "ok",
+      "finished_at": "2026-06-06T05:00:23.353937+00:00",
+      "selected_ids": [
+        5789,
+        5790,
+        5791,
+        5800,
+        5801,
+        5803,
+        5805,
+        5810,
+        5792,
+        5793
+      ],
+      "diagnostics": {
+        "gastro_count": 5,
+        "keyword_count": 3,
+        "general_count": 2
+      }
+    },
+    "translate": {
+      "status": "pending"
+    },
+    "publish_article": {
+      "status": "pending"
+    },
+    "publish_brief": {
+      "status": "pending"
+    },
+    "audio": {
+      "status": "pending"
+    },
+    "push": {
+      "status": "pending"
+    }
+  }
+}
