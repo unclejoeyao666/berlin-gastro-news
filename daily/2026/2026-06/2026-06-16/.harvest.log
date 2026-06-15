@@ -1,0 +1,646 @@
+{
+  "timestamp": "2026-06-15T22:31:08+00:00",
+  "caps": {
+    "HARVEST_CAP": 25,
+    "KEYWORD_KEEP": 10,
+    "GENERAL_KEEP": 5
+  },
+  "buckets": {
+    "gastro_t1": {
+      "total": 15,
+      "kept": 14
+    },
+    "gastro_t2": {
+      "total": 6,
+      "kept": 0
+    },
+    "general_keyword": {
+      "total": 33,
+      "kept": 6
+    },
+    "general_other": {
+      "total": 308,
+      "kept": 5
+    }
+  },
+  "totals": {
+    "kept": 25,
+    "dropped": 329
+  },
+  "per_source": {
+    "ahgz-gastro": {
+      "name": "AHGZ Gastronomie",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 23,
+      "candidates": 2,
+      "errors": []
+    },
+    "bmel": {
+      "name": "BMEL Pressemitteilungen",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 50,
+      "candidates": 0,
+      "errors": []
+    },
+    "dehoga-berlin": {
+      "name": "DEHOGA Berlin",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "faz": {
+      "name": "FAZ Aktuell",
+      "fetched": 105,
+      "noise": 0,
+      "seen": 18,
+      "candidates": 87,
+      "errors": []
+    },
+    "manager-magazin": {
+      "name": "Manager Magazin",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 6,
+      "candidates": 24,
+      "errors": []
+    },
+    "politico-eu": {
+      "name": "Politico EU",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 10,
+      "errors": []
+    },
+    "scmp": {
+      "name": "South China Morning Post",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 50,
+      "errors": []
+    },
+    "spiegel": {
+      "name": "Der Spiegel",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 30,
+      "errors": []
+    },
+    "tagesschau-wirtschaft": {
+      "name": "Tagesschau Wirtschaft",
+      "fetched": 22,
+      "noise": 0,
+      "seen": 15,
+      "candidates": 7,
+      "errors": []
+    },
+    "wiwo": {
+      "name": "WirtschaftsWoche",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 4,
+      "candidates": 16,
+      "errors": []
+    },
+    "ahgz-all": {
+      "name": "AHGZ Allgemein",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 13,
+      "candidates": 12,
+      "errors": []
+    },
+    "ahgz-suppliers": {
+      "name": "AHGZ Zulieferer",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 24,
+      "candidates": 1,
+      "errors": []
+    },
+    "dw-de": {
+      "name": "Deutsche Welle (DE)",
+      "fetched": 84,
+      "noise": 0,
+      "seen": 68,
+      "candidates": 16,
+      "errors": []
+    },
+    "dw-en": {
+      "name": "Deutsche Welle (EN)",
+      "fetched": 149,
+      "noise": 0,
+      "seen": 125,
+      "candidates": 24,
+      "errors": []
+    },
+    "ec-press": {
+      "name": "European Commission Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 4,
+      "candidates": 6,
+      "errors": []
+    },
+    "efsa-press": {
+      "name": "EFSA Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "euobserver": {
+      "name": "EUobserver",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 11,
+      "candidates": 9,
+      "errors": []
+    },
+    "tagesschau-all": {
+      "name": "Tagesschau All",
+      "fetched": 81,
+      "noise": 0,
+      "seen": 31,
+      "candidates": 50,
+      "errors": []
+    },
+    "wiwo-politik": {
+      "name": "WiWo Politik",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 13,
+      "candidates": 7,
+      "errors": []
+    },
+    "zdf-wirtschaft": {
+      "name": "ZDFheute Wirtschaft",
+      "fetched": 76,
+      "noise": 0,
+      "seen": 65,
+      "candidates": 11,
+      "errors": []
+    }
+  },
+  "kept_titles": [
+    {
+      "title": "Konzept : Super* eröffnet im Herzog Max in München",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Opening : Big Mamma kommt mit Pamela nach Berlin",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Vor G7-Gipfel: Trump droht Paris mit 100 Prozent Weinsteuer",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "G7-Gipfel: Wie der Mittelstand unter globalen Krisen leidet",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Update Wirtschaft vom 15.06.2026",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Nach SpaceX: OpenAI und Anthropic vor dem Börsengang",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Großbritannien plant Social-Media-Verbot für unter 16-Jährige",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Reifen-Unternehmer Michelin wäre heute 100 Jahre alt geworden",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Marktbericht: Die Hoffnung regiert",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Jubiläum : Dehag feiert 50-jähriges Bestehen",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Verband: Um diese Zukunftsthemen geht es beim HSMA-Day 2026",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Ferienzeit: Rettet Heimaturlaub das Sommergeschäft?",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Interview mit Leonardo: Geschäftsreise – wie Leonardo Hotels den Wandel erleben",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Bilanz: Bayerns Winzer produzieren 2025 mehr Wein",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Übernahme: Fletcher Hotels sichert sich das Sunderland Hotel",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Transaktion: Vion verkauft Salomon Foodworld",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Konzept : Super* eröffnet im Herzog Max in München",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Weinbau: Politiker schlagen Deutschlandfahne auf Weindeckel vor",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Opening : Big Mamma kommt mit Pamela nach Berlin",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Personalie: Dirs21 richtet Marketing personell neu aus",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Hotel-Studie: Wofür Hotelgäste gern zusätzlich zahlen",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Wohnungskrise in Spanien: Rausschmeißer vs. Hausbesetzer - SPIEGEL TV für Arte Re",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "WM 2026: Romelu Lukaku erzwingt Belgiens Ausgleich gegen Ägypten nach Einwechslung",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Energiewende: Wohin mit all dem grünen Strom?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Schäden des Irankriegs: Nicht einen Tag zu früh",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    }
+  ],
+  "dropped_titles": [
+    {
+      "title": "Isar Aerospace: Münchner Raumfahrt-Start-up sagt erneut Startversuch ab",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Gavin Newsom wirft Donald Trump vor, gegen ihn zu ermitteln",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Stephan-Andreas Casdorff: »Jüdische Allgemeine« entfernt wegen KI-Verdacht zwei Kommentare von Ex-»Tagesspiegel«-Chefredakteur",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Bonnie Tyler nach fünf Wochen aus Koma erwacht",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Polen: Ärztin soll mehr als 30 menschliche Föten im Garten vergraben haben",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Marius Borg Høiby kommt nicht aus Untersuchungshaft frei",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ukraine: EU beginnt Verhandlungen zum Ukrainebeitritt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "WM 2026: Gegen Spanien – Kap Verde sorgt für eine der größten Sensationen der WM-Geschichte",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "USA-Iran-Einigung: Plötzlich steht Benjamin Netanyahu als Verlierer da",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Russland-Ukraine-Krieg: Lawra in Kyjiw – ein Heiligtum in Flammen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Hamburg: Frühere Parteispitze der Grünen zahlt Sozialabgaben nach",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "»Gut genug«: Wird Shirin David von Heidi Klum gedisst?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Krieg in Iran: Donald Trump hat Iran-Abkommen offenbar digital unterschrieben",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ungarn: Parlament verhindert mögliche Wiederwahl von Viktor Orbán",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Artemis-Programm: Esa-Chef Aschbacher will europäische Astronauten auf dem Mond",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Öl, Sprit, Kerosin: Wann sorgt Donald Trumps Deal mit dem Iran für niedrigere Preise?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Bundesregierung einigt sich mit KNDS auf Details des Staatseinstiegs",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ursula von der Leyen schließt Ende der Iran-Sanktionen ohne Entgegenkommen aus",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kyjiw, Ukraine: Berühmtes Höhlenkloster steht in Flammen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Iran-Krieg: Räumt die Bundeswehr bald Minen in der Straße von Hormus?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Majorana-2: Microsofts neuer Quantenchip rechnet mit Teilchen, deren Existenz unbewiesen ist",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Berlin: AfD-Politiker hat kein Recht auf Einstellung im gehobenen Dienst bei der Polizei",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "News des Tages: Exportbann für KI-Modelle, Urteil gegen Marius Borg Høiby, EU-Fluggastrechte",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Klima: Wälder können offenbar weniger CO₂ speichern als angenommen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Hannover: Fünf Polizisten vom Dienst suspendiert",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ulrich Siegmund und Guido Heuer: Warum die Foto-Affäre für die CDU ein Problem ist",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Schleswig: Wie gefährlich sind Belastungsübungen bei der Feuerwehr?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ukraine-Krieg: Das sind die neuen EU-Sanktionen gegen Russland",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Gießener Tennisverein: Riskanter Streit um Alkohol",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Rahmeneinigung im Irankrieg: „Es dauert Monate, bis sich das Ölangebot wieder normalisiert“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Kurs steigt weiter: Der Run auf die SpaceX-Aktie",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Privathochschulen: Lehren ohne Fachkenntnis",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Private Raumfahrt: Deutsche Orbitalrakete am Start",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Törn auf der „Maltese Falcon“: Warte, bis es Yacht wird",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "„Mythos“ und „Fable 5“: Was die amerikanische Anthropic-Sperre für Europa bedeutet",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Anthropic gegen US-Regierung: Der KI-Warnschuss",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Krieg in Nahost: Amerikas Macht kann wenig wert sein",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Liveblog Irankrieg: Trump: Straße von Hormus wird Freitag „vollständig“ geöffnet",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Straße von Hormus: „Der Flugzeugträger kann binnen zwei oder drei Tagen im Einsatz sein“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "F.A.Z. exklusiv: Die USA entziehen der NATO wichtige militärische Beiträge – ab sofort",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Liveblog Ukrainekrieg: Merz: Russland kann militärisch nicht gewinnen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Deutsches Start-Up: Isar Aerospace sagt Startversuch der Spectrum-Rakete abermals ab",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kap Verde schockt Spanien: Nach der großen WM-Überraschung fließen die Tränen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Brennende Kirche in Kiew: Ein Treffer in das Herz der Geschichte",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Liveblog Fußball-WM 2026: Millionen Follower: Kap Verdes WM-Held wird zum Social-Media-Star",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Pressestimmen zu Spanien: „Kolossale Blamage“ und ein „Desaster zum Auftakt“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Remis gegen Belgien: Ägypten verpasst historischen ersten WM-Sieg knapp",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Bildungsbericht: Das Recht und die Pflicht der Eltern",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Gewaltkriminalität: Wer setzt welche Waffen ein?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Musk und SpaceX: Alle für einen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    }
+  ]
+}
