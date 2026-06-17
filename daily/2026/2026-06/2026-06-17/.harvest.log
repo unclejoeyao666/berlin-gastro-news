@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-14T05:04:15+00:00",
+  "timestamp": "2026-06-17T04:00:12+00:00",
   "caps": {
     "HARVEST_CAP": 25,
     "KEYWORD_KEEP": 10,
@@ -7,57 +7,57 @@
   },
   "buckets": {
     "gastro_t1": {
-      "total": 12,
-      "kept": 11
+      "total": 16,
+      "kept": 16
     },
     "gastro_t2": {
-      "total": 10,
+      "total": 9,
       "kept": 0
     },
     "general_keyword": {
-      "total": 33,
-      "kept": 9
+      "total": 24,
+      "kept": 4
     },
     "general_other": {
-      "total": 310,
+      "total": 337,
       "kept": 5
     }
   },
   "totals": {
     "kept": 25,
-    "dropped": 332
+    "dropped": 355
   },
   "per_source": {
     "ahgz-gastro": {
       "name": "AHGZ Gastronomie",
       "fetched": 25,
       "noise": 0,
-      "seen": 24,
-      "candidates": 1,
+      "seen": 23,
+      "candidates": 2,
       "errors": []
     },
     "bmel": {
       "name": "BMEL Pressemitteilungen",
       "fetched": 50,
       "noise": 0,
-      "seen": 50,
-      "candidates": 0,
+      "seen": 49,
+      "candidates": 1,
       "errors": []
     },
     "dehoga-berlin": {
       "name": "DEHOGA Berlin",
       "fetched": 10,
       "noise": 0,
-      "seen": 9,
-      "candidates": 1,
+      "seen": 10,
+      "candidates": 0,
       "errors": []
     },
     "faz": {
       "name": "FAZ Aktuell",
-      "fetched": 133,
+      "fetched": 103,
       "noise": 0,
-      "seen": 63,
-      "candidates": 70,
+      "seen": 16,
+      "candidates": 87,
       "errors": []
     },
     "manager-magazin": {
@@ -94,10 +94,10 @@
     },
     "tagesschau-wirtschaft": {
       "name": "Tagesschau Wirtschaft",
-      "fetched": 34,
+      "fetched": 31,
       "noise": 0,
-      "seen": 17,
-      "candidates": 17,
+      "seen": 20,
+      "candidates": 11,
       "errors": []
     },
     "wiwo": {
@@ -112,32 +112,32 @@
       "name": "AHGZ Allgemein",
       "fetched": 25,
       "noise": 0,
-      "seen": 16,
-      "candidates": 9,
+      "seen": 12,
+      "candidates": 13,
       "errors": []
     },
     "ahgz-suppliers": {
       "name": "AHGZ Zulieferer",
       "fetched": 25,
       "noise": 0,
-      "seen": 24,
-      "candidates": 1,
+      "seen": 25,
+      "candidates": 0,
       "errors": []
     },
     "dw-de": {
       "name": "Deutsche Welle (DE)",
-      "fetched": 90,
+      "fetched": 83,
       "noise": 0,
-      "seen": 75,
-      "candidates": 15,
+      "seen": 66,
+      "candidates": 17,
       "errors": []
     },
     "dw-en": {
       "name": "Deutsche Welle (EN)",
-      "fetched": 135,
+      "fetched": 151,
       "noise": 0,
-      "seen": 113,
-      "candidates": 22,
+      "seen": 123,
+      "candidates": 28,
       "errors": []
     },
     "ec-press": {
@@ -152,492 +152,492 @@
       "name": "EFSA Press",
       "fetched": 10,
       "noise": 0,
-      "seen": 9,
-      "candidates": 1,
+      "seen": 10,
+      "candidates": 0,
       "errors": []
     },
     "euobserver": {
       "name": "EUobserver",
       "fetched": 20,
       "noise": 0,
-      "seen": 12,
-      "candidates": 8,
+      "seen": 11,
+      "candidates": 9,
       "errors": []
     },
     "tagesschau-all": {
       "name": "Tagesschau All",
-      "fetched": 72,
+      "fetched": 75,
       "noise": 0,
-      "seen": 23,
-      "candidates": 49,
+      "seen": 18,
+      "candidates": 57,
       "errors": []
     },
     "wiwo-politik": {
       "name": "WiWo Politik",
       "fetched": 20,
       "noise": 0,
-      "seen": 4,
-      "candidates": 16,
+      "seen": 8,
+      "candidates": 12,
       "errors": []
     },
     "zdf-wirtschaft": {
       "name": "ZDFheute Wirtschaft",
-      "fetched": 74,
+      "fetched": 77,
       "noise": 0,
-      "seen": 57,
-      "candidates": 17,
+      "seen": 66,
+      "candidates": 11,
       "errors": []
     }
   },
   "kept_titles": [
     {
-      "title": "Nach dem Prämien-Aus: Jetzt müssen echte Entlastungen kommen",
-      "source_id": "dehoga-berlin",
-      "score": 100,
-      "bucket": "gastro_t1"
-    },
-    {
-      "title": "Ausstattung: Diese 10 Tabletop-Trends machen den Tisch zur Bühne",
+      "title": "Restaurantkritik : Zehn neue Bib Gourmands für Deutschland",
       "source_id": "ahgz-gastro",
       "score": 93,
       "bucket": "gastro_t1"
     },
     {
-      "title": "Neue Gaskraftwerke: Kritik an Wasserstoffstrategie der Bundesregierung",
+      "title": "Alkoholfreie Getränke in der Gastro: Alkoholfrei ist mehr als bloß Verzicht",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Analyse der Stromnetzbetreiber - Rekordrenditen und massive Kritik",
       "source_id": "tagesschau-wirtschaft",
       "score": 87,
       "bucket": "general_keyword"
     },
     {
-      "title": "Wirtschaft vor acht vom 13.05.2026",
+      "title": "Wirtschaft vor acht vom 16.06.2026",
       "source_id": "tagesschau-wirtschaft",
       "score": 87,
       "bucket": "general_keyword"
     },
     {
-      "title": "Update Wirtschaft vom 13.05.2026",
-      "source_id": "tagesschau-wirtschaft",
-      "score": 87,
-      "bucket": "general_keyword"
-    },
-    {
-      "title": "Wer will noch neue Öl- und Gasheizungen einbauen?",
+      "title": "Milliarden-Deal: SpaceX will KI-Startup kaufen",
       "source_id": "tagesschau-wirtschaft",
       "score": 87,
       "bucket": "general_other"
     },
     {
-      "title": "Was ändert sich beim Heizen?",
+      "title": "Streit über UniCredit-Angebot für Commerzbank kurz vor Fristende",
       "source_id": "tagesschau-wirtschaft",
       "score": 87,
       "bucket": "general_other"
     },
     {
-      "title": "Ist die Heizungsdebatte nun Geschichte?",
+      "title": "Zahl der Sozialwohnungen auch 2025 wieder gesunken",
       "source_id": "tagesschau-wirtschaft",
       "score": 87,
       "bucket": "general_other"
     },
     {
-      "title": "Trump-Besuch in China: Hat Xi die besseren Karten?",
+      "title": "Spritpreise sinken in Richtung Vorkriegsniveau",
       "source_id": "tagesschau-wirtschaft",
       "score": 87,
       "bucket": "general_other"
     },
     {
-      "title": "Reisen durch Europa: Ein Ticket für die ganze Fahrt",
+      "title": "Abstimmung im EU-Parlament: Weg frei für Handelsdeal mit USA",
       "source_id": "tagesschau-wirtschaft",
       "score": 87,
       "bucket": "general_other"
     },
     {
-      "title": "Corporate-Geschäft: Geschäftsreisende lassen sich von höheren Raten nicht abschrecken",
+      "title": "Asienreise: Rainer treibt Umsetzung der Agrarexportstrategie weiter voran",
+      "source_id": "bmel",
+      "score": 83,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Rahmenabkommen zum Ende des Iran-Krieg: In diesem Hotel wollen die USA und Iran unterschreiben",
       "source_id": "ahgz-all",
       "score": 80,
       "bucket": "gastro_t1"
     },
     {
-      "title": "Jubiläum: 25 Jahre Victor’s Residenz Hotel in Leipzig",
+      "title": "Nach Insolvenz : Art-Invest verpachtet frühere Revo-Hotels neu",
       "source_id": "ahgz-all",
       "score": 80,
       "bucket": "gastro_t1"
     },
     {
-      "title": "Das neue ahgz E-Paper: Titelthema: Inklusion wagen",
+      "title": "Neuer Ländermarkt: Meininger startet in Barcelona",
       "source_id": "ahgz-all",
       "score": 80,
       "bucket": "gastro_t1"
     },
     {
-      "title": "Wellness: Neuer Glanz für das Vier-Jahreszeiten-Spa",
+      "title": "Ruby Frida Stockholm: Ruby Hotels startet in Skandinavien",
       "source_id": "ahgz-all",
       "score": 80,
       "bucket": "gastro_t1"
     },
     {
-      "title": "Strategie: Igefa setzt Zeichen in Österreich",
+      "title": "Partnerschaft: Schlossgut Groß Schwansee kooperiert mit Spitzenkoch",
       "source_id": "ahgz-all",
       "score": 80,
       "bucket": "gastro_t1"
     },
     {
-      "title": "Zwischenstand Revo-Insolvenz: Licht am Ende des Tunnels?",
+      "title": "Expansion: Radisson Collection kommt nach Frankfurt",
       "source_id": "ahgz-all",
       "score": 80,
       "bucket": "gastro_t1"
     },
     {
-      "title": "Ausstattung: Diese 10 Tabletop-Trends machen den Tisch zur Bühne",
+      "title": "Restaurantkritik : Zehn neue Bib Gourmands für Deutschland",
       "source_id": "ahgz-all",
       "score": 80,
       "bucket": "gastro_t1"
     },
     {
-      "title": "Nach Renovierung: Smartments Apartments in Berliner Prenzlauer Berg wiedereröffnet",
+      "title": "Alkoholfreie Getränke in der Gastro: Alkoholfrei ist mehr als bloß Verzicht",
       "source_id": "ahgz-all",
       "score": 80,
       "bucket": "gastro_t1"
     },
     {
-      "title": "Kommentar: Die Top 100: Aktiv in der Warteschleife",
+      "title": "Online-Plattform: Tripadvisor verkauft The Fork für 700 Millionen US-Dollar",
       "source_id": "ahgz-all",
       "score": 80,
       "bucket": "gastro_t1"
     },
     {
-      "title": "Wein: Weltweit wird so wenig getrunken wie zuletzt im Jahr 1957, meldet die OIV",
+      "title": "Großes Gefälle: Nur knapp die Hälfte bekommt Urlaubsgeld",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Kommentar: Nostalgie hilft nicht im Sommergeschäft",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Nachfolge: Warum sich eine Strategie in der Nachfolge lohnt",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "American Innovation and Choice Online Act: Traveltech unterstützt US-Gesetz gegen Google & Co",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "News: Steuern auf Tabak, Alkohol und Zucker, Antisemitismus-Bericht, G7-Gipfel in Évian",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_keyword"
     },
     {
-      "title": "Venezuela: Maduro-Sohn Nicolasito räumt im Interview Scheitern ein",
+      "title": "Pizza Hut: Fast-Food-Kette wird verkauft",
       "source_id": "spiegel",
       "score": 80,
-      "bucket": "general_keyword"
-    },
-    {
-      "title": "Neues Luxusresort: Hier feierte George Clooney gerade seinen Geburtstag",
-      "source_id": "faz",
-      "score": 76,
-      "bucket": "general_keyword"
-    },
-    {
-      "title": "Geldanlage: Die besten Renditen des Jahrhunderts",
-      "source_id": "faz",
-      "score": 76,
-      "bucket": "general_keyword"
-    },
-    {
-      "title": "Alkohol: Weltweiter Weinkonsum sinkt auf niedrigsten Stand seit 1957",
-      "source_id": "faz",
-      "score": 76,
-      "bucket": "general_keyword"
-    },
-    {
-      "title": "Brandenburg: Kinderarzt wegen sexuellen Missbrauchs in 130 Fällen angeklagt",
-      "source_id": "faz",
-      "score": 76,
       "bucket": "general_keyword"
     }
   ],
   "dropped_titles": [
     {
-      "title": "Autoindustrie rechnet mit größerem Stellenabbau bis 2035",
+      "title": "Klamme Kommunen - eine Gefahr für die Demokratie?",
       "source_id": "tagesschau-wirtschaft",
       "score": 87,
       "bucket": "general_other"
     },
     {
-      "title": "Versicherungskonzern Allianz verdient so viel wie nie",
+      "title": "Tschechische Regierung spart beim öffentlich-rechtlichen Rundfunk",
       "source_id": "tagesschau-wirtschaft",
       "score": 87,
       "bucket": "general_other"
     },
     {
-      "title": "Urteil: Die Milka-Tafel ist eine Mogelpackung",
+      "title": "Marktbericht: Iran-Deal zieht nicht mehr",
       "source_id": "tagesschau-wirtschaft",
       "score": 87,
       "bucket": "general_other"
     },
     {
-      "title": "Verlag siegt vor EU-Gericht: Kein Markenschutz für Waffen namens Obelix",
-      "source_id": "tagesschau-wirtschaft",
-      "score": 87,
-      "bucket": "general_other"
-    },
-    {
-      "title": "Diskussion um Primärarztsystem: Ohne Hausarzt kein Spezialist",
-      "source_id": "tagesschau-wirtschaft",
-      "score": 87,
-      "bucket": "general_other"
-    },
-    {
-      "title": "Entlastungsprämie laut Union endgültig vom Tisch",
-      "source_id": "tagesschau-wirtschaft",
-      "score": 87,
-      "bucket": "general_other"
-    },
-    {
-      "title": "Finanzwende kritisiert die Finanzaufsicht BaFin",
-      "source_id": "tagesschau-wirtschaft",
-      "score": 87,
-      "bucket": "general_other"
-    },
-    {
-      "title": "Marktbericht: Gute Stimmung vor dem Feiertag",
-      "source_id": "tagesschau-wirtschaft",
-      "score": 87,
-      "bucket": "general_other"
-    },
-    {
-      "title": "Bahn bietet im Sommer Familienticket an",
+      "title": "Bundesverfassungsgericht verhandelt zu Abschaffung der Stoffstrombilanzverordnung",
       "source_id": "tagesschau-wirtschaft",
       "score": 82,
       "bucket": "general_other"
     },
     {
-      "title": "Heizungsgesetz: Normenkontrollrat nennt Kabinettsbeschluss »schwach und praxisfern«",
+      "title": "Steuererklärung: Mit diesen fünf Posten sparen Sie spürbar Geld",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "Xi Jinping empfängt Donald Trump in China: »Sollten Partner sein, keine Rivalen«",
+      "title": "Steuererklärung: Mit einem Klick zur Erklärung – so funktioniert das neue Verfahren",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "Benjamin Netanyahu will heimlich die Vereinigten Arabischen Emirate besucht haben – dort weist man das zurück",
+      "title": "WM 2026 News heute: Lionel Messi stellt mit Hattrick WM-Torrekord von Miroslav Klose ein",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "Russland überzieht Ukraine mit einem der längsten Luftangriffe seit Kriegsbeginn",
+      "title": "Fünf Männer wegen Anschlagsplänen auf Donald Trumps Geburtstagsparty festgenommen",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "Samsung gegen Dua Lipa: Konzern weist Vorwurf der unerlaubten Werbung auf TV-Karton zurück",
+      "title": "Fußball-WM 2026 Live: Lionel Messi zieht mit Rekordtorschütze Miroslav Klose gleich",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "Sachsen: AfD und BSW verhelfen Grünen-Antrag zur Mehrheit",
+      "title": "Donald Trump: Offenbar fließt doch Steuergeld in den Ballsaal und der US-Präsident soll davon gewusst haben",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "Frankreich: Kylian Mbappé feuert gegen RN – Jordan Bardella und Marine Le Pen schießen zurück",
+      "title": "Bundeswehr plant mehr Projekte mit Tierversuchen",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "Australien: Pläne für Trump Tower in Queensland sind vom Tisch",
+      "title": "Sohn von Brasiliens Ex-Präsident Bolsonaro zu Haftstrafe verurteilt",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "Paris Saint-Germain zum 14. Mal französischer Meister",
+      "title": "G7 erhöhen Druck auf Russland mit neuen Sanktionen",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "Fußball-WM 2026: US-Regierung lockert Einreise-Regeln für WM-Fans",
+      "title": "Fußball-WM: Adidas geht das V für DFB-Fan-Trikots aus",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "Matthew Perry: Ex-Suchtberater wegen Ketaminlieferung zu Haft verurteilt",
+      "title": "Göttingen: 16-Jähriger stellt sich nach Schuss auf Polizisten",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "Israel: Netanyahu-Koalition leitet Auflösung der Knesset und Neuwahlen ein",
+      "title": "Tödlicher Sturz von Brücke in Brasilien: Rätsel um verschwundene Kamera",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "Wolodymyr Selenskyj und Korruption in der Ukraine: Wer ist der rätselhafte »R1«?",
+      "title": "Boris Pistorius: Aktionsplan Drohnen soll Abwehr der Bundeswehr stärken",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "Kevin Warsh: US-Senat bestätigt Trumps Kandidaten als Fed-Chef",
+      "title": "Fußball-WM 2026: Michael Olise und Kylian Mbappé führen Frankreich zu Auftaktsieg",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "Riem Hussein: Rekordschiedsrichterin hört nach 156 Spielen auf",
+      "title": "G7-Gipfel in Évian: Merz setzt auf gemeinsames Vorgehen von Europa und USA in Ukraine-Frage",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "Kritik an Kirchen: ZDF löscht Beitrag nach »Fehler«",
+      "title": "Tom Holland und Zendaya: Haben sie bereits geheiratet? »Mehr als das wirst du dazu nicht erfahren«",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "Rostock - Fall Fabian vor Gericht: Was seine Freunde sagen",
+      "title": "EU-Parlament stimmt für Verbot von KI für Missbrauch-Deepfakes",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "Donald Trump beleidigt Journalistinnen: »Du Dummkopf!«",
+      "title": "Fall Fabian: Zeuge Olaf K. ging mit Gina H. zur Leiche",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "SPD: Von der Volkspartei zum Sorgenkind – SPIEGEL TV",
+      "title": "Palantir: Frankreich beendet Zusammenarbeit mit US-Konzern",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "Lettland: Regierung verliert Mehrheit nach Rücktritt des Verteidigungsministers",
+      "title": "USA: Warum Franchises gerade so beliebt sind",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "USA: Gericht hebt Mordurteile gegen Alex Murdaugh auf",
+      "title": "Alaska-Wahl: Dan Sullivan darf nicht gegen Dan Sullivan antreten",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "Warum zerstörten die Germanen wertvolle Beute und warfen sie ins Wasser?",
+      "title": "BMW kappt Prognosen deutlich – Aktie fällt",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "Sambia: Wie China eine Menschenrechtskonferenz in Afrika verhinderte",
+      "title": "Ukraine-Krieg: Russland baut ein eigenes Starlink. Wie gut ist das System?",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "Marvin Wildhage: YouTuber für Auftritt als falsches Maskottchen beim EM-Spiel verurteilt",
+      "title": "Shein: BHV Marais trennt sich nach Kritik vom chinesischen Modekonzern",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "Meißen in Sachsen: Frau überfuhr Ehemann für das Erbe – lebenslange Haft",
+      "title": "Michel Friedman: Publizist kritisiert Absage von Gedenkfeier in Bayreuth",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "Nigel Farage: Ethikausschuss leitet Untersuchung wegen Millionenspende ein",
+      "title": "Friedrich Merz und Donald Trump: Kanzler setzt beim G7-Gipfel auf Geschenk-Diplomatie",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "Alexander Hurst wurde an der Börse zum Millionär: »Es ist erstaunlich, wie schnell man zum Arschloch wird«",
+      "title": "Ihre Sexpuppe im Schloss Bellevue sorgt für Aufregung. Jetzt spricht die Künstlerin Alexandra Bircken",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "News des Tages: Cem Özdemir - Die Rettung für die CDU sind die Grünen",
+      "title": "Sardinien: Der Sonnenschirm, die unbekannte Gefahr",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "„SCHUTZGELD“-Erpresser: Neun Festnahmen bei Razzia in Berlin",
+      "title": "Weltwirtschaft: Grenzen der Diversifizierung",
       "source_id": "faz",
       "score": 76,
       "bucket": "general_keyword"
     },
     {
-      "title": "„Maingold“ in Frankfurt: Kinmokusei Fizz und Estragon-Champignons",
+      "title": "Nebenwerte im Blick: „Die GKV reicht gerade so zum Überleben“",
       "source_id": "faz",
       "score": 76,
       "bucket": "general_keyword"
     },
     {
-      "title": "Spieltheorie und Religion: Die Regel des heiligen Ludwig",
+      "title": "F.A.Z. Live-Podcast: „Deutschlands Erfolgsfaktoren sind weg“",
       "source_id": "faz",
       "score": 76,
       "bucket": "general_keyword"
     },
     {
-      "title": "Bundestag am Zug: Kabinett beschließt neues Heizungsgesetz",
+      "title": "Hohes Verlustrisiko: Bafin greift im Handel mit Turbo-Zertifikaten ein",
       "source_id": "faz",
       "score": 76,
       "bucket": "general_keyword"
     },
     {
-      "title": "Bereits 800 Drohnen: Russland beschießt Ukraine massiv mit Raketen und Drohnen",
+      "title": "Britische Hochschulkrise: Was ist ein Uni-Studium noch wert?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Vergiftung in Istanbul: „Da fragen wir uns: ‚Was ist unsere Tochter wert?‘“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Bad Salzhausen: Junge Ideen für 200 Jahre altes Hotel",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "KNDS-Manager im Gespräch: „In Deutschland werden wir noch zwei zusätzliche Produktionsstätten aufbauen“",
       "source_id": "faz",
       "score": 76,
       "bucket": "general_other"
     },
     {
-      "title": "Korruption in der Ukraine: Wofür der Fall Jermak steht",
+      "title": "Krieg in der Ukraine: Die Zeit spielt nun gegen Putin",
       "source_id": "faz",
       "score": 76,
       "bucket": "general_other"
     },
     {
-      "title": "Machtwechsel in der Fed: Ein neuer US-Notenbankchef für niedrige Zinsen?",
+      "title": "Alexandr Lukaschenko: Ein schwieriger Verbündeter für Moskau",
       "source_id": "faz",
       "score": 76,
       "bucket": "general_other"
     },
     {
-      "title": "Neuer Fed-Chef: Der US-Senat bestätigt Kevin Warsh",
+      "title": "Liveblog Fußball-WM 2026: Messi stellt Kloses Torrekord ein",
       "source_id": "faz",
       "score": 76,
       "bucket": "general_other"
     },
     {
-      "title": "Liveblog USA unter Trump: Trump lobt Xi: „Eine Ehre, Ihr Freund zu sein“",
+      "title": "Gegen Senegal: Superstar Mbappé führt Franzosen zum Auftaktsieg",
       "source_id": "faz",
       "score": 76,
       "bucket": "general_other"
     },
     {
-      "title": "Deutscher Chef: Mit NASA-Technik ins Herz der chinesischen Batteriewelt",
+      "title": "DFB-Kapitän Kimmich: „Ihr seid ja quasi im Urlaub hier“",
       "source_id": "faz",
       "score": 76,
       "bucket": "general_other"
     },
     {
-      "title": "Zieljahr 2045: Will die CDU die Klimawende?",
+      "title": "Liveblog Ukrainekrieg: G7 wollen mit neuen Sanktionen Druck auf Russland erhöhen",
       "source_id": "faz",
       "score": 76,
       "bucket": "general_other"
     },
     {
-      "title": "Umgang mit Rechenzentren: Warum Milliarden-Projekte an Bürgern scheitern",
+      "title": "Kolumne „Midlife Crisis“: Älter werden heißt wieder Kind werden – mit mehr Geld und Freiheit",
       "source_id": "faz",
       "score": 76,
       "bucket": "general_other"
     },
     {
-      "title": "Auflösung der Knesset: Israelische Regierung strebt Neuwahl an",
+      "title": "US-Rückzug aus Europa: Einige Lücken kann die NATO kaum füllen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Jordi Savall im Interview: „Ich kannte einen Musiker, der Magen-Darm-Krankheiten mit einem Instrument geheilt hat“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Regionale Preise: Wo das Leben besonders teuer ist – und wo besonders günstig",
       "source_id": "faz",
       "score": 76,
       "bucket": "general_other"
