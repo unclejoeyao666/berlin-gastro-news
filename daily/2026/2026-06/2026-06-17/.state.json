@@ -60,8 +60,8 @@
       "article_count": 7
     },
     "push": {
-      "status": "running",
-      "started_at": "2026-06-17T04:55:07.788120+00:00"
+      "status": "ok",
+      "finished_at": "2026-06-17T04:55:13.378819+00:00"
     }
   }
 }

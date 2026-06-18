@@ -1,0 +1,646 @@
+{
+  "timestamp": "2026-06-18T04:00:13+00:00",
+  "caps": {
+    "HARVEST_CAP": 25,
+    "KEYWORD_KEEP": 10,
+    "GENERAL_KEEP": 5
+  },
+  "buckets": {
+    "gastro_t1": {
+      "total": 19,
+      "kept": 17
+    },
+    "gastro_t2": {
+      "total": 10,
+      "kept": 0
+    },
+    "general_keyword": {
+      "total": 15,
+      "kept": 3
+    },
+    "general_other": {
+      "total": 330,
+      "kept": 5
+    }
+  },
+  "totals": {
+    "kept": 25,
+    "dropped": 339
+  },
+  "per_source": {
+    "ahgz-gastro": {
+      "name": "AHGZ Gastronomie",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 21,
+      "candidates": 4,
+      "errors": []
+    },
+    "bmel": {
+      "name": "BMEL Pressemitteilungen",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 49,
+      "candidates": 1,
+      "errors": []
+    },
+    "dehoga-berlin": {
+      "name": "DEHOGA Berlin",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "faz": {
+      "name": "FAZ Aktuell",
+      "fetched": 102,
+      "noise": 0,
+      "seen": 17,
+      "candidates": 85,
+      "errors": []
+    },
+    "manager-magazin": {
+      "name": "Manager Magazin",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 20,
+      "errors": []
+    },
+    "politico-eu": {
+      "name": "Politico EU",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 10,
+      "errors": []
+    },
+    "scmp": {
+      "name": "South China Morning Post",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 50,
+      "errors": []
+    },
+    "spiegel": {
+      "name": "Der Spiegel",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 30,
+      "errors": []
+    },
+    "tagesschau-wirtschaft": {
+      "name": "Tagesschau Wirtschaft",
+      "fetched": 42,
+      "noise": 0,
+      "seen": 29,
+      "candidates": 13,
+      "errors": []
+    },
+    "wiwo": {
+      "name": "WirtschaftsWoche",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 20,
+      "errors": []
+    },
+    "ahgz-all": {
+      "name": "AHGZ Allgemein",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 13,
+      "candidates": 12,
+      "errors": []
+    },
+    "ahgz-suppliers": {
+      "name": "AHGZ Zulieferer",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 23,
+      "candidates": 2,
+      "errors": []
+    },
+    "dw-de": {
+      "name": "Deutsche Welle (DE)",
+      "fetched": 82,
+      "noise": 0,
+      "seen": 67,
+      "candidates": 15,
+      "errors": []
+    },
+    "dw-en": {
+      "name": "Deutsche Welle (EN)",
+      "fetched": 150,
+      "noise": 0,
+      "seen": 130,
+      "candidates": 20,
+      "errors": []
+    },
+    "ec-press": {
+      "name": "European Commission Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 1,
+      "candidates": 9,
+      "errors": []
+    },
+    "efsa-press": {
+      "name": "EFSA Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 9,
+      "candidates": 1,
+      "errors": []
+    },
+    "euobserver": {
+      "name": "EUobserver",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 11,
+      "candidates": 9,
+      "errors": []
+    },
+    "tagesschau-all": {
+      "name": "Tagesschau All",
+      "fetched": 77,
+      "noise": 0,
+      "seen": 19,
+      "candidates": 58,
+      "errors": []
+    },
+    "wiwo-politik": {
+      "name": "WiWo Politik",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 14,
+      "candidates": 6,
+      "errors": []
+    },
+    "zdf-wirtschaft": {
+      "name": "ZDFheute Wirtschaft",
+      "fetched": 77,
+      "noise": 0,
+      "seen": 68,
+      "candidates": 9,
+      "errors": []
+    }
+  },
+  "kept_titles": [
+    {
+      "title": "Fleischersatzprodukte: Veggie-Burger ja, Veggie-Chicken nein",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Gourmetgastronomie: Dieter Koschina und Hans Neuner gastieren im Eatrenalin",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Gourmetgastronomie: Im Alois in München braucht es kein Chichi",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Oktoberfest: Rechtsstreit um Wiesn-Zelte eskaliert",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Update Wirtschaft vom 17.06.2026",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Hitzewelle in Deutschland: Regeln am Arbeitsplatz und in der Schule",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "US-Notenbank lässt Leitzins unverändert",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Was die Sperre von Anthropic-Modellen für die KI-Industrie bedeutet",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Bundesbank-Studie: Deutsche zahlen meistens ohne Bargeld",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Iran-Krieg drückt Ölvorräte auf tiefsten Stand seit 1990",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Schadholzanteil in deutschen Wäldern geht weiter zurück",
+      "source_id": "bmel",
+      "score": 83,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Fleischersatzprodukte: Veggie-Burger ja, Veggie-Chicken nein",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Salomon Foodservice: Was der COO von Vion Food Group zum geplanten Verkauf sagt",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Weiterentwicklung: Neuer General Manager für das Steigenberger Krems",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Studie : Warum Kleinunternehmer trotz Krisen glücklich sind",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Einkaufskooperation: HGK präsentiert gute Zahlen in schweren Zeiten",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Gourmetgastronomie: Dieter Koschina und Hans Neuner gastieren im Eatrenalin",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Gourmetgastronomie: Im Alois in München braucht es kein Chichi",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Oktoberfest: Rechtsstreit um Wiesn-Zelte eskaliert",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Kreuzfahrt: Four Seasons Yacht stellt neue Luxus-Suiten vor",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Nachfolge: Warum sich der Fokus auf die Finanzierung lohnt",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Digitalisierung: Romantik Hotels & Restaurants launcht digitale Plattform",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Dehoga Sachsen: Dehoga Sachsen kürt Axel Hüpkes zum Ehrenpräsidenten",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Ölkrise: So geht es jetzt in der Straße von Hormus weiter",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Mietpreisbremse in Hessen: Vertrauen in Mansoori beschädigt",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    }
+  ],
+  "dropped_titles": [
+    {
+      "title": "Ravensburger übernimmt Mehrheit bei Plüschtier-Hersteller Steiff",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Offshore-Netzanbindung: Milliardenauftrag bleibt in Deutschland",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "BMW senkt Prognose wegen China-Krise und Iran-Krieg",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Zoll hebt große illegale Zigarettenfabrik in Rheinland-Pfalz aus",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Nach Sanierung weiter Verspätungen auf Bahnstrecke Berlin-Hamburg",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "USA: Der erste Zinsentscheid ist für Warsh leichter geworden",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Anleger halten sich vor Fed-Entscheidung zurück",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "News: Pete Hegseth, Donald Trump, Friedrich Merz, Emmanuel Macron, Keir Starmer, Andy Burnham",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "WM 2026 Live: Cristiano Ronaldo auswechseln? Portugal-Trainer verteidigt seinen Superstar",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Hautkrebs: Wie erkenne ich die verschiedenen Typen – und wie schütze ich mich im Urlaub?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Daveigh Chase ist tot: Schauspielerin aus »The Ring« und »Lilo & Stitch« mit 35 Jahren gestorben",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Der Möchtegern-King im Schloss des Sonnenkönigs",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kevin Warsh: Fed-Chef lässt Zinsen unverändert - Donald Trump dürfte enttäuscht sein",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Central Park in New York: Unfall mit Pferde-Kutsche - 18-Jähriger gestorben",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Apple-Chef kündigt Preiserhöhungen an",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ukraine-Krieg: Russland greift Kyjiw an – Wolodymyr Selenskyj spricht mit Donald Trump und Emmanuel Macron",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "WM 2026 Live: Kolumbien gegen Usbekistan im Liveticker",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Irankrieg: USA und Iran unterzeichnen 14-Punkte-Plan zur Waffenruhe",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Fußball-WM 2026: England gegen Kroatien: Thomas Tuchels Team startet mit Feuerwerk",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Schorndorf bei Stuttgart: Mutter vergisst Kleinkind im Auto – Kind stirbt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ukraine-Krieg: Von der Leyen will Aufnahme von Ukrainern in der EU einschränken",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Jeffrey Epstein: Das verraten seine Notizen aus dem Gefängnis",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Hamburg: Verfassungsschutz überprüft künftig sämtliche Bewerber für den Staatsdienst",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Fußball-WM 2026: DR Kongo gegen Portugal: Kongo tanzt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Japan: Kartellbehörde ermittelt gegen Eis-Hersteller wegen Verdacht auf Absprachen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Peine: Verurteilter Mörder flieht auf Motorrad vor JVA-Mitarbeiter",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Revision in Berliner Vergewaltigungsfall: Wollte Marvin S. sein Opfer mit Drogen betäuben, um es zu vergewaltigen?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kevin Warsh: Neuer Fed-Chef tastet den US-Leitzins vorerst nicht an",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Nationalsozialismus: »Die SS war der Motor für Hitlers Mordapparat«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "München: Juwelendiebe flüchten vor 40 Streifenwagen – Verdächtige festgenommen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "BBC: Öffentlicher Rundfunk in Großbritannien baut 550 Jobs ab",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Eva Maria Michelmann in Haft in Syrien: Das rätselhafte Verschwinden der Deutschen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Viktor Orbán in Brüssel: Als eine Journalistin ihn mit »Herr Premierminister« anspricht, verzieht er keine Miene",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "G7-Gipfel: »Ich bin der Chef« – wie Trump sich beim Treffen inszeniert",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Antisemitismus in Deutschland: Rias-Bericht 2025 zeigt hohes Vorfallsniveau - wo bleibt der Aufschrei?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ostfriesland: Ex-Jugendtrainer soll Spieler geohrfeigt und belästigt haben",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Neue Altersvorsorge: „Der ständige Blick aufs Depot ist nicht gut fürs Gemüt“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Kapitalmarktausblick: Staatsquote über 50 Prozent – nach Kohls Maßstab sind wir im Sozialismus",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Finanzbildung für Schüler: So geht Geld",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Memorandum unterschrieben: Was das Iran-Abkommen regelt – und was nicht",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Straße von Hormus: „Am meisten Angst haben wir vor den Amerikanern gehabt“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "4:2 gegen Kroatien: Plötzlich entfachen Tuchels Engländer Euphorie",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "US-Notenbank: Kevin Warsh liefert erste Überraschungen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Hitzewelle in Deutschland: Die besten Tipps für eine kühle Wohnung",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Pflanzenöl versus Strom: Dieselmotor? Ja, bitte",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Liveblog Ukrainekrieg: Nach Unterstützungszusage der G7: Russland feuert ballistische Raketen auf Kiew",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Offene Beziehung: „Unsere Regeln sind: Niemand aus dem Freundeskreis. Nicht zu Hause. Geheimhalten“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "1:0 in der Nachspielzeit: Ghana feiert Last-Minute-Sieg gegen Panama",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Rüdiger über Tah: „Er ist der neue Chef“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Liveblog Fußball-WM 2026: FIFA löscht seit WM-Beginn fast 400.000 Hasskommentare",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    }
+  ]
+}
