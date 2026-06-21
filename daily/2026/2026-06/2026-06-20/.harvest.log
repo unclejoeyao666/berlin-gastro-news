@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-19T21:51:46+00:00",
+  "timestamp": "2026-06-19T22:29:47+00:00",
   "caps": {
     "HARVEST_CAP": 25,
     "KEYWORD_KEEP": 10,
@@ -19,13 +19,13 @@
       "kept": 0
     },
     "general_other": {
-      "total": 11,
+      "total": 5,
       "kept": 5
     }
   },
   "totals": {
     "kept": 5,
-    "dropped": 6
+    "dropped": 0
   },
   "per_source": {
     "ahgz-gastro": {
@@ -56,8 +56,8 @@
       "name": "FAZ Aktuell",
       "fetched": 104,
       "noise": 0,
-      "seen": 101,
-      "candidates": 3,
+      "seen": 104,
+      "candidates": 0,
       "errors": []
     },
     "manager-magazin": {
@@ -80,16 +80,16 @@
       "name": "South China Morning Post",
       "fetched": 50,
       "noise": 0,
-      "seen": 48,
-      "candidates": 2,
+      "seen": 47,
+      "candidates": 3,
       "errors": []
     },
     "spiegel": {
       "name": "Der Spiegel",
       "fetched": 30,
       "noise": 0,
-      "seen": 27,
-      "candidates": 3,
+      "seen": 29,
+      "candidates": 1,
       "errors": []
     },
     "tagesschau-wirtschaft": {
@@ -136,8 +136,8 @@
       "name": "Deutsche Welle (EN)",
       "fetched": 147,
       "noise": 0,
-      "seen": 145,
-      "candidates": 2,
+      "seen": 147,
+      "candidates": 0,
       "errors": []
     },
     "ec-press": {
@@ -184,81 +184,44 @@
     },
     "zdf-wirtschaft": {
       "name": "ZDFheute Wirtschaft",
-      "fetched": 75,
+      "fetched": 73,
       "noise": 0,
-      "seen": 75,
+      "seen": 73,
       "candidates": 0,
       "errors": []
     }
   },
   "kept_titles": [
     {
-      "title": "Fußball-WM 2026: USA stehen nach 2:0 gegen Australien in der nächsten Runde",
+      "title": "WM 2026 Live: Algerien legt wegen Lionel Messi Protest ein",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "WM 2026 Live: Drei Erkenntnisse aus USA - Australien",
-      "source_id": "spiegel",
-      "score": 80,
-      "bucket": "general_other"
-    },
-    {
-      "title": "Morgan Freeman kündigt Blues-Album an: Schauspieler veröffentlicht musikalisches Debüt",
-      "source_id": "spiegel",
-      "score": 80,
-      "bucket": "general_other"
-    },
-    {
-      "title": "Zugverkehr eingestellt: Ein Toter und mehrere Verletzte bei Zugunglück in England",
-      "source_id": "faz",
-      "score": 76,
-      "bucket": "general_other"
-    },
-    {
-      "title": "2:0 gegen Australien: Die USA ziehen in die K.O.-Phase ein",
-      "source_id": "faz",
-      "score": 76,
-      "bucket": "general_other"
-    }
-  ],
-  "dropped_titles": [
-    {
-      "title": "Liveblog Fußball-WM 2026: Zwayer geht bei WM-Debüt mit Krämpfen zu Boden",
-      "source_id": "faz",
-      "score": 76,
-      "bucket": "general_other"
-    },
-    {
-      "title": "As populations fall, nations that can tap human potential will succeed",
+      "title": "Taylor Swift and the Haim sisters’ decade-long friendship",
       "source_id": "scmp",
       "score": 74,
       "bucket": "general_other"
     },
     {
-      "title": "2 trains collide north of London, killing 1 and injuring dozens",
+      "title": "Energy storage: China’s battery power sets stage for global leadership",
       "source_id": "scmp",
       "score": 74,
       "bucket": "general_other"
     },
     {
-      "title": "WM 2026: Sieg gegen Australien - USA im Sechzehntelfinale",
+      "title": "Why luxury tea towels are the ultimate kitchen and home decor upgrade",
+      "source_id": "scmp",
+      "score": 74,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Trump-Bemerkung zu Meloni löst Krise zwischen Italien und USA aus",
       "source_id": "tagesschau-all",
       "score": 45,
       "bucket": "general_other"
-    },
-    {
-      "title": "Poland's president strips Zelenskyy of top honor",
-      "source_id": "dw-en",
-      "score": 42,
-      "bucket": "general_other"
-    },
-    {
-      "title": "UK: Train collision north of London kills at least one person",
-      "source_id": "dw-en",
-      "score": 42,
-      "bucket": "general_other"
     }
-  ]
+  ],
+  "dropped_titles": []
 }

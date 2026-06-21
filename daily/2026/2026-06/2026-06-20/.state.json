@@ -57,8 +57,18 @@
       "article_count": 4
     },
     "push": {
-      "status": "running",
-      "started_at": "2026-06-19T21:13:35.521730+00:00"
+      "status": "ok",
+      "finished_at": "2026-06-19T21:13:41+00:00"
+    }
+  },
+  "deliveries": {
+    "discord": {
+      "status": "ok",
+      "message_id": "1517638597912694905",
+      "channel_id": "1491860896614715475",
+      "method": "openclaw_message",
+      "finished_at": "2026-06-19T21:14:00+00:00",
+      "note": "restored after merge-test state overwrite; message was really sent"
     }
   }
 }

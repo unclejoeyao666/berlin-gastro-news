@@ -1,0 +1,66 @@
+{
+  "date": "2026-06-21",
+  "started_at": "2026-06-19T22:29:32.121855+00:00",
+  "steps": {
+    "harvest": {
+      "status": "ok",
+      "finished_at": "2026-06-19T22:29:47.273017+00:00",
+      "stats": {
+        "unplayed": 5392,
+        "total": 5903
+      }
+    },
+    "select": {
+      "status": "ok",
+      "finished_at": "2026-06-19T22:29:47.421059+00:00",
+      "selected_ids": [
+        5936,
+        5937,
+        5938,
+        5940,
+        5941,
+        5924,
+        5880,
+        5927,
+        5928,
+        5929
+      ],
+      "diagnostics": {
+        "gastro_count": 5,
+        "keyword_count": 2,
+        "general_count": 3
+      }
+    },
+    "translate": {
+      "status": "ok",
+      "finished_at": "2026-06-19T22:39:33.500508+00:00",
+      "translated_ids": [
+        5936,
+        5938,
+        5940,
+        5941,
+        5924,
+        5880
+      ],
+      "skipped_count": 4
+    },
+    "publish_article": {
+      "status": "ok",
+      "finished_at": "2026-06-21T04:00:00.216137+00:00"
+    },
+    "publish_brief": {
+      "status": "ok",
+      "finished_at": "2026-06-21T04:00:00.287825+00:00"
+    },
+    "audio": {
+      "status": "ok",
+      "finished_at": "2026-06-21T04:00:15.278131+00:00",
+      "mp3_size": 6536492,
+      "article_count": 6
+    },
+    "push": {
+      "status": "running",
+      "started_at": "2026-06-21T04:00:15.278632+00:00"
+    }
+  }
+}
