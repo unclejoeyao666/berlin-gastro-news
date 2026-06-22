@@ -1,0 +1,598 @@
+{
+  "timestamp": "2026-06-22T04:00:18+00:00",
+  "caps": {
+    "HARVEST_CAP": 25,
+    "KEYWORD_KEEP": 10,
+    "GENERAL_KEEP": 5
+  },
+  "buckets": {
+    "gastro_t1": {
+      "total": 2,
+      "kept": 2
+    },
+    "gastro_t2": {
+      "total": 0,
+      "kept": 0
+    },
+    "general_keyword": {
+      "total": 25,
+      "kept": 10
+    },
+    "general_other": {
+      "total": 303,
+      "kept": 5
+    }
+  },
+  "totals": {
+    "kept": 17,
+    "dropped": 306
+  },
+  "per_source": {
+    "ahgz-gastro": {
+      "name": "AHGZ Gastronomie",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 25,
+      "candidates": 0,
+      "errors": []
+    },
+    "bmel": {
+      "name": "BMEL Pressemitteilungen",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 50,
+      "candidates": 0,
+      "errors": []
+    },
+    "dehoga-berlin": {
+      "name": "DEHOGA Berlin",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "faz": {
+      "name": "FAZ Aktuell",
+      "fetched": 102,
+      "noise": 0,
+      "seen": 19,
+      "candidates": 83,
+      "errors": []
+    },
+    "manager-magazin": {
+      "name": "Manager Magazin",
+      "fetched": 28,
+      "noise": 0,
+      "seen": 19,
+      "candidates": 9,
+      "errors": []
+    },
+    "politico-eu": {
+      "name": "Politico EU",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 10,
+      "errors": []
+    },
+    "scmp": {
+      "name": "South China Morning Post",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 50,
+      "errors": []
+    },
+    "spiegel": {
+      "name": "Der Spiegel",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 30,
+      "errors": []
+    },
+    "tagesschau-wirtschaft": {
+      "name": "Tagesschau Wirtschaft",
+      "fetched": 54,
+      "noise": 0,
+      "seen": 49,
+      "candidates": 5,
+      "errors": []
+    },
+    "wiwo": {
+      "name": "WirtschaftsWoche",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 3,
+      "candidates": 17,
+      "errors": []
+    },
+    "ahgz-all": {
+      "name": "AHGZ Allgemein",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 23,
+      "candidates": 2,
+      "errors": []
+    },
+    "ahgz-suppliers": {
+      "name": "AHGZ Zulieferer",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 25,
+      "candidates": 0,
+      "errors": []
+    },
+    "dw-de": {
+      "name": "Deutsche Welle (DE)",
+      "fetched": 82,
+      "noise": 0,
+      "seen": 57,
+      "candidates": 25,
+      "errors": []
+    },
+    "dw-en": {
+      "name": "Deutsche Welle (EN)",
+      "fetched": 146,
+      "noise": 0,
+      "seen": 123,
+      "candidates": 23,
+      "errors": []
+    },
+    "ec-press": {
+      "name": "European Commission Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "efsa-press": {
+      "name": "EFSA Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "euobserver": {
+      "name": "EUobserver",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 16,
+      "candidates": 4,
+      "errors": []
+    },
+    "tagesschau-all": {
+      "name": "Tagesschau All",
+      "fetched": 74,
+      "noise": 0,
+      "seen": 24,
+      "candidates": 50,
+      "errors": []
+    },
+    "wiwo-politik": {
+      "name": "WiWo Politik",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 7,
+      "candidates": 13,
+      "errors": []
+    },
+    "zdf-wirtschaft": {
+      "name": "ZDFheute Wirtschaft",
+      "fetched": 72,
+      "noise": 0,
+      "seen": 63,
+      "candidates": 9,
+      "errors": []
+    }
+  },
+  "kept_titles": [
+    {
+      "title": "Fußball-WM: Von der FIFA angekündigter Fan-Boom bleibt in den USA aus",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Investoren aus China: Ausverkauf deutscher Technik oder Chance?",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "\"CopenPay\" - Belohnung für nachhaltigen Tourismus in Kopenhagen",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 82,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Umstrittene Pläne für Lithium-Abbau im Erzgebirge",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 82,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Wie KI-Halluzination in Studien landet - und welche Gefahren drohen",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 82,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Verbessertes Kundenerlebnis: H10 Hotels führt eine neue mobile App ein",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Mannheim: Messerangreifer stirbt nach Polizeieinsatz",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Rente: Gewerkschaften und Ökonomen kritisieren Vorschläge zur Reform der Altersvorsorge",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "News: Renten-Reform, Keir Starmer vor Rücktritt, Friedrich Merz, Linken-Chef Luigi Pantisano",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Beton in Pompeji: Die Baustelle sieht aus wie ihr eigenes Denkmal",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Zehnter Jahrestag: Die bittere Brexit-Bilanz in sechs Grafiken",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Weinanbau im Atlantik: Ein Hoch auf die Azoren!",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Buffett: Was die EU-Vorgaben für Frühstück konkret bedeuten",
+      "source_id": "ahgz-all",
+      "score": 75,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Nie Huihua on the non-Westernness of Chinese government and the challenge to innovation",
+      "source_id": "scmp",
+      "score": 74,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Pimple patches: hide them or show them off? From Justin Bieber’s mushrooms to Dua Lipa’s stars",
+      "source_id": "scmp",
+      "score": 74,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "US attorney backs Trump on Washington pool ‘vandalising’, vows prosecutions",
+      "source_id": "scmp",
+      "score": 74,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "China’s Iran strategy an exercise in power without projection",
+      "source_id": "scmp",
+      "score": 74,
+      "bucket": "general_keyword"
+    }
+  ],
+  "dropped_titles": [
+    {
+      "title": "WM 2026 News heute: Kap Verdes WM-Märchen geht weiter",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "USA-Iran-Gespräche in der Schweiz: Vermittler Katar und Pakistan melden »ermutigende Fortschritte«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "US-Regierung droht »Pool-Vandalen« mit voller Härte des Gesetzes",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Präsidenten-Wahl in Kolumbien: Abelardo de la Espriella liegt in Stichwahl knapp vor ​Iván Cepeda",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Iran-Krieg: Syrien lehnt Trumps Idee für Kampf gegen Hisbollah ab",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kritik an Nina Warken: Krankenhaus-Verband DKG warnt, dass jede zweite Klinik pleitegehen könnte",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "WM 2026 Live: Iran und Belgien verzweifeln am gegnerischen Torhüter",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "WM 2026: Iran-Torhüter Alireza Beiranvand überragt bei Remis gegen Belgien",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Berlin: Mann mit zwei Kindern antisemitisch angegriffen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Iran-Krieg: 92 Prozent der Israelis sehen laut Umfrage Iran als Gewinner",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Wimbledon: Serena Williams erhält Einzel-Wildcard – Rückkehr mit 44 Jahren",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Parteitag in Potsdam: Linke beschließen Diätendeckel für Abgeordnete",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Graz in Österreich: Elke Kahr und der Aufstieg der Kommunistischen Partei",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Rapper Haftbefehl kündigt Pause aus gesundheitlichen Gründen an",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Friedrich Merz stellt keine Strafanträge wegen Beleidigung",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Spanien besiegt Saudi-Arabien auch dank Lamine Yamal: Die Rückkehr des jungen Königs",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Iran-Verhandlungen in Genf: JD Vance spricht von Fortschritt, Donald Trump droht mit Gewalt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Brasilien: Neue Festnahmen nach tödlichem Rope-Jumping-Sturz von Brücke",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ikkimel: Die Berliner Rapperin ist zum feministischen Superstar geworden. Worum geht es ihr?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Bundesliga Basketball: Alba Berlin holt den Meistertitel gegen Topfavorit Bayern München",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Großbritannien spekuliert über Rücktritt von Premier Keir Starmer am Montag",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Gaza: Mahmoud wurde von seiner sterbenden Mutter geboren; zwei Väter erheben Anspruch auf ihn",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Empathie stärken: Diese Übungen aus dem SPIEGEL-Coaching helfen Ihnen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Berufseinstieg: Mit 26 beginnt Henry Kalisch seine erste Ausbildung",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Fußball-WM 2026: Geburt statt Fußball? - Belgiens Jeremy Doku löst Debatte aus",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Bundeswehr in Litauen: Panzer im Partisanenwald",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "»Unternehmen Barbarossa« 1941: Der deutsche Vernichtungskrieg",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Gespräche in der Schweiz: Zum Auftakt droht Trump",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Liveblog Irankrieg: USA und Iran einigen sich auf Vorgehen für endgültiges Abkommen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "ETF-Boom: Die Mär vom garantierten Aktienaufschwung",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Empfehlung der Kommission: So soll die große Rentenreform im Detail aussehen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Stichwahl: Trump-Verbündeter gewinnt Präsidentenwahl in Kolumbien",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Undav löst den ersten WM-Notfall: Ein Geschenk, das Julian Nagelsmann verändert",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Nach Anthropic-Sperre: Europas Ausweg aus der KI-Falle",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Hochbegabung: „Welche Kinder kommen zum IQ-Test zu Ihnen, Herr Eckerle?“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "3:1 Gegen Neuseeland: Ägypten gewinnt erstmals bei einer WM",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Remis gegen Uruguay: Kap Verdes WM-Märchen geht weiter",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "WM-KolumnE „Blind date“: Die Königsdisziplin ist „Deutschland-nicht-Gucken“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "„Faschismus“-Vorwürfe: Jetzt hat auch die Linke eine Brandmauer-Diskussion",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Abschiebungen nach Afghanistan: Nicht die Falschen schützen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "WM aus italienischer Sicht: Schon wieder ein Sommer ohne die Azzurri",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Trainer Riera tritt nach: Mehr Größenwahn als Größe",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Vorbild Schweden: Eine bessere Rentenreform wird es nicht mehr geben",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "DFB-Team schon weiter: Undavs Super-Mario-Moment",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "USA unter Trump: Trump wirft britischem Premierminister Starmer Versagen vor",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Deutschland-Liveblog: Junge Union zu Rentenvorschlägen: „Große Chance für die Regierung“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Haftbefehl benötigt Pause: „Aktuell bin ich emotional und körperlich nicht in der Verfassung, aufzutreten“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Nach Deutschland-Spiel: Prügelei wegen Hitlergruß im Autokorso",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Angelique Kerbers Abschied: Das Herz bleibt auf dem Platz",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Behandlung von Demenz: „Antikörper sind nicht der Gamechanger bei Alzheimer“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    }
+  ]
+}
