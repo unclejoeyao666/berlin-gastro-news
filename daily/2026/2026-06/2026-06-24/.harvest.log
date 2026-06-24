@@ -1,0 +1,646 @@
+{
+  "timestamp": "2026-06-24T04:00:15+00:00",
+  "caps": {
+    "HARVEST_CAP": 25,
+    "KEYWORD_KEEP": 10,
+    "GENERAL_KEEP": 5
+  },
+  "buckets": {
+    "gastro_t1": {
+      "total": 23,
+      "kept": 18
+    },
+    "gastro_t2": {
+      "total": 10,
+      "kept": 0
+    },
+    "general_keyword": {
+      "total": 32,
+      "kept": 2
+    },
+    "general_other": {
+      "total": 311,
+      "kept": 5
+    }
+  },
+  "totals": {
+    "kept": 25,
+    "dropped": 342
+  },
+  "per_source": {
+    "ahgz-gastro": {
+      "name": "AHGZ Gastronomie",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 18,
+      "candidates": 7,
+      "errors": []
+    },
+    "bmel": {
+      "name": "BMEL Pressemitteilungen",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 50,
+      "candidates": 0,
+      "errors": []
+    },
+    "dehoga-berlin": {
+      "name": "DEHOGA Berlin",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 9,
+      "candidates": 1,
+      "errors": []
+    },
+    "faz": {
+      "name": "FAZ Aktuell",
+      "fetched": 102,
+      "noise": 0,
+      "seen": 18,
+      "candidates": 84,
+      "errors": []
+    },
+    "manager-magazin": {
+      "name": "Manager Magazin",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 13,
+      "candidates": 17,
+      "errors": []
+    },
+    "politico-eu": {
+      "name": "Politico EU",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 10,
+      "errors": []
+    },
+    "scmp": {
+      "name": "South China Morning Post",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 50,
+      "errors": []
+    },
+    "spiegel": {
+      "name": "Der Spiegel",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 30,
+      "errors": []
+    },
+    "tagesschau-wirtschaft": {
+      "name": "Tagesschau Wirtschaft",
+      "fetched": 40,
+      "noise": 0,
+      "seen": 22,
+      "candidates": 18,
+      "errors": []
+    },
+    "wiwo": {
+      "name": "WirtschaftsWoche",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 4,
+      "candidates": 16,
+      "errors": []
+    },
+    "ahgz-all": {
+      "name": "AHGZ Allgemein",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 11,
+      "candidates": 14,
+      "errors": []
+    },
+    "ahgz-suppliers": {
+      "name": "AHGZ Zulieferer",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 24,
+      "candidates": 1,
+      "errors": []
+    },
+    "dw-de": {
+      "name": "Deutsche Welle (DE)",
+      "fetched": 86,
+      "noise": 0,
+      "seen": 73,
+      "candidates": 13,
+      "errors": []
+    },
+    "dw-en": {
+      "name": "Deutsche Welle (EN)",
+      "fetched": 145,
+      "noise": 0,
+      "seen": 123,
+      "candidates": 22,
+      "errors": []
+    },
+    "ec-press": {
+      "name": "European Commission Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 10,
+      "errors": []
+    },
+    "efsa-press": {
+      "name": "EFSA Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "euobserver": {
+      "name": "EUobserver",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 9,
+      "candidates": 11,
+      "errors": []
+    },
+    "tagesschau-all": {
+      "name": "Tagesschau All",
+      "fetched": 71,
+      "noise": 0,
+      "seen": 16,
+      "candidates": 55,
+      "errors": []
+    },
+    "wiwo-politik": {
+      "name": "WiWo Politik",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 14,
+      "candidates": 6,
+      "errors": []
+    },
+    "zdf-wirtschaft": {
+      "name": "ZDFheute Wirtschaft",
+      "fetched": 73,
+      "noise": 0,
+      "seen": 62,
+      "candidates": 11,
+      "errors": []
+    }
+  },
+  "kept_titles": [
+    {
+      "title": "Vorschläge der Rentenkommission gefährden eine Million Minijobs im Gastgewerbe",
+      "source_id": "dehoga-berlin",
+      "score": 100,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Verleihung: Alle Sterne aus dem neuen Michelin Guide 2026",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Auszeichnung: Gastro Talent Awards 2026 in Frankfurt vergeben",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Finanzierung: Warum Kleinunternehmer lieber keinen Kredit aufnehmen",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Sterne über Frankfurt: Heiße Nordic Night im Frankfurter Hof",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Guide Michelin: Was die Michelin-Sterne für die Spitzengastronomie bedeuten",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Neuausrichtung: Coffee Fellows ernennt Co-CEO",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Jubiläum: Institute of Culinary Art feiert 20-Jähriges",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Der Brexit und die Wirtschaft: Auch nach zehn Jahren \"nur Verlierer\"",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Update Wirtschaft vom 23.06.2026",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Brexit-Bilanz: Frankfurt stärkt Rolle als Finanzplatz der EU",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Wieso hängt Italien bei E-Mobilität so hinterher?",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "ACEA-Zahlen: Jeder fünfte Neuwagen in EU fährt vollelektrisch",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "EHI-Studie: Rekordverluste durch Diebstahl im Einzelhandel",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ein Fünftel in Deutschland kann sich keine Woche Urlaub leisten",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Verleihung: Alle Sterne aus dem neuen Michelin Guide 2026",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Positionierung: Zuwachs für L’Art de Vivre Residenzen",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Messe Hamburg: Heiko Stutzinger wechselt nach Frankfurt",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Auszeichnung: Gastro Talent Awards 2026 in Frankfurt vergeben",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "HGK: Das war die HGK-Convention 2026 in Dresden",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Finanzierung: Warum Kleinunternehmer lieber keinen Kredit aufnehmen",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Sterne über Frankfurt: Heiße Nordic Night im Frankfurter Hof",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Guide Michelin: Was die Michelin-Sterne für die Spitzengastronomie bedeuten",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Minijob-Aus: „Frontalangriff auf die Flexibilität am Arbeitsmarkt“",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Übernachtungsmarkt: Wie der Klimawandel die Campingsaison verlängert",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    }
+  ],
+  "dropped_titles": [
+    {
+      "title": "Rentenreform-Vorschläge: Wie weit trägt der \"Geist der Kommission\"?",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kommentar zur Rente: Die Kommission hat geliefert",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Vorbild für Deutschland: So funktioniert das schwedische Rentensystem",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Rentenkommission setzt auf Kapitalmärkte",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Babyboomer in Rente hinterlassen bis 2040 große Lücke",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Was die Rentenreform für die verschiedenen Generationen bedeutet",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Schwarz-Rot will Vorschläge der Rentenkommission vollständig umsetzen",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Rentenkommission übergibt ihre Vorschläge",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Zahl der Insolvenzen erreicht höchsten Stand seit 2013",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Glyphosat-Beschwerde gegen Bayer teilweise angenommen",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Marktbericht: KI-Verkaufswelle belastet den DAX",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Datev Mittelstandsindex Juni : Umsätze im Mittelstand wieder unter Vorjahresniveau",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Geschäftsbericht: Übernachtungsrekord für Jugendherbergen",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "News des Tages: Rentenreform, Lehrkräfte und Politik, Trumps Probleme mit dem Reflecting Pool in Washington",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "News: Hitze-Welle in Europa, Social-Media-Verbot, Panzer-Hersteller KNDS",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "WM 2026 News heute: Frankreich-Coach Didier Deschamps reist wegen Tod seiner Mutter ab",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Gehalt: Wie viel Einkommen für ein zufriedenes Leben nötig ist",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "NBA: Hannes Steinbach und Christian Anderson von den Charlotte Hornets in Draft ausgewählt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Australien: Opfer von Hai-Angriff in Coogee, Sydney kurzzeitig aus Koma erwacht",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "YouTube einigt sich mit 16-Jährigem außergerichtlich",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Airbus: 16 Flugzeuge vom Typ A380 der Emirates und von Qantas müssen wegen Rissen am Boden bleiben",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Mexiko: Unberührte Maya-Stätte im Dschungel entdeckt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Stadt Halle (Saale) fordert Strand-Bad auf, umstrittene Einlass-Regel zu Deutsch-Kenntnissen zurückzunehmen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Insgesamt 450 Jahre Haft für acht »Antifa-Terroristen« in Texas",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "WM 2026 Live: Kroatien gegen Panama, Kolumbien gegen DR Kongo",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "WM 2026: England und Thomas Tuchel enttäuschen gegen Ghana",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Deutsche Bahn: Erst Züge fahren wieder nach bundesweitem Ausfall wieder",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Alibaba: Konzern verklagt US-Regierung gegen Einstufung als chinesisches Militärunternehmen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Deutsche Bahn: Bundesweiter Ausfall des Zugfunks legt Bahnverkehr lahm",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Georgia Meloni setzt im Streit mit Donald Trump nun auf Deeskalation",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "WM 2026: Cristiano Ronaldo führt Portugal mit zwei Toren zu Sieg gegen Usbekistan",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Österreich: Bremer Schulklasse gerät bei Gewitter in Bergnot",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Niedersachsen: Stichflamme beim Grillen – Elfjähriger rettet sich in Kanal",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Boris Pistorius: Der Verteidigungsminister will das Fregatten-Projekt F126 beenden",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kenia: Proteste erzwingen Entschuldigung im Streit um Ebola-Zentrum",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Gespräche mit Taliban: Vertreter erstmals in Brüssel empfangen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Straße von Hormus: Weltschifffahrtsorganisation will 11.000 festsitzende Seeleute evakuieren",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Korsika: Eine autonome Insel? Frankreichs Unterhaus billigt Pläne",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Friedrich Merz und die Rente: Endlich mal ein guter Tag für den CDU-Kanzler",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Frankreich, Spanien, Großbritannien: Hitze macht Europa zu schaffen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Clueso: »Ich habe kein Problem damit, ›Fuck AfD‹ zu sagen«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Herbert Grönemeyer erhält Deutschen Nationalpreis und kritisiert deutsche Politiker",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Rente – Frührente: Gartenbauer? Altenpflegerin? Wer die »Rente mit 63« wirklich nutzt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Beziehung zur Industrie: Ist Merz der Kanzler der Bosse?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Brauereikonzern: Heineken holt Kaffeemanager und beendet Führungskrise",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Seit Brexit: Der britische Aktienmarkt hinkt dem europäischen hinterher",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Vanguard, Blackrock und Co.: Billionen in fossiler Wirtschaft angelegt",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Deutsches Schulbarometer: Gewalt unter Schülern stresst deutsche Lehrer am meisten",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Funkstörung: Nach komplettem Stillstand läuft Bahnverkehr wieder an",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "F.A.Z.-Empfang in Berlin: Menschen mit Menschen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    }
+  ]
+}

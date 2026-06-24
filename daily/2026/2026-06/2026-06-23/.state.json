@@ -56,8 +56,19 @@
       "article_count": 3
     },
     "push": {
-      "status": "running",
-      "started_at": "2026-06-23T05:00:09.678530+00:00"
+      "status": "ok",
+      "finished_at": "2026-06-23T05:00:15.316536+00:00"
+    }
+  },
+  "deliveries": {
+    "discord": {
+      "status": "ok",
+      "message_id": "1518843125588561940",
+      "channel_id": "1491860896614715475",
+      "method": "openclaw_message",
+      "finished_at": "2026-06-23T05:00:20.616644+00:00",
+      "chars": 922,
+      "mp3_size": 1417968
     }
   }
 }
