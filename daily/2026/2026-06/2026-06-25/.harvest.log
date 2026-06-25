@@ -1,0 +1,646 @@
+{
+  "timestamp": "2026-06-25T04:00:16+00:00",
+  "caps": {
+    "HARVEST_CAP": 25,
+    "KEYWORD_KEEP": 10,
+    "GENERAL_KEEP": 5
+  },
+  "buckets": {
+    "gastro_t1": {
+      "total": 14,
+      "kept": 14
+    },
+    "gastro_t2": {
+      "total": 10,
+      "kept": 0
+    },
+    "general_keyword": {
+      "total": 27,
+      "kept": 6
+    },
+    "general_other": {
+      "total": 327,
+      "kept": 5
+    }
+  },
+  "totals": {
+    "kept": 25,
+    "dropped": 348
+  },
+  "per_source": {
+    "ahgz-gastro": {
+      "name": "AHGZ Gastronomie",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 22,
+      "candidates": 3,
+      "errors": []
+    },
+    "bmel": {
+      "name": "BMEL Pressemitteilungen",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 49,
+      "candidates": 1,
+      "errors": []
+    },
+    "dehoga-berlin": {
+      "name": "DEHOGA Berlin",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 8,
+      "candidates": 2,
+      "errors": []
+    },
+    "faz": {
+      "name": "FAZ Aktuell",
+      "fetched": 105,
+      "noise": 0,
+      "seen": 18,
+      "candidates": 87,
+      "errors": []
+    },
+    "manager-magazin": {
+      "name": "Manager Magazin",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 11,
+      "candidates": 19,
+      "errors": []
+    },
+    "politico-eu": {
+      "name": "Politico EU",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 10,
+      "errors": []
+    },
+    "scmp": {
+      "name": "South China Morning Post",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 50,
+      "errors": []
+    },
+    "spiegel": {
+      "name": "Der Spiegel",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 30,
+      "errors": []
+    },
+    "tagesschau-wirtschaft": {
+      "name": "Tagesschau Wirtschaft",
+      "fetched": 24,
+      "noise": 0,
+      "seen": 13,
+      "candidates": 11,
+      "errors": []
+    },
+    "wiwo": {
+      "name": "WirtschaftsWoche",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 20,
+      "errors": []
+    },
+    "ahgz-all": {
+      "name": "AHGZ Allgemein",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 17,
+      "candidates": 8,
+      "errors": []
+    },
+    "ahgz-suppliers": {
+      "name": "AHGZ Zulieferer",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 25,
+      "candidates": 0,
+      "errors": []
+    },
+    "dw-de": {
+      "name": "Deutsche Welle (DE)",
+      "fetched": 84,
+      "noise": 0,
+      "seen": 65,
+      "candidates": 19,
+      "errors": []
+    },
+    "dw-en": {
+      "name": "Deutsche Welle (EN)",
+      "fetched": 145,
+      "noise": 0,
+      "seen": 124,
+      "candidates": 21,
+      "errors": []
+    },
+    "ec-press": {
+      "name": "European Commission Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 10,
+      "errors": []
+    },
+    "efsa-press": {
+      "name": "EFSA Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "euobserver": {
+      "name": "EUobserver",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 13,
+      "candidates": 7,
+      "errors": []
+    },
+    "tagesschau-all": {
+      "name": "Tagesschau All",
+      "fetched": 72,
+      "noise": 0,
+      "seen": 16,
+      "candidates": 56,
+      "errors": []
+    },
+    "wiwo-politik": {
+      "name": "WiWo Politik",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 5,
+      "candidates": 15,
+      "errors": []
+    },
+    "zdf-wirtschaft": {
+      "name": "ZDFheute Wirtschaft",
+      "fetched": 72,
+      "noise": 0,
+      "seen": 63,
+      "candidates": 9,
+      "errors": []
+    }
+  },
+  "kept_titles": [
+    {
+      "title": "Änderung des Arbeitszeitgesetzes: Erster Referentenentwurf ist eine Enttäuschung auf ganzer Linie",
+      "source_id": "dehoga-berlin",
+      "score": 100,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Kein Widerrufsbutton erforderlich für Online-Hotelbuchungen",
+      "source_id": "dehoga-berlin",
+      "score": 100,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Sterneverleihung: Freudentränen und Sternenregen beim Michelin Guide 2026",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Personalie: Cuisyn erweitert Führung für weiteres Wachstum",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Michelin Guide 2026: Daniel Schimkowitsch holt drei Michelin-Sterne ins L.A. Jordan",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Wirtschaft blickt kritisch auf Teile der Rentenreform",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Stimmung aufgehellt: Unternehmen hoffen auf Entspannung in Nahost",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Wirtschaft vor acht vom 24.06.2026",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Update Wirtschaft vom 24.06.2026",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Pläne der Rentenkommission: Was der Wegfall der Minijobs bedeuten würde",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Güterverkehr nach Bahnstörung weiter stark beeinträchtigt",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Störung bei der Bahn - Kommunikationssystem als Knackpunkt",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Wie Bahnfahrer vom Italo-Einstieg in Deutschland profitieren könnten",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Pistorius beendet umstrittenes Fregatten-Projekt F126",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "#CheckDeinNetz: Mitmach-Aktion für besseren Mobilfunk gestartet",
+      "source_id": "bmel",
+      "score": 83,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Sterneverleihung: Freudentränen und Sternenregen beim Michelin Guide 2026",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "FUR Reiseanalyse: Die Urlaubslust der Deutschen geht zurück",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Personalie: Cuisyn erweitert Führung für weiteres Wachstum",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Michelin Guide 2026: Daniel Schimkowitsch holt drei Michelin-Sterne ins L.A. Jordan",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Welttag des Duftes: Dufte Sache: Wenn Hotels die Nase erobern",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Nach Insolvenz: Der erste Revo-Erbe ist offiziell",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Business Travel mit Widersprüchen: Wenn Reisen gut tut – und trotzdem verunsichert",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Tourismusnachfrage: Jeder Fünfte kann sich keinen Urlaub leisten",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Süßstoffe: Wie gefährlich Aspartam wirklich ist – ein Ernährungswissenschaftler klärt auf",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "WM 2026: Brasilien schlägt Schottland - Ist die Boston Beer Party jetzt vorbei?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    }
+  ],
+  "dropped_titles": [
+    {
+      "title": "Risse in Tragflächen: Airbus muss A380-Maschinen untersuchen",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Marktbericht: Verkaufswelle rollt weiter",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Neuer Literatur-Newsletter: Wie kann der Bachmann-Preis gutes Fernsehen sein?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "News: WM-Spiel Deutschland gegen Ecuador, Friedrich Merz, schwarz-roter Rentenkompromiss, Organspenden",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "WM 2026 News heute: Bundestrainer Julian Nagelsmann hält nichts von Rotation gegen Ecuador",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Polizei in Offenburg beendet »anstößiges Schauspiel« im Burgerwaldsee",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Australien: Studie zeigt, wie Jugendliche das Social-Media-Verbot austricksen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Fotos zeigen Zerstörung in Caracas",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Veronica Ferres ist in die Oscar-Akademie eingeladen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Zwei starke Erdbeben erschüttern Venezuela",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Donald Trump kritisiert Friedrich Merz und lobt Wolodymyr Selenskyj",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Frankreich: Marine stopft Risse am Wrack des 1999 untergegangenen Öl-Tankers »Erika«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Donald Trump streitet mit der eigenen Partei und brüllt Senator an",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "VW verkauft Motorentochter für 7,4 Milliarden Euro",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Bundeswehr: Fast 300.000 Fragebögen zum Wehrdienst verschickt – 530 Freiwillige für 2026 rekrutiert",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "WM 2026: Manzambi führt Schweiz gegen Kanada zum Gruppensieg",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ukraine: Zwei Mitarbeiter von Minenräumorganisation bei Angriff getötet",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Texas: Giraffe aus Ranch entkommen – 5000 Dollar Belohnung ausgesetzt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Herne-Wanne: DHL-Bote wegen gefährlicher Körperverletzung verurteilt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "E5-Gipfel im Kanzleramt: Wie Merz und Europas Spitzen Trump beeindrucken wollen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Russischer Oppositionspolitiker Maxim Kruglow muss sieben Jahre in Haft",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Blumenkübel-Streit in Schwanau: Maschinenbauunternehmen Herrenknecht erwägt Verlagerung des Standorts",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "WM 2026 live: Schweiz gegen Kanada im Liveticker",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Russland-Ukraine-Krieg: Sönke Neitzel über Putins Ziele und Europas Verantwortung - Spitzengespräch",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Vassili Golod übernimmt als Nachfolger von Georg Restle Leitung des ARD-Magazins »Monitor«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Social Media: Warum ein Verbot für Kinder und Jugendliche der falsche Weg ist",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "»Ingeborg Bachmann – Jemand, der einmal ich war«: Geisterstunde einer stolz vereinsamten Dichterin",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Zohran Mamdani: New Yorker Bürgermeister baut seine Machtbasis in der Demokratischen Partei aus",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Berlin: Hitze stellt neue U-Bahn ohne Klimaanlage auf die Probe",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Hitze in der Wohnung: Was Mieter vor dem Kauf einer Klimaanlage wissen müssen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Studie zu moderatem Konsum: Wann wird Alkohol gefährlich?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "„Manipulation der Stimmen“: Peruanischer Präsidentschaftskandidat Sanchez will Wahlergebnis nicht anerkennen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Tödliche Messerattacke: 25-Jähriger stirbt nach Streit in Café in Thüringen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Urlaub mit Kindern: Endlich ruft niemand Mama!",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "7,5 auf der Richterskala: Venezuela vom stärksten Beben in seiner Geschichte erschüttert",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Venezuela: US-Behörde befürchtet nach Erdbeben bis zu 100.000 Tote",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Liveblog Irankrieg: Iranische Revolutionsgarde nennt neue Route in Straße von Hormus inakzeptabel",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Buchungszurückhaltung: Zum Ferienbeginn werden noch Urlauber gesucht",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Nach Apartheid-Vergleich: Kallas ist nun auch in Brüssel isoliert",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Liveblog Ukrainekrieg: Selenskyj kündigt Präventivschläge gegen russische Anlagen an",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Hitze-Liveblog: Wetterdienst erwartet für Freitag Hitzerekord von 40 bis 41 Grad",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "3:0 gegen Schottland: Neymars Einsatz versetzt Brasiliens Fans in Ekstase",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Bahn-Stillstand: „Die Frage müsste der Verkehrsminister im eigenen Haus stellen“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Dauerbaustelle „Stuttgart 21“: Falsch kalkuliert, falsch geplant, falsch gebaut",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Deutsche Bahn: Eine Störung bisher unbekannter Art",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Schienenverkehr: Kleines Bahn-, großes Staatsproblem",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Entsendung von Arbeitnehmern: Merz' Bekenntnisse zum Binnenmarkt sind vor allem Schlagzeilen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "erhöhte Sterblichkeit: Hitze ist eine Gefahrenlage",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Trumps Reflecting Pool: Make Algae Green Again",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Taliban in Brüssel: Empörung hilft den Frauen in Afghanistan nicht",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    }
+  ]
+}
