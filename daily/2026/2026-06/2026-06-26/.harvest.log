@@ -1,0 +1,646 @@
+{
+  "timestamp": "2026-06-26T04:00:14+00:00",
+  "caps": {
+    "HARVEST_CAP": 25,
+    "KEYWORD_KEEP": 10,
+    "GENERAL_KEEP": 5
+  },
+  "buckets": {
+    "gastro_t1": {
+      "total": 15,
+      "kept": 15
+    },
+    "gastro_t2": {
+      "total": 12,
+      "kept": 0
+    },
+    "general_keyword": {
+      "total": 25,
+      "kept": 5
+    },
+    "general_other": {
+      "total": 330,
+      "kept": 5
+    }
+  },
+  "totals": {
+    "kept": 25,
+    "dropped": 350
+  },
+  "per_source": {
+    "ahgz-gastro": {
+      "name": "AHGZ Gastronomie",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 23,
+      "candidates": 2,
+      "errors": []
+    },
+    "bmel": {
+      "name": "BMEL Pressemitteilungen",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 50,
+      "candidates": 0,
+      "errors": []
+    },
+    "dehoga-berlin": {
+      "name": "DEHOGA Berlin",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 8,
+      "candidates": 2,
+      "errors": []
+    },
+    "faz": {
+      "name": "FAZ Aktuell",
+      "fetched": 104,
+      "noise": 0,
+      "seen": 20,
+      "candidates": 84,
+      "errors": []
+    },
+    "manager-magazin": {
+      "name": "Manager Magazin",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 6,
+      "candidates": 24,
+      "errors": []
+    },
+    "politico-eu": {
+      "name": "Politico EU",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 10,
+      "errors": []
+    },
+    "scmp": {
+      "name": "South China Morning Post",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 50,
+      "errors": []
+    },
+    "spiegel": {
+      "name": "Der Spiegel",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 30,
+      "errors": []
+    },
+    "tagesschau-wirtschaft": {
+      "name": "Tagesschau Wirtschaft",
+      "fetched": 32,
+      "noise": 0,
+      "seen": 22,
+      "candidates": 10,
+      "errors": []
+    },
+    "wiwo": {
+      "name": "WirtschaftsWoche",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 20,
+      "errors": []
+    },
+    "ahgz-all": {
+      "name": "AHGZ Allgemein",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 14,
+      "candidates": 11,
+      "errors": []
+    },
+    "ahgz-suppliers": {
+      "name": "AHGZ Zulieferer",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 25,
+      "candidates": 0,
+      "errors": []
+    },
+    "dw-de": {
+      "name": "Deutsche Welle (DE)",
+      "fetched": 83,
+      "noise": 0,
+      "seen": 65,
+      "candidates": 18,
+      "errors": []
+    },
+    "dw-en": {
+      "name": "Deutsche Welle (EN)",
+      "fetched": 148,
+      "noise": 0,
+      "seen": 122,
+      "candidates": 26,
+      "errors": []
+    },
+    "ec-press": {
+      "name": "European Commission Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 10,
+      "errors": []
+    },
+    "efsa-press": {
+      "name": "EFSA Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 8,
+      "candidates": 2,
+      "errors": []
+    },
+    "euobserver": {
+      "name": "EUobserver",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 11,
+      "candidates": 9,
+      "errors": []
+    },
+    "tagesschau-all": {
+      "name": "Tagesschau All",
+      "fetched": 71,
+      "noise": 0,
+      "seen": 20,
+      "candidates": 51,
+      "errors": []
+    },
+    "wiwo-politik": {
+      "name": "WiWo Politik",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 9,
+      "candidates": 11,
+      "errors": []
+    },
+    "zdf-wirtschaft": {
+      "name": "ZDFheute Wirtschaft",
+      "fetched": 71,
+      "noise": 0,
+      "seen": 59,
+      "candidates": 12,
+      "errors": []
+    }
+  },
+  "kept_titles": [
+    {
+      "title": "DEHOGA trauert um seinen Ehrenpräsidenten Ernst Fischer",
+      "source_id": "dehoga-berlin",
+      "score": 100,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Der Tankrabatt der Bundesregierung läuft zum 30. Juni 2026 aus – bei uns können Sie dauerhaft günstiger tanken!",
+      "source_id": "dehoga-berlin",
+      "score": 100,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Kommentar: „Und wo sind die Frauen beim Michelin Guide 2026?“",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Konzept : Bliss Group zeigt gastronomische Vielfalt in Heidelberg",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Wirtschaft vor acht vom 25.06.2026",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Update Wirtschaft vom 25.06.2026",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Sind Klimageräte Stromfresser? So hoch sind Verbrauch und Kosten",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Oberstes US-Gericht entscheidet im Glyphosat-Streit zugunsten von Bayer",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Mobilfunk-Messwoche: Wo es in Deutschland noch Funklöcher gibt",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Zu viel Euphorie am Ölmarkt? Warum der Preissturz trügt",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Wurden die Betriebsratswahlen am Frankfurter Flughafen manipuliert?",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Frankfurt: Limehome unterzeichnet ersten Mietvertrag mit Aroundtown",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Markenhotellerie: Leonardo Smart gibt in Wien sein Debüt",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Kommentar: „Und wo sind die Frauen beim Michelin Guide 2026?“",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Konzept : Bliss Group zeigt gastronomische Vielfalt in Heidelberg",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Interview: Hotelverband Deutschland: „Es gibt viele Tretminen um uns herum“",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Kunst im Hotel: Kunst im Steigenberger Icon Grandhotel Handelshof",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Marketing: Welche KPIs zählen wirklich in Social Media?",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Nachruf: Dehoga trauert um Ehrenpräsident Ernst Fischer",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Projekt: An die Ikone ICC sollen hohe Hotels gebaut werden",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Deutschlandtourismus: Das zeigt der Urlaubsplanungsindex Sommer 2026",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Interview: So will Worldhotels vom Glamping-Trend profitieren",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Guide Michelin: Diese Einsternerestaurants lohnen sich besonders",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Hitze in Paris: Stadt erlässt Alkoholverbot im öffentlichen Raum",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Hitze-Liveblog: Paris verhängt weitreichendes Alkoholverbot",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    }
+  ],
+  "dropped_titles": [
+    {
+      "title": "Gaming-Branche: Vorverkauf für neues \"GTA\"-Spiel gestartet",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "VW-Manager Michael Obrowski wird neuer Finanzchef der Bahn",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Marktbericht: DAX rappelt sich auf",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "News: AfD, Cem Özdemir, Grüne, Krankenkassen, Nina Warken",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Grillen: Fleisch, Fisch und Gemüse - So reduzieren Sie gefährliche Stoffe",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "WM 2026 News heute: Julian Nagelsmann nimmt Manuel Neuer in Schutz",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Sanierung der Bahnstrecke Hamburg–Berlin deutlich teurer",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Demokratische Republik Kongo: Mehr als 300 Tote durch Ebola bestätigt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Straße von Hormus: Durchfahrten nach Angriff auf Frachtschiff gestoppt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Erdbeben in Venezuela: Mehr als 200 Menschen verschüttet – auch das THW rückt an",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "WM 2026: Julian Nagelsmann kritisiert Johannes B. Kerner: »Hört auf mit dem Quatsch«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "WM 2026: Deutschland unterliegt Ecuador – Manuel Neuer bei Gegentreffern unglücklich",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "WM 2026: Deutschland in der Einzelkritik – Manuel Neuer wackelt, Leroy Sané mit Tor und Fehler",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kaufhauskette Galeria bekommt Millionenkredit – aber Schließungen geplant",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Florida: Berüchtigter Abschiebeknast »Alligator Alcatraz« ist geschlossen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "König Charles III.: Monarch zahlt 12,9 Millionen Pfund Steuern",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Felix Nmecha: Wie problematisch sind die Netzwerke hinter dem WM-Held?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Glyphosat in Roundup: Wie das Supreme-Court-Urteil dem Bayer-Konzern und Donald Trump hilft",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "WM 2026 Deutschland vs. Ecuador: Schiedsrichter-Experten sehen klares Foul vor Treffer von Leroy Sané",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Donald Trump: Nato-Chef Mark Rutte präsentiert im Weißen Haus die »Trump-Billion«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Boris Pistorius: Ende des Marine-Großprojekts erhöht Druck auf Minister",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Bund und Länder: Einigung auf Entlastung für Kommunen erzielt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Fußball-WM 2026: »Der Zug hat keine Bremse« wird zur inoffiziellen WM-Hymne",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "»Medusa Protocol«: Was machen Auftragsmörder, wenn sie nicht mehr töten wollen?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Vinted: Werden hier Kinder verkauft? Die absurde Debatte über dubiose Anzeigen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Donald Trump und die 250-Jahres-Feier: »Er dringt nicht mehr durch«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ukraine-Krieg: Wie eine Angriffsdrohung gegen Belarus Lukaschenko in Bedrängnis bringt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kibiwott Kandie: Lange Sperre nach verweigerter Dopingprobe und Fälschungen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "ZOiS: Renommiertes Osteuropa-Institut meldet Cyberangriff",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Tennis: Chris Evert macht erneute Krebserkrankung öffentlich",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "WM 2026 News heute: Undav ist laut Podolski »Kein zweiter Podolski«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ringen um Reform: Die Steuer-Brandmauer",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Trotz Krieg: Warum Israels Wirtschaft brummt",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Farage zu Starmer-Rücktritt: „Ich habe ihn entsorgt“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Takaichis Zukunftsbranchen: Ein Billionen-Plan für Japan",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Kritik an DB nach Komplettausfall: „Von einer Katastrophe zur nächsten“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "F.A.Z. exklusiv: Uber-Partner kauft Taxizentrale Frankfurt – „Dieser Grabenkrieg muss aufhören“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Finale Staffel „The Bear“: Fehlt eigentlich nur noch Godzilla",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Attraktive Arbeitgeber: Die Autobranche lockt weiter Studierende an",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "DFB-Team in Einzelkritik: Nmechas Nickerchen und ein Super-Joker, der leer ausgeht",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "1:1 im direkten Duell: Japan und Schweden in der K.o.-Runde",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Liveblog Fußball-WM 2026: Mit Krücken im Stadion – Beifall für Schlotterbeck",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Gegen tunesien: Oranje-Team bei WM als Gruppensieger weiter",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Opferzahl steigt: Ausländische Helfer treffen im Erdbebengebiet in Venezuela ein",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Liveblog Irankrieg: Evakuierungsaktion in Straße von Hormus nach Angriff ausgesetzt",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Einigung auf Lastenteilung: Plötzlich ganz viel Harmonie zwischen Bund und Ländern",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Rentenkommission: Die Missverständnisse der Minijobkritiker",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Iran und Oman: In der Straße von Hormus ist ein neuer Machtkampf entbrannt",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Zukunft des Staatensystems: Warum auch Großmächte vom Völkerrecht profitieren",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Temperaturen bis zu 40 Grad: Jetzt kommt die Hitzeflaute",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    }
+  ]
+}
