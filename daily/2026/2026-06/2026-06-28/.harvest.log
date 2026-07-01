@@ -1,0 +1,616 @@
+{
+  "timestamp": "2026-06-28T04:00:12+00:00",
+  "caps": {
+    "HARVEST_CAP": 25,
+    "KEYWORD_KEEP": 10,
+    "GENERAL_KEEP": 5
+  },
+  "buckets": {
+    "gastro_t1": {
+      "total": 3,
+      "kept": 3
+    },
+    "gastro_t2": {
+      "total": 2,
+      "kept": 2
+    },
+    "general_keyword": {
+      "total": 26,
+      "kept": 10
+    },
+    "general_other": {
+      "total": 222,
+      "kept": 5
+    }
+  },
+  "totals": {
+    "kept": 20,
+    "dropped": 230
+  },
+  "per_source": {
+    "ahgz-gastro": {
+      "name": "AHGZ Gastronomie",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 24,
+      "candidates": 1,
+      "errors": []
+    },
+    "bmel": {
+      "name": "BMEL Pressemitteilungen",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 50,
+      "candidates": 0,
+      "errors": []
+    },
+    "dehoga-berlin": {
+      "name": "DEHOGA Berlin",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "faz": {
+      "name": "FAZ Aktuell",
+      "fetched": 105,
+      "noise": 0,
+      "seen": 42,
+      "candidates": 63,
+      "errors": []
+    },
+    "manager-magazin": {
+      "name": "Manager Magazin",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 26,
+      "candidates": 4,
+      "errors": []
+    },
+    "politico-eu": {
+      "name": "Politico EU",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 10,
+      "errors": []
+    },
+    "scmp": {
+      "name": "South China Morning Post",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 50,
+      "errors": []
+    },
+    "spiegel": {
+      "name": "Der Spiegel",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 2,
+      "candidates": 28,
+      "errors": []
+    },
+    "tagesschau-wirtschaft": {
+      "name": "Tagesschau Wirtschaft",
+      "fetched": 27,
+      "noise": 0,
+      "seen": 24,
+      "candidates": 3,
+      "errors": []
+    },
+    "wiwo": {
+      "name": "WirtschaftsWoche",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 2,
+      "candidates": 18,
+      "errors": []
+    },
+    "ahgz-all": {
+      "name": "AHGZ Allgemein",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 23,
+      "candidates": 2,
+      "errors": []
+    },
+    "ahgz-suppliers": {
+      "name": "AHGZ Zulieferer",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 25,
+      "candidates": 0,
+      "errors": []
+    },
+    "dw-de": {
+      "name": "Deutsche Welle (DE)",
+      "fetched": 81,
+      "noise": 0,
+      "seen": 72,
+      "candidates": 9,
+      "errors": []
+    },
+    "dw-en": {
+      "name": "Deutsche Welle (EN)",
+      "fetched": 146,
+      "noise": 0,
+      "seen": 134,
+      "candidates": 12,
+      "errors": []
+    },
+    "ec-press": {
+      "name": "European Commission Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 8,
+      "candidates": 2,
+      "errors": []
+    },
+    "efsa-press": {
+      "name": "EFSA Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "euobserver": {
+      "name": "EUobserver",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 17,
+      "candidates": 3,
+      "errors": []
+    },
+    "tagesschau-all": {
+      "name": "Tagesschau All",
+      "fetched": 68,
+      "noise": 0,
+      "seen": 29,
+      "candidates": 39,
+      "errors": []
+    },
+    "wiwo-politik": {
+      "name": "WiWo Politik",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 15,
+      "candidates": 5,
+      "errors": []
+    },
+    "zdf-wirtschaft": {
+      "name": "ZDFheute Wirtschaft",
+      "fetched": 70,
+      "noise": 0,
+      "seen": 66,
+      "candidates": 4,
+      "errors": []
+    }
+  },
+  "kept_titles": [
+    {
+      "title": "Karrieren im Gastgewerbe: Von der Aushilfe an der Bar zum COO",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Kuba kündigt Wirtschaftsreformen an - hilft das den Menschen?",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "80 Jahre Vespa: Geburtstagsparty mit wirtschaftlichen Sorgen",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Für ausgewählte Firmen: Anthropic gibt KI \"Mythos 5\" wieder frei",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Wassersport: Tourismus-Schub für Lausitzer Seen",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Karrieren im Gastgewerbe: Von der Aushilfe an der Bar zum COO",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "WM 2026 News heute: DR Kongo siegt gegen Usbekistan, Kolumbien gewinnt Gruppe vor Portugal",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Narzissmus: Wenn der Sex mit Narzissten begeistert – und später belastet",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Narzissmus: Wie narzisstische Menschen lieben – und verletzen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Serbien: Präsident Vučić kündigt taktischen Rücktritt an",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "NSDAP-Mitgliederkartei: Jeder hätte wissen können, ob sein Vater Nazi war",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Neues aus der Campingwelt: Das Zelt ist nicht genug",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Superstars gesucht: Land ohne Genie",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Rheingau: Den Winzern wird das Wasser knapp",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Hong Kong Observatory issues amber rainstorm signal, warns city to brace for rain",
+      "source_id": "scmp",
+      "score": 74,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Global attractions that ooze innovation and imagination",
+      "source_id": "scmp",
+      "score": 74,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Hong Kong’s Cantonese restaurants must innovate and adapt to survive",
+      "source_id": "scmp",
+      "score": 74,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Formula One’s Charles Leclerc and his rare watch collection, from Richard Mille and Patek Philippe to Hublot",
+      "source_id": "scmp",
+      "score": 74,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Doorstep Statement by Commissioner Lahbib at Budapest Pride",
+      "source_id": "ec-press",
+      "score": 70,
+      "bucket": "gastro_t2"
+    },
+    {
+      "title": "Speech by Commissioner Lahbib at the Budapest Pride Diplomatic Reception",
+      "source_id": "ec-press",
+      "score": 60,
+      "bucket": "gastro_t2"
+    }
+  ],
+  "dropped_titles": [
+    {
+      "title": "Irankrieg: Donald Trump droht Iran mit Vernichtung nach der nächsten Nacht voller Angriffe",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "WM 2026: England gewinnt Gruppe L dank Jude Bellingham und Harry Kane",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Venezuela: Die Zahl der Todesopfer steigt, die Wut auf die Regierung wächst",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "WM 2026: Jude Bellingahm und Harry Kane erlösen England – Drei Erkenntnisse zum Sieg gegen Panama",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Hitzewelle: Mehrere Menschen seit Freitag bei Badeunfällen gestorben",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Donald Trump: Trump will Lance Schroyer zum neuen ICE-Direktor machen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Boxen: WBC erklärt Agit Kabayel zum Weltmeister im Schwergewicht",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Hitze und Gesundheit: Wie Krankenhäuser auf Extremtemperaturen reagieren",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Wie Donald Trump Washington umbaut, um sich ein Denkmal zu setzen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Johann Lafer: Unheilbar an Lymphdrüsenkrebs erkrankt – Wunschziel Mount Everest",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Wimbledon 2026: Alexander Zverev klagt vor Auftakt über »Rasenallergie«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Zwischen Krawall, Kriminalität und Kult: Die Cops von der Davidwache - SPIEGEL TV",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Wie Eltern die Geschwisterbeziehung stärken - Podcast mit Eliane Retz",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Wie die »Azubis gegen Rechts« ihre Betriebe verändern wollen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Australien verdoppelt Geldstrafen für Verstöße gegen Social-Media-Verbot für Kinder",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "WM 2026 News heute: Philipp Lahm fordert Joshua Kimmich im DFB-Mittelfeld gegen Paraguay",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Rudi Völler bei der Fußball-WM 2026: Der Meister der Besänftigung",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Rente - Reformpläne: »Am schlimmsten sind die Empfehlungen 14 und 15«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Erdbeben in Venezuela: Familie nach 26 Stunden lebend aus Trümmern gerettet",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Berlin: Männer greifen trans Frau und nicht-binäre Person an",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Mallorca: Mann soll Tochter in den Kosovo entführt haben",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Oberammergau: Christian Stückl inszeniert Kehlmanns »Tyll« als Höllenspektakel",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Südkorea: Starbucks rief einen »Panzertag« aus - nun sollen Mitarbeiter in Pflichtschulungen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "CSD in Sachsen-Anhalt: Wie organisiert man ein Fest für Schwule und Lesben in einer AfD-Hochburg?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Endlich kommt die Reform: Wird die Rente jetzt sicher?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ohne Kinder keine Rente: „Junge Menschen wünschen sich eigentlich Kinder – und schieben sie permanent auf“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Podcast Löhr & Pennekamp: Ohne Kinder keine Rente",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Hitze-Liveblog: Nach Hitze drohen Deutschland schwere Unwetter",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Sommerliche Hitzegewitter: Warum Gewitter so schwer vorherzusagen sind",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Reise nach Cleveland: Zu Besuch bei Trumps treuen Anhängern",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Daniel Schimkowitsch: „Mir läuft es schon wieder eiskalt den Rücken runter“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Volatile Börsenrakete: Die heiße Wette auf SpaceX-Aktien",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Terrorprävention: Amokläufe verhindern – geht das?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "0:0 gegen KOlumbien: Schwache Portugiesen verpassen den Gruppensieg",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Neuers Spiel: Ohne die Null fehlt das Plus",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Straße von Hormus: Die Sklaven des Welthandels",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Wall Street im Fokus: Der Tech-Abverkauf ist abgesagt",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Lesen, Erholen, Bauen: To-do-Liste für die Ferien",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Liveblog Irankrieg: USA greifen abermals Ziele in Iran an",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Serbiens Präsident Vucic: „Ich werde nur noch ein paar Wochen Präsident sein“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Formel 1 in Österreich: Russell startet von Platz eins – Verstappen crasht",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Verheerendes doppel-Erdbeben: Zahl der Toten in Venezuela steigt auf 1430",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "3:1 gegen Usbekistan: Kongo nach Aufholjagd im Sechzehntelfinale",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "2:0 gegen Panama: Ein paar Zweifel bleiben bei Thomas Tuchels Engländern",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Liveblog Fußball-WM 2026: Lahm fordert Versetzung von Kimmich ins Mittelfeld",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ironman Frankfurt: Julian Becker zum ersten Mal bei den richtig Guten",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Buch über den Solf-Kreis: Sie leisteten Hitler Widerstand",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Akne und Psyche: Wie eine kranke Haut auch seelisch krank macht",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Psychologin im Interview: „Das frustriert Eltern extrem“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Fischrezept vom Sternekoch: Spektakulärer kann man einen Wolfsbarsch nicht zubereiten",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "date": "2026-06-30",
+  "started_at": "2026-06-30T04:00:00.097700+00:00",
+  "steps": {
+    "harvest": {
+      "status": "ok",
+      "finished_at": "2026-06-30T04:00:11.690793+00:00",
+      "stats": {
+        "unplayed": 5489,
+        "total": 6053
+      }
+    },
+    "select": {
+      "status": "ok",
+      "finished_at": "2026-06-30T04:00:11.836918+00:00",
+      "selected_ids": [
+        6130,
+        6131,
+        6132,
+        6133,
+        6134,
+        6141,
+        6143,
+        6122,
+        6123,
+        6124
+      ],
+      "diagnostics": {
+        "gastro_count": 5,
+        "keyword_count": 2,
+        "general_count": 3
+      }
+    },
+    "translate": {
+      "status": "pending",
+      "pending_ids": [
+        6130,
+        6131,
+        6132,
+        6133,
+        6134,
+        6141,
+        6143,
+        6122,
+        6123,
+        6124
+      ]
+    },
+    "publish_article": {
+      "status": "pending"
+    },
+    "publish_brief": {
+      "status": "pending"
+    },
+    "audio": {
+      "status": "pending"
+    },
+    "push": {
+      "status": "pending"
+    }
+  }
+}

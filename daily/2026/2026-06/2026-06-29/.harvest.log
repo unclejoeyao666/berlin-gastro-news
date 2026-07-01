@@ -1,0 +1,598 @@
+{
+  "timestamp": "2026-06-29T04:00:13+00:00",
+  "caps": {
+    "HARVEST_CAP": 25,
+    "KEYWORD_KEEP": 10,
+    "GENERAL_KEEP": 5
+  },
+  "buckets": {
+    "gastro_t1": {
+      "total": 2,
+      "kept": 2
+    },
+    "gastro_t2": {
+      "total": 0,
+      "kept": 0
+    },
+    "general_keyword": {
+      "total": 22,
+      "kept": 10
+    },
+    "general_other": {
+      "total": 230,
+      "kept": 5
+    }
+  },
+  "totals": {
+    "kept": 17,
+    "dropped": 235
+  },
+  "per_source": {
+    "ahgz-gastro": {
+      "name": "AHGZ Gastronomie",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 24,
+      "candidates": 1,
+      "errors": []
+    },
+    "bmel": {
+      "name": "BMEL Pressemitteilungen",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 50,
+      "candidates": 0,
+      "errors": []
+    },
+    "dehoga-berlin": {
+      "name": "DEHOGA Berlin",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "faz": {
+      "name": "FAZ Aktuell",
+      "fetched": 102,
+      "noise": 0,
+      "seen": 36,
+      "candidates": 66,
+      "errors": []
+    },
+    "manager-magazin": {
+      "name": "Manager Magazin",
+      "fetched": 28,
+      "noise": 0,
+      "seen": 23,
+      "candidates": 5,
+      "errors": []
+    },
+    "politico-eu": {
+      "name": "Politico EU",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 10,
+      "errors": []
+    },
+    "scmp": {
+      "name": "South China Morning Post",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 50,
+      "errors": []
+    },
+    "spiegel": {
+      "name": "Der Spiegel",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 2,
+      "candidates": 28,
+      "errors": []
+    },
+    "tagesschau-wirtschaft": {
+      "name": "Tagesschau Wirtschaft",
+      "fetched": 29,
+      "noise": 0,
+      "seen": 27,
+      "candidates": 2,
+      "errors": []
+    },
+    "wiwo": {
+      "name": "WirtschaftsWoche",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 5,
+      "candidates": 15,
+      "errors": []
+    },
+    "ahgz-all": {
+      "name": "AHGZ Allgemein",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 24,
+      "candidates": 1,
+      "errors": []
+    },
+    "ahgz-suppliers": {
+      "name": "AHGZ Zulieferer",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 25,
+      "candidates": 0,
+      "errors": []
+    },
+    "dw-de": {
+      "name": "Deutsche Welle (DE)",
+      "fetched": 77,
+      "noise": 0,
+      "seen": 68,
+      "candidates": 9,
+      "errors": []
+    },
+    "dw-en": {
+      "name": "Deutsche Welle (EN)",
+      "fetched": 146,
+      "noise": 0,
+      "seen": 130,
+      "candidates": 16,
+      "errors": []
+    },
+    "ec-press": {
+      "name": "European Commission Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "efsa-press": {
+      "name": "EFSA Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "euobserver": {
+      "name": "EUobserver",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 18,
+      "candidates": 2,
+      "errors": []
+    },
+    "tagesschau-all": {
+      "name": "Tagesschau All",
+      "fetched": 73,
+      "noise": 0,
+      "seen": 31,
+      "candidates": 42,
+      "errors": []
+    },
+    "wiwo-politik": {
+      "name": "WiWo Politik",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 16,
+      "candidates": 4,
+      "errors": []
+    },
+    "zdf-wirtschaft": {
+      "name": "ZDFheute Wirtschaft",
+      "fetched": 70,
+      "noise": 0,
+      "seen": 67,
+      "candidates": 3,
+      "errors": []
+    }
+  },
+  "kept_titles": [
+    {
+      "title": "Dinner im Ackerboden : Essen aus dem Boden und im Boden",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Trotz Grillsaison: schlechte Stimmung bei den Schweinehaltern",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Verkauf von Glasfaserverträgen: Fragwürdige Methoden an der Haustür",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Dinner im Ackerboden : Essen aus dem Boden und im Boden",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "News: China, EU, Handel, Wladimir Putin, Russland, Ukraine, Friedrich Merz, Donald Trump",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Fußball-WM 2026: Paraguay verspricht DFB-Elf einen Kampf ums Achtelfinale",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Angst vor der Kündigung: Was, wenn jetzt auch ich meinen Job verliere?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Karriere: Nach Aufhebungsvertrag antriebslos – wie der Neustart gelingt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Hohe Baukosten: Warum ein Platz im Pflegeheim 9000 Euro kostet",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Weinbau im Gefängnis: Dieser Wein ist verboten gut",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Projekt 10.000: Kneipen für Deutschland",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Hanks Welt: Warum eine Gesundheitsreform so schwer ist",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Museums-Kleinod in Mailand: Im Schatzhaus des Grafen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Sheikh Hasina vows to return to Bangladesh ‘this year’ despite death sentence",
+      "source_id": "scmp",
+      "score": 74,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Worker killed, another unconscious after excavator tips over in Hong Kong",
+      "source_id": "scmp",
+      "score": 74,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "High ceiling to clear? First rectified subdivided flat to be approved soon",
+      "source_id": "scmp",
+      "score": 74,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Why would Filipinos holiday at home if abroad is cheaper?",
+      "source_id": "scmp",
+      "score": 74,
+      "bucket": "general_keyword"
+    }
+  ],
+  "dropped_titles": [
+    {
+      "title": "Supreme Court: Wie Donald Trump die USA noch weiter abschottet",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Weltgesundheitsorganisation: Ausbruch des Hantavirus geht zu Ende",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Pakistan greift Ziele in Afghanistan an – mehrere Tote",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kate absolviert »Three Peaks Challenge«: Diese Prinzessin treibt es auf die Spitze",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Joe Biden rechnet in Rede mit Donald Trump ab und nennt ihn »Verlierer«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "USA: Donald Trump inspiziert Pläne für seinen neuen Golf-Platz in Washington, D.C.",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "US-Staaten Utah und Colorado: Drei US-Feuerwehrleute sterben bei Einsätzen gegen Waldbrände",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Bremen: Polizei nimmt im Fall des getöteten Ehepaars Verdächtigen in Maisfeld in Niedersachsen fest",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Rente: Junge-Union-Chef Johannes Winkel stichelt gegen Markus Söder",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "WM 2026: Kanada nach spätem Tor gegen Südafrika erstmals im Achtelfinale",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kalifornien: Mindestens 117 tote Hunde in »No-Kill«-Tierheim entdeckt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Deutschrapper Apsilon: »Was soll mir irgendein Nationalstolz bringen?«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Österreich: KPÖ siegt in Graz – FPÖ fällt auf den vierten Platz zurück",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Russland: Wladimir Putin räumt Treibstoffmangel nach ukrainischen Angriffen ein",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "WM 2026 live: Südafrika und Kanada im Liveticker",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Iran-Krieg: Klerus drängt auf Abbruch der Gespräche mit den USA",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Rätsel der Woche: 19 schwarze Kugeln und eine weiße – Gewinnstrategie gesucht",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Künstliche Intelligenz: Wie Kanzler Friedrich Merz und sein Kabinett mit KI umgehen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Lüdenscheid in NRW: 18-Jährige soll Neugeborenes aus Klinik entführt haben",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Gehren in Ilmenau: Urteil im Prozess um Anschlag auf Flüchtlingsunterkunft",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "WM 2026 News am 28.6.: Südkorea-Trainer schmeißt nach scharfer Kritik des Präsidenten hin",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Mexiko: Archäologen entdecken unberührte Maya-Stadt auf Yucatán",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kinder und Drogen: »Ich ging anfangs bei jedem Verdacht an die Decke«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Berlin: Schiitische Demonstration mit gefesselten Kindern sorgt für heftige Kritik",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Liveblog Irankrieg: US-Medien: Neue Gespräche zwischen USA und Iran am Dienstag in Qatar",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "1:0 gegen Südafrika: Kanada steht erstmals in einem WM-Achtelfinale",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Liveblog Fußball-WM 2026: Nach Präsidenten-Kritik: Südkoreas Trainer tritt zurück",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Nagelsmanns Nöte: Maximen eines dünnhäutigen Besserwissers",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Euro gegen Dollar: Unsere Währung im Niedergang – mal wieder",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Liya Yu über NeuroPolitik: Gehirnjogging für Rechtsradikale",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "„Audienz oder Aufstand“: Schon wieder ein Instagram-Appell an Putin",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "für Krebshilfe: Britische Prinzessin Kate erklimmt drei Gipfel",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Grüne im Osten: Schaut her, wir essen Bratwurst",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "USA und Iran: Trump, schlag nach bei Clausewitz",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Mehr Steuern auf Schnaps: Nüchtern betrachtet",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ironman in Frankfurt: Unvernünftig war nur François",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Social-Media-Verbot: Zuerst den Techkonzernen Grenzen setzen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Fazit Bad Homburg Open: Deutsche Tristesse im Taunus",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Theaterpreise: Anerkennung für die Theater in Hessen und Rheinland-Pfalz",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Nach Kommunalwahl: Ämter werden nur auf Zeit vergeben",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "USA unter Trump: Trumps nächstes Washington-Projekt ist ein Golfplatz",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Öffentliche Fahndung: Totes Ehepaar in Bremen – Verdächtiger festgenommen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Untersuchung: Manche Kleidung bei Shein stark mit Chemikalien belastet",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Konflikt: Pakistan greift erneut Ziele in Afghanistan an",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Hitze-Liveblog: DWD-Bilanz: Juni deutlich wärmer als sonst",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Hohe Nachfrage: Warum Klimaanlagen gerade schwer zu finden sind",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Strandbad Überfüllt: Und dann lässt die Polizei keinen mehr rein",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Habermas-Henrich-Debatte: Erkenntnis in der entzauberten Welt",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Medical Gaslighting: Jahrelang hieß es: Die Schmerzen seien psychosomatisch",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Alleinerziehende: Und immer das Gefühl, das Kind kommt zu kurz",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    }
+  ]
+}

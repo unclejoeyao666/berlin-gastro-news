@@ -1,0 +1,646 @@
+{
+  "timestamp": "2026-07-01T04:00:13+00:00",
+  "caps": {
+    "HARVEST_CAP": 25,
+    "KEYWORD_KEEP": 10,
+    "GENERAL_KEEP": 5
+  },
+  "buckets": {
+    "gastro_t1": {
+      "total": 16,
+      "kept": 15
+    },
+    "gastro_t2": {
+      "total": 9,
+      "kept": 0
+    },
+    "general_keyword": {
+      "total": 37,
+      "kept": 5
+    },
+    "general_other": {
+      "total": 323,
+      "kept": 5
+    }
+  },
+  "totals": {
+    "kept": 25,
+    "dropped": 351
+  },
+  "per_source": {
+    "ahgz-gastro": {
+      "name": "AHGZ Gastronomie",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 21,
+      "candidates": 4,
+      "errors": []
+    },
+    "bmel": {
+      "name": "BMEL Pressemitteilungen",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 50,
+      "candidates": 0,
+      "errors": []
+    },
+    "dehoga-berlin": {
+      "name": "DEHOGA Berlin",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 9,
+      "candidates": 1,
+      "errors": []
+    },
+    "faz": {
+      "name": "FAZ Aktuell",
+      "fetched": 99,
+      "noise": 0,
+      "seen": 18,
+      "candidates": 81,
+      "errors": []
+    },
+    "manager-magazin": {
+      "name": "Manager Magazin",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 9,
+      "candidates": 21,
+      "errors": []
+    },
+    "politico-eu": {
+      "name": "Politico EU",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 10,
+      "errors": []
+    },
+    "scmp": {
+      "name": "South China Morning Post",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 50,
+      "errors": []
+    },
+    "spiegel": {
+      "name": "Der Spiegel",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 30,
+      "errors": []
+    },
+    "tagesschau-wirtschaft": {
+      "name": "Tagesschau Wirtschaft",
+      "fetched": 21,
+      "noise": 0,
+      "seen": 8,
+      "candidates": 13,
+      "errors": []
+    },
+    "wiwo": {
+      "name": "WirtschaftsWoche",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 20,
+      "errors": []
+    },
+    "ahgz-all": {
+      "name": "AHGZ Allgemein",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 15,
+      "candidates": 10,
+      "errors": []
+    },
+    "ahgz-suppliers": {
+      "name": "AHGZ Zulieferer",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 24,
+      "candidates": 1,
+      "errors": []
+    },
+    "dw-de": {
+      "name": "Deutsche Welle (DE)",
+      "fetched": 85,
+      "noise": 0,
+      "seen": 69,
+      "candidates": 16,
+      "errors": []
+    },
+    "dw-en": {
+      "name": "Deutsche Welle (EN)",
+      "fetched": 142,
+      "noise": 0,
+      "seen": 123,
+      "candidates": 19,
+      "errors": []
+    },
+    "ec-press": {
+      "name": "European Commission Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 1,
+      "candidates": 9,
+      "errors": []
+    },
+    "efsa-press": {
+      "name": "EFSA Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "euobserver": {
+      "name": "EUobserver",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 9,
+      "candidates": 11,
+      "errors": []
+    },
+    "tagesschau-all": {
+      "name": "Tagesschau All",
+      "fetched": 83,
+      "noise": 0,
+      "seen": 25,
+      "candidates": 58,
+      "errors": []
+    },
+    "wiwo-politik": {
+      "name": "WiWo Politik",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 1,
+      "candidates": 19,
+      "errors": []
+    },
+    "zdf-wirtschaft": {
+      "name": "ZDFheute Wirtschaft",
+      "fetched": 72,
+      "noise": 0,
+      "seen": 60,
+      "candidates": 12,
+      "errors": []
+    }
+  },
+  "kept_titles": [
+    {
+      "title": "Aktualisierte Informationen zur VEA – Verwertungseinrichtung Audiovision GmbH",
+      "source_id": "dehoga-berlin",
+      "score": 100,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Contract Caterer: Neuer CFO bei Compass",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Gourmetgastronomie: Fußball-Koch Anton Schmaus startet Storstad neu",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Namensregeln der EU: „Veggie-Burger“ ist ok, „Seitan-Steak“ nicht",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Stadion Catering: Wie die Traube Tonbach beim Karlsruher SC auftischt",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Alphabet-Aktie jetzt im US-Leitindex Dow Jones",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "UBS-Bericht zu Privatvermögen: Die Reichen sind noch reicher geworden",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Warum Schweden zurück zum Bargeld will",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Tankrabatt beendet - Sorge vor dem Preissprung um 12 Uhr",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Wärmepläne: Kommunen fordern Planungssicherheit",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Spritpreise vor Ende des Tankrabatts deutlich gestiegen",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Inflationsrate sinkt im Juni auf 2,3 Prozent",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Forschung: Wie Künstliche Intelligenz den optimalen Burger designt",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Der große Spagat: Bei Spaniens Hotels ist Premium Trumpf",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Contract Caterer: Neuer CFO bei Compass",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Gourmetgastronomie: Fußball-Koch Anton Schmaus startet Storstad neu",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Führungsposten: Hotel Palace Berlin befördert Eric Födisch zum stellvertretenden Direktor",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "The Indian Hotels Company Limited: Taj Hessischer Hof Frankfurt besetzt vier Spitzen-Posten",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Namensregeln der EU: „Veggie-Burger“ ist ok, „Seitan-Steak“ nicht",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Exklusiv-Interview: Zurück in Deutschland, zurück im Adlon Kempinski Berlin",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Deutsche Obstbauern: „Beste Kirschenernte seit Jahren“",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Stadion Catering: Wie die Traube Tonbach beim Karlsruher SC auftischt",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Geldanlage: Der größte Fehler von Privatanlegern mit MSCI-World-ETFs",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "WM 2026: Mexiko-Fans lärmen vor Ecuadors Team-Hotel",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Koalitionsausschuss: Kündigungsschutz nur bis 100.000 Euro im Jahr",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    }
+  ],
+  "dropped_titles": [
+    {
+      "title": "Wo Stellen wegfallen - und wo neue entstehen",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Zahl der Arbeitslosen im Juni nur leicht gesunken",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Nach WM-Aus der Deutschen: Adidas-Aktie knickt ein",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Marktmacht der US-Techkonzerne: Ist ein Leben ohne Google möglich?",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Marktbericht: Versöhnlicher Halbjahres-Abschluss an der Börse",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Singapur: KI-Kurse fürs Volk",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Raumfahrt: China greift nach dem Mond – Interview mit Nasa-Vize Amit Kshatriya",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Fachkräftemangel: Wer heute nicht investiert, verliert die Fachkräfte von morgen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Koalition und Reformen: Gelingt der Regierung doch noch der große Wurf?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Der Podcaster »Ben Ungeskriptet« soll ein Gespräch mit Björn Höcke nachträglich bearbeiten. Ist das Zensur?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "News: Friedrich Merz, Koalitionsausschuss, Nato-Gipfel, Türkei, Iran-Krieg",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "WM 2026 News heute: Deniz Undav zum WM-Aus: »Haben Deutschland enttäuscht«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Geldanlage: Permanentes Portfolio – wie stabil ist der Mix aus vier Bausteinen?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Feuerwehr rettet »beachtlich große« Spornschildkröte nahe Augsburger Mülldeponie",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Palau: USA beginnen mit Abschiebung von Migranten in Pazifikstaat",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Donald Trump nahm 2025 mehr als 1,4 Milliarden Dollar mit Krypto-Geschäften ein",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Donald Trump setzt außerplanmäßigen Parteitag der Republikaner vor Midterms an um sich feiern zu lassen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "AfD-Parteitag in Erfurt: Gewerkschaft der Polizei warnt vor Mangel an Einsatzkräften",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Temu, Shein & Co.: Auf Billiglieferungen aus Asien wird jetzt Zoll fällig",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "WM 2026: Frankreich begeistert gegen Schweden, Kylian Mbappé trifft doppelt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Serena Williams: Comeback in Wimbledon in der ersten Runde beendet",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "USA verhängen Sanktionen gegen mutmaßliche Benzinschmuggler in Mexiko",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "WM 2026: Ronald Koeman tritt als Trainer der Niederlande zurück",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Angela Merkel: Kanzlerin enthüllt Porträt für das Kanzleramt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "WM 2026 live: Frankreich gewinnt 3:0 gegen Schweden",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Angela Merkels Staatsporträt: Zwischen Queen und Vorarbeiterin",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Venezuela: Dreijähriger sechs Tage nach Erdbeben gerettet",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "WM 2026: Erling Haaland schießt Norwegen gegen die Elfenbeinküste ins Achtelfinale",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Kaufbeuren wird Standort für Raketenabwehrsystem Arrow 3",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Gerrymandering in den USA: Wie Donald Trump das Wahlsystem zu seinen Gunsten verändert",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Stade: Haftbefehl wegen sechsfachen Mordes gegen Tatverdächtigen erlassen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Angela Merkels Porträt für Kanzlergalerie in Berlin enthüllt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Energiewende: Die Menschheit verbrennt mehr Erdöl, Erdgas und Kohle als je zuvor – aber es gibt Hoffnung für das Klima",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "NBA: LeBron James macht weiter – aber nicht bei den Lakers",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Arbeitsmarkt: Mehr Wohlstand durch klügeren Kündigungsschutz",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Bluttat in Stade: Amtsgericht erlässt Haftbefehl wegen sechsfachen Mordes",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Reaktion auf WM-Aus: Hoffentlich sieht Merz die Wirtschaftslage realistischer",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Mangelnde Innovationskraft: Aus der Substanz",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Tierbedarfsanbieter Futterhaus: „Der Hund ist ein Familienmitglied“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Naturwunder Steiermark: Schöner grüner See, wo bist du geblieben?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Alkoholkonsum: Auf das Daydrinking!",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Fleischproduktion: Indien treibt globales Agrarwachstum",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "3:0 gegen Schweden: Mbappé schießt Frankreich ins Achtelfinale",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Norwegen im Achtelfinale: Ødegaards Auge und Haalands Effizienz",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Nationale Heldenstätte: In Polen wächst der Widerstand gegen einen EU-Beitritt Kiews",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Bundeswehr: Aufbruch in Litauen, Absturz in Berlin",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ende der Steuerentlastung: Was der Tankrabatt wirklich gebracht hat",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Gegen 20-Jährige Australierin: Serena Williams fliegt in erster Wimbledon-Runde raus",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "„Da häng' ich dann eben“: Merkel-Porträt enthüllt",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Steigende Wassertemperatur: Meere so warm wie noch nie um diese Jahreszeit",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    }
+  ]
+}

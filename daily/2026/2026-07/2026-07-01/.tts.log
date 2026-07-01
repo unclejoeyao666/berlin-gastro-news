@@ -1,0 +1,6 @@
+-- TTS cascade @ 2026-07-01T13:35:22.831634+00:00 --
+text length: 985 chars
+target: /Users/unclejoe/Media_Workspace/berlin-gastro-news/daily/2026/2026-07/2026-07-01/audio.mp3
+[try] synthesize_edge
+[edge] using /opt/homebrew/lib/node_modules/openclaw/node_modules/node-edge-tts/dist/edge-tts.js
+[ok] synthesize_edge → 1165536 bytes
