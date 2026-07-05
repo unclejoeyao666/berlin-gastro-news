@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-05T05:06:03+00:00",
+  "timestamp": "2026-07-03T04:00:12+00:00",
   "caps": {
     "HARVEST_CAP": 25,
     "KEYWORD_KEEP": 10,
@@ -7,33 +7,33 @@
   },
   "buckets": {
     "gastro_t1": {
-      "total": 26,
-      "kept": 10
+      "total": 21,
+      "kept": 17
     },
     "gastro_t2": {
       "total": 10,
       "kept": 0
     },
     "general_keyword": {
-      "total": 49,
-      "kept": 10
+      "total": 46,
+      "kept": 3
     },
     "general_other": {
-      "total": 354,
+      "total": 319,
       "kept": 5
     }
   },
   "totals": {
     "kept": 25,
-    "dropped": 409
+    "dropped": 365
   },
   "per_source": {
     "ahgz-gastro": {
       "name": "AHGZ Gastronomie",
       "fetched": 25,
       "noise": 0,
-      "seen": 23,
-      "candidates": 2,
+      "seen": 21,
+      "candidates": 4,
       "errors": []
     },
     "bmel": {
@@ -48,24 +48,24 @@
       "name": "DEHOGA Berlin",
       "fetched": 10,
       "noise": 0,
-      "seen": 6,
-      "candidates": 4,
+      "seen": 9,
+      "candidates": 1,
       "errors": []
     },
     "faz": {
       "name": "FAZ Aktuell",
-      "fetched": 100,
+      "fetched": 104,
       "noise": 0,
-      "seen": 16,
-      "candidates": 84,
+      "seen": 19,
+      "candidates": 85,
       "errors": []
     },
     "manager-magazin": {
       "name": "Manager Magazin",
       "fetched": 30,
       "noise": 0,
-      "seen": 1,
-      "candidates": 29,
+      "seen": 7,
+      "candidates": 23,
       "errors": []
     },
     "politico-eu": {
@@ -80,8 +80,8 @@
       "name": "South China Morning Post",
       "fetched": 50,
       "noise": 0,
-      "seen": 1,
-      "candidates": 49,
+      "seen": 0,
+      "candidates": 50,
       "errors": []
     },
     "spiegel": {
@@ -94,50 +94,50 @@
     },
     "tagesschau-wirtschaft": {
       "name": "Tagesschau Wirtschaft",
-      "fetched": 41,
+      "fetched": 36,
       "noise": 0,
-      "seen": 22,
-      "candidates": 19,
+      "seen": 23,
+      "candidates": 13,
       "errors": []
     },
     "wiwo": {
       "name": "WirtschaftsWoche",
       "fetched": 20,
       "noise": 0,
-      "seen": 2,
-      "candidates": 18,
+      "seen": 0,
+      "candidates": 20,
       "errors": []
     },
     "ahgz-all": {
       "name": "AHGZ Allgemein",
       "fetched": 25,
       "noise": 0,
-      "seen": 8,
-      "candidates": 17,
+      "seen": 10,
+      "candidates": 15,
       "errors": []
     },
     "ahgz-suppliers": {
       "name": "AHGZ Zulieferer",
       "fetched": 25,
       "noise": 0,
-      "seen": 22,
-      "candidates": 3,
+      "seen": 24,
+      "candidates": 1,
       "errors": []
     },
     "dw-de": {
       "name": "Deutsche Welle (DE)",
-      "fetched": 90,
+      "fetched": 89,
       "noise": 0,
-      "seen": 64,
-      "candidates": 26,
+      "seen": 73,
+      "candidates": 16,
       "errors": []
     },
     "dw-en": {
       "name": "Deutsche Welle (EN)",
-      "fetched": 143,
+      "fetched": 142,
       "noise": 0,
-      "seen": 110,
-      "candidates": 33,
+      "seen": 118,
+      "candidates": 24,
       "errors": []
     },
     "ec-press": {
@@ -160,16 +160,16 @@
       "name": "EUobserver",
       "fetched": 20,
       "noise": 0,
-      "seen": 1,
-      "candidates": 19,
+      "seen": 7,
+      "candidates": 13,
       "errors": []
     },
     "tagesschau-all": {
       "name": "Tagesschau All",
-      "fetched": 70,
+      "fetched": 75,
       "noise": 0,
-      "seen": 13,
-      "candidates": 57,
+      "seen": 20,
+      "candidates": 55,
       "errors": []
     },
     "wiwo-politik": {
@@ -184,460 +184,460 @@
       "name": "ZDFheute Wirtschaft",
       "fetched": 74,
       "noise": 0,
-      "seen": 61,
-      "candidates": 13,
+      "seen": 64,
+      "candidates": 10,
       "errors": []
     }
   },
   "kept_titles": [
     {
-      "title": "Neuer DEHOGA Zahlenspiegel: Daten und Fakten geben Orientierung und stärken Entscheidungen",
+      "title": "Reformpaket mit wichtigen Impulsen",
       "source_id": "dehoga-berlin",
       "score": 100,
       "bucket": "gastro_t1"
     },
     {
-      "title": "Mehr Flexibilität für Betriebe und Beschäftigte: Breites Verbändebündnis fordert Wochenarbeitszeit",
-      "source_id": "dehoga-berlin",
-      "score": 100,
-      "bucket": "gastro_t1"
-    },
-    {
-      "title": "Arbeitsmarkt im Gastgewerbe: Beschäftigung wächst, aber Dynamik fehlt",
-      "source_id": "dehoga-berlin",
-      "score": 96,
-      "bucket": "gastro_t1"
-    },
-    {
-      "title": "Fit für die WM: Neues DEHOGA-Merkblatt mit wichtigen rechtlichen Hinweisen zur Werbung in Gastro-Betrieben",
-      "source_id": "dehoga-berlin",
-      "score": 96,
-      "bucket": "gastro_t1"
-    },
-    {
-      "title": "Spitzengastronomie: Neuer Küchenchef im Kesselhaus",
+      "title": "Inklusion: Inklusiver Kaffee sichert Teilhabe bei Coffee, Brownies & Downies",
       "source_id": "ahgz-gastro",
       "score": 93,
       "bucket": "gastro_t1"
     },
     {
-      "title": "Wirtschaft vor acht vom 06.06.2026",
-      "source_id": "tagesschau-wirtschaft",
-      "score": 87,
-      "bucket": "general_keyword"
-    },
-    {
-      "title": "Update Wirtschaft vom 04.06.2026",
-      "source_id": "tagesschau-wirtschaft",
-      "score": 87,
-      "bucket": "general_keyword"
-    },
-    {
-      "title": "Wieso immer mehr Deutsche auf Elektroautos setzen",
-      "source_id": "tagesschau-wirtschaft",
-      "score": 87,
-      "bucket": "general_other"
-    },
-    {
-      "title": "Warum Volkswagen seine neuen E-Kleinwagen in Spanien produziert",
-      "source_id": "tagesschau-wirtschaft",
-      "score": 87,
-      "bucket": "general_other"
-    },
-    {
-      "title": "Elektronische Kassen sollen Pflicht werden",
-      "source_id": "tagesschau-wirtschaft",
-      "score": 87,
-      "bucket": "general_other"
-    },
-    {
-      "title": "Entwurf für geplante Pflegereform liegt vor",
-      "source_id": "tagesschau-wirtschaft",
-      "score": 87,
-      "bucket": "general_other"
-    },
-    {
-      "title": "Essener Baukonzern Hochtief steigt erstmals in den DAX auf",
-      "source_id": "tagesschau-wirtschaft",
-      "score": 87,
-      "bucket": "general_other"
-    },
-    {
-      "title": "Pharma-Großkonzerne Lilly und Boehringer stoppen Investitionen",
-      "source_id": "tagesschau-wirtschaft",
-      "score": 82,
-      "bucket": "general_keyword"
-    },
-    {
-      "title": "ARD-DeutschlandTrend: Sorge vor wirtschaftlichem Abstieg wächst",
-      "source_id": "tagesschau-wirtschaft",
-      "score": 82,
-      "bucket": "general_keyword"
-    },
-    {
-      "title": "Schlechte Wirtschaftslage in Russland - und die Schulden steigen",
-      "source_id": "tagesschau-wirtschaft",
-      "score": 82,
-      "bucket": "general_keyword"
-    },
-    {
-      "title": "Kritik an Teilnahme der AfD am St. Petersburger Wirtschaftsforum",
-      "source_id": "tagesschau-wirtschaft",
-      "score": 82,
-      "bucket": "general_keyword"
-    },
-    {
-      "title": "DIW-Studie: Aus für \"Rente mit 63\" würde Milliarden sparen",
-      "source_id": "tagesschau-wirtschaft",
-      "score": 82,
-      "bucket": "general_keyword"
-    },
-    {
-      "title": "Probleme häufen sich: Was ist los in der Glasfaserbranche?",
-      "source_id": "tagesschau-wirtschaft",
-      "score": 82,
-      "bucket": "general_keyword"
-    },
-    {
-      "title": "Zehn Jahre: Hotel Klosterhof in Bayerisch Gmain feiert Jubiläum",
-      "source_id": "ahgz-all",
-      "score": 80,
-      "bucket": "gastro_t1"
-    },
-    {
-      "title": "Hotelmarkt: Der Markt der Münchner Luxushotels wächst",
-      "source_id": "ahgz-all",
-      "score": 80,
-      "bucket": "gastro_t1"
-    },
-    {
-      "title": "Spitzengastronomie: Neuer Küchenchef im Kesselhaus",
-      "source_id": "ahgz-all",
-      "score": 80,
-      "bucket": "gastro_t1"
-    },
-    {
-      "title": "6. Servicetag von Jeunes Restaurateurs: Deshalb schulen die JRE den Teamgeist",
-      "source_id": "ahgz-all",
-      "score": 80,
-      "bucket": "gastro_t1"
-    },
-    {
-      "title": "Künstliche Intelligenz: Kanada setzt auf KI, um 250.000 neue Stellen zu schaffen",
-      "source_id": "spiegel",
-      "score": 80,
-      "bucket": "general_keyword"
-    },
-    {
-      "title": "News: Türkische Opposition, Sankt Petersburger Wirtschaftsgipfel, KNDS",
-      "source_id": "spiegel",
-      "score": 80,
-      "bucket": "general_keyword"
-    },
-    {
-      "title": "Expertenrat: 7 Tipps fürs Gläserspülen wie die Küchenprofis",
+      "title": "Bundesfinanzministerium: Neue Steuerregeln in Vorbereitung",
       "source_id": "ahgz-gastro",
-      "score": 78,
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Dehoga und Land prämieren: Das sind Hessens beste Dorfgasthäuser 2026",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Gourmetgastronomie: Im Supermarkt wird Spitzenküche aufgetischt",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Pläne für den Arbeitsmarkt: \"Mehr Beweglichkeit für Unternehmen\"",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Wirtschaft vor acht vom 02.07.2026",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Update Wirtschaft vom 02.07.2026",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "DAX erreicht nach sinkenden Ölpreisen Rekordstand",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Niederlage vor EuGH: Google muss EU-Rekordstrafe zahlen",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Erste Sommerreisewelle erwartet: Wo Stau droht",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Wie die Koalition Steuerzahler entlasten will",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Auf welche Reformen sich Schwarz-Rot geeinigt hat",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Neueröffnung: Me and All Leipzig geht an den Start",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Reformpläne: Wie geht es jetzt weiter mit den Minijobs?",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Irische Hotelmarke: The Dean öffnet in München",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Überlaufen, teuer, unbequem: Wie Overtourism die Geschäftsreise ausbremst",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Inklusion: Inklusiver Kaffee sichert Teilhabe bei Coffee, Brownies & Downies",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Igefa: Spatenstich für neue Igefa-Niederlassung",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Bundesfinanzministerium: Neue Steuerregeln in Vorbereitung",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Gutachten: Hotelinvestmentmarkt Deutschland legt zu",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Dehoga und Land prämieren: Das sind Hessens beste Dorfgasthäuser 2026",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "IHG Hotels & Resorts: Crowne Plaza Wien startet noch in diesem Jahr",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Gourmetgastronomie: Im Supermarkt wird Spitzenküche aufgetischt",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Tourismus: Reisebranche erwartet im Sommer schlechtere Geschäfte",
+      "source_id": "ahgz-all",
+      "score": 80,
       "bucket": "gastro_t1"
     }
   ],
   "dropped_titles": [
     {
-      "title": "Marktbericht: DAX schließt am Feiertag unter 25.000 Punkten",
+      "title": "Koalition einigt sich auf Reform der Einkommensteuer",
       "source_id": "tagesschau-wirtschaft",
       "score": 87,
       "bucket": "general_other"
     },
     {
-      "title": "Mehr Hochleistungschips sollen aus Europa kommen",
+      "title": "Streiks abgewendet: Tarifabschluss bei der Postbank",
       "source_id": "tagesschau-wirtschaft",
-      "score": 82,
+      "score": 87,
       "bucket": "general_other"
     },
     {
-      "title": "USA drohen mit zusätzlichen Zöllen gegen 60 Handelspartner - auch der EU",
+      "title": "Infineon eröffnet neue Chipfabrik in Dresden",
       "source_id": "tagesschau-wirtschaft",
-      "score": 82,
+      "score": 87,
       "bucket": "general_other"
     },
     {
-      "title": "Millionen Mieter in Deutschland von Wohnkosten überlastet",
+      "title": "Panzerbauer KNDS bläst Börsengang vorerst ab",
       "source_id": "tagesschau-wirtschaft",
-      "score": 82,
+      "score": 87,
       "bucket": "general_other"
     },
     {
-      "title": "BGH-Urteil: Uber und Co. müssen nach Fahrt zum Firmensitz zurück",
+      "title": "Marktbericht: DAX schafft neues Allzeithoch",
       "source_id": "tagesschau-wirtschaft",
-      "score": 82,
+      "score": 87,
       "bucket": "general_other"
     },
     {
-      "title": "Utrecht: Die fahrradfreundlichste Stadt der Welt",
-      "source_id": "tagesschau-wirtschaft",
-      "score": 82,
-      "bucket": "general_other"
+      "title": "Wellness: Seehotel Niedernberg mit neuem Spa",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
     },
     {
-      "title": "Grillen: 32 vegane Grillprodukte im Test – diese lohnen sich wirklich",
+      "title": "Influencer Toni Askitis: Wissen über Wein? #asktoni",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_keyword"
     },
     {
-      "title": "Obduktion von Buckelwal »Timmy« in Dänemark: SPIEGEL-Reporter berichtet von Insel Anholt",
+      "title": "WM 2026 News heute: Portugal rettet sich nach Nachspielzeit-Drama gegen Kroatien ins Achtelfinale",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_keyword"
     },
     {
-      "title": "»Off Campus« und der Hype um Hockey Romance: Menschliche Gefühlskonserven",
+      "title": "Clueso über AfD-Parteitag in Erfurt: »Alle haben Schiss«",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "Martin Scorsese: Berater und Partner von Black Forest Labs, Kritik von Kreativen",
+      "title": "Einkommensteuer-Reform: So berechnen Sie die Entlastung für Ihr Einkommen",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "CDU sagt Präsidiumsklausur in Magdeburg ab",
+      "title": "»Vigil« von George Saunders: Anja Rützel liest das Buch gegen den Zwang zur Milde",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "Grillen: So grillen Sie Fisch wie im Urlaub – Tipps von Salt & Silver",
+      "title": "Frankreich: Schützt das französische Recht einen Jeffrey-Epstein-Helfer?",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "Donald Trumps Irankrieg: Ein Gesetz aus dem Vietnamkrieg soll dem Präsidenten Grenzen setzen",
+      "title": "Kündigungsschutz: Was die gelockerte Regel für Topverdiener bedeutet",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "Anthropic warnt vor nächster KI-Generation und plädiert für Entwicklungspause",
+      "title": "News: Hochzeit von Taylor Swift und Travis Kelce, Khamenei-Beisetzung in Iran, Angriff auf Kyjiw",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "Wadephul lehnt Kürzung der deutschen Uno-Beiträge ab",
+      "title": "Kochen: Mit diesen Tipps holen Sie das Beste aus Kräutern heraus",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "Früherer Prinz Andrew zahlte Mini-Miete für Anwesen und vermietete Cottages angeblich weiter",
+      "title": "WM 2026: Österreich scheitert klar an Spanien – Erwartungen zu hoch",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "NBA: Die New York Knicks liegen gegen San Antonio vorn und nun will Donald Trump zugucken",
+      "title": "USA blockieren offenbar Friedensmission in Somalia",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "Donald Trump: Kennedy Center streicht Trumps Namen aus E-Mails und Briefköpfen",
+      "title": "Kölner Dom: SPD-Politiker fordert wöchentlichen Gratis-Tag",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "Kuba: USA verhängen Sanktionen gegen Präsident Miguel Díaz-Canel",
+      "title": "Hechelnd durch das Dickicht des Kleingedruckten",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "»Schöne, saubere Kohle« – Trump kündigt 700 Millionen Dollar für fossile Energie an",
+      "title": "Taylor Swift und Travis Kelce: Spekulation über Hochzeit in Nashville",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "Andoni Iraola wird neuer Trainer beim FC Liverpool",
+      "title": "Monacos Justiz erlässt Haftbefehl nach Bombenanschlag",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "Richard Gere: Umgang mit Geflüchteten – US-Schauspieler schämt sich für sein Land",
+      "title": "Fußball-WM 2026: Spanien zerlegt Österreich mit drei Toren",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "»Maskenmann«: Martin Ney in Nantes zu lebenslanger Haft wegen Mordes an Jonathan C. verurteilt",
+      "title": "WM 2026 Live: Drei Erkenntnisse aus Spaniens Sieg gegen Österreich",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "Ukrainekrieg: Putin und Selenskyj äußern sich zu möglichen Verhandlungen",
+      "title": "Hantavirus: WHO erklärt tödlichen Ausbruch auf einem Kreuzfahrtschiff für beendet",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "1860 München: Investor Hasan Ismaik will Club nicht vor einer Insolvenz retten",
+      "title": "Mount Everest: Indien will 30 Jahre alte Leiche bergen",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "Wal-Obduktion in Dänemark: Ein leises Zischen, dann entweicht die Luft aus dem Kadaver",
+      "title": "Reformpaket: Opposition und Verbände kritisieren Beschlüsse – Merz und Klingbeil verteidigen es",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "Fleurance – Frankreich: Polizisten finden Kinderleiche auf Suche nach Elfjähriger",
+      "title": "Washington: Ex-Olympiasportler David Hearn wegen Vandalismus am Reflecting Pool angeklagt",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "Dokumentenaffäre: Trumps Ex-Berater Bolton will sich laut Medienberichten schuldig bekennen",
+      "title": "Ifo-Chef Clemens Fuest lobt das Reformpaket der Bundesregierung",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "Lufthansa – Flughafen Frankfurt: Mehrere Menschen nach Vorfall im Krankenhaus",
+      "title": "Ukraine-Krieg: Selenskyj fordert eigene Patriot-Produktion",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "Buckelwal vor Anholt: Erste Obduktionsergebnisse – »Timmy« war ein Mädchen",
+      "title": "Hollywood: Franka Potentes Freunde sind arbeitslos",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "Manfred Hamm: Mit seiner Kamera fing er die Magie ein - Nachruf",
+      "title": "Albanien: Festnahmen bei »Flamingo-Protesten« in Tirana",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "Friedrich Merz: Es ist nicht irgendein Fritze, es ist der Bundeskanzler",
+      "title": "Julian Reichelt: Rechts-außen-Portal gewinnt an Einfluss - Podcast Firewall",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "Kroatien: Vier Tote bei Absturz von Kleinflugzeug",
+      "title": "Israel: Warum Benjamin Netanyahu als Favorit in den Wahlkampf zieht",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "Pflegereform: Nina Warken spart bei den Falschen - Kommentar",
+      "title": "Donald Trump bezeichnet Deutschlands Nato-Ausgaben als »lächerlich«",
       "source_id": "spiegel",
       "score": 80,
       "bucket": "general_other"
     },
     {
-      "title": "Wirtschaftsforum: In Putins schöner, ukrainefreier Welt",
+      "title": "Krankschreibungen: Warum Atteste ab dem ersten Tag teuer und wirkungslos sind",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Stade: Fatih Khan G. wollte sich offenbar nach der Tat das Leben nehmen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Bruch mit dem Vatikan: Wer sind diese Piusbrüder, die „Rom bekehren“ wollen?",
       "source_id": "faz",
       "score": 76,
       "bucket": "general_keyword"
     },
     {
-      "title": "F.A.Z. Frühdenker: Was hat Merz für den Westbalkan im Gepäck?",
+      "title": "Kanzler und Fussball: Friedrich Merz und das peinlichste Eigentor der WM",
       "source_id": "faz",
       "score": 76,
       "bucket": "general_keyword"
     },
     {
-      "title": "Warkens Reform: Allein mit neuen Begriffen lässt sich die Pflege nicht retten",
+      "title": "Reformen der Koalition: Kein großer Knall, aber ein großes Paket",
       "source_id": "faz",
       "score": 76,
       "bucket": "general_keyword"
     },
     {
-      "title": "Golf von Saint-Tropez: Brigitte Bardot ist hier nie gealtert",
+      "title": "Japans Billionen-Plan: Zum Fortschritt verdammt",
       "source_id": "faz",
       "score": 76,
       "bucket": "general_keyword"
     },
     {
-      "title": "Albanische Riviera: Proteste gegen Luxusresort von Trumps Schwiegersohn",
+      "title": "Kolumne „Gesundheitsmythen“: „Der Fruchtzucker aus Obst fällt nicht groß ins Gewicht“",
       "source_id": "faz",
       "score": 76,
       "bucket": "general_keyword"
     },
     {
-      "title": "Technologischer Wandel: Es kommt nicht auf die Größe an",
+      "title": "Digitalwirtschaft-Podcast: Wie Roboter, KI und digitale Zwillinge den Bau retten sollen",
       "source_id": "faz",
       "score": 76,
       "bucket": "general_keyword"
     },
     {
-      "title": "Bafin soll prüfen: Wer hat Commerzbank-Aktien an Unicredit verkauft?",
+      "title": "Nord-Stream-Anschlag: Die Sprengsätze soll er „Geschenke“ genannt haben",
       "source_id": "faz",
       "score": 76,
       "bucket": "general_keyword"
     },
     {
-      "title": "World Wealth Report: Fast 1,8 Millionen Millionäre leben in Deutschland",
+      "title": "Markt für Geschäftsbriefe: Deutsche Post soll einen Steuervorteil verlieren",
       "source_id": "faz",
       "score": 76,
       "bucket": "general_keyword"
     },
     {
-      "title": "maría montserrat alvarado: Für den Vatikan spricht künftig eine Frau",
+      "title": "Hessische Staatsweingüter: Feine Tropfen aus der Schatzkammer des Klosters",
       "source_id": "faz",
       "score": 76,
       "bucket": "general_keyword"
     },
     {
-      "title": "Leihangebote: Spitzenplatz für Frankfurt dank E-Scootern",
-      "source_id": "faz",
-      "score": 76,
-      "bucket": "general_keyword"
-    },
-    {
-      "title": "Biermann im Pour le mérite: Geschichtsstunde mit Gesangseinlage",
-      "source_id": "faz",
-      "score": 76,
-      "bucket": "general_keyword"
-    },
-    {
-      "title": "Liveblog Ukrainekrieg: Selenskyj schlägt persönliches Treffen mit Putin vor",
+      "title": "250 Jahre USA: „Die Demokraten sind vollständig in der Geldfalle“",
       "source_id": "faz",
       "score": 76,
       "bucket": "general_other"
     },
     {
-      "title": "Kindermörder: Deutscher „Maskenmann“ erhält lebenslänglich für Mord in Bretagne",
+      "title": "TV-Kritik „Maybrit Illner“: Merz belehrt Illner beim Rechnen – und blamiert sich beim Dienstwagen",
       "source_id": "faz",
       "score": 76,
       "bucket": "general_other"
     },
     {
-      "title": "Migräne oder Hirnblutung?: Ist das wirklich ein Notfall?",
+      "title": "Krankschreibungen: Zu lasch gegen Blaumacher",
       "source_id": "faz",
       "score": 76,
       "bucket": "general_other"
     },
     {
-      "title": "Der Fall Wim Wenders: Entgegen der Vereinbarung",
+      "title": "Deutschland-Liveblog: Merz und Klingbeil verteidigen neue Regeln bei Krankschreibungen",
       "source_id": "faz",
       "score": 76,
       "bucket": "general_other"
     },
     {
-      "title": "Neue Enthüllungen: Ex-Prinz Andrew vermietete königliche Cottages weiter",
+      "title": "Nationalmannschaft: Was bei der Identifikation hilft",
       "source_id": "faz",
       "score": 76,
       "bucket": "general_other"

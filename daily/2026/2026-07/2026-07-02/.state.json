@@ -1,29 +1,29 @@
 {
-  "date": "2026-06-30",
-  "started_at": "2026-06-30T04:00:00.097700+00:00",
+  "date": "2026-07-02",
+  "started_at": "2026-07-02T04:00:00.119111+00:00",
   "steps": {
     "harvest": {
       "status": "ok",
-      "finished_at": "2026-06-30T04:00:11.690793+00:00",
+      "finished_at": "2026-07-02T04:00:13.020863+00:00",
       "stats": {
-        "unplayed": 5489,
-        "total": 6053
+        "unplayed": 5523,
+        "total": 6097
       }
     },
     "select": {
       "status": "ok",
-      "finished_at": "2026-06-30T04:00:11.836918+00:00",
+      "finished_at": "2026-07-02T04:00:13.167085+00:00",
       "selected_ids": [
-        6130,
-        6131,
-        6132,
-        6133,
-        6134,
+        6168,
+        6169,
+        6170,
+        6171,
+        6179,
         6141,
         6143,
-        6122,
-        6123,
-        6124
+        6172,
+        6173,
+        6174
       ],
       "diagnostics": {
         "gastro_count": 5,
@@ -33,7 +33,7 @@
     },
     "translate": {
       "status": "failed",
-      "finished_at": "2026-07-02T10:00:00.218357+00:00",
+      "finished_at": "2026-07-04T10:00:00.227873+00:00",
       "error": "translation marked complete but no audio_script.md — run translate_helper.py finalize"
     },
     "publish_article": {

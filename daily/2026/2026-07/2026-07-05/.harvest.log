@@ -1,0 +1,598 @@
+{
+  "timestamp": "2026-07-05T04:00:13+00:00",
+  "caps": {
+    "HARVEST_CAP": 25,
+    "KEYWORD_KEEP": 10,
+    "GENERAL_KEEP": 5
+  },
+  "buckets": {
+    "gastro_t1": {
+      "total": 2,
+      "kept": 2
+    },
+    "gastro_t2": {
+      "total": 0,
+      "kept": 0
+    },
+    "general_keyword": {
+      "total": 16,
+      "kept": 10
+    },
+    "general_other": {
+      "total": 240,
+      "kept": 5
+    }
+  },
+  "totals": {
+    "kept": 17,
+    "dropped": 238
+  },
+  "per_source": {
+    "ahgz-gastro": {
+      "name": "AHGZ Gastronomie",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 24,
+      "candidates": 1,
+      "errors": []
+    },
+    "bmel": {
+      "name": "BMEL Pressemitteilungen",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 50,
+      "candidates": 0,
+      "errors": []
+    },
+    "dehoga-berlin": {
+      "name": "DEHOGA Berlin",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "faz": {
+      "name": "FAZ Aktuell",
+      "fetched": 103,
+      "noise": 0,
+      "seen": 25,
+      "candidates": 78,
+      "errors": []
+    },
+    "manager-magazin": {
+      "name": "Manager Magazin",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 27,
+      "candidates": 3,
+      "errors": []
+    },
+    "politico-eu": {
+      "name": "Politico EU",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 3,
+      "candidates": 7,
+      "errors": []
+    },
+    "scmp": {
+      "name": "South China Morning Post",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 50,
+      "errors": []
+    },
+    "spiegel": {
+      "name": "Der Spiegel",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 30,
+      "errors": []
+    },
+    "tagesschau-wirtschaft": {
+      "name": "Tagesschau Wirtschaft",
+      "fetched": 22,
+      "noise": 0,
+      "seen": 19,
+      "candidates": 3,
+      "errors": []
+    },
+    "wiwo": {
+      "name": "WirtschaftsWoche",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 8,
+      "candidates": 12,
+      "errors": []
+    },
+    "ahgz-all": {
+      "name": "AHGZ Allgemein",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 24,
+      "candidates": 1,
+      "errors": []
+    },
+    "ahgz-suppliers": {
+      "name": "AHGZ Zulieferer",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 25,
+      "candidates": 0,
+      "errors": []
+    },
+    "dw-de": {
+      "name": "Deutsche Welle (DE)",
+      "fetched": 93,
+      "noise": 0,
+      "seen": 84,
+      "candidates": 9,
+      "errors": []
+    },
+    "dw-en": {
+      "name": "Deutsche Welle (EN)",
+      "fetched": 138,
+      "noise": 0,
+      "seen": 125,
+      "candidates": 13,
+      "errors": []
+    },
+    "ec-press": {
+      "name": "European Commission Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "efsa-press": {
+      "name": "EFSA Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "euobserver": {
+      "name": "EUobserver",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 18,
+      "candidates": 2,
+      "errors": []
+    },
+    "tagesschau-all": {
+      "name": "Tagesschau All",
+      "fetched": 71,
+      "noise": 0,
+      "seen": 29,
+      "candidates": 42,
+      "errors": []
+    },
+    "wiwo-politik": {
+      "name": "WiWo Politik",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 16,
+      "candidates": 4,
+      "errors": []
+    },
+    "zdf-wirtschaft": {
+      "name": "ZDFheute Wirtschaft",
+      "fetched": 76,
+      "noise": 0,
+      "seen": 73,
+      "candidates": 3,
+      "errors": []
+    }
+  },
+  "kept_titles": [
+    {
+      "title": "Neueröffnung: Alles neu im Restaurant auf dem Berliner Funkturm",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Altersabsicherung oder Verkaufsfalle: Was das Altersvorsorgedepot bietet",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Baustoffe werden knapp: Recycling kommt kaum zum Einsatz",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Abwärme wird kaum als Energiequelle genutzt - muss das sein?",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Neueröffnung: Alles neu im Restaurant auf dem Berliner Funkturm",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Liebe: Gibt es Liebe auf den ersten Blick? Psychologe erklärt den Effekt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Bilder vom Auge: Drei Paare zeigen ihr persönliches Iris-Foto",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Der Krieg holt Putin ein: „Russland kämpft auf die kostspieligste Weise, die man sich nur denken kann“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Kneipensterben: Die Kneipe im Dorf lassen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Quiz zu 250 Jahren USA: Wie gut kennen Sie sich mit der Geschichte der USA aus?",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Image der Stadt: Frankfurt braucht eine klare Linie",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Diamond League in Eugene: Malaika Mihambo fast sieben Meter weit",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Víctor Manuel Fernández: Der Exkommunikator",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Südafrikas Metropole: Johannesburg zwischen Neustart und Kollaps",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Costa Brava: Trennschleifer hat womöglich großen Waldbrand ausgelöst",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "So isst Politik: Ein Hoch auf die Spreewälder Jurkn!",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Why Hong Kong’s major developers stayed out of Northern Metropolis’ first pilot tender",
+      "source_id": "scmp",
+      "score": 74,
+      "bucket": "general_keyword"
+    }
+  ],
+  "dropped_titles": [
+    {
+      "title": "USA 250 Jahre Unabhängigkeit: Liveticker – jetzt redet Donald Trump",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Trump telefoniert mit Putin und Selenskyj und bietet Vermittlung an",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "David Duchovny: \"Akte X\"-Star bekommt bei Filmfest in München Ehrenpreis - und spricht übers Verlieren",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "40 Prozent der Beschäftigten zweifeln am Durchhalten bis zur Rente",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Boris Pistorius warnt vor Weitergabe geheimer Informationen an mögliche AfD-Minister",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "WM 2026: Frankreich ringt Paraguay nieder und steht im Viertelfinale",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "WM 2026 live: Drei Erkenntnisse aus Frankreich gegen Paraguay",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Frankreich: Marine Le Pen und Jordan Bardella (RN) demonstrieren vor Gerichts-Urteil Einigkeit",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Zahl der Toten in Venezuela steigt auf fast 3000",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "WM 2026: Marokko schlägt Kanada deutlich – Ismael Saibari verletzt raus",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Unabhängigkeitstag: Joey Chestnut gewinnt Hotdog-Wettessen mit 66 Würstchen in zehn Minuten",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "AfD-Parteitag in Erfurt: Blockaden und Proteste - Unterwegs mit zwei Demonstrierenden",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Frankreichs Problem mit Jugendgewalt: Ehre, Messer, Revierkämpfe - SPIEGEL TV",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "WM 2026 live: Drei Erkenntnisse aus Marokko - Kanada",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Beyoncé überrascht mit unveröffentlichtem Song »Morning Dew (Donk)«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ungarn: Péter Magyar will Parlamentsmandate auf zwölf Jahre beschränken",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "AfD-Parteitag in Erfurt: Alice Weidels Rache",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Friedrich Merz: »Sehr gute Jahre« vor Deutschland – und Aktionsplan gegen Sozialmissbrauch",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Iran: Regime macht Trauerkundgebung in Teheran zur Machtdemonstration",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Tour de France 2026: Rundfahrt beginnt mit Teamzeitfahren in Barcelona",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Stade: Zahlreiche Menschen nehmen an Gedenken für Opfer teil",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Henning Beck erklärt, wie wir Denkfehler erkennen und klüger handeln – Podcast",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Fußball-WM 2026: Macht die Weltmeisterschaft größer – und kürzer",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Adele teilt Liebe für Formel 1 mit ihrem 13-jährigen Sohn Angelo",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "RND: Richtigstellung zu Merz-Döpfner-Gespräch über AfD-Zusammenarbeit",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Auswanderung aus Deutschland: »Die Unzufriedenen sind in der Minderheit«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Wimbledon 2026: Serena Williams ist verletzt und muss Doppel mit Schwester Venus absagen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "AfD-Parteitag in Erfurt: »Es geht vorrangig um Machtkämpfe«",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Le Pen vor ihrem Urteil: „Was immer auch passiert, ich werde nicht sterben“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Frankreich bezwingt Paraguay: Mbappés Elfmetertor reicht",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "3:0 gegen Kanada: Marokko als Party-Crasher",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Liveblog Fußball-WM 2026: So geht es mit Klopp weiter",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "AfD-Parteitag: Viel Routine und ein paar Überraschungen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "„Sonntagstrend“: AfD liegt laut Umfrage acht Prozentpunkte vor der Union",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Vermögensgeschichte: Der Millionär von nebenan",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "USA unter Trump: Festmeile in Washington wegen Unwetterwarnung evakuiert",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "250. Geburtstag: Was aus Amerika geworden ist",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Reformen der Regierung: Die unzureichende Politik des Möglichen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Streit ums Wahlrecht: Pflicht zur Parität? Niemals!",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "XXL-Turnier mit 48 Teams: Was die große WM-Erweiterung wirklich gebracht hat",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Reform der Krankschreibung: So bleiben wir krank",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "BSW und AfD: Für Aufmerksamkeit ist Wagenknecht jedes Mittel recht",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "DGB-Studie: Fast die Hälfte der Beschäftigten zweifelt am Durchhalten bis zur Rente",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Albanien: Zehntausende protestieren gegen Kushner-Bauprojekt",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Erdbeben in Venezuela: Totenzahl in Venezuela steigt auf fast 3.000",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Pogačar geschlagen: Vingegaard und Visma gewinnen Tour-Auftakt",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "August der Starke: Er machte Dresden zur schönsten Stadt Deutschlands",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Unfall-Handchirurg: „Guillotineartige Verletzungen sind uns die liebsten“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Muskelkater vermeiden: „Vor intensiver Belastung ist ein Aufwärmtraining wichtig“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Hirnforschung: Warum das komfortabelste Leben nicht das glücklichste ist",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    }
+  ]
+}
