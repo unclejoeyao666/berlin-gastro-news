@@ -55,12 +55,12 @@ def render_briefing_collection(date_str, audio_url, slugs, intro) -> str:
     return "\n".join(parts)
 
 
-def render_discord_briefing(date_str, rows, audio_url, site_url) -> str:
+def render_discord_briefing(date_str, rows, audio_url, site_url, briefing_url) -> str:
     """Markdown for Discord — short, link-heavy."""
     lines = [
         f"# 📰 柏林餐饮商业新闻简报 — {date_str}",
         "",
-        f"🎧 [今日音频]({audio_url}) · 🌐 [完整网页]({site_url})",
+        f"🎧 [今日音频]({audio_url}) · 🌐 [完整网页]({briefing_url})",
         "",
     ]
     for i, row in enumerate(rows, 1):
@@ -140,7 +140,9 @@ def main():
 
         discord_path = daily_dir / "briefing.md"
         discord_path.write_text(
-            render_discord_briefing(date_str, rows, audio_url_full, args.site_url),
+            render_discord_briefing(
+                date_str, rows, audio_url_full, args.site_url, briefing_url_full
+            ),
             encoding="utf-8",
         )
         print(f"✅ {discord_path.relative_to(ROOT)}")
