@@ -33,7 +33,7 @@
     },
     "translate": {
       "status": "failed",
-      "finished_at": "2026-07-05T07:00:00.241254+00:00",
+      "finished_at": "2026-07-05T10:00:00.222356+00:00",
       "error": "translation marked complete but no audio_script.md — run translate_helper.py finalize"
     },
     "publish_article": {

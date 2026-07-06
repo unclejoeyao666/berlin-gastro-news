@@ -1,0 +1,598 @@
+{
+  "timestamp": "2026-07-06T04:00:14+00:00",
+  "caps": {
+    "HARVEST_CAP": 25,
+    "KEYWORD_KEEP": 10,
+    "GENERAL_KEEP": 5
+  },
+  "buckets": {
+    "gastro_t1": {
+      "total": 2,
+      "kept": 2
+    },
+    "gastro_t2": {
+      "total": 0,
+      "kept": 0
+    },
+    "general_keyword": {
+      "total": 26,
+      "kept": 10
+    },
+    "general_other": {
+      "total": 242,
+      "kept": 5
+    }
+  },
+  "totals": {
+    "kept": 17,
+    "dropped": 250
+  },
+  "per_source": {
+    "ahgz-gastro": {
+      "name": "AHGZ Gastronomie",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 24,
+      "candidates": 1,
+      "errors": []
+    },
+    "bmel": {
+      "name": "BMEL Pressemitteilungen",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 50,
+      "candidates": 0,
+      "errors": []
+    },
+    "dehoga-berlin": {
+      "name": "DEHOGA Berlin",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "faz": {
+      "name": "FAZ Aktuell",
+      "fetched": 103,
+      "noise": 0,
+      "seen": 32,
+      "candidates": 71,
+      "errors": []
+    },
+    "manager-magazin": {
+      "name": "Manager Magazin",
+      "fetched": 29,
+      "noise": 0,
+      "seen": 22,
+      "candidates": 7,
+      "errors": []
+    },
+    "politico-eu": {
+      "name": "Politico EU",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 10,
+      "errors": []
+    },
+    "scmp": {
+      "name": "South China Morning Post",
+      "fetched": 50,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 50,
+      "errors": []
+    },
+    "spiegel": {
+      "name": "Der Spiegel",
+      "fetched": 30,
+      "noise": 0,
+      "seen": 0,
+      "candidates": 30,
+      "errors": []
+    },
+    "tagesschau-wirtschaft": {
+      "name": "Tagesschau Wirtschaft",
+      "fetched": 24,
+      "noise": 0,
+      "seen": 22,
+      "candidates": 2,
+      "errors": []
+    },
+    "wiwo": {
+      "name": "WirtschaftsWoche",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 7,
+      "candidates": 13,
+      "errors": []
+    },
+    "ahgz-all": {
+      "name": "AHGZ Allgemein",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 24,
+      "candidates": 1,
+      "errors": []
+    },
+    "ahgz-suppliers": {
+      "name": "AHGZ Zulieferer",
+      "fetched": 25,
+      "noise": 0,
+      "seen": 25,
+      "candidates": 0,
+      "errors": []
+    },
+    "dw-de": {
+      "name": "Deutsche Welle (DE)",
+      "fetched": 83,
+      "noise": 0,
+      "seen": 74,
+      "candidates": 9,
+      "errors": []
+    },
+    "dw-en": {
+      "name": "Deutsche Welle (EN)",
+      "fetched": 136,
+      "noise": 0,
+      "seen": 116,
+      "candidates": 20,
+      "errors": []
+    },
+    "ec-press": {
+      "name": "European Commission Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "efsa-press": {
+      "name": "EFSA Press",
+      "fetched": 10,
+      "noise": 0,
+      "seen": 10,
+      "candidates": 0,
+      "errors": []
+    },
+    "euobserver": {
+      "name": "EUobserver",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 18,
+      "candidates": 2,
+      "errors": []
+    },
+    "tagesschau-all": {
+      "name": "Tagesschau All",
+      "fetched": 73,
+      "noise": 0,
+      "seen": 27,
+      "candidates": 46,
+      "errors": []
+    },
+    "wiwo-politik": {
+      "name": "WiWo Politik",
+      "fetched": 20,
+      "noise": 0,
+      "seen": 16,
+      "candidates": 4,
+      "errors": []
+    },
+    "zdf-wirtschaft": {
+      "name": "ZDFheute Wirtschaft",
+      "fetched": 76,
+      "noise": 0,
+      "seen": 72,
+      "candidates": 4,
+      "errors": []
+    }
+  },
+  "kept_titles": [
+    {
+      "title": "Lindner Hotels: Verstärkung für die Küche im Hotel Stadt Hamburg auf Sylt",
+      "source_id": "ahgz-gastro",
+      "score": 93,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "Warum der Suezkanal für den Welthandel so wichtig ist",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Kraftstoff aus Mais treibt Brasilien an",
+      "source_id": "tagesschau-wirtschaft",
+      "score": 87,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Lindner Hotels: Verstärkung für die Küche im Hotel Stadt Hamburg auf Sylt",
+      "source_id": "ahgz-all",
+      "score": 80,
+      "bucket": "gastro_t1"
+    },
+    {
+      "title": "News: AfD, Haushaltsentwurf, Brände in Südeuropa, George W. Bush wird 80",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Selbstständige und Krankenkasse: Wie Sie hohe Nachforderungen vermeiden können",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Mentale Gesundheit: Fünf-Punkte-Plan für den Umgang mit Gefühlen im Team",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "WM 2026 News heute: England steht nach Abwehrschlacht gegen Mexiko im Viertelfinale",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "TEHeRAN: Trauerfeier für getöteten Ajatollah Khamenei in Iran",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Bundesparteitag: Die AfD zelebriert den wirtschaftlichen Niedergang",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Ocado Group: Kampf um britischen Roboter-Supermarkt eskaliert",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Kolumne „Reiner Wein“: So ein Fest wäre in Deutschland undenkbar",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Plan des Ministeriums: Streit um Jagd auf Wölfe in Hessen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Pilotprojekt in Maastricht: Ohne Forschung bleibt von Konzerten nichts zu hören",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "Australia, Fiji sign mutual defence pact to boost Pacific security",
+      "source_id": "scmp",
+      "score": 74,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "55 Hong Kong students from 13 schools score perfect IB marks",
+      "source_id": "scmp",
+      "score": 74,
+      "bucket": "general_keyword"
+    },
+    {
+      "title": "How a Japanese prefecture is managing rising bear population with microchips",
+      "source_id": "scmp",
+      "score": 74,
+      "bucket": "general_keyword"
+    }
+  ],
+  "dropped_titles": [
+    {
+      "title": "Australien: Anthony Albanese entschuldigt sich für Kylie-Minogue-Kommentar im Comedy-Podcast",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Ukraine-Krieg: Russland überzieht Kyjiw mit Luftangriffen – offenbar mehrere Tote",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Fußball-WM: Norwegen besiegt Brasilien und steht im Viertelfinale - Reaktionen von Erling Haaland und der Presse",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Fußball-WM 2026: Achtelfinale Mexiko gegen England wegen Unwetter später",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "WM 2026 live: Drei Erkenntnisse aus Brasilien - Norwegen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Donald Trump und Wolodymyr Selenskyj planen Treffen beim Nato-Gipfel in Ankara",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Fußball-WM 2026: Donald Trump rief wegen Rotsperre offenbar bei Gianni Infantino an",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Fußball-WM 2026: Gut fürs Geschäft ist immer noch die wichtigste Fifa-Regel",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Wimbledon 2026: Jan-Lennard Struff steht erstmals im Viertelfinale in Wimbledon",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "AfD-Parteitag: Polizei ermittelt wegen Angriffen auf Medienschaffende",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Frankreich: Unbekannte stehlen Schmuck in Millionenwert aus Museum im Elsass",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Wimbledon 2026: Novak Djokovic holt 106. Sieg im Wimbledon-Einzel – und überholt damit Roger Federer",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Nina Warken will Pharmaindustrie stärker schonen, als bislang bekannt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Wimbledon 2026: Aryna Sabalenka unterliegt sensationell Naomi Osaka",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "AfD-Parteitag in Erfurt: Alternative für Dreckwerfen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "USA: Feuerwerk zum Unabhängigkeitstag trifft Passagierflugzeug",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Wülfershausen hat eine neue Bürgermeisterin - Neuwahl nach Wahlfälschung",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "WM 2026 News heute: Fifa setzt Rot-Sperre gegen Folarin Balogun zur Bewährung aus, Donald Trump dankt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Lars Klingbeil im ARD-Sommerinterview: »Pragmatische Umsetzung« von Krankschreibungsregeln",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "England vs. Mexiko im Aztekenstadion: Warum die Höhe zum Problem für Tuchels Team wird",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Polen: Auf der Halbinsel Hel fahren sie zur Hölle – mit dem Flixbus der Buslinie 666. Nur die Kirche regt sich auf",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Sony 1000X The Collexion im Test: Klingt dieser Kopfhörer gut genug, um so teuer zu sein?",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Tour de France: Tadej Pogačar lässt Teamkollege Isaac del Toro in Barcelona den Vortritt",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Formel 1 in Silverstone: Charles Leclerc gewinnt, Kimi Antonelli wird Opfer der Technik",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Köln: Rund 1,5 Millionen Menschen feiern Christopher Street Day",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Leipzig: Straßenbahnverkehr nach Hitzeschäden größtenteils wieder angelaufen",
+      "source_id": "spiegel",
+      "score": 80,
+      "bucket": "general_other"
+    },
+    {
+      "title": "1:2 gegen Norwegen: Brasilien scheitert an Haaland, Nyland und dem Ruder-Kollektiv",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Fußball-WM: England triumphiert in epischem Duell mit Mexiko",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Liveblog Fußball-WM 2026: Balogun darf spielen – wohl nach Anruf von Trump bei Infantino",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Grundlegende Änderung im DFB: Klopp vor der Krönung",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Liveblog Ukrainekrieg: Luftalarm in fast der gesamten Ukraine – Russland fliegt neue Angriffe",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "ARD-Sommerinterview: Klingbeil lobt eine Steuer, die es nicht gibt",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Betrug auf Kleinanzeigen: 14.000 Euro für einen falschen Klick",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "„KI-Version von Hiroshima“: Britische Außenministerin warnt vor existenzieller Bedrohung durch KI",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Gefälschtes Olivenöl: „Rapsöl, Sojaöl – alles, was billiger ist“",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Autokonzern in der KRise: Dieses Mal geht der VW-Chef aufs Ganze",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Wandeln oder Weichen: Schicksalsjahr für die Autobranche",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Business-Ticker: Porsche streicht laut Medienbericht weitere 4000 Stellen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Straße von Hormus: So sieht Trumps „enormer Erfolg“ aus",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Leo auf Lampedusa: Die Kraft der Barmherzigkeit",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "AfD-Parteitag: Weidel sollte ihre Partei zur Mäßigung bringen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Heimliche Aufnahmen: Warum Millionen Menschen gerade verbotene Bilder aus dem Schlachthof teilen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "GKV-Reform: Die relativen Erfolge der Gesundheitsministerin",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Bahn saniert strecke: Jetzt wird es still im Rheintal",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Schiedsrichter bei der WM: Der Verdacht der Willkür überschattet die Pfiffe",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Flusskraftwerk in Giessen: Blaupause für Energiewende von unten",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Klingbeils Haushalt: Immer mehr Schulden schnüren dem Bund die Luft ab",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "80 Jahre Bikini: Explosive Emanzipation",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Streit um Höcke-Interview: Podcaster Ben Berndt will notfalls gegen Medienaufsicht klagen",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    },
+    {
+      "title": "Präsidentenwahlen: Frankreich will wieder an sich glauben",
+      "source_id": "faz",
+      "score": 76,
+      "bucket": "general_other"
+    }
+  ]
+}
